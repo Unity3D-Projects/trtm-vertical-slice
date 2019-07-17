@@ -7,7 +7,12 @@ public sealed class Condition
 {
     string expression;
     
-    bool Check()
+    public Condition(string expression)
+    {
+        this.expression = expression;
+    }
+
+    public bool Check()
     {
         return Utilities.ParseExpression(expression);
     }

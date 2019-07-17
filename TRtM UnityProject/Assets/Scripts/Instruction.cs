@@ -6,7 +6,12 @@ public sealed class Instruction
 {
     string expression;
 
-    void Execute(string expression)
+    public Instruction(string expression)
+    {
+        this.expression = expression;
+    }
+
+    public void Execute()
     {
         Utilities.ExecuteInstructions(expression);
     }

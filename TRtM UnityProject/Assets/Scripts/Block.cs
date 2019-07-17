@@ -4,12 +4,14 @@ using UnityEngine;
 
 public sealed class Block
 {
-    string id;
-    string buttonText;
-    string[] phrases;
-    Sprite image;
-    string music;
-    Condition[] conditions;
-    Instruction[] instructions;
-    double delay;
+    public string id;
+    public string buttonText;
+    public string[] phrases;
+    public Sprite image;
+    public string music;
+    public Condition condition;
+    public Instruction instruction;
+    public double delay;
+
+    public Block[] exits;
 }

@@ -2,9 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 using B83.LogicExpressionParser;
+using UnityEngine.UI;
 
-public static class Utilities
+public class Utilities : MonoBehaviour
 {
+    public PrefabManager prefabManager;
+
+    private void Awake()
+    {
+        prefabManager = FindObjectOfType<PrefabManager>();
+    }
+
     public static bool ParseExpression(string exp)
     {
         Parser parser = new Parser();
@@ -38,7 +46,24 @@ public static class Utilities
             }
         }
     }
-    
+
+    public void SpawnPhrase(string phrase)
+    {
+        Instantiate(prefabManager.phrasePrefab, prefabManager.content);
+    }
+
+    public void SpawnButton(string text, UnityEngine.Events.UnityAction call)
+    {
+        GameObject buttonGroup = Instantiate(prefabManager.buttonGroup, prefabManager.content);
+        Button button = Instantiate(prefabManager.buttonPrefab, buttonGroup.transform);
+        button.onClick.AddListener(call);
+    }
+
+    public void SpawnEndgame()
+    {
+        Instantiate(prefabManager.endgamePrefab, prefabManager.content);
+    }
+
     /* -----------------------------*/
 
     static void SetContext(ref LogicExpression le)
