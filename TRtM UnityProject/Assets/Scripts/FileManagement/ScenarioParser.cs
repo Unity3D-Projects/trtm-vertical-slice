@@ -1,18 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System.Xml.Linq;
 
-public class ScenarioParser : MonoBehaviour
+public static class ScenarioParser
 {
-    // Start is called before the first frame update
-    void Start()
+    static Block[] ParseScenario(string path)
     {
-        
-    }
+        XDocument articyXml = new XDocument(path);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
