@@ -1,0 +1,6880 @@
+{
+  "Settings": {
+    "set_Localization": "False",
+    "set_TextFormatter": "Unity",
+    "set_IncludedNodes": "Settings, Project, GlobalVariables, ObjectDefinitions, Packages, ScriptMethods, Hierarchy, Assets",
+    "set_UseScriptSupport": "True",
+    "ExportVersion": "1.1",
+    "ObjectDefinitionsHash": "498B542231707E2BC7AB17488C2D49E2B3FF31AD7E4123A5A50872D157C86B3D",
+    "ScriptFragmentsHash": "3244358420"
+  },
+  "Project": {
+    "Name": "test",
+    "DetailName": "",
+    "Guid": "1066e276-0c4b-46d2-9635-ce2737d2a5e8",
+    "TechnicalName": "Test"
+  },
+  "GlobalVariables": [
+    {
+      "Namespace": "Game",
+      "Description": "",
+      "Variables": [
+        {
+          "Variable": "side",
+          "Type": "Integer",
+          "Value": "0",
+          "Description": ""
+        },
+        {
+          "Variable": "likes",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": ""
+        },
+        {
+          "Variable": "intro",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": ""
+        },
+        {
+          "Variable": "answer",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": ""
+        }
+      ]
+    }
+  ],
+  "ObjectDefinitions": [
+    {
+      "Type": "Point",
+      "Class": "Primitive",
+      "Properties": [
+        {
+          "Property": "x",
+          "Type": "float"
+        },
+        {
+          "Property": "y",
+          "Type": "float"
+        }
+      ]
+    },
+    {
+      "Type": "Color",
+      "Class": "Primitive",
+      "Properties": [
+        {
+          "Property": "a",
+          "Type": "float"
+        },
+        {
+          "Property": "r",
+          "Type": "float"
+        },
+        {
+          "Property": "g",
+          "Type": "float"
+        },
+        {
+          "Property": "b",
+          "Type": "float"
+        }
+      ]
+    },
+    {
+      "Type": "Size",
+      "Class": "Primitive",
+      "Properties": [
+        {
+          "Property": "w",
+          "Type": "float"
+        },
+        {
+          "Property": "h",
+          "Type": "float"
+        }
+      ]
+    },
+    {
+      "Type": "Rect",
+      "Class": "Primitive",
+      "Properties": [
+        {
+          "Property": "x",
+          "Type": "float"
+        },
+        {
+          "Property": "y",
+          "Type": "float"
+        },
+        {
+          "Property": "w",
+          "Type": "float"
+        },
+        {
+          "Property": "h",
+          "Type": "float"
+        }
+      ]
+    },
+    {
+      "Type": "PreviewImage",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "ViewBox",
+          "Type": "Rect"
+        },
+        {
+          "Property": "Mode",
+          "Type": "PreviewImageViewBoxModes"
+        },
+        {
+          "Property": "Asset",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Transformation",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "Pivot",
+          "Type": "Point"
+        },
+        {
+          "Property": "Rotation",
+          "Type": "float"
+        },
+        {
+          "Property": "Translation",
+          "Type": "Point"
+        }
+      ]
+    },
+    {
+      "Type": "OutgoingConnection",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "Label",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "TargetPin",
+          "Type": "InputPin"
+        },
+        {
+          "Property": "Target",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "IncomingConnection",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "Label",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "SourcePin",
+          "Type": "OutputPin"
+        },
+        {
+          "Property": "Source",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "OutputPin",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "Text",
+          "Type": "Script_Instruction"
+        },
+        {
+          "Property": "Id",
+          "Type": "id"
+        },
+        {
+          "Property": "Owner",
+          "Type": "id"
+        },
+        {
+          "Property": "Connections",
+          "Type": "Array",
+          "ItemType": "OutgoingConnection"
+        }
+      ]
+    },
+    {
+      "Type": "InputPin",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "Text",
+          "Type": "Script_Condition"
+        },
+        {
+          "Property": "Id",
+          "Type": "id"
+        },
+        {
+          "Property": "Owner",
+          "Type": "id"
+        },
+        {
+          "Property": "Connections",
+          "Type": "Array",
+          "ItemType": "OutgoingConnection"
+        }
+      ]
+    },
+    {
+      "Type": "LocationAnchor",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "AnchorPositionX",
+          "Type": "float"
+        },
+        {
+          "Property": "AnchorPositionY",
+          "Type": "float"
+        },
+        {
+          "Property": "AnchorColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "AnchorSize",
+          "Type": "LocationAnchorSize"
+        }
+      ]
+    },
+    {
+      "Type": "Sex",
+      "Class": "Enum",
+      "DisplayName": "Пол",
+      "Values": {
+        "Male": 0,
+        "Female": 1,
+        "Unknown": 2
+      },
+      "DisplayNames": {
+        "Male": "Male",
+        "Female": "Female",
+        "Unknown": "Unknown"
+      }
+    },
+    {
+      "Type": "ShapeType",
+      "Class": "Enum",
+      "DisplayName": "ShapeType",
+      "Values": {
+        "Invalid": 0,
+        "Spot": 1,
+        "Circle": 2,
+        "Rectangle": 3,
+        "Path": 4,
+        "Polygon": 5,
+        "Link": 6
+      },
+      "DisplayNames": {
+        "Invalid": "Invalid",
+        "Spot": "Spot",
+        "Circle": "Circle",
+        "Rectangle": "Rectangle",
+        "Path": "Path",
+        "Polygon": "Polygon",
+        "Link": "Link"
+      }
+    },
+    {
+      "Type": "SelectabilityModes",
+      "Class": "Enum",
+      "DisplayName": "SelectabilityModes",
+      "Values": {
+        "Unselectable": 0,
+        "Selectable": 1
+      },
+      "DisplayNames": {
+        "Unselectable": "Unselectable",
+        "Selectable": "Selectable"
+      }
+    },
+    {
+      "Type": "VisibilityModes",
+      "Class": "Enum",
+      "DisplayName": "VisibilityModes",
+      "Values": {
+        "Invisible": 0,
+        "Visible": 1
+      },
+      "DisplayNames": {
+        "Invisible": "Invisible",
+        "Visible": "Visible"
+      }
+    },
+    {
+      "Type": "OutlineStyle",
+      "Class": "Enum",
+      "DisplayName": "OutlineStyle",
+      "Values": {
+        "Solid": 0,
+        "Dot": 1,
+        "Dash": 2,
+        "DashDot": 3,
+        "DashDotDot": 4
+      },
+      "DisplayNames": {
+        "Solid": "Solid",
+        "Dot": "Dot",
+        "Dash": "Dash",
+        "DashDot": "DashDot",
+        "DashDotDot": "DashDotDot"
+      }
+    },
+    {
+      "Type": "PathCaps",
+      "Class": "Enum",
+      "DisplayName": "PathCaps",
+      "Values": {
+        "ColoredDot": 0,
+        "None": 1,
+        "LineArrowHead": 2,
+        "FilledArrowHead": 3,
+        "Diamond": 4,
+        "Square": 5,
+        "Disc": 6
+      },
+      "DisplayNames": {
+        "ColoredDot": "ColoredDot",
+        "None": "None",
+        "LineArrowHead": "LineArrowHead",
+        "FilledArrowHead": "FilledArrowHead",
+        "Diamond": "Diamond",
+        "Square": "Square",
+        "Disc": "Disc"
+      }
+    },
+    {
+      "Type": "LocationAnchorSize",
+      "Class": "Enum",
+      "DisplayName": "LocationAnchorSize",
+      "Values": {
+        "Small": 0,
+        "Medium": 1,
+        "Large": 2
+      },
+      "DisplayNames": {
+        "Small": "Small",
+        "Medium": "Medium",
+        "Large": "Large"
+      }
+    },
+    {
+      "Type": "PreviewImageViewBoxModes",
+      "Class": "Enum",
+      "DisplayName": "PreviewImageViewBoxModes",
+      "Values": {
+        "FromAsset": 0,
+        "Custom": 1
+      },
+      "DisplayNames": {
+        "FromAsset": "FromAsset",
+        "Custom": "Custom"
+      }
+    },
+    {
+      "Type": "FlowFragment",
+      "Class": "FlowFragment",
+      "DisplayName": "FlowFragment",
+      "Properties": [
+        {
+          "Property": "Attachments",
+          "Type": "Array",
+          "ItemType": "Id"
+        },
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "Dialogue",
+      "Class": "Dialogue",
+      "DisplayName": "Dialogue",
+      "Properties": [
+        {
+          "Property": "Attachments",
+          "Type": "Array",
+          "ItemType": "Id"
+        },
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "DialogueFragment",
+      "Class": "DialogueFragment",
+      "DisplayName": "DialogueFragment",
+      "Properties": [
+        {
+          "Property": "MenuText",
+          "Type": "string"
+        },
+        {
+          "Property": "StageDirections",
+          "Type": "string"
+        },
+        {
+          "Property": "Speaker",
+          "Type": "Id"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "PhraseDialogueFragment",
+      "Class": "DialogueFragment",
+      "InheritsFrom": "DialogueFragment",
+      "Template": {
+        "TechnicalName": "PhraseDialogueFragment",
+        "DisplayName": "Фраза",
+        "Features": [
+          {
+            "TechnicalName": "PhraseFeature",
+            "DisplayName": "Фраза",
+            "Properties": [
+              {
+                "Property": "id",
+                "Type": "string",
+                "DisplayName": "Id"
+              },
+              {
+                "Property": "image",
+                "Type": "Id",
+                "DisplayName": "Image"
+              },
+              {
+                "Property": "sfx",
+                "Type": "Id",
+                "DisplayName": "SFX"
+              },
+              {
+                "Property": "music",
+                "Type": "Id",
+                "DisplayName": "Music"
+              },
+              {
+                "Property": "pause",
+                "Type": "Bool",
+                "DisplayName": "Pause"
+              },
+              {
+                "Property": "delay",
+                "Type": "Float",
+                "DisplayName": "Delay"
+              },
+              {
+                "Property": "textColor",
+                "Type": "string",
+                "DisplayName": "TextColor"
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "id",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "False",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "image",
+                "Type": "ReferenceSlot",
+                "AllowedModelTypes": [
+                  "FlowFragment",
+                  "Dialogue",
+                  "DialogueFragment",
+                  "Condition",
+                  "Instruction",
+                  "Hub",
+                  "Jump",
+                  "Entity",
+                  "Location",
+                  "Link",
+                  "Path",
+                  "Spot",
+                  "Zone",
+                  "LocationText",
+                  "LocationImage",
+                  "Document",
+                  "TextObject",
+                  "Journey",
+                  "Asset"
+                ],
+                "PlaceholderValue": "",
+                "AllowedAssetCategories": [
+                  "None",
+                  "Image",
+                  "Video",
+                  "Audio",
+                  "Document",
+                  "Misc",
+                  "All"
+                ],
+                "AllowedModelTemplates": []
+              },
+              {
+                "Property": "sfx",
+                "Type": "ReferenceSlot",
+                "AllowedModelTypes": [
+                  "FlowFragment",
+                  "Dialogue",
+                  "DialogueFragment",
+                  "Condition",
+                  "Instruction",
+                  "Hub",
+                  "Jump",
+                  "Entity",
+                  "Location",
+                  "Link",
+                  "Path",
+                  "Spot",
+                  "Zone",
+                  "LocationText",
+                  "LocationImage",
+                  "Document",
+                  "TextObject",
+                  "Journey",
+                  "Asset"
+                ],
+                "PlaceholderValue": "",
+                "AllowedAssetCategories": [
+                  "None",
+                  "Image",
+                  "Video",
+                  "Audio",
+                  "Document",
+                  "Misc",
+                  "All"
+                ],
+                "AllowedModelTemplates": []
+              },
+              {
+                "Property": "music",
+                "Type": "ReferenceSlot",
+                "AllowedModelTypes": [
+                  "FlowFragment",
+                  "Dialogue",
+                  "DialogueFragment",
+                  "Condition",
+                  "Instruction",
+                  "Hub",
+                  "Jump",
+                  "Entity",
+                  "Location",
+                  "Link",
+                  "Path",
+                  "Spot",
+                  "Zone",
+                  "LocationText",
+                  "LocationImage",
+                  "Document",
+                  "TextObject",
+                  "Journey",
+                  "Asset"
+                ],
+                "PlaceholderValue": "",
+                "AllowedAssetCategories": [
+                  "None",
+                  "Image",
+                  "Video",
+                  "Audio",
+                  "Document",
+                  "Misc",
+                  "All"
+                ],
+                "AllowedModelTemplates": []
+              },
+              {
+                "Property": "pause",
+                "Type": "Boolean",
+                "DisplayAsCombobox": "False"
+              },
+              {
+                "Property": "delay",
+                "Type": "Number",
+                "MinValue": "-3.40282346638529E+38",
+                "MaxValue": "3.40282346638529E+38",
+                "Precision": "0",
+                "MinPrecision": "0",
+                "MaxPrecision": "0",
+                "Unit": null
+              },
+              {
+                "Property": "textColor",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "False",
+                "AllowsLinebreaks": "False"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Hub",
+      "Class": "Hub",
+      "DisplayName": "Hub",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "Comment",
+      "Class": "Comment",
+      "DisplayName": "Comment",
+      "Properties": [
+        {
+          "Property": "CreatedBy",
+          "Type": "string"
+        },
+        {
+          "Property": "CreatedOn",
+          "Type": "DateTime"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Jump",
+      "Class": "Jump",
+      "DisplayName": "Jump",
+      "Properties": [
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "Target",
+          "Type": "Id"
+        },
+        {
+          "Property": "TargetPin",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "Entity",
+      "Class": "Entity",
+      "DisplayName": "Entity",
+      "Properties": [
+        {
+          "Property": "Attachments",
+          "Type": "Array",
+          "ItemType": "Id"
+        },
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "DefaultSupportingCharacterTemplate",
+      "Class": "Entity",
+      "InheritsFrom": "Entity",
+      "Template": {
+        "TechnicalName": "DefaultSupportingCharacterTemplate",
+        "DisplayName": "Шаблон второстепенного персонажа",
+        "Features": [
+          {
+            "TechnicalName": "DefaultBasicCharacterFeature",
+            "DisplayName": "Основные свойства характера",
+            "Properties": [
+              {
+                "Property": "Age",
+                "Type": "Float",
+                "DisplayName": "Возраст"
+              },
+              {
+                "Property": "Species",
+                "Type": "string",
+                "DisplayName": "Вид"
+              },
+              {
+                "Property": "BornIn",
+                "Type": "string",
+                "DisplayName": "Родился в"
+              },
+              {
+                "Property": "Sex",
+                "Type": "Sex",
+                "DisplayName": "Пол"
+              },
+              {
+                "Property": "Occupation",
+                "Type": "string",
+                "DisplayName": "Профессия"
+              },
+              {
+                "Property": "Accent",
+                "Type": "string",
+                "DisplayName": "Голос"
+              },
+              {
+                "Property": "Personality",
+                "Type": "string",
+                "DisplayName": "Личность"
+              },
+              {
+                "Property": "Appearance",
+                "Type": "string",
+                "DisplayName": "Внешний вид"
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Age",
+                "Type": "Number",
+                "MinValue": "-3.40282346638529E+38",
+                "MaxValue": "3.40282346638529E+38",
+                "Precision": "0",
+                "MinPrecision": "0",
+                "MaxPrecision": "0",
+                "Unit": null
+              },
+              {
+                "Property": "Species",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "BornIn",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Sex",
+                "Type": "Enum",
+                "IsLocalized": "True",
+                "SortMode": "BySortIndex"
+              },
+              {
+                "Property": "Occupation",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Accent",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Personality",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              },
+              {
+                "Property": "Appearance",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Type": "DefaultMainCharacterTemplate",
+      "Class": "Entity",
+      "InheritsFrom": "Entity",
+      "Template": {
+        "TechnicalName": "DefaultMainCharacterTemplate",
+        "DisplayName": "Шаблон главного героя",
+        "Features": [
+          {
+            "TechnicalName": "DefaultExtendedCharacterFeature",
+            "DisplayName": "Расширенные свойства характера",
+            "Properties": [
+              {
+                "Property": "Motivation",
+                "Type": "string",
+                "DisplayName": "Цели"
+              },
+              {
+                "Property": "InnerConflict",
+                "Type": "string",
+                "DisplayName": "Внутренний конфликт"
+              },
+              {
+                "Property": "Skills",
+                "Type": "string",
+                "DisplayName": "Навыки"
+              },
+              {
+                "Property": "Fears",
+                "Type": "string",
+                "DisplayName": "Слабые стороны"
+              },
+              {
+                "Property": "Habits",
+                "Type": "string",
+                "DisplayName": "Причуды/Привычки"
+              },
+              {
+                "Property": "FurtherDetails",
+                "Type": "string",
+                "DisplayName": "Дополнительные детали"
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Motivation",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              },
+              {
+                "Property": "InnerConflict",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              },
+              {
+                "Property": "Skills",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              },
+              {
+                "Property": "Fears",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              },
+              {
+                "Property": "Habits",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              },
+              {
+                "Property": "FurtherDetails",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              }
+            ]
+          },
+          {
+            "TechnicalName": "DefaultBasicCharacterFeature",
+            "DisplayName": "Основные свойства характера",
+            "Properties": [
+              {
+                "Property": "Age",
+                "Type": "Float",
+                "DisplayName": "Возраст"
+              },
+              {
+                "Property": "Species",
+                "Type": "string",
+                "DisplayName": "Вид"
+              },
+              {
+                "Property": "BornIn",
+                "Type": "string",
+                "DisplayName": "Родился в"
+              },
+              {
+                "Property": "Sex",
+                "Type": "Sex",
+                "DisplayName": "Пол"
+              },
+              {
+                "Property": "Occupation",
+                "Type": "string",
+                "DisplayName": "Профессия"
+              },
+              {
+                "Property": "Accent",
+                "Type": "string",
+                "DisplayName": "Голос"
+              },
+              {
+                "Property": "Personality",
+                "Type": "string",
+                "DisplayName": "Личность"
+              },
+              {
+                "Property": "Appearance",
+                "Type": "string",
+                "DisplayName": "Внешний вид"
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Age",
+                "Type": "Number",
+                "MinValue": "-3.40282346638529E+38",
+                "MaxValue": "3.40282346638529E+38",
+                "Precision": "0",
+                "MinPrecision": "0",
+                "MaxPrecision": "0",
+                "Unit": null
+              },
+              {
+                "Property": "Species",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "BornIn",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Sex",
+                "Type": "Enum",
+                "IsLocalized": "True",
+                "SortMode": "BySortIndex"
+              },
+              {
+                "Property": "Occupation",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Accent",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "False"
+              },
+              {
+                "Property": "Personality",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              },
+              {
+                "Property": "Appearance",
+                "Type": "Text",
+                "MaxLength": "2048",
+                "PlaceholderValue": "",
+                "IsLocalized": "True",
+                "AllowsLinebreaks": "True"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Location",
+      "Class": "Location",
+      "DisplayName": "Location",
+      "Properties": [
+        {
+          "Property": "Attachments",
+          "Type": "Array",
+          "ItemType": "Id"
+        },
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Spot",
+      "Class": "Spot",
+      "DisplayName": "Spot",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "ShowDisplayName",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "DisplayNameColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "DisplayNameSize",
+          "Type": "int"
+        },
+        {
+          "Property": "OutlineColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "OutlineSize",
+          "Type": "Float"
+        },
+        {
+          "Property": "OutlineStyle",
+          "Type": "OutlineStyle"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Zone",
+      "Class": "Zone",
+      "DisplayName": "Zone",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Vertices",
+          "Type": "Array",
+          "ItemType": "Point"
+        },
+        {
+          "Property": "Transform",
+          "Type": "Transformation"
+        },
+        {
+          "Property": "ShapeType",
+          "Type": "ShapeType"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "OutlineColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "OutlineSize",
+          "Type": "Float"
+        },
+        {
+          "Property": "OutlineStyle",
+          "Type": "OutlineStyle"
+        },
+        {
+          "Property": "ShowDisplayName",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "DisplayNameColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "DisplayNameSize",
+          "Type": "int"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Path",
+      "Class": "Path",
+      "DisplayName": "Path",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Vertices",
+          "Type": "Array",
+          "ItemType": "Point"
+        },
+        {
+          "Property": "Transform",
+          "Type": "Transformation"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "ShowDisplayName",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "DisplayNameColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "DisplayNameSize",
+          "Type": "int"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "OutlineColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "OutlineSize",
+          "Type": "Float"
+        },
+        {
+          "Property": "OutlineStyle",
+          "Type": "OutlineStyle"
+        },
+        {
+          "Property": "StartCap",
+          "Type": "PathCaps"
+        },
+        {
+          "Property": "EndCap",
+          "Type": "PathCaps"
+        },
+        {
+          "Property": "LineWidth",
+          "Type": "Float"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Link",
+      "Class": "Link",
+      "DisplayName": "Link",
+      "Properties": [
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "Target",
+          "Type": "Id"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "ShowDisplayName",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "DisplayNameColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "DisplayNameSize",
+          "Type": "int"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Asset",
+      "Class": "Asset",
+      "DisplayName": "Asset",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Filename",
+          "Type": "string"
+        },
+        {
+          "Property": "OriginalSource",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Condition",
+      "Class": "Condition",
+      "DisplayName": "Condition",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "String"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Expression",
+          "Type": "Script_Condition"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "Instruction",
+      "Class": "Instruction",
+      "DisplayName": "Instruction",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "String"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Expression",
+          "Type": "Script_Instruction"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "LocationText",
+      "Class": "LocationText",
+      "DisplayName": "LocationText",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "String"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Anchors",
+          "Type": "Array",
+          "ItemType": "LocationAnchor"
+        },
+        {
+          "Property": "Vertices",
+          "Type": "Array",
+          "ItemType": "Point"
+        },
+        {
+          "Property": "Transform",
+          "Type": "Transformation"
+        },
+        {
+          "Property": "ShapeType",
+          "Type": "ShapeType"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "OutlineColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "OutlineSize",
+          "Type": "Float"
+        },
+        {
+          "Property": "OutlineStyle",
+          "Type": "OutlineStyle"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "ForcedWidth",
+          "Type": "Float"
+        },
+        {
+          "Property": "ForcedHeight",
+          "Type": "Float"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "LocationImage",
+      "Class": "LocationImage",
+      "DisplayName": "LocationImage",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Anchors",
+          "Type": "Array",
+          "ItemType": "LocationAnchor"
+        },
+        {
+          "Property": "Vertices",
+          "Type": "Array",
+          "ItemType": "Point"
+        },
+        {
+          "Property": "Transform",
+          "Type": "Transformation"
+        },
+        {
+          "Property": "ShapeType",
+          "Type": "ShapeType"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "OutlineColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "OutlineSize",
+          "Type": "Float"
+        },
+        {
+          "Property": "OutlineStyle",
+          "Type": "OutlineStyle"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "ClipRect",
+          "Type": "Rect"
+        },
+        {
+          "Property": "ImageOpacity",
+          "Type": "Float"
+        },
+        {
+          "Property": "ImageAsset",
+          "Type": "Id"
+        },
+        {
+          "Property": "CachedImageWidth",
+          "Type": "int"
+        },
+        {
+          "Property": "CachedImageHeight",
+          "Type": "int"
+        },
+        {
+          "Property": "ShowDisplayName",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "DisplayNameColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "DisplayNameSize",
+          "Type": "int"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Document",
+      "Class": "Document",
+      "DisplayName": "Document",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "TextObject",
+      "Class": "TextObject",
+      "DisplayName": "TextObject",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Attachments",
+          "Type": "Array",
+          "ItemType": "Id"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "UserFolder",
+      "Class": "UserFolder",
+      "DisplayName": "UserFolder",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        }
+      ]
+    }
+  ],
+  "Packages": [
+    {
+      "Name": "All objects",
+      "Description": "Exports all objects & types of the project",
+      "IsDefaultPackage": true,
+      "Models": [
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_70EF9493",
+            "Id": "0x10000000000010F",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Глава 1",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Интро",
+            "ExternalId": "",
+            "Position": {
+              "x": 325.0,
+              "y": 300.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 375.0,
+              "h": 275.0
+            },
+            "ShortId": 1894749331,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000112",
+                "Owner": "0x10000000000010F"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000113",
+                "Owner": "0x10000000000010F",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000117",
+                    "Target": "0x100000000000115"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_F85538F3",
+            "Id": "0x100000000000115",
+            "Parent": "0x300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Глава 2",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Испытание",
+            "ExternalId": "",
+            "Position": {
+              "x": 775.0,
+              "y": 300.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 375.0,
+              "h": 275.0
+            },
+            "ShortId": 4166334707,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000117",
+                "Owner": "0x100000000000115",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000149",
+                    "Target": "0x100000000000146"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000014E",
+                    "Target": "0x10000000000014C"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000118",
+                "Owner": "0x100000000000115"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_36140D8F",
+            "Id": "0x100000000000123",
+            "Parent": "0x10000000000010F",
+            "Attachments": [],
+            "DisplayName": "Интро",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Вступительная часть",
+            "ExternalId": "",
+            "Position": {
+              "x": -333.0,
+              "y": 100.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 341.0,
+              "h": 200.0
+            },
+            "ShortId": 907283855,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000126",
+                "Owner": "0x100000000000123"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "Game.intro = true",
+                "Id": "0x100000000000127",
+                "Owner": "0x100000000000123",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000020E",
+                    "Target": "0x1000000000001E9"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_4876943C",
+            "Id": "0x100000000000129",
+            "Parent": "0x10000000000010F",
+            "Attachments": [],
+            "DisplayName": "Добрая команда",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Приветствия доброй команды",
+            "ExternalId": "",
+            "Position": {
+              "x": 517.0,
+              "y": 100.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 341.0,
+              "h": 200.0
+            },
+            "ShortId": 1215730748,
+            "InputPins": [
+              {
+                "Text": "Game.side == 0",
+                "Id": "0x10000000000012B",
+                "Owner": "0x100000000000129",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001B4",
+                    "Target": "0x1000000000001B1"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000012C",
+                "Owner": "0x100000000000129",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000013E",
+                    "Target": "0x10000000000013C"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001E2",
+                    "Target": "0x1000000000001E0"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_05C0CDBF",
+            "Id": "0x10000000000012F",
+            "Parent": "0x10000000000010F",
+            "Attachments": [],
+            "DisplayName": "Злая команда",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Приветствия злой команды",
+            "ExternalId": "",
+            "Position": {
+              "x": 517.0,
+              "y": 425.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 341.0,
+              "h": 200.0
+            },
+            "ShortId": 96521663,
+            "InputPins": [
+              {
+                "Text": "Game.side == 1",
+                "Id": "0x100000000000131",
+                "Owner": "0x10000000000012F",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000236",
+                    "Target": "0x100000000000234"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000132",
+                "Owner": "0x10000000000012F",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000013E",
+                    "Target": "0x10000000000013C"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001E2",
+                    "Target": "0x1000000000001E0"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_ADB6EF3C",
+            "Id": "0x10000000000013C",
+            "Parent": "0x10000000000010F",
+            "Attachments": [],
+            "DisplayName": "Рассказ лора",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Лор",
+            "ExternalId": "",
+            "Position": {
+              "x": 942.0,
+              "y": 100.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 341.0,
+              "h": 200.0
+            },
+            "ShortId": 2914447164,
+            "InputPins": [
+              {
+                "Text": "Game.likes == true",
+                "Id": "0x10000000000013E",
+                "Owner": "0x10000000000013C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000260",
+                    "Target": "0x10000000000025D"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000013F",
+                "Owner": "0x10000000000013C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000113",
+                    "Target": "0x10000000000010F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_9C0A1C3C",
+            "Id": "0x1000000000001E0",
+            "Parent": "0x10000000000010F",
+            "Attachments": [],
+            "DisplayName": "Перенаправление",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Перенаправление",
+            "ExternalId": "",
+            "Position": {
+              "x": 942.0,
+              "y": 425.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 341.0,
+              "h": 200.0
+            },
+            "ShortId": 2617908284,
+            "InputPins": [
+              {
+                "Text": "Game.likes == false",
+                "Id": "0x1000000000001E2",
+                "Owner": "0x1000000000001E0",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000228",
+                    "Target": "0x100000000000225"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001E3",
+                "Owner": "0x1000000000001E0",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000020E",
+                    "Target": "0x1000000000001E9"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_8F3582B8",
+            "Id": "0x1000000000001E9",
+            "Parent": "0x10000000000010F",
+            "Attachments": [],
+            "DisplayName": "Выбор",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Выбор команды",
+            "ExternalId": "",
+            "Position": {
+              "x": 67.0,
+              "y": 100.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 341.0,
+              "h": 200.0
+            },
+            "ShortId": 2402648760,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000020E",
+                "Owner": "0x1000000000001E9",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000218",
+                    "Target": "0x100000000000216"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000020F",
+                "Owner": "0x1000000000001E9",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000012B",
+                    "Target": "0x100000000000129"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000131",
+                    "Target": "0x10000000000012F"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_0E666D5E",
+            "Id": "0x100000000000146",
+            "Parent": "0x100000000000115",
+            "Attachments": [],
+            "DisplayName": "Больше о добре",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Дополнительные сведения о команде добра",
+            "ExternalId": "",
+            "Position": {
+              "x": 242.0,
+              "y": 250.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 241593694,
+            "InputPins": [
+              {
+                "Text": "Game.side == 0",
+                "Id": "0x100000000000149",
+                "Owner": "0x100000000000146",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000028B",
+                    "Target": "0x100000000000288"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000014A",
+                "Owner": "0x100000000000146",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000015D",
+                    "Target": "0x10000000000015B"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_7F78B29C",
+            "Id": "0x10000000000014C",
+            "Parent": "0x100000000000115",
+            "Attachments": [],
+            "DisplayName": "Больше о зле",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Дополнительные сведения о команде зла",
+            "ExternalId": "",
+            "Position": {
+              "x": 242.0,
+              "y": 525.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 2138616476,
+            "InputPins": [
+              {
+                "Text": "Game.side == 1",
+                "Id": "0x10000000000014E",
+                "Owner": "0x10000000000014C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000299",
+                    "Target": "0x100000000000297"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000014F",
+                "Owner": "0x10000000000014C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000015D",
+                    "Target": "0x10000000000015B"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_DB337784",
+            "Id": "0x10000000000015B",
+            "Parent": "0x100000000000115",
+            "Attachments": [],
+            "DisplayName": "Квест Испытание 1",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Рассказ о квесте",
+            "ExternalId": "",
+            "Position": {
+              "x": 642.0,
+              "y": 375.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 3677583236,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000015D",
+                "Owner": "0x10000000000015B",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002A8",
+                    "Target": "0x1000000000002A6"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000015E",
+                "Owner": "0x10000000000015B",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000166",
+                    "Target": "0x100000000000164"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_FCB0A5A7",
+            "Id": "0x100000000000164",
+            "Parent": "0x100000000000115",
+            "Attachments": [],
+            "DisplayName": "Квест Испытание 2",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Сам квест",
+            "ExternalId": "",
+            "Position": {
+              "x": 992.0,
+              "y": 375.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 4239435175,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000166",
+                "Owner": "0x100000000000164",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002C8",
+                    "Target": "0x1000000000002C5"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000167",
+                "Owner": "0x100000000000164",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000016E",
+                    "Target": "0x10000000000016C"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_782E63FA",
+            "Id": "0x10000000000016C",
+            "Parent": "0x100000000000115",
+            "Attachments": [],
+            "DisplayName": "Квест Испытание 3",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Результаты квеста",
+            "ExternalId": "",
+            "Position": {
+              "x": 1342.0,
+              "y": 375.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 2016306170,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000016E",
+                "Owner": "0x10000000000016C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002E9",
+                    "Target": "0x1000000000002E6"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002ED",
+                    "Target": "0x1000000000002EB"
+                  }
+                ]
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000016F",
+                "Owner": "0x10000000000016C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000118",
+                    "Target": "0x100000000000115"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_ED580A21",
+            "Id": "0x100000000000175",
+            "Parent": "0x100000000000123",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Эй, игрок!",
+            "ExternalId": "",
+            "Position": {
+              "x": 125.0,
+              "y": 350.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3981969953,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000178",
+                "Owner": "0x100000000000175"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000179",
+                "Owner": "0x100000000000175",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000184",
+                    "Target": "0x100000000000182"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": false,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_EE067002",
+            "Id": "0x100000000000182",
+            "Parent": "0x100000000000123",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Не хочешь поиграть?",
+            "ExternalId": "",
+            "Position": {
+              "x": 400.0,
+              "y": 350.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3993399298,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000184",
+                "Owner": "0x100000000000182"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000185",
+                "Owner": "0x100000000000182",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000018A",
+                    "Target": "0x100000000000188"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_171EF656",
+            "Id": "0x100000000000188",
+            "Parent": "0x100000000000123",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Будет интересно! Ну как, ты согласен?",
+            "ExternalId": "",
+            "Position": {
+              "x": 675.0,
+              "y": 350.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 387905110,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000018A",
+                "Owner": "0x100000000000188"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000018B",
+                "Owner": "0x100000000000188",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "Хорошо, сыграем",
+                    "TargetPin": "0x100000000000190",
+                    "Target": "0x10000000000018E"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "Я не буду с тобой играть",
+                    "TargetPin": "0x100000000000196",
+                    "Target": "0x100000000000194"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_D5417C69",
+            "Id": "0x10000000000018E",
+            "Parent": "0x100000000000123",
+            "MenuText": "Хорошо, сыграем",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Отлично! Тебе нужно выбрать команду. Добро или зло? Пудумай хорошо, от этого многое зависит.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1050.0,
+              "y": 200.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3577838697,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000190",
+                "Owner": "0x10000000000018E"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000191",
+                "Owner": "0x10000000000018E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000127",
+                    "Target": "0x100000000000123"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_EA291FC5",
+            "Id": "0x100000000000194",
+            "Parent": "0x100000000000123",
+            "MenuText": "Я не буду с тобой играть",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Хорошо. Прощай!",
+            "ExternalId": "",
+            "Position": {
+              "x": 1050.0,
+              "y": 500.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3928563653,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000196",
+                "Owner": "0x100000000000194"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000197",
+                "Owner": "0x100000000000194"
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_C996CCD3",
+            "Id": "0x1000000000001B1",
+            "Parent": "0x100000000000129",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Привет, игрок, я Бог – капитан команды добра. Я буду твоим наставником в этой игре.",
+            "ExternalId": "",
+            "Position": {
+              "x": 375.0,
+              "y": 325.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3382103251,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001B4",
+                "Owner": "0x1000000000001B1"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001B5",
+                "Owner": "0x1000000000001B1",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001B9",
+                    "Target": "0x1000000000001B7"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_EAA79C3F",
+            "Id": "0x1000000000001B7",
+            "Parent": "0x100000000000129",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "В команде добра много сахара и развлечений, поэтому тебе должно быть здесь уютно.",
+            "ExternalId": "",
+            "Position": {
+              "x": 675.0,
+              "y": 325.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3936853055,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001B9",
+                "Owner": "0x1000000000001B7"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001BA",
+                "Owner": "0x1000000000001B7",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "Какие правила игры?",
+                    "TargetPin": "0x1000000000001C0",
+                    "Target": "0x1000000000001BE"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_6E35FDF3",
+            "Id": "0x1000000000001BE",
+            "Parent": "0x100000000000129",
+            "MenuText": "Какие правила игры?",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Мы боремся со злом. Всё просто! Чем больше зла ты победишь, тем больше сахара и веселья получишь!",
+            "ExternalId": "",
+            "Position": {
+              "x": 1125.0,
+              "y": 325.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1849032179,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001C0",
+                "Owner": "0x1000000000001BE"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001C1",
+                "Owner": "0x1000000000001BE",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001C8",
+                    "Target": "0x1000000000001C6"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_5B9B950F",
+            "Id": "0x1000000000001C6",
+            "Parent": "0x100000000000129",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Ну что, тебе нравится у нас?",
+            "ExternalId": "",
+            "Position": {
+              "x": 1450.0,
+              "y": 325.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1536922895,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001C8",
+                "Owner": "0x1000000000001C6"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001C9",
+                "Owner": "0x1000000000001C6",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "Да, нравится",
+                    "TargetPin": "0x1000000000001CF",
+                    "Target": "0x1000000000001CD"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "Нет, хочу сменить команду",
+                    "TargetPin": "0x1000000000001D5",
+                    "Target": "0x1000000000001D3"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_5111DB4A",
+            "Id": "0x1000000000001CD",
+            "Parent": "0x100000000000129",
+            "MenuText": "Да, нравится",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Прекрfсно. Продолжим.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1875.0,
+              "y": 200.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1360124746,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001CF",
+                "Owner": "0x1000000000001CD"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "Game.likes = true",
+                "Id": "0x1000000000001D0",
+                "Owner": "0x1000000000001CD",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000012C",
+                    "Target": "0x100000000000129"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_84F53838",
+            "Id": "0x1000000000001D3",
+            "Parent": "0x100000000000129",
+            "MenuText": "Нет, хочу сменить команду",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Хорошо! Всего тебе хорошего!",
+            "ExternalId": "",
+            "Position": {
+              "x": 1875.0,
+              "y": 450.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2230663224,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001D5",
+                "Owner": "0x1000000000001D3"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "Game.likes = false",
+                "Id": "0x1000000000001D6",
+                "Owner": "0x1000000000001D3",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000012C",
+                    "Target": "0x100000000000129"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_438185FA",
+            "Id": "0x10000000000022E",
+            "Parent": "0x10000000000012F",
+            "MenuText": "Нет, хочу сменить команду",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Ну и проваливай отсюда. И передавай Богу привет.",
+            "ExternalId": "",
+            "Position": {
+              "x": 2016.0,
+              "y": 633.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1132561914,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000230",
+                "Owner": "0x10000000000022E"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "Game.likes = false",
+                "Id": "0x100000000000231",
+                "Owner": "0x10000000000022E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000132",
+                    "Target": "0x10000000000012F"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_805D83E5",
+            "Id": "0x100000000000234",
+            "Parent": "0x10000000000012F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Привет, игрок, я Дьявол– капитан команды добра. Я буду твоим наставником в этой игре.",
+            "ExternalId": "",
+            "Position": {
+              "x": 516.0,
+              "y": 508.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2153612261,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000236",
+                "Owner": "0x100000000000234"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000237",
+                "Owner": "0x100000000000234",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000024E",
+                    "Target": "0x10000000000024C"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_AC47DD50",
+            "Id": "0x10000000000023A",
+            "Parent": "0x10000000000012F",
+            "MenuText": "Да, нравится",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Прекрасно. Продолжим.",
+            "ExternalId": "",
+            "Position": {
+              "x": 2016.0,
+              "y": 383.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2890390864,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000023C",
+                "Owner": "0x10000000000023A"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "Game.likes = true",
+                "Id": "0x10000000000023D",
+                "Owner": "0x10000000000023A",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000132",
+                    "Target": "0x10000000000012F"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_85BE196D",
+            "Id": "0x100000000000240",
+            "Parent": "0x10000000000012F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Тебе же это нравится? Не зря ведь ты выбрал команду зла.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1591.0,
+              "y": 508.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2243828077,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000242",
+                "Owner": "0x100000000000240"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000243",
+                "Owner": "0x100000000000240",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "Да, нравится",
+                    "TargetPin": "0x10000000000023C",
+                    "Target": "0x10000000000023A"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "Нет, хочу сменить команду",
+                    "TargetPin": "0x100000000000230",
+                    "Target": "0x10000000000022E"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_AE5199F8",
+            "Id": "0x100000000000246",
+            "Parent": "0x10000000000012F",
+            "MenuText": "Какие правила игры?",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Мы разрушаем мир. Всё просто! Просто разрушай все, что видишь.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1266.0,
+              "y": 508.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2924583416,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000248",
+                "Owner": "0x100000000000246"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000249",
+                "Owner": "0x100000000000246",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000242",
+                    "Target": "0x100000000000240"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_8BD5BF36",
+            "Id": "0x10000000000024C",
+            "Parent": "0x10000000000012F",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "В команде зла много издевательств и грехов, поэтому тебе должно быть здесь отлично!",
+            "ExternalId": "",
+            "Position": {
+              "x": 816.0,
+              "y": 508.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2346041142,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000024E",
+                "Owner": "0x10000000000024C"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000024F",
+                "Owner": "0x10000000000024C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "Какие правила игры?",
+                    "TargetPin": "0x100000000000248",
+                    "Target": "0x100000000000246"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_1FD047C5",
+            "Id": "0x10000000000025D",
+            "Parent": "0x10000000000013C",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "В этом мире все не так-то просто.",
+            "ExternalId": "",
+            "Position": {
+              "x": -300.0,
+              "y": 375.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 533743557,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000260",
+                "Owner": "0x10000000000025D"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000261",
+                "Owner": "0x10000000000025D",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000264",
+                    "Target": "0x100000000000262"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_7850B2DD",
+            "Id": "0x100000000000262",
+            "Parent": "0x10000000000013C",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Добро и зло противостоят друг другу уже очень давно – миллион лет!!!",
+            "ExternalId": "",
+            "Position": {
+              "x": -25.0,
+              "y": 375.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2018554589,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000264",
+                "Owner": "0x100000000000262"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000265",
+                "Owner": "0x100000000000262",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000269",
+                    "Target": "0x100000000000267"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_C90E102B",
+            "Id": "0x100000000000267",
+            "Parent": "0x10000000000013C",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Бог и дьявол – родные братья, но общего имеют мало. Бог живет на небесах, а Дьявол – под землей.",
+            "ExternalId": "",
+            "Position": {
+              "x": 250.0,
+              "y": 375.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3373142059,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000269",
+                "Owner": "0x100000000000267"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000026A",
+                "Owner": "0x100000000000267",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000026E",
+                    "Target": "0x10000000000026C"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_A00EB161",
+            "Id": "0x10000000000026C",
+            "Parent": "0x10000000000013C",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Все люди, примкнувшие к какой-либо команде, обязаны пройти испытание, чтобы доказать, что они нужны их стороне.",
+            "ExternalId": "",
+            "Position": {
+              "x": 525.0,
+              "y": 375.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2685317473,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000026E",
+                "Owner": "0x10000000000026C"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000026F",
+                "Owner": "0x10000000000026C",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000273",
+                    "Target": "0x100000000000271"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_32B5025B",
+            "Id": "0x100000000000271",
+            "Parent": "0x10000000000013C",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Ты узнаешь о своем испытании довольно скоро.",
+            "ExternalId": "",
+            "Position": {
+              "x": 800.0,
+              "y": 375.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 850723419,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000273",
+                "Owner": "0x100000000000271"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000274",
+                "Owner": "0x100000000000271",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000278",
+                    "Target": "0x100000000000276"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_826C8055",
+            "Id": "0x100000000000276",
+            "Parent": "0x10000000000013C",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Можешь идти, хорошей игры, игрок!",
+            "ExternalId": "",
+            "Position": {
+              "x": 1075.0,
+              "y": 375.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2188148821,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000278",
+                "Owner": "0x100000000000276"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000279",
+                "Owner": "0x100000000000276",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000013F",
+                    "Target": "0x10000000000013C"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_08481BA5",
+            "Id": "0x100000000000225",
+            "Parent": "0x1000000000001E0",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Не нравится команда? Выбери еще раз!",
+            "ExternalId": "",
+            "Position": {
+              "x": 500.0,
+              "y": 350.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 138943397,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000228",
+                "Owner": "0x100000000000225"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000229",
+                "Owner": "0x100000000000225",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000001E3",
+                    "Target": "0x1000000000001E0"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_2F61CC44",
+            "Id": "0x1000000000001A5",
+            "Parent": "0x1000000000001E9",
+            "MenuText": "Выбираю зло",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Зло! Прекрасный выбор. Готовься к игре!",
+            "ExternalId": "",
+            "Position": {
+              "x": 850.0,
+              "y": 750.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 794938436,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001A7",
+                "Owner": "0x1000000000001A5"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "Game.side = 1",
+                "Id": "0x1000000000001A8",
+                "Owner": "0x1000000000001A5",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000020F",
+                    "Target": "0x1000000000001E9"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_35E66E17",
+            "Id": "0x10000000000019F",
+            "Parent": "0x1000000000001E9",
+            "MenuText": "Выбираю добро",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Добро! Отличный выбор. Будет весело!",
+            "ExternalId": "",
+            "Position": {
+              "x": 850.0,
+              "y": 500.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 904293911,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000001A1",
+                "Owner": "0x10000000000019F"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "Game.side = 0",
+                "Id": "0x1000000000001A2",
+                "Owner": "0x10000000000019F",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000020F",
+                    "Target": "0x1000000000001E9"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_D56C951B",
+            "Id": "0x100000000000216",
+            "Parent": "0x1000000000001E9",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Ну, выбирай!",
+            "ExternalId": "",
+            "Position": {
+              "x": 350.0,
+              "y": 625.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3580663067,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000218",
+                "Owner": "0x100000000000216"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000219",
+                "Owner": "0x100000000000216",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "Выбираю добро",
+                    "TargetPin": "0x1000000000001A1",
+                    "Target": "0x10000000000019F"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "Выбираю зло",
+                    "TargetPin": "0x1000000000001A7",
+                    "Target": "0x1000000000001A5"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_0F479BF0",
+            "Id": "0x100000000000288",
+            "Parent": "0x100000000000146",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Расскажу тебе еще кое-что.",
+            "ExternalId": "",
+            "Position": {
+              "x": 175.0,
+              "y": 350.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 256351216,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000028B",
+                "Owner": "0x100000000000288"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000028C",
+                "Owner": "0x100000000000288",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000028F",
+                    "Target": "0x10000000000028D"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_D65DC183",
+            "Id": "0x10000000000028D",
+            "Parent": "0x100000000000146",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Хотя нет, потом.",
+            "ExternalId": "",
+            "Position": {
+              "x": 450.0,
+              "y": 350.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3596468611,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000028F",
+                "Owner": "0x10000000000028D"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000290",
+                "Owner": "0x10000000000028D",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000014A",
+                    "Target": "0x100000000000146"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_2FFEACB1",
+            "Id": "0x100000000000297",
+            "Parent": "0x10000000000014C",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Расскажу тебе еще кое-что.",
+            "ExternalId": "",
+            "Position": {
+              "x": 344.0,
+              "y": 366.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 805219505,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x100000000000299",
+                "Owner": "0x100000000000297"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000029A",
+                "Owner": "0x100000000000297",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000029F",
+                    "Target": "0x10000000000029D"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_4C9F22A4",
+            "Id": "0x10000000000029D",
+            "Parent": "0x10000000000014C",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Я Дьявол!",
+            "ExternalId": "",
+            "Position": {
+              "x": 619.0,
+              "y": 366.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1285497508,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000029F",
+                "Owner": "0x10000000000029D"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002A0",
+                "Owner": "0x10000000000029D",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000014F",
+                    "Target": "0x10000000000014C"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_642EDA9E",
+            "Id": "0x1000000000002A6",
+            "Parent": "0x10000000000015B",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Теперь расскажу о квесте.",
+            "ExternalId": "",
+            "Position": {
+              "x": 225.0,
+              "y": 350.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1680792222,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002A8",
+                "Owner": "0x1000000000002A6"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002A9",
+                "Owner": "0x1000000000002A6",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002AE",
+                    "Target": "0x1000000000002AC"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_AAFA583C",
+            "Id": "0x1000000000002AC",
+            "Parent": "0x10000000000015B",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Это математика, готов?",
+            "ExternalId": "",
+            "Position": {
+              "x": 500.0,
+              "y": 350.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2868533308,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002AE",
+                "Owner": "0x1000000000002AC"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002AF",
+                "Owner": "0x1000000000002AC",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "Да",
+                    "TargetPin": "0x1000000000002B5",
+                    "Target": "0x1000000000002B3"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "Нет",
+                    "TargetPin": "0x1000000000002BB",
+                    "Target": "0x1000000000002B9"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_DFD5A03B",
+            "Id": "0x1000000000002B3",
+            "Parent": "0x10000000000015B",
+            "MenuText": "Да",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Отлично!",
+            "ExternalId": "",
+            "Position": {
+              "x": 825.0,
+              "y": 200.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3755319355,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002B5",
+                "Owner": "0x1000000000002B3"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002B6",
+                "Owner": "0x1000000000002B3",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000015E",
+                    "Target": "0x10000000000015B"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_6CCCA14E",
+            "Id": "0x1000000000002B9",
+            "Parent": "0x10000000000015B",
+            "MenuText": "Нет",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Мне все равно.",
+            "ExternalId": "",
+            "Position": {
+              "x": 825.0,
+              "y": 475.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1825349966,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002BB",
+                "Owner": "0x1000000000002B9"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002BC",
+                "Owner": "0x1000000000002B9",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000015E",
+                    "Target": "0x10000000000015B"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_85F60F11",
+            "Id": "0x1000000000002C5",
+            "Parent": "0x100000000000164",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Сколько будет 2*2?",
+            "ExternalId": "",
+            "Position": {
+              "x": 400.0,
+              "y": 325.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2247495441,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002C8",
+                "Owner": "0x1000000000002C5"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002C9",
+                "Owner": "0x1000000000002C5",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x1000000000002CC",
+                    "Target": "0x1000000000002CA"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_60F4B920",
+            "Id": "0x1000000000002CA",
+            "Parent": "0x100000000000164",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Подумай хорошенько.",
+            "ExternalId": "",
+            "Position": {
+              "x": 700.0,
+              "y": 325.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1626650912,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002CC",
+                "Owner": "0x1000000000002CA"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002CD",
+                "Owner": "0x1000000000002CA",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "4",
+                    "TargetPin": "0x1000000000002D5",
+                    "Target": "0x1000000000002D3"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "Сдаюсь",
+                    "TargetPin": "0x1000000000002DB",
+                    "Target": "0x1000000000002D9"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_F8DC63E4",
+            "Id": "0x1000000000002D3",
+            "Parent": "0x100000000000164",
+            "MenuText": "4",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Правильный ответ! Ты готов принять участие в игре! Она начнется через полчаса.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1050.0,
+              "y": 175.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 4175193060,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002D5",
+                "Owner": "0x1000000000002D3"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "Game.answer = true",
+                "Id": "0x1000000000002D6",
+                "Owner": "0x1000000000002D3",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000167",
+                    "Target": "0x100000000000164"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 30.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_9EAA8BAB",
+            "Id": "0x1000000000002D9",
+            "Parent": "0x100000000000164",
+            "MenuText": "Сдаюсь",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Ты недостоин.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1050.0,
+              "y": 425.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2661977003,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002DB",
+                "Owner": "0x1000000000002D9"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "Game.answer = false",
+                "Id": "0x1000000000002DC",
+                "Owner": "0x1000000000002D9",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x100000000000167",
+                    "Target": "0x100000000000164"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_A36678C9",
+            "Id": "0x1000000000002E6",
+            "Parent": "0x10000000000016C",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Ты заслужил похвалу. Она будет с минуты на минуту. Подожди.",
+            "ExternalId": "",
+            "Position": {
+              "x": 250.0,
+              "y": 125.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2741401801,
+            "InputPins": [
+              {
+                "Text": "Game.answer == true",
+                "Id": "0x1000000000002E9",
+                "Owner": "0x1000000000002E6"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002EA",
+                "Owner": "0x1000000000002E6",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000066D",
+                    "Target": "0x10000000000066B"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 1.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_FCA03243",
+            "Id": "0x1000000000002EB",
+            "Parent": "0x10000000000016C",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Ты недостоин быть в своей команде. Игра окончена.",
+            "ExternalId": "",
+            "Position": {
+              "x": 250.0,
+              "y": 375.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 4238357059,
+            "InputPins": [
+              {
+                "Text": "Game.answer == false",
+                "Id": "0x1000000000002ED",
+                "Owner": "0x1000000000002EB"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x1000000000002EE",
+                "Owner": "0x1000000000002EB"
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "PhraseDialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_3A23FEC9",
+            "Id": "0x10000000000066B",
+            "Parent": "0x10000000000016C",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x3000000F071A5F6",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Вот и она!",
+            "ExternalId": "",
+            "Position": {
+              "x": 675.0,
+              "y": 250.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 975437513,
+            "InputPins": [
+              {
+                "Text": "Game.answer == false",
+                "Id": "0x10000000000066D",
+                "Owner": "0x10000000000066B"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x10000000000066E",
+                "Owner": "0x10000000000066B",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x10000000000016F",
+                    "Target": "0x10000000000016C"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "PhraseFeature": {
+              "id": "",
+              "image": "0x0",
+              "sfx": "0x0",
+              "music": "0x0",
+              "pause": null,
+              "delay": 0.0,
+              "textColor": "(255, 255, 255)"
+            }
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_506C6EA3",
+            "Id": "0x100000000000105",
+            "Parent": "0x30000004C3DAF54",
+            "DisplayName": "Изображения",
+            "ExternalId": "",
+            "ShortId": 1349283491
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_E0092460",
+            "Id": "0x100000000000107",
+            "Parent": "0x30000004C3DAF54",
+            "DisplayName": "Видео",
+            "ExternalId": "",
+            "ShortId": 3758695520
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_37D69D95",
+            "Id": "0x100000000000109",
+            "Parent": "0x30000004C3DAF54",
+            "DisplayName": "Аудио",
+            "ExternalId": "",
+            "ShortId": 936811925
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_DDF8507D",
+            "Id": "0x10000000000010B",
+            "Parent": "0x30000004C3DAF54",
+            "DisplayName": "Документы",
+            "ExternalId": "",
+            "ShortId": 3724038269
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_54931066",
+            "Id": "0x10000000000010D",
+            "Parent": "0x30000004C3DAF54",
+            "DisplayName": "Разное",
+            "ExternalId": "",
+            "ShortId": 1418924134
+          }
+        }
+      ]
+    }
+  ],
+  "ScriptMethods": [],
+  "Hierarchy": {
+    "Id": "0x100000000000001",
+    "TechnicalName": "Test",
+    "Type": "Project",
+    "Children": [
+      {
+        "Id": "0x300000043CE43F7",
+        "TechnicalName": "Flow",
+        "Type": "Flow",
+        "Children": [
+          {
+            "Id": "0x10000000000010F",
+            "TechnicalName": "FFr_70EF9493",
+            "Type": "FlowFragment",
+            "Children": [
+              {
+                "Id": "0x100000000000123",
+                "TechnicalName": "Dlg_36140D8F",
+                "Type": "Dialogue",
+                "Children": [
+                  {
+                    "Id": "0x100000000000175",
+                    "TechnicalName": "DFr_ED580A21",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x100000000000182",
+                    "TechnicalName": "DFr_EE067002",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x100000000000188",
+                    "TechnicalName": "DFr_171EF656",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x10000000000018E",
+                    "TechnicalName": "DFr_D5417C69",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x100000000000194",
+                    "TechnicalName": "DFr_EA291FC5",
+                    "Type": "DialogueFragment"
+                  }
+                ]
+              },
+              {
+                "Id": "0x100000000000129",
+                "TechnicalName": "Dlg_4876943C",
+                "Type": "Dialogue",
+                "Children": [
+                  {
+                    "Id": "0x1000000000001B1",
+                    "TechnicalName": "DFr_C996CCD3",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x1000000000001B7",
+                    "TechnicalName": "DFr_EAA79C3F",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x1000000000001BE",
+                    "TechnicalName": "DFr_6E35FDF3",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x1000000000001C6",
+                    "TechnicalName": "DFr_5B9B950F",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x1000000000001CD",
+                    "TechnicalName": "DFr_5111DB4A",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x1000000000001D3",
+                    "TechnicalName": "DFr_84F53838",
+                    "Type": "DialogueFragment"
+                  }
+                ]
+              },
+              {
+                "Id": "0x10000000000012F",
+                "TechnicalName": "Dlg_05C0CDBF",
+                "Type": "Dialogue",
+                "Children": [
+                  {
+                    "Id": "0x10000000000022E",
+                    "TechnicalName": "DFr_438185FA",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x100000000000234",
+                    "TechnicalName": "DFr_805D83E5",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x10000000000023A",
+                    "TechnicalName": "DFr_AC47DD50",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x100000000000240",
+                    "TechnicalName": "DFr_85BE196D",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x100000000000246",
+                    "TechnicalName": "DFr_AE5199F8",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x10000000000024C",
+                    "TechnicalName": "DFr_8BD5BF36",
+                    "Type": "DialogueFragment"
+                  }
+                ]
+              },
+              {
+                "Id": "0x10000000000013C",
+                "TechnicalName": "Dlg_ADB6EF3C",
+                "Type": "Dialogue",
+                "Children": [
+                  {
+                    "Id": "0x10000000000025D",
+                    "TechnicalName": "DFr_1FD047C5",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x100000000000262",
+                    "TechnicalName": "DFr_7850B2DD",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x100000000000267",
+                    "TechnicalName": "DFr_C90E102B",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x10000000000026C",
+                    "TechnicalName": "DFr_A00EB161",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x100000000000271",
+                    "TechnicalName": "DFr_32B5025B",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x100000000000276",
+                    "TechnicalName": "DFr_826C8055",
+                    "Type": "DialogueFragment"
+                  }
+                ]
+              },
+              {
+                "Id": "0x1000000000001E0",
+                "TechnicalName": "Dlg_9C0A1C3C",
+                "Type": "Dialogue",
+                "Children": [
+                  {
+                    "Id": "0x100000000000225",
+                    "TechnicalName": "DFr_08481BA5",
+                    "Type": "DialogueFragment"
+                  }
+                ]
+              },
+              {
+                "Id": "0x1000000000001E9",
+                "TechnicalName": "Dlg_8F3582B8",
+                "Type": "Dialogue",
+                "Children": [
+                  {
+                    "Id": "0x1000000000001A5",
+                    "TechnicalName": "DFr_2F61CC44",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x10000000000019F",
+                    "TechnicalName": "DFr_35E66E17",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x100000000000216",
+                    "TechnicalName": "DFr_D56C951B",
+                    "Type": "DialogueFragment"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Id": "0x100000000000115",
+            "TechnicalName": "FFr_F85538F3",
+            "Type": "FlowFragment",
+            "Children": [
+              {
+                "Id": "0x100000000000146",
+                "TechnicalName": "Dlg_0E666D5E",
+                "Type": "Dialogue",
+                "Children": [
+                  {
+                    "Id": "0x100000000000288",
+                    "TechnicalName": "DFr_0F479BF0",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x10000000000028D",
+                    "TechnicalName": "DFr_D65DC183",
+                    "Type": "DialogueFragment"
+                  }
+                ]
+              },
+              {
+                "Id": "0x10000000000014C",
+                "TechnicalName": "Dlg_7F78B29C",
+                "Type": "Dialogue",
+                "Children": [
+                  {
+                    "Id": "0x100000000000297",
+                    "TechnicalName": "DFr_2FFEACB1",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x10000000000029D",
+                    "TechnicalName": "DFr_4C9F22A4",
+                    "Type": "DialogueFragment"
+                  }
+                ]
+              },
+              {
+                "Id": "0x10000000000015B",
+                "TechnicalName": "Dlg_DB337784",
+                "Type": "Dialogue",
+                "Children": [
+                  {
+                    "Id": "0x1000000000002A6",
+                    "TechnicalName": "DFr_642EDA9E",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x1000000000002AC",
+                    "TechnicalName": "DFr_AAFA583C",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x1000000000002B3",
+                    "TechnicalName": "DFr_DFD5A03B",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x1000000000002B9",
+                    "TechnicalName": "DFr_6CCCA14E",
+                    "Type": "DialogueFragment"
+                  }
+                ]
+              },
+              {
+                "Id": "0x100000000000164",
+                "TechnicalName": "Dlg_FCB0A5A7",
+                "Type": "Dialogue",
+                "Children": [
+                  {
+                    "Id": "0x1000000000002C5",
+                    "TechnicalName": "DFr_85F60F11",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x1000000000002CA",
+                    "TechnicalName": "DFr_60F4B920",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x1000000000002D3",
+                    "TechnicalName": "DFr_F8DC63E4",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x1000000000002D9",
+                    "TechnicalName": "DFr_9EAA8BAB",
+                    "Type": "DialogueFragment"
+                  }
+                ]
+              },
+              {
+                "Id": "0x10000000000016C",
+                "TechnicalName": "Dlg_782E63FA",
+                "Type": "Dialogue",
+                "Children": [
+                  {
+                    "Id": "0x1000000000002E6",
+                    "TechnicalName": "DFr_A36678C9",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x1000000000002EB",
+                    "TechnicalName": "DFr_FCA03243",
+                    "Type": "DialogueFragment"
+                  },
+                  {
+                    "Id": "0x10000000000066B",
+                    "TechnicalName": "DFr_3A23FEC9",
+                    "Type": "DialogueFragment"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Id": "0x30000003140D3AC",
+        "TechnicalName": "Locations",
+        "Type": "Locations"
+      },
+      {
+        "Id": "0x3000000AC61A2B3",
+        "TechnicalName": "Entities",
+        "Type": "Entities"
+      },
+      {
+        "Id": "0x30000004C3DAF54",
+        "TechnicalName": "Assets",
+        "Type": "Assets",
+        "Children": [
+          {
+            "Id": "0x100000000000105",
+            "TechnicalName": "Ufo_506C6EA3",
+            "Type": "AssetsUserFolder"
+          },
+          {
+            "Id": "0x100000000000107",
+            "TechnicalName": "Ufo_E0092460",
+            "Type": "AssetsUserFolder"
+          },
+          {
+            "Id": "0x100000000000109",
+            "TechnicalName": "Ufo_37D69D95",
+            "Type": "AssetsUserFolder"
+          },
+          {
+            "Id": "0x10000000000010B",
+            "TechnicalName": "Ufo_DDF8507D",
+            "Type": "AssetsUserFolder"
+          },
+          {
+            "Id": "0x10000000000010D",
+            "TechnicalName": "Ufo_54931066",
+            "Type": "AssetsUserFolder"
+          }
+        ]
+      },
+      {
+        "Id": "0x300000029CF057C",
+        "TechnicalName": "TemplateDesign",
+        "Type": "TemplateDesign",
+        "Children": [
+          {
+            "Id": "0x3000000D2404DC0",
+            "TechnicalName": "Features",
+            "Type": "Features",
+            "Children": [
+              {
+                "Id": "0x100000000000008",
+                "TechnicalName": "DefaultBasicCharacterFeature",
+                "Type": "Feature"
+              },
+              {
+                "Id": "0x100000000000043",
+                "TechnicalName": "DefaultExtendedCharacterFeature",
+                "Type": "Feature"
+              },
+              {
+                "Id": "0x100000000000304",
+                "TechnicalName": "PhraseFeature",
+                "Type": "Feature"
+              }
+            ]
+          },
+          {
+            "Id": "0x30000009AF68DCD",
+            "TechnicalName": "Templates",
+            "Type": "Templates",
+            "Children": [
+              {
+                "Id": "0x300000078B45A71",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder",
+                "Children": [
+                  {
+                    "Id": "0x10000000000006B",
+                    "TechnicalName": "DefaultSupportingCharacterTemplate",
+                    "Type": "Template"
+                  },
+                  {
+                    "Id": "0x100000000000095",
+                    "TechnicalName": "DefaultMainCharacterTemplate",
+                    "Type": "Template"
+                  }
+                ]
+              },
+              {
+                "Id": "0x30000006D1BC275",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000030B5ACF",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder",
+                "Children": [
+                  {
+                    "Id": "0x100000000000300",
+                    "TechnicalName": "PhraseDialogueFragment",
+                    "Type": "Template"
+                  }
+                ]
+              },
+              {
+                "Id": "0x30000008DD5C0F2",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x300000092CF598E",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x300000030635118",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000A715C057",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x30000005314E813",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x30000004264B29C",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000FB371D5C",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x300000013DF3A1A",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000ADA9FA17",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000ECC00F83",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000F514339C",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x300000096812FC1",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000CC5A07F0",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000DCC67F9D",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x3000000BA022E2F",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              }
+            ]
+          },
+          {
+            "Id": "0x30000002C0951AE",
+            "TechnicalName": "PropertyTemplates",
+            "Type": "TraitTemplatesFolder",
+            "Children": [
+              {
+                "Id": "0x30000006E2C178B",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              },
+              {
+                "Id": "0x3000000BB12F1B8",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              },
+              {
+                "Id": "0x30000006F82D78E",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              },
+              {
+                "Id": "0x300000037DCE3F0",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              },
+              {
+                "Id": "0x30000003630A240",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              },
+              {
+                "Id": "0x3000000D745C449",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Id": "0x30000002B4F4C54",
+        "TechnicalName": "GlobalVariables",
+        "Type": "GlobalVariables",
+        "Children": [
+          {
+            "Id": "0x100000000000158",
+            "TechnicalName": "",
+            "Type": "VariableSet"
+          }
+        ]
+      },
+      {
+        "Id": "0x3000000103AA2F0",
+        "TechnicalName": "Documents",
+        "Type": "Documents"
+      },
+      {
+        "Id": "0x3000000236F7272",
+        "TechnicalName": "Journeys",
+        "Type": "Journeys"
+      },
+      {
+        "Id": "0x3000000F917511B",
+        "TechnicalName": "ProjectSettings",
+        "Type": "ProjectSettingsFolder",
+        "Children": [
+          {
+            "Id": "0x1000000000000FA",
+            "TechnicalName": "",
+            "Type": "ProjectSettingsGeneral"
+          },
+          {
+            "Id": "0x1000000000000FB",
+            "TechnicalName": "",
+            "Type": "ProjectSettingsJourneys"
+          },
+          {
+            "Id": "0x1000000000000FC",
+            "TechnicalName": "",
+            "Type": "ProjectSettingsLocation"
+          },
+          {
+            "Id": "0x1000000000000FD",
+            "TechnicalName": "",
+            "Type": "ProjectSettingsFlow"
+          }
+        ]
+      },
+      {
+        "Id": "0x3000000173C3392",
+        "TechnicalName": "",
+        "Type": "RuleSets",
+        "Children": [
+          {
+            "Id": "0x1000000000000FF",
+            "TechnicalName": "",
+            "Type": "RuleSet",
+            "Children": [
+              {
+                "Id": "0x100000000000102",
+                "TechnicalName": "",
+                "Type": "RuleSetPackage"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -10,5 +10,6 @@ public class PrefabManager : MonoBehaviour
     public GameObject buttonGroup;
     public Button buttonPrefab;
     public GameObject endgamePrefab;
+    public Slider sliderPrefab;
     public Transform content;
 }

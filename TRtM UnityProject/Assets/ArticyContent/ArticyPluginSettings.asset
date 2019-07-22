@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1760449090, guid: 538242286e35fb84f8e90dd86ba08b80, type: 3}
+  m_Name: ArticyPluginSettings
+  m_EditorClassIdentifier: 
+  mUsedImportFile: Assets/test.articyu3d
+  mUsedLocalizationPath: 
+  mLastUsedObjectDefinitionHash: 498B542231707E2BC7AB17488C2D49E2B3FF31AD7E4123A5A50872D157C86B3D
+  mLastUsedScriptFragmentsHash: 3244358420
+  mLastUsedPackagesHash: 282370559
+  mLastUsedPackagesCount: 1
+  mLastBuildCode: 1
+  mAwaitingModelImport: 0
+  mAwaitingFragmentsImport: 0
+  mSCMIgnoreState: 0
+  mShowObjectsInDatabaseView: 1
+  mNewVersionAvailable: 0
+  mLastPluginVersion: 2.0.3.34886
+  mUseExperimentalRetinaMode: 0
+  mUpdateHierarchyInOptimizedPath: 0
+  mAutomaticallyTriggerImport: 1
+  mUseAssemblyDefinitions: 0
+  mGenerateStringInterpolationCode: 1
+  mIsUsingLocalization: 0
