@@ -15,25 +15,29 @@ using System.Threading.Tasks;
 using System;
 using UnityEngine.UI;
 
+public enum TextSpeed { SLOWEST = 5, SLOW = 4, NORMAL = 3, FAST = 2, FASTEST = 1 }
+
 public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 {
-    public enum TextSpeed { SLOWEST = 5, SLOW = 4, NORMAL = 3, FAST = 2, FASTEST = 1 }
+    private Spawner _spawner;
 
-    /* --------------------------------*/
-
-    PhraseDialogueFragment current;
-    float currentSpeed;
+    private void Awake()
+    {
+        _spawner = FindObjectOfType<Spawner>();
+    }
+    private PhraseDialogueFragment _current;
+    private float _currentSpeed;
 
     public TextSpeed textSpeed;
 
     public void OnFlowPlayerPaused(IFlowObject aObject)
     {
-        current = GetComponent<ArticyFlowPlayer>().PausedOn as PhraseDialogueFragment;
-        currentSpeed = (int)textSpeed * 0.02f;
+        _current = GetComponent<ArticyFlowPlayer>().PausedOn as PhraseDialogueFragment;
+        _currentSpeed = (int)textSpeed * 0.02f;
 
         if (aObject is PhraseDialogueFragment df)
         {
-            Spawner.SpawnPhrase(df.Text);
+            _spawner.SpawnPhrase(df.Text);
         }
     }
     public void OnBranchesUpdated(IList<Branch> aBranches)
@@ -46,13 +50,13 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
                 candidates.Add(branch);
         }
 
-        StartCoroutine(Continue(candidates, current.Text.Length * currentSpeed));
+        StartCoroutine(Continue(candidates, _current.Text.Length * _currentSpeed));
     }
 
     IEnumerator Continue(List<Branch> candidates, float time)
     {
         yield return new WaitForSeconds(time);
-        float delay = current.Template.PhraseFeature.delay;
+        float delay = _current.Template.PhraseFeature.delay;
         if (delay > 0)
             StartCoroutine(HandleDelayedPlay(candidates, delay));
         else
@@ -68,16 +72,16 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             var target = candidates[0].Target as PhraseDialogueFragment;
             print(target.TechnicalName);
             if (target.MenuText.Length > 0)
-                Spawner.SpawnChoice(candidates);
+                _spawner.SpawnChoice(candidates);
             else
                 GetComponent<ArticyFlowPlayer>().Play(candidates[0]);
         } else
-            Spawner.SpawnChoice(candidates);
+            _spawner.SpawnChoice(candidates);
     }
 
     IEnumerator HandleDelayedPlay(List<Branch> candidates, float delay)
     {
-        Slider slider = Spawner.SpawnSlider(DateTime.Now, delay);
+        Slider slider = _spawner.SpawnSlider(DateTime.Now, delay);
         print(slider.value);
         while (slider.value < 1)
         {

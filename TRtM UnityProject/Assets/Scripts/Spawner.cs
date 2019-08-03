@@ -9,18 +9,23 @@ using UnityEngine.UI;
 
 public class Spawner : MonoBehaviour
 {
-    public static PrefabManager pm = FindObjectOfType<PrefabManager>();
+    private PrefabManager _prefabManager;
+    private ArticyFlowPlayer _flowPlayer;
 
-    public static ArticyFlowPlayer flowPlayer = FindObjectOfType<ArticyFlowPlayer>();
-    
-    public static GameObject SpawnPhrase(string text)
+    private void Awake()
     {
-        GameObject p = Instantiate(pm.phrasePrefab, pm.content);
+        _prefabManager = FindObjectOfType<PrefabManager>();
+        _flowPlayer = FindObjectOfType<ArticyFlowPlayer>();
+    }
+
+    public GameObject SpawnPhrase(string text)
+    {
+        GameObject p = Instantiate(_prefabManager.phrasePrefab, _prefabManager.content);
         p.GetComponentInChildren<Text>().text = text;
         return p;
     }
 
-    public static GameObject SpawnChoice(List<Branch> candidates)
+    public GameObject SpawnChoice(List<Branch> candidates)
     {
         GameObject bg = SpawnButtonGroup();
         foreach (Branch p in candidates)
@@ -31,25 +36,24 @@ public class Spawner : MonoBehaviour
         return bg;
     }
 
-    public static GameObject SpawnButtonGroup()
+    public GameObject SpawnButtonGroup()
     {
-        GameObject bg = Instantiate(pm.buttonGroup, pm.content);
+        GameObject bg = Instantiate(_prefabManager.buttonGroup, _prefabManager.content);
         return bg;
     }
 
-    public static Button SpawnButton(Transform buttonGroup, string text, Branch exit)
+    public Button SpawnButton(Transform buttonGroup, string text, Branch exit)
     {
-        Button b = Instantiate(pm.buttonPrefab, buttonGroup);
+        Button b = Instantiate(_prefabManager.buttonPrefab, buttonGroup);
         b.GetComponentInChildren<Text>().text = text;
-        b.onClick.AddListener(() => flowPlayer.Play(exit));
+        b.onClick.AddListener(() => _flowPlayer.Play(exit));
         return b;
     }
 
-    public static Slider SpawnSlider(DateTime start, double delay)
+    public Slider SpawnSlider(DateTime start, double delay)
     {
-        DateTime end = start.AddMinutes(delay);
         double timePassed = (DateTime.Now - start).TotalMinutes;
-        Slider s = Instantiate(pm.sliderPrefab, pm.content);
+        Slider s = Instantiate(_prefabManager.sliderPrefab, _prefabManager.content);
         s.value = (float)(timePassed / delay);
         return s;
     }

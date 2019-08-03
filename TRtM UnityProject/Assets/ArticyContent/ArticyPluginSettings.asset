@@ -23,7 +23,7 @@ MonoBehaviour:
   mAwaitingFragmentsImport: 0
   mSCMIgnoreState: 0
   mShowObjectsInDatabaseView: 1
-  mNewVersionAvailable: 0
+  mNewVersionAvailable: 1
   mLastPluginVersion: 2.0.3.34886
   mUseExperimentalRetinaMode: 0
   mUpdateHierarchyInOptimizedPath: 0
