@@ -14,8 +14,8 @@ public class Spawner : MonoBehaviour
 
     private void Awake()
     {
-        _prefabManager = FindObjectOfType<PrefabManager>();
-        _flowPlayer = FindObjectOfType<ArticyFlowPlayer>();
+        _prefabManager = GetComponent<PrefabManager>();
+        _flowPlayer = GetComponent<ArticyFlowPlayer>();
     }
 
     public GameObject SpawnPhrase(string text)

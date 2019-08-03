@@ -23,8 +23,9 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     private void Awake()
     {
-        _spawner = FindObjectOfType<Spawner>();
+        _spawner = GetComponent<Spawner>();
     }
+
     private PhraseDialogueFragment _current;
     private float _currentSpeed;
 
@@ -50,46 +51,44 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
                 candidates.Add(branch);
         }
 
-        StartCoroutine(Continue(candidates, _current.Text.Length * _currentSpeed));
+        StartCoroutine(WaitTimeAndCheckForDelay(candidates, _current.Text.Length * _currentSpeed));
     }
 
-    IEnumerator Continue(List<Branch> candidates, float time)
+    private IEnumerator WaitTimeAndCheckForDelay(List<Branch> candidates, float time)
     {
         yield return new WaitForSeconds(time);
+
         float delay = _current.Template.PhraseFeature.delay;
         if (delay > 0)
-            StartCoroutine(HandleDelayedPlay(candidates, delay));
+            StartCoroutine(PlayWithDelay(candidates, delay));
         else
-            HandlePlay(candidates);
+            Play(candidates);
     }
 
-    void HandlePlay(List<Branch> candidates)
+    private void Play(List<Branch> candidates)
     {
         if (candidates.Count == 0)
-            print("Error");
+            Debug.LogError("No candidates found.");
         else if (candidates.Count == 1)
         {
-            var target = candidates[0].Target as PhraseDialogueFragment;
-            print(target.TechnicalName);
-            if (target.MenuText.Length > 0)
-                _spawner.SpawnChoice(candidates);
-            else
+            //var target = candidates[0].Target as PhraseDialogueFragment;
+            //if (target.MenuText.Length > 0)
+            //    _spawner.SpawnChoice(candidates);
+            //else
                 GetComponent<ArticyFlowPlayer>().Play(candidates[0]);
         } else
             _spawner.SpawnChoice(candidates);
     }
 
-    IEnumerator HandleDelayedPlay(List<Branch> candidates, float delay)
+    private IEnumerator PlayWithDelay(List<Branch> candidates, float delay)
     {
         Slider slider = _spawner.SpawnSlider(DateTime.Now, delay);
-        print(slider.value);
         while (slider.value < 1)
         {
-            print("debug");
             slider.value += Time.deltaTime / delay;
             yield return null;
         }
         Destroy(slider.gameObject);
-        HandlePlay(candidates);
+        Play(candidates);
     }
 }
