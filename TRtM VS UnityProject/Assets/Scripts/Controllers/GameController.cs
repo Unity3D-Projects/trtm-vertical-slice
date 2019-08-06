@@ -19,15 +19,23 @@ public enum TextSpeed { SLOWEST = 5, SLOW = 4, NORMAL = 3, FAST = 2, FASTEST = 1
 
 public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 {
+    // controls spawner, flow player, save system, 
     private Spawner _spawner;
+    private ArticyFlowPlayer _player;
+
+    private PhraseDialogueFragment _current;
+    public PhraseDialogueFragment Current {
+        get { return _current;
+        }
+    }
+
+    private float _currentSpeed;
 
     private void Awake()
     {
         _spawner = GetComponent<Spawner>();
+        _player = GetComponent<ArticyFlowPlayer>();
     }
-
-    private PhraseDialogueFragment _current;
-    private float _currentSpeed;
 
     public TextSpeed textSpeed;
 
@@ -51,6 +59,11 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
                 candidates.Add(branch);
         }
 
+        if (candidates.Count > 1)
+        {
+            // save new state before choice
+        }
+
         StartCoroutine(WaitTimeAndCheckForDelay(candidates, _current.Text.Length * _currentSpeed));
     }
 
@@ -71,11 +84,10 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             Debug.LogError("No candidates found.");
         else if (candidates.Count == 1)
         {
-            //var target = candidates[0].Target as PhraseDialogueFragment;
-            //if (target.MenuText.Length > 0)
-            //    _spawner.SpawnChoice(candidates);
-            //else
-                GetComponent<ArticyFlowPlayer>().Play(candidates[0]);
+            var technicalName = ((PhraseDialogueFragment)candidates[0].Target).TechnicalName;
+            // set <execute tn="technicalName" />
+
+            _player.Play(candidates[0]);
         } else
             _spawner.SpawnChoice(candidates);
     }

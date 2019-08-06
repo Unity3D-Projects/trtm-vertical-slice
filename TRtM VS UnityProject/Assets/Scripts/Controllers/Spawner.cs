@@ -11,17 +11,20 @@ public class Spawner : MonoBehaviour
 {
     private PrefabManager _prefabManager;
     private ArticyFlowPlayer _flowPlayer;
+    private SaveSystem _saveSystem;
 
     private void Awake()
     {
         _prefabManager = GetComponent<PrefabManager>();
         _flowPlayer = GetComponent<ArticyFlowPlayer>();
+        _saveSystem = GetComponent<SaveSystem>();
     }
 
     public GameObject SpawnPhrase(string text)
     {
         GameObject p = Instantiate(_prefabManager.phrasePrefab, _prefabManager.content);
         p.GetComponentInChildren<Text>().text = text;
+        _saveSystem.LogEvent(Const.EventType.PhraseEvent, text);
         return p;
     }
 
@@ -32,6 +35,7 @@ public class Spawner : MonoBehaviour
         {
             IObjectWithMenuText target = p.Target as IObjectWithMenuText;
             SpawnButton(bg.transform, target.MenuText, p);
+            _saveSystem.LogEvent(Const.EventType.ButtonEvent, target.MenuText);
         }
         return bg;
     }
@@ -55,6 +59,7 @@ public class Spawner : MonoBehaviour
         double timePassed = (DateTime.Now - start).TotalMinutes;
         Slider s = Instantiate(_prefabManager.sliderPrefab, _prefabManager.content);
         s.value = (float)(timePassed / delay);
+        // log slider or something
         return s;
     }
 }
