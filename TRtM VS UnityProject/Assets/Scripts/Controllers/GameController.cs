@@ -26,8 +26,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     private PhraseDialogueFragment _current;
     public PhraseDialogueFragment Current {
-        get { return _current;
-        }
+        get { return _current; }
     }
 
     private float _currentSpeed;
@@ -54,13 +53,17 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     public void OnBranchesUpdated(IList<Branch> aBranches)
     {
         List<Branch> candidates = new List<Branch>();
-
         foreach (Branch branch in aBranches)
         {
             if (branch.IsValid)
                 candidates.Add(branch);
         }
 
+        if (candidates.Count == 1)
+        {
+            _saveSystem.LogEvent(Const.EventType.PhraseEvent, Current.Text);
+            _saveSystem.UpdateExecuteElement(((PhraseDialogueFragment)candidates[0].Target).TechnicalName);
+        }
         if (candidates.Count > 1)
             _saveSystem.LogState();
 
@@ -84,9 +87,6 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             Debug.LogError("No candidates found.");
         else if (candidates.Count == 1)
         {
-            var technicalName = ((PhraseDialogueFragment)candidates[0].Target).TechnicalName;
-            // set <execute tn="technicalName" />
-
             _player.Play(candidates[0]);
         } else
             _spawner.SpawnChoice(candidates);

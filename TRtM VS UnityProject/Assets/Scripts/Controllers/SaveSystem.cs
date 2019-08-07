@@ -7,11 +7,11 @@ using UnityEngine;
 
 public class SaveSystem : MonoBehaviour
 {
-
     private GameController _controller;
     private ArticyFlowPlayer _player;
     private XDocument _xDoc;
 
+    private string _currentBlockName { get { return _controller.Current.TechnicalName; } }
 
     private string _savePath = Const.SavePath;
     public bool HasFile { get; set; } = false;
@@ -40,35 +40,45 @@ public class SaveSystem : MonoBehaviour
 
     public void LogState()
     {
-        var current = _controller.Current;
         var states = _xDoc.Element("save").Element("states");
-        states.Add(GetGlobalVarsXml("state"), new XAttribute("id", current.TechnicalName));
+        states.Add(GetGlobalVarsXml("state"), new XAttribute("id", _currentBlockName));
 
-        Debug.Log($"State {current.TechnicalName} was saved");
+        Debug.Log($"State {_currentBlockName} was saved");
+    }
+
+    // удалять и GetGlobalVarsXml()? или переписывать каждую
+    public void UpdateGlobalVars()
+    {
+        var xmlVars = _xDoc.Element("save").Element("vars");
+        foreach(XElement var in xmlVars.Descendants())
+        {
+            var.Value = _player.globalVariables.Variables[var.Attribute("name").Value].ToString();
+        }
+    }
+
+    public void UpdateExecuteElement(string technicalName)
+    {
+        _xDoc.Element("execute").Attribute("tn").Value = technicalName;
     }
 
     public void CreateNewSaveFile(string path)
     {
-        var current = _controller.Current;
         _xDoc = new XDocument(_savePath);
 
         _xDoc.Add(new XElement("save",
                   new XElement("log"),
-                  new XElement("vars"),
-                  new XElement("execute", new XAttribute("tn", current.TechnicalName)),
+                  new XElement("execute", new XAttribute("tn", _currentBlockName)),
                   new XElement("states")));
-        
-        var xmlVars = _xDoc.Element("save").Element("vars");
-        GetGlobalVarsXml("vars");
+        _xDoc.Add(GetGlobalVarsXml("vars"));
     }
 
     XElement GetGlobalVarsXml(string elementName)
     {
-        XElement state = new XElement("state");
+        XElement varsContainer = new XElement(elementName);
         foreach (var v in _player.globalVariables.Variables)
         {
-            state.Add(new XElement("var", new XAttribute("name", v.Key), v.Value));
+            varsContainer.Add(new XElement("var", new XAttribute("name", v.Key), v.Value));
         }
-        return state;
+        return varsContainer;
     }
 }
