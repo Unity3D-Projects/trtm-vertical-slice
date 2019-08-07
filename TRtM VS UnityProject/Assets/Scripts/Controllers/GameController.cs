@@ -22,6 +22,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     // controls spawner, flow player, save system, 
     private Spawner _spawner;
     private ArticyFlowPlayer _player;
+    private SaveSystem _saveSystem;
 
     private PhraseDialogueFragment _current;
     public PhraseDialogueFragment Current {
@@ -35,6 +36,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     {
         _spawner = GetComponent<Spawner>();
         _player = GetComponent<ArticyFlowPlayer>();
+        _saveSystem = GetComponent<SaveSystem>();
     }
 
     public TextSpeed textSpeed;
@@ -60,9 +62,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         }
 
         if (candidates.Count > 1)
-        {
-            // save new state before choice
-        }
+            _saveSystem.LogState();
 
         StartCoroutine(WaitTimeAndCheckForDelay(candidates, _current.Text.Length * _currentSpeed));
     }
