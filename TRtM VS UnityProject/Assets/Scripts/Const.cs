@@ -6,6 +6,12 @@
     {
         public const string PhraseEvent = "phrase";
         public const string ButtonEvent = "button";
-        // slider
+    }
+
+    public class XmlAliases
+    {
+        public const string ExecuteId = "tname";
+        public const string ExecuteTime = "at";
+
     }
 }

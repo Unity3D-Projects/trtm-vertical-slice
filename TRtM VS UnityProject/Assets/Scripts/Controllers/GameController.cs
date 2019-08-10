@@ -38,6 +38,18 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         _current = ScriptableObject.CreateInstance("PhraseDialogueFragment") as PhraseDialogueFragment;
     }
 
+    private void Start()
+    {
+        if (!_saveSystem.SaveFileExists())
+        {
+            _saveSystem.CreateNewSaveFile();
+        }
+        else
+        {
+            _saveSystem.LoadGame();
+        }
+    }
+
     public TextSpeed textSpeed;
 
     public void OnFlowPlayerPaused(IFlowObject aObject)
@@ -94,6 +106,10 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     private IEnumerator PlayWithDelay(List<Branch> candidates, float delay)
     {
+        DateTime endTime = DateTime.Now.AddMinutes(delay);
+
+
+
         Slider slider = _spawner.SpawnSlider(DateTime.Now, delay);
         while (slider.value < 1)
         {
@@ -102,5 +118,14 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         }
         Destroy(slider.gameObject);
         Play(candidates);
+    }
+
+    public IEnumerator PlayWithDelay(IArticyObject aObject, DateTime executeTime)
+    {
+        while (DateTime.Now <= executeTime)
+        {
+            yield return null;
+        }
+        _player.StartOn = aObject;
     }
 }

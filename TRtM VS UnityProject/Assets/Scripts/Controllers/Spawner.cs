@@ -52,13 +52,12 @@ public class Spawner : MonoBehaviour
         b.GetComponentInChildren<Text>().text = text;
         b.onClick.AddListener(() =>
         {
-            //  Логаем и фразу и все кнопки только по нажатию на одну из них
             _saveSystem.LogEvent(Const.EventType.PhraseEvent, _controller.Current.Text);
             foreach (Branch branch in candidates)
             {
                 _saveSystem.LogEvent(Const.EventType.ButtonEvent, ((PhraseDialogueFragment)branch.Target).MenuText);
             }
-            _saveSystem.UpdateGlobalVars();
+            _saveSystem.LogGlobalVars();
 
             _flowPlayer.Play(exit);
         });
@@ -73,4 +72,9 @@ public class Spawner : MonoBehaviour
         // log slider or something
         return s;
     }
+
+    //public GameObject SpawnDelayBlock()
+    //{
+
+    //}
 }

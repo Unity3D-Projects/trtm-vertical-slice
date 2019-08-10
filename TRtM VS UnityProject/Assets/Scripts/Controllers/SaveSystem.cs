@@ -1,7 +1,12 @@
-﻿using Articy.Unity;
+﻿using Articy.Test.GlobalVariables;
+using Articy.Unity.Utils;
+using Articy.Unity;
+using System;
+using System.IO;
 using System.Linq;
 using System.Xml.Linq;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class SaveSystem : MonoBehaviour
 {
@@ -9,7 +14,6 @@ public class SaveSystem : MonoBehaviour
     private ArticyFlowPlayer _player;
 
     private string _savePath = Const.SavePath;
-    public bool HasFile { get; set; } = false;
 
     private void Awake()
     {
@@ -17,14 +21,42 @@ public class SaveSystem : MonoBehaviour
         _player = GetComponent<ArticyFlowPlayer>();
     }
 
-    private void Start()
+    public bool SaveFileExists()
     {
-        // is there any save at path?
-
-        CreateNewSaveFile();
+        return File.Exists(_savePath);
     }
 
-    // get type of event
+    public void LoadGame()
+    {
+        XDocument xDoc = XDocument.Load(_savePath);
+        // отрисовать лог
+
+        // инициализировать глобальные переменные
+        Dictionary<string, object> loadedVars = new Dictionary<string, object>();
+        var xVars = xDoc.Element("save").Element("vars").Descendants();
+        foreach (var xVar in xVars)
+        {
+            var varName = xVar.Attribute("name").Value;
+            var varValue = xVar.Value;
+            loadedVars.Add(varName, varValue);
+        }
+        ArticyDatabase.DefaultGlobalVariables.Variables = loadedVars;
+        // проверить дилей
+        var executeElement = xDoc
+            .Element("save")
+            .Element("execute");
+        var startOn = ArticyDatabase.GetObject(executeElement.Attribute(Const.XmlAliases.ExecuteId).Value);
+
+        var xExecuteTime = executeElement.Attribute(Const.XmlAliases.ExecuteTime);
+        if (xExecuteTime != null)
+        {
+            DateTime executeTime = DateTime.Parse(xExecuteTime.Value);
+            StartCoroutine(_controller.PlayWithDelay(startOn, executeTime));
+        } else
+            _player.StartOn = startOn;
+    }
+
+    // get type of event ???
     public void LogEvent(string eventType, string content)
     {
         XDocument xDoc = XDocument.Load(_savePath);
@@ -77,13 +109,13 @@ public class SaveSystem : MonoBehaviour
     }
 
     // TODO менять значение той переменной, которая поменялась
-    public void UpdateGlobalVars()
+    public void LogGlobalVars()
     {
         XDocument xDoc = XDocument.Load(_savePath);
-        var xmlVars = xDoc.Element("save").Element("vars");
-        foreach(XElement var in xmlVars.Descendants())
+        var xmlVars = xDoc.Element("save").Element("vars").Descendants();
+        foreach(XElement xVar in xmlVars)
         {
-            var.Value = _player.globalVariables.Variables[var.Attribute("name").Value].ToString();
+            xVar.Value = _player.globalVariables.Variables[xVar.Attribute("name").Value].ToString();
         }
         xDoc.Save(_savePath);
     }
@@ -91,7 +123,7 @@ public class SaveSystem : MonoBehaviour
     public void UpdateExecuteElement(string technicalName)
     {
         XDocument xDoc = XDocument.Load(_savePath);
-        xDoc.Element("save").Element("execute").Attribute("tn").Value = technicalName;
+        xDoc.Element("save").Element("execute").Attribute(Const.XmlAliases.ExecuteId).Value = technicalName;
         xDoc.Save(_savePath);
     }
 
@@ -100,7 +132,7 @@ public class SaveSystem : MonoBehaviour
         XDocument xDoc = new XDocument(
                     new XElement("save",
                         new XElement("log"),
-                        new XElement("execute", new XAttribute("tn", "null")),
+                        new XElement("execute", new XAttribute(Const.XmlAliases.ExecuteId, _player.StartOn.TechnicalName)),
                         new XElement("states")));
         xDoc.Element("save").Add(GetGlobalVars("vars"));
         
