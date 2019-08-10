@@ -1,7 +1,5 @@
 ﻿using Articy.Unity;
-using System.Collections;
-using System.Collections.Generic;
-using System.IO;
+using System.Linq;
 using System.Xml.Linq;
 using UnityEngine;
 
@@ -9,9 +7,6 @@ public class SaveSystem : MonoBehaviour
 {
     private GameController _controller;
     private ArticyFlowPlayer _player;
-    private XDocument _xDoc;
-
-    private string _currentBlockName { get { return _controller.Current.TechnicalName; } }
 
     private string _savePath = Const.SavePath;
     public bool HasFile { get; set; } = false;
@@ -25,54 +20,94 @@ public class SaveSystem : MonoBehaviour
     private void Start()
     {
         // is there any save at path?
-        if (!HasFile)
-        {
-            CreateNewSaveFile(_savePath);
-        }
+
+        CreateNewSaveFile();
     }
 
     // get type of event
     public void LogEvent(string eventType, string content)
     {
-        // check if xdoc is instantiated
-        _xDoc?.Element("save").Element("log").Add(new XElement(eventType, content));
+        XDocument xDoc = XDocument.Load(_savePath);
+        xDoc.Element("save").Element("log").Add(new XElement(eventType, content));
+        xDoc.Save(_savePath);
     }
 
     public void LogState()
     {
-        var states = _xDoc.Element("save").Element("states");
-        states.Add(GetGlobalVarsXml("state"), new XAttribute("id", _currentBlockName));
-
-        Debug.Log($"State {_currentBlockName} was saved");
+        XDocument xDoc = XDocument.Load(_savePath);
+        var currentBlockName = _controller.Current.TechnicalName;
+        var states = xDoc.Element("save").Element("states");
+        if (!HasState(states, currentBlockName, out XElement stateWithThisName))
+        {
+            CreateState(states, currentBlockName);
+            xDoc.Save(_savePath);
+            Debug.Log($"State {currentBlockName} was saved");
+        } else
+        {
+            Debug.LogWarning("Overwriting the state...");
+            OverwriteState(stateWithThisName);
+        }
     }
 
-    // удалять и GetGlobalVarsXml()? или переписывать каждую
+    private bool HasState(XElement statesElement, string stateName, out XElement stateWithThisName)
+    {
+        stateWithThisName = statesElement
+            .Elements()
+            .Where(e => e.FirstAttribute.Value == stateName)
+            .FirstOrDefault();
+
+        if (stateWithThisName != null)
+        {
+            Debug.LogWarning($"{GetType().Name}: Document already has a state called \"{stateName}\".");
+            return true;
+        }
+        else return false;
+    }
+
+    private void CreateState(XElement states, string id)
+    {
+        var state = GetGlobalVars("state");
+        state.Add(new XAttribute("id", id));
+        states.Add(state);
+    }
+    private void OverwriteState(XElement state)
+    {
+        state.Descendants().Remove();
+        state.Add(GetGlobalVars("state"));
+    }
+
+    // TODO менять значение той переменной, которая поменялась
     public void UpdateGlobalVars()
     {
-        var xmlVars = _xDoc.Element("save").Element("vars");
+        XDocument xDoc = XDocument.Load(_savePath);
+        var xmlVars = xDoc.Element("save").Element("vars");
         foreach(XElement var in xmlVars.Descendants())
         {
             var.Value = _player.globalVariables.Variables[var.Attribute("name").Value].ToString();
         }
+        xDoc.Save(_savePath);
     }
 
     public void UpdateExecuteElement(string technicalName)
     {
-        _xDoc.Element("execute").Attribute("tn").Value = technicalName;
+        XDocument xDoc = XDocument.Load(_savePath);
+        xDoc.Element("save").Element("execute").Attribute("tn").Value = technicalName;
+        xDoc.Save(_savePath);
     }
 
-    public void CreateNewSaveFile(string path)
+    public void CreateNewSaveFile()
     {
-        _xDoc = new XDocument(_savePath);
-
-        _xDoc.Add(new XElement("save",
-                  new XElement("log"),
-                  new XElement("execute", new XAttribute("tn", _currentBlockName)),
-                  new XElement("states")));
-        _xDoc.Add(GetGlobalVarsXml("vars"));
+        XDocument xDoc = new XDocument(
+                    new XElement("save",
+                        new XElement("log"),
+                        new XElement("execute", new XAttribute("tn", "null")),
+                        new XElement("states")));
+        xDoc.Element("save").Add(GetGlobalVars("vars"));
+        
+        xDoc.Save(_savePath);
     }
 
-    XElement GetGlobalVarsXml(string elementName)
+    private XElement GetGlobalVars(string elementName)
     {
         XElement varsContainer = new XElement(elementName);
         foreach (var v in _player.globalVariables.Variables)

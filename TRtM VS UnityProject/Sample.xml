@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<file>
+  <name filename="sample" />
+  <date modified="2019-08-09T23:45:45.5263841+03:00" />
+  <info>
+    <data value="Data1" />
+    <data value="Data2" />
+    <data value="Data3" />
+  </info>
+</file>

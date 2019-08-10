@@ -11,7 +11,7 @@ using Articy.Test;
 using Articy.Test.Templates;
 using Articy.Test.Features;
 using Articy.Test.GlobalVariables;
-using System.Threading.Tasks;
+
 using System;
 using UnityEngine.UI;
 
@@ -19,7 +19,6 @@ public enum TextSpeed { SLOWEST = 5, SLOW = 4, NORMAL = 3, FAST = 2, FASTEST = 1
 
 public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 {
-    // controls spawner, flow player, save system, 
     private Spawner _spawner;
     private ArticyFlowPlayer _player;
     private SaveSystem _saveSystem;
@@ -36,6 +35,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         _spawner = GetComponent<Spawner>();
         _player = GetComponent<ArticyFlowPlayer>();
         _saveSystem = GetComponent<SaveSystem>();
+        _current = ScriptableObject.CreateInstance("PhraseDialogueFragment") as PhraseDialogueFragment;
     }
 
     public TextSpeed textSpeed;

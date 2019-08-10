@@ -1,10 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
-
-public class Const
+﻿public class Const
 {
-    public const string SavePath = "";
+    public const string SavePath = @"G:\GitHub\The Road to Moscow\saves\save.xml";
 
     public class EventType
     {
