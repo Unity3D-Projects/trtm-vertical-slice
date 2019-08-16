@@ -10,13 +10,13 @@ public class Spawner : MonoBehaviour
 {
     private GameController _controller;
     private PrefabManager _prefabManager;
-    private ArticyFlowPlayer _flowPlayer;
+    private ArticyFlowPlayer _player;
     private SaveSystem _saveSystem;
 
     private void Awake()
     {
         _prefabManager = GetComponent<PrefabManager>();
-        _flowPlayer = GetComponent<ArticyFlowPlayer>();
+        _player = GetComponent<ArticyFlowPlayer>();
         _saveSystem = GetComponent<SaveSystem>();
         _controller = GetComponent<GameController>();
     }
@@ -59,7 +59,7 @@ public class Spawner : MonoBehaviour
             }
             _saveSystem.LogGlobalVars();
 
-            _flowPlayer.Play(exit);
+            _player.Play(exit);
         });
         return b;
     }
@@ -73,8 +73,9 @@ public class Spawner : MonoBehaviour
         return s;
     }
 
-    //public GameObject SpawnDelayBlock()
-    //{
-
-    //}
+    public GameObject SpawnDelayBlock()
+    {
+        GameObject delayBlock = Instantiate(_prefabManager.delayBlockPrefab, _prefabManager.content);
+        return delayBlock;
+    }
 }

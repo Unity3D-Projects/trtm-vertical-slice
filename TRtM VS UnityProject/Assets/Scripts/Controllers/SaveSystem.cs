@@ -7,6 +7,8 @@ using System.Linq;
 using System.Xml.Linq;
 using UnityEngine;
 using System.Collections.Generic;
+using Articy.Unity.Interfaces;
+using System.Collections;
 
 public class SaveSystem : MonoBehaviour
 {
@@ -21,6 +23,20 @@ public class SaveSystem : MonoBehaviour
         _player = GetComponent<ArticyFlowPlayer>();
     }
 
+    private void Start()
+    {
+        _controller.PlayerStandBy = true;
+
+        if (!SaveFileExists())
+        {
+            CreateNewSaveFile();
+        }
+        else
+        {
+            LoadGame();
+        }
+    }
+
     public bool SaveFileExists()
     {
         return File.Exists(_savePath);
@@ -29,9 +45,37 @@ public class SaveSystem : MonoBehaviour
     public void LoadGame()
     {
         XDocument xDoc = XDocument.Load(_savePath);
+
         // отрисовать лог
 
         // инициализировать глобальные переменные
+        InitializeGlobalVariables(xDoc);
+
+        // проверить дилей
+        var xExecute = xDoc.Element("save").Element("execute");
+        var delay = CheckForDelay(xExecute);
+
+        var executeId = xExecute.Attribute(Const.XmlAliases.ExecuteId).Value;
+        var startOn = ArticyDatabase.GetObject(executeId);
+        _player.StartOn = startOn;
+        
+        if (delay > 0)
+        {
+            var coroutine = new CoroutineObject<float>(_controller, _controller.ExecuteWithDelay);
+            coroutine.Finished += () =>
+            {
+                _controller.PlayerStandBy = false;
+                _player.StartOn = startOn;
+            };
+            coroutine.Start(delay);
+        } else
+        {
+            _controller.PlayerStandBy = false;
+        }
+    }
+
+    private void InitializeGlobalVariables(XDocument xDoc)
+    {
         Dictionary<string, object> loadedVars = new Dictionary<string, object>();
         var xVars = xDoc.Element("save").Element("vars").Descendants();
         foreach (var xVar in xVars)
@@ -41,19 +85,18 @@ public class SaveSystem : MonoBehaviour
             loadedVars.Add(varName, varValue);
         }
         ArticyDatabase.DefaultGlobalVariables.Variables = loadedVars;
-        // проверить дилей
-        var executeElement = xDoc
-            .Element("save")
-            .Element("execute");
-        var startOn = ArticyDatabase.GetObject(executeElement.Attribute(Const.XmlAliases.ExecuteId).Value);
+    }
 
-        var xExecuteTime = executeElement.Attribute(Const.XmlAliases.ExecuteTime);
-        if (xExecuteTime != null)
+    private float CheckForDelay(XElement xExecute)
+    {
+        var executeTime = DateTime.Parse(xExecute.Attribute(Const.XmlAliases.ExecuteTime)?.Value ?? DateTime.Now.ToString());
+
+        if (executeTime != null && DateTime.Now < executeTime)
         {
-            DateTime executeTime = DateTime.Parse(xExecuteTime.Value);
-            StartCoroutine(_controller.PlayWithDelay(startOn, executeTime));
-        } else
-            _player.StartOn = startOn;
+            return (float)(executeTime - DateTime.Now).TotalMinutes;
+        }
+
+        return 0;
     }
 
     // get type of event ???
@@ -79,6 +122,21 @@ public class SaveSystem : MonoBehaviour
             Debug.LogWarning("Overwriting the state...");
             OverwriteState(stateWithThisName);
         }
+    }
+
+    public void SetExecuteTime(DateTime executeTime)
+    {
+        XDocument xDoc = XDocument.Load(_savePath);
+        XElement xExecute = xDoc.Element("save").Element("execute");
+        XAttribute xExecuteTime = xExecute.Attribute(Const.XmlAliases.ExecuteTime);
+        if (xExecuteTime != null)
+        {
+            xExecuteTime.Value = executeTime.ToString();
+        } else
+        {
+            xExecute.Add(new XAttribute(Const.XmlAliases.ExecuteTime, executeTime.ToString()));
+        }
+        xDoc.Save(_savePath);
     }
 
     private bool HasState(XElement statesElement, string stateName, out XElement stateWithThisName)
