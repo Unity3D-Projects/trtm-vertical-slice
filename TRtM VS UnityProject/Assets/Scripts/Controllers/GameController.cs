@@ -118,6 +118,12 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             _spawner.SpawnChoice(candidates);
     }
 
+    public IEnumerator PlayAndWaitConstantTimeOnClick(Branch branch)
+    {
+        yield return new WaitForSeconds(1);
+        _player.Play(branch);
+    }
+
     private IEnumerator PlayWithDelay(List<Branch> candidates, float delay)
     {
         DateTime endTime = DateTime.Now.AddMinutes(delay);

@@ -3,6 +3,7 @@ using Articy.Unity;
 using Articy.Unity.Interfaces;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
@@ -55,7 +56,25 @@ public class Spawner : MonoBehaviour
         b.onClick.AddListener(() =>
         {
             _saveSystem.LogChoice(exit, candidates);
-            _player.Play(exit);
+
+            var colors = b.colors;
+            colors.highlightedColor = Color.green;
+            colors.normalColor = Color.green;
+            colors.pressedColor = Color.green;
+            colors.selectedColor = Color.green;
+            b.colors = colors;
+
+            var siblingButtons = buttonGroup.gameObject.GetComponentsInChildren<Button>().ToList();
+            foreach (Button sibling in siblingButtons)
+            {
+                sibling.onClick.RemoveAllListeners();
+                sibling.onClick.AddListener(() =>
+                {
+                    // rewind to state
+                });
+            }
+
+            StartCoroutine(_controller.PlayAndWaitConstantTimeOnClick(exit));
         });
         return b;
     }
