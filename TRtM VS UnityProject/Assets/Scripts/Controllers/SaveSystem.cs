@@ -59,7 +59,7 @@ public class SaveSystem : MonoBehaviour
                     foreach (XElement xButton in logEvent.Elements())
                     {
                         Button b = _spawner.SpawnButtonFromLog(
-                            bg.transform,
+                            bg,
                             xButton.Value,
                             bool.Parse(xButton.Attribute(Const.XmlAliases.ButtonPressedAttributte).Value));
                     }
@@ -73,21 +73,31 @@ public class SaveSystem : MonoBehaviour
         return File.Exists(_savePath);
     }
 
-    public void LoadGame()
+    public void LoadGame(string stateId = null)
     {
+        bool fromState = stateId != null;
+
         XDocument xDoc = XDocument.Load(_savePath);
 
         // отрисовать лог
         SpawnLog(xDoc);
 
         // инициализировать глобальные переменные
-        InitializeGlobalVariables(xDoc);
+        if (!fromState)
+        {
+            InitializeGlobalVariables();
+        } else
+        {
+            InitializeGlobalVariables(stateId);
+        }
 
         // проверить дилей
         var xExecute = xDoc.Element("save").Element("execute");
         var delay = CheckForDelay(xExecute);
 
-        var executeId = xExecute.Attribute(Const.XmlAliases.ExecuteId).Value;
+        var executeId = !fromState
+            ? xExecute.Attribute(Const.XmlAliases.ExecuteId).Value
+            : stateId;
         var startOn = ArticyDatabase.GetObject(executeId);
         _player.StartOn = startOn;
         
@@ -106,17 +116,27 @@ public class SaveSystem : MonoBehaviour
         }
     }
 
-    private void InitializeGlobalVariables(XDocument xDoc)
+    public void InitializeGlobalVariables(string id = null)
+    {
+        XDocument xDoc = XDocument.Load(_savePath);
+
+        var loadedVars = id == null
+           ? CopyVars(xDoc.Element("save").Element("vars"))
+           : CopyVars(xDoc.Element("save").Element("states").Elements().Where(e => e.Attribute("id").Value == id).FirstOrDefault());
+
+        ArticyDatabase.DefaultGlobalVariables.Variables = loadedVars;
+    }
+
+    private Dictionary<string, object> CopyVars(XElement elementToCopyFrom)
     {
         Dictionary<string, object> loadedVars = new Dictionary<string, object>();
-        var xVars = xDoc.Element("save").Element("vars").Descendants();
-        foreach (var xVar in xVars)
+        foreach (XElement xVar in elementToCopyFrom.Elements())
         {
             var varName = xVar.Attribute("name").Value;
             var varValue = xVar.Value;
             loadedVars.Add(varName, varValue);
         }
-        ArticyDatabase.DefaultGlobalVariables.Variables = loadedVars;
+        return loadedVars;
     }
 
     private float CheckForDelay(XElement xExecute)
@@ -201,6 +221,12 @@ public class SaveSystem : MonoBehaviour
         }
     }
 
+    public void LoadState(string id)
+    {
+        XDocument xDoc = XDocument.Load(_savePath);
+        var df = (PhraseDialogueFragment)ArticyDatabase.GetObject(id);
+    }
+
     public void SetExecuteTime(DateTime executeTime)
     {
         XDocument xDoc = XDocument.Load(_savePath);
@@ -282,5 +308,25 @@ public class SaveSystem : MonoBehaviour
             varsContainer.Add(new XElement("var", new XAttribute("name", v.Key), v.Value));
         }
         return varsContainer;
+    }
+
+    public void CleanLog(string idToCleanUntil)
+    {
+        XDocument xDoc = XDocument.Load(_savePath);
+        var logElements = xDoc.Element("save").Element("log").Elements();
+        for (int i = logElements.Count() - 1; i > 0; i--)
+        {
+            var current = logElements.LastOrDefault();
+            if (current.Name == Const.XmlAliases.ButtonGroup &&
+                current.Attribute("id") != null &&
+                current.Attribute("id").Value == idToCleanUntil)
+            {
+                current.PreviousNode.Remove();
+                current.Remove();
+                break;
+            }
+            current.Remove();
+        }
+        xDoc.Save(_savePath);
     }
 }

@@ -22,7 +22,9 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     private Spawner _spawner;
     private ArticyFlowPlayer _player;
     private SaveSystem _saveSystem;
-
+    
+    // false by default, toggle true when game over (can use for debug)
+    public bool allowRewinding { get; set; } = true;
     private bool _playerStandBy = true;
     public bool PlayerStandBy
     {
@@ -43,6 +45,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     }
 
     private float _currentSpeed;
+
 
     private void Awake()
     {
@@ -139,8 +142,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         Destroy(delayBlock.gameObject);
         Play(candidates);
     }
-
-    // попробовать крутить не по фрагментам, а как-то еще
+    
     public IEnumerator ExecuteWithDelay(float delay)
     {
         GameObject delayBlock = _spawner.SpawnDelayBlock();
@@ -154,5 +156,13 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         }
         Destroy(delayBlock.gameObject); // будет ли работать без gameObject?
         Destroy(slider.gameObject);
+    }
+
+    public void RewindToState(string stateId)
+    {
+        _saveSystem.CleanLog(stateId);
+        _spawner.ClearScreen();
+
+        _saveSystem.LoadGame(stateId);
     }
 }

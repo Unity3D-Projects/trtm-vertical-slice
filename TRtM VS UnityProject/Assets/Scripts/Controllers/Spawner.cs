@@ -26,8 +26,15 @@ public class Spawner : MonoBehaviour
     public GameObject SpawnPhrase(string text)
     {
         GameObject p = Instantiate(_prefabManager.phrasePrefab, _prefabManager.content);
+        p.name = text.Length >= 20 ? Trim(text, 20) : text;
         p.GetComponentInChildren<Text>().text = text;
         return p;
+    }
+
+    private string Trim(string text, int index)
+    {
+        string newText = text.Substring(0, index);
+        return newText;
     }
 
     public GameObject SpawnChoice(List<Branch> candidates)
@@ -37,7 +44,7 @@ public class Spawner : MonoBehaviour
         {
             IObjectWithMenuText target = p.Target as IObjectWithMenuText;
             // Передаем в том числе всех кандидатов, чтобы после выбора они все залогались
-            SpawnButton(bg.transform, target.MenuText, p, candidates);
+            SpawnButton(bg, target.MenuText, p, candidates);
         }
         return bg;
     }
@@ -49,53 +56,61 @@ public class Spawner : MonoBehaviour
         return bg;
     }
 
-    public Button SpawnButtonFromLog(Transform buttonGroup, string text, bool clicked)
+    public Button SpawnButtonFromLog(GameObject buttonGroup, string text, bool clicked)
     {
-        Button b = Instantiate(_prefabManager.buttonPrefab, buttonGroup);
+        Button b = Instantiate(_prefabManager.buttonPrefab, buttonGroup.transform);
+        b.name = text;
         b.GetComponentInChildren<Text>().text = text;
 
         if (clicked)
         {
-            var colors = b.colors;
-            colors.highlightedColor = Color.green;
-            colors.normalColor = Color.green;
-            colors.pressedColor = Color.green;
-            colors.selectedColor = Color.green;
+            var colors = b.GetComponent<ButtonColors>().pressedColors;
+            b.colors = colors;
+        } else
+        {
+            var colors = b.GetComponent<ButtonColors>().notPressedColors;
             b.colors = colors;
         }
 
         b.onClick.AddListener(() =>
         {
-            // rewind to state
+            if (_controller.allowRewinding)
+            {
+                var reference = buttonGroup.GetComponent<ArticyReference>().reference;
+                var id = ((PhraseDialogueFragment)reference).TechnicalName;
+                _controller.RewindToState(id);
+            }
         });
         return b;
     }
 
-    public Button SpawnButton(Transform buttonGroup, string text, Branch exit, List<Branch> candidates)
+    public Button SpawnButton(GameObject buttonGroup, string text, Branch exit, List<Branch> candidates)
     {
-        Button b = Instantiate(_prefabManager.buttonPrefab, buttonGroup);
+        Button b = Instantiate(_prefabManager.buttonPrefab, buttonGroup.transform);
+        b.name = text;
         b.GetComponentInChildren<Text>().text = text;
         b.onClick.AddListener(() =>
         {
             _saveSystem.LogChoice(exit, candidates);
 
-            // TODO: refactor
-            var colors = b.colors;
-            colors.highlightedColor = Color.green;
-            colors.normalColor = Color.green;
-            colors.pressedColor = Color.green;
-            colors.selectedColor = Color.green;
-            b.colors = colors;
-
             var siblingButtons = buttonGroup.gameObject.GetComponentsInChildren<Button>().ToList();
             foreach (Button sibling in siblingButtons)
             {
+                var sColors = b.GetComponent<ButtonColors>().notPressedColors;
+                sibling.colors = sColors;
                 sibling.onClick.RemoveAllListeners();
                 sibling.onClick.AddListener(() =>
                 {
-                    // rewind to state
+                    if (_controller.allowRewinding)
+                    {
+                        var reference = buttonGroup.GetComponent<ArticyReference>().reference;
+                        var id = ((PhraseDialogueFragment)reference).TechnicalName;
+                        _controller.RewindToState(id);
+                    }
                 });
             }
+            var bColors = b.GetComponent<ButtonColors>().pressedColors;
+            b.colors = bColors;
 
             StartCoroutine(_controller.PlayAndWaitConstantTimeOnClick(exit));
         });
@@ -115,5 +130,14 @@ public class Spawner : MonoBehaviour
     {
         GameObject delayBlock = Instantiate(_prefabManager.delayBlockPrefab, _prefabManager.content);
         return delayBlock;
+    }
+
+    public void ClearScreen()
+    {
+        foreach (Transform child in _prefabManager.content)
+        {
+            Destroy(child.gameObject);
+        }
+        Debug.LogWarning("Screen cleaned.");
     }
 }
