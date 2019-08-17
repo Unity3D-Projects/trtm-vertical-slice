@@ -10,11 +10,13 @@ using System.Collections.Generic;
 using Articy.Unity.Interfaces;
 using System.Collections;
 using Articy.Test;
+using UnityEngine.UI;
 
 public class SaveSystem : MonoBehaviour
 {
     private GameController _controller;
     private ArticyFlowPlayer _player;
+    private Spawner _spawner;
 
     private string _savePath = Const.SavePath;
 
@@ -22,6 +24,7 @@ public class SaveSystem : MonoBehaviour
     {
         _controller = GetComponent<GameController>();
         _player = GetComponent<ArticyFlowPlayer>();
+        _spawner = GetComponent<Spawner>();
     }
 
     private void Start()
@@ -39,6 +42,32 @@ public class SaveSystem : MonoBehaviour
         }
     }
 
+    private void SpawnLog(XDocument xDoc)
+    {
+        var log = xDoc.Element("save").Element("log");
+        foreach (XElement logEvent in log.Elements())
+        {
+            switch (logEvent.Name.LocalName)
+            {
+                case (Const.XmlAliases.Phrase):
+                    _spawner.SpawnPhrase(logEvent.Value);
+                    break;
+
+                case (Const.XmlAliases.ButtonGroup):
+                    GameObject bg = _spawner.SpawnButtonGroup();
+                    bg.GetComponent<ArticyReference>().reference = (ArticyRef)ArticyDatabase.GetObject(logEvent.Attribute("id").Value);
+                    foreach (XElement xButton in logEvent.Elements())
+                    {
+                        Button b = _spawner.SpawnButtonFromLog(
+                            bg.transform,
+                            xButton.Value,
+                            bool.Parse(xButton.Attribute(Const.XmlAliases.ButtonPressedAttributte).Value));
+                    }
+                    break;
+            }
+        }
+    }
+
     public bool SaveFileExists()
     {
         return File.Exists(_savePath);
@@ -49,6 +78,7 @@ public class SaveSystem : MonoBehaviour
         XDocument xDoc = XDocument.Load(_savePath);
 
         // отрисовать лог
+        SpawnLog(xDoc);
 
         // инициализировать глобальные переменные
         InitializeGlobalVariables(xDoc);

@@ -49,6 +49,28 @@ public class Spawner : MonoBehaviour
         return bg;
     }
 
+    public Button SpawnButtonFromLog(Transform buttonGroup, string text, bool clicked)
+    {
+        Button b = Instantiate(_prefabManager.buttonPrefab, buttonGroup);
+        b.GetComponentInChildren<Text>().text = text;
+
+        if (clicked)
+        {
+            var colors = b.colors;
+            colors.highlightedColor = Color.green;
+            colors.normalColor = Color.green;
+            colors.pressedColor = Color.green;
+            colors.selectedColor = Color.green;
+            b.colors = colors;
+        }
+
+        b.onClick.AddListener(() =>
+        {
+            // rewind to state
+        });
+        return b;
+    }
+
     public Button SpawnButton(Transform buttonGroup, string text, Branch exit, List<Branch> candidates)
     {
         Button b = Instantiate(_prefabManager.buttonPrefab, buttonGroup);
@@ -57,6 +79,7 @@ public class Spawner : MonoBehaviour
         {
             _saveSystem.LogChoice(exit, candidates);
 
+            // TODO: refactor
             var colors = b.colors;
             colors.highlightedColor = Color.green;
             colors.normalColor = Color.green;
