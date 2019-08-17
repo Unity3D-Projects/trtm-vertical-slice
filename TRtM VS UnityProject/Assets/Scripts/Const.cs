@@ -1,15 +1,24 @@
-﻿public class Const
+﻿using UnityEngine;
+
+public class Const
 {
     public const string SavePath = @"G:\GitHub\The Road to Moscow\saves\save.xml";
 
-    public class EventType
+    public enum LogEvent
     {
-        public const string PhraseEvent = "phrase";
-        public const string ButtonEvent = "button";
+        LogPhrase,
+        LogButtonGroup,
+        LogButton,
+        LogButtonPressed
     }
 
     public class XmlAliases
     {
+        public const string Phrase = "phrase";
+        public const string ButtonGroup = "buttonGroup";
+        public const string Button = "button";
+        public const string ButtonPressedAttributte = "pressed";
+
         public const string ExecuteId = "tname";
         public const string ExecuteTime = "at";
 

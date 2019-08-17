@@ -4,6 +4,7 @@ using Articy.Unity.Interfaces;
 using System;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UI;
 
 public class Spawner : MonoBehaviour
@@ -43,6 +44,7 @@ public class Spawner : MonoBehaviour
     public GameObject SpawnButtonGroup()
     {
         GameObject bg = Instantiate(_prefabManager.buttonGroup, _prefabManager.content);
+        bg.GetComponent<ArticyReference>().reference = (ArticyRef)_controller.Current;
         return bg;
     }
 
@@ -52,13 +54,7 @@ public class Spawner : MonoBehaviour
         b.GetComponentInChildren<Text>().text = text;
         b.onClick.AddListener(() =>
         {
-            _saveSystem.LogEvent(Const.EventType.PhraseEvent, _controller.Current.Text);
-            foreach (Branch branch in candidates)
-            {
-                _saveSystem.LogEvent(Const.EventType.ButtonEvent, ((PhraseDialogueFragment)branch.Target).MenuText);
-            }
-            _saveSystem.LogGlobalVars();
-
+            _saveSystem.LogChoice(exit, candidates);
             _player.Play(exit);
         });
         return b;

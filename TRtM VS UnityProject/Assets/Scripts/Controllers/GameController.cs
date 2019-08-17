@@ -85,7 +85,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
         if (candidates.Count == 1)
         {
-            _saveSystem.LogEvent(Const.EventType.PhraseEvent, Current.Text);
+            _saveSystem.LogEvent(Const.LogEvent.LogPhrase, Current.Text);
             _saveSystem.UpdateExecuteElement(((PhraseDialogueFragment)candidates[0].Target).TechnicalName);
         }
         if (candidates.Count > 1)
@@ -144,7 +144,6 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         {
             remaining -= Time.deltaTime;
             slider.value += Time.deltaTime / (delay * 60);
-            Debug.Log(remaining.ToString());
             yield return null;
         }
         Destroy(delayBlock.gameObject); // будет ли работать без gameObject?

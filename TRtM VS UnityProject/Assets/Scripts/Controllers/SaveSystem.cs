@@ -9,6 +9,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using Articy.Unity.Interfaces;
 using System.Collections;
+using Articy.Test;
 
 public class SaveSystem : MonoBehaviour
 {
@@ -30,6 +31,7 @@ public class SaveSystem : MonoBehaviour
         if (!SaveFileExists())
         {
             CreateNewSaveFile();
+            _controller.PlayerStandBy = false;
         }
         else
         {
@@ -100,11 +102,56 @@ public class SaveSystem : MonoBehaviour
     }
 
     // get type of event ???
-    public void LogEvent(string eventType, string content)
+    public void LogEvent(Const.LogEvent type, string content)
     {
         XDocument xDoc = XDocument.Load(_savePath);
-        xDoc.Element("save").Element("log").Add(new XElement(eventType, content));
+
+        switch (type)
+        {
+            case Const.LogEvent.LogPhrase:
+                xDoc.Element("save").Element("log").Add(new XElement(Const.XmlAliases.Phrase, content));
+                break;
+            case Const.LogEvent.LogButtonGroup:
+                xDoc.Element("save").Element("log")
+                    .Add(new XElement(
+                        Const.XmlAliases.ButtonGroup,
+                            new XAttribute("id", _controller.Current.TechnicalName),
+                        content));
+                break;
+
+            case Const.LogEvent.LogButton:
+                xDoc.Element("save").Element("log").Elements(Const.XmlAliases.ButtonGroup).Last()
+                    .Add(new XElement(
+                        Const.XmlAliases.Button,
+                            new XAttribute(Const.XmlAliases.ButtonPressedAttributte, false),
+                        content));
+                break;
+
+            case Const.LogEvent.LogButtonPressed:
+                xDoc.Element("save").Element("log").Elements(Const.XmlAliases.ButtonGroup).Last()
+                    .Add(new XElement(
+                        Const.XmlAliases.Button,
+                            new XAttribute(Const.XmlAliases.ButtonPressedAttributte, true),
+                        content));
+                break;
+        }
         xDoc.Save(_savePath);
+    }
+
+    public void LogChoice(Branch exit, List<Branch> candidates)
+    {
+        LogEvent(Const.LogEvent.LogPhrase, _controller.Current.Text);
+        LogEvent(Const.LogEvent.LogButtonGroup, string.Empty);
+        foreach (Branch branch in candidates)
+        {
+            if (((PhraseDialogueFragment)branch.Target).TechnicalName == ((PhraseDialogueFragment)exit.Target).TechnicalName)
+            {
+                LogEvent(Const.LogEvent.LogButtonPressed, ((PhraseDialogueFragment)exit.Target).MenuText);
+                continue;
+            }
+            LogEvent(Const.LogEvent.LogButton, ((PhraseDialogueFragment)branch.Target).MenuText);
+        }
+        LogGlobalVars();
     }
 
     public void LogState()
