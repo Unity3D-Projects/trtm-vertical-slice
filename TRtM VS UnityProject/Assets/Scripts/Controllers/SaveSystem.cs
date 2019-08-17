@@ -30,6 +30,8 @@ public class SaveSystem : MonoBehaviour
     private void Start()
     {
         _controller.PlayerStandBy = true;
+        _controller.GameEnded = false;
+        _controller.AllowRewinding = false;
 
         if (!SaveFileExists())
         {
@@ -38,6 +40,7 @@ public class SaveSystem : MonoBehaviour
         }
         else
         {
+            Debug.Log($"Loading saved game");
             LoadGame();
         }
     }
@@ -62,6 +65,15 @@ public class SaveSystem : MonoBehaviour
                             bg,
                             xButton.Value,
                             bool.Parse(xButton.Attribute(Const.XmlAliases.ButtonPressedAttributte).Value));
+                    }
+                    break;
+                case (Const.XmlAliases.EndGame):
+                    if (bool.Parse(logEvent.Attribute(Const.XmlAliases.EndGameWinAttributte).Value))
+                    {
+                        _spawner.SpawnEndGame(true);
+                    } else
+                    {
+                        _spawner.SpawnEndGame(false);
                     }
                     break;
             }
@@ -91,23 +103,31 @@ public class SaveSystem : MonoBehaviour
             InitializeGlobalVariables(stateId);
         }
 
-        // проверить дилей
-        var xExecute = xDoc.Element("save").Element("execute");
-        var delay = CheckForDelay(xExecute);
+        // лишняя работа, если из ревайнда (посмотреть весь метод на подобное)
+        var anyEndGame = xDoc.Element("save").Element("log").Elements("endGame").Any();
+        if (anyEndGame)
+        {
+            Debug.Log("Game already ended.");
+            _controller.GameEnded = true;
+            return;
+        }
 
+        // set startOn
+        var xExecute = xDoc.Element("save").Element("execute");
         var executeId = !fromState
             ? xExecute.Attribute(Const.XmlAliases.ExecuteId).Value
             : stateId;
         var startOn = ArticyDatabase.GetObject(executeId);
         _player.StartOn = startOn;
-        
+
+        // проверить дилей (неактуально для ревайнда)
+        var delay = CheckForDelay(xExecute);
         if (delay > 0)
         {
             var coroutine = new CoroutineObject<float>(_controller, _controller.ExecuteWithDelay);
             coroutine.Finished += () =>
             {
                 _controller.PlayerStandBy = false;
-                _player.StartOn = startOn;
             };
             coroutine.Start(delay);
         } else
@@ -183,6 +203,19 @@ public class SaveSystem : MonoBehaviour
                         Const.XmlAliases.Button,
                             new XAttribute(Const.XmlAliases.ButtonPressedAttributte, true),
                         content));
+                break;
+            case Const.LogEvent.LogEndGameWin:
+                xDoc.Element("save").Element("log")
+                    .Add(new XElement(Const.XmlAliases.EndGame,
+                            new XAttribute(Const.XmlAliases.EndGameWinAttributte, true),
+                            content));
+                break;
+
+            case Const.LogEvent.LogEndGameLose:
+                xDoc.Element("save").Element("log")
+                    .Add(new XElement(Const.XmlAliases.EndGame,
+                            new XAttribute(Const.XmlAliases.EndGameWinAttributte, false),
+                            content));
                 break;
         }
         xDoc.Save(_savePath);
@@ -313,6 +346,14 @@ public class SaveSystem : MonoBehaviour
     public void CleanLog(string idToCleanUntil)
     {
         XDocument xDoc = XDocument.Load(_savePath);
+
+        var xExecute = xDoc.Element("save").Element("execute");
+        xExecute.Attribute(Const.XmlAliases.ExecuteId).Value = idToCleanUntil;
+        if (xExecute.Attribute(Const.XmlAliases.ExecuteTime) != null)
+        {
+            xExecute.Attribute(Const.XmlAliases.ExecuteTime).Remove();
+        }
+
         var logElements = xDoc.Element("save").Element("log").Elements();
         for (int i = logElements.Count() - 1; i > 0; i--)
         {

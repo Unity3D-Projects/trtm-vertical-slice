@@ -9,7 +9,9 @@ public class Const
         LogPhrase,
         LogButtonGroup,
         LogButton,
-        LogButtonPressed
+        LogButtonPressed,
+        LogEndGameWin,
+        LogEndGameLose
     }
 
     public class XmlAliases
@@ -17,8 +19,9 @@ public class Const
         public const string Phrase = "phrase";
         public const string ButtonGroup = "buttonGroup";
         public const string Button = "button";
+        public const string EndGame = "endGame";
         public const string ButtonPressedAttributte = "pressed";
-
+        public const string EndGameWinAttributte = "win";
         public const string ExecuteId = "tname";
         public const string ExecuteTime = "at";
 

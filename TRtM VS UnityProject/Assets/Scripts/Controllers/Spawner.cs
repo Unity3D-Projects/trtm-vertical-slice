@@ -74,7 +74,7 @@ public class Spawner : MonoBehaviour
 
         b.onClick.AddListener(() =>
         {
-            if (_controller.allowRewinding)
+            if (_controller.AllowRewinding)
             {
                 var reference = buttonGroup.GetComponent<ArticyReference>().reference;
                 var id = ((PhraseDialogueFragment)reference).TechnicalName;
@@ -101,7 +101,7 @@ public class Spawner : MonoBehaviour
                 sibling.onClick.RemoveAllListeners();
                 sibling.onClick.AddListener(() =>
                 {
-                    if (_controller.allowRewinding)
+                    if (_controller.AllowRewinding)
                     {
                         var reference = buttonGroup.GetComponent<ArticyReference>().reference;
                         var id = ((PhraseDialogueFragment)reference).TechnicalName;
@@ -132,12 +132,25 @@ public class Spawner : MonoBehaviour
         return delayBlock;
     }
 
+    public GameObject SpawnEndGame(bool win)
+    {
+        GameObject endGame = Instantiate(_prefabManager.endgamePrefab, _prefabManager.content);
+        if (win)
+        {
+            endGame.GetComponent<Image>().color = endGame.GetComponent<EndGameColors>().youWinColor;
+        }
+        else
+        {
+            endGame.GetComponent<Image>().color = endGame.GetComponent<EndGameColors>().youLoseColor;
+        }
+        return endGame;
+    }
+
     public void ClearScreen()
     {
         foreach (Transform child in _prefabManager.content)
         {
             Destroy(child.gameObject);
         }
-        Debug.LogWarning("Screen cleaned.");
     }
 }

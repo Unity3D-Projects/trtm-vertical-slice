@@ -19,13 +19,30 @@ public enum TextSpeed { SLOWEST = 5, SLOW = 4, NORMAL = 3, FAST = 2, FASTEST = 1
 
 public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 {
+    #region Dependencies
     private Spawner _spawner;
     private ArticyFlowPlayer _player;
     private SaveSystem _saveSystem;
+    #endregion
+
+    #region Settings
+    public TextSpeed textSpeed;
+
+    public bool _allowRewinding = true;
+    public bool AllowRewinding
+    {
+        get
+        {
+            return _allowRewinding;
+        }
+        set
+        {
+            _allowRewinding = value;
+            Debug.LogWarning($"Rewinding{(_allowRewinding ? " " : " dis")}allowed");
+        }
+    }
     
-    // false by default, toggle true when game over (can use for debug)
-    public bool allowRewinding { get; set; } = true;
-    private bool _playerStandBy = true;
+    public bool _playerStandBy = false;
     public bool PlayerStandBy
     {
         get
@@ -35,27 +52,39 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         set
         {
             _playerStandBy = value;
-            Debug.LogWarning($"ArticyFlowPlayer is {!_playerStandBy}"); 
+            Debug.LogWarning($"ArticyFlowPlayer is {(_playerStandBy ? "OFF" : "ON")}"); 
         }
     }
 
-    private PhraseDialogueFragment _current;
-    public PhraseDialogueFragment Current {
-        get { return _current; }
+    public bool _gameEnded = false;
+    public bool GameEnded
+    {
+        get
+        {
+            return _gameEnded;
+        }
+        set
+        {
+            _gameEnded = value;
+            if (value == true)
+            {
+                PlayerStandBy = true;
+                AllowRewinding = true;
+            }
+            Debug.LogWarning($"Game ended = {_gameEnded}");
+        }
     }
+    #endregion
 
+    public PhraseDialogueFragment Current { get; private set; }
     private float _currentSpeed;
-
 
     private void Awake()
     {
         _spawner = GetComponent<Spawner>();
         _player = GetComponent<ArticyFlowPlayer>();
         _saveSystem = GetComponent<SaveSystem>();
-        _current = ScriptableObject.CreateInstance("PhraseDialogueFragment") as PhraseDialogueFragment;
     }
-
-    public TextSpeed textSpeed;
     
     public void OnFlowPlayerPaused(IFlowObject aObject)
     {
@@ -64,7 +93,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             return;
         }
 
-        _current = GetComponent<ArticyFlowPlayer>().PausedOn as PhraseDialogueFragment;
+        Current = GetComponent<ArticyFlowPlayer>().PausedOn as PhraseDialogueFragment;
         _currentSpeed = (float)textSpeed * 0.02f;
 
         if (aObject is PhraseDialogueFragment df)
@@ -79,29 +108,46 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             return;
         }
 
+        if (aBranches == null)
+        {
+            Debug.LogError("No branches found");
+            GameObject eg = _spawner.SpawnEndGame(false);
+        }
+
         List<Branch> candidates = new List<Branch>();
         foreach (Branch branch in aBranches)
         {
+            // if branch is not DF (empty) - it's a pin - end of flow
+            if (!(branch.Target is PhraseDialogueFragment))
+            {
+                _spawner.SpawnEndGame(true);
+                _saveSystem.LogEvent(Const.LogEvent.LogEndGameWin, string.Empty);
+                GameEnded = true;
+                return;
+            }
             if (branch.IsValid)
                 candidates.Add(branch);
         }
 
+        // checking for saving - refactor
         if (candidates.Count == 1)
         {
             _saveSystem.LogEvent(Const.LogEvent.LogPhrase, Current.Text);
             _saveSystem.UpdateExecuteElement(((PhraseDialogueFragment)candidates[0].Target).TechnicalName);
         }
-        if (candidates.Count > 1)
+        else if (candidates.Count > 1)
+        {
             _saveSystem.LogState();
+        }
 
-        StartCoroutine(WaitTimeAndCheckForDelay(candidates, _current.Text.Length * _currentSpeed)); // TODO: clamp to min 1 sec
+        StartCoroutine(WaitTimeAndCheckForDelay(candidates, Current.Text.Length * _currentSpeed)); // TODO: clamp to min 1 sec
     }
 
     private IEnumerator WaitTimeAndCheckForDelay(List<Branch> candidates, float time)
     {
         yield return new WaitForSeconds(time);
 
-        float delay = _current.Template.PhraseFeature.delay;
+        float delay = Current.Template.PhraseFeature.delay;
         if (delay > 0)
         {
             StartCoroutine(PlayWithDelay(candidates, delay));
@@ -113,7 +159,11 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     private void Play(List<Branch> candidates)
     {
         if (candidates.Count == 0)
+        {
             Debug.LogError("No candidates found.");
+            GameObject eg = _spawner.SpawnEndGame(false);
+        }
+
         else if (candidates.Count == 1)
         {
             _player.Play(candidates[0]);
@@ -160,9 +210,14 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     public void RewindToState(string stateId)
     {
+        Debug.Log($"Rewinding to state {stateId}");
+
+        PlayerStandBy = false;
+        GameEnded = false;
+        AllowRewinding = false;
+
         _saveSystem.CleanLog(stateId);
         _spawner.ClearScreen();
-
         _saveSystem.LoadGame(stateId);
     }
 }
