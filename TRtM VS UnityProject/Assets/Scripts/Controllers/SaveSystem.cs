@@ -161,8 +161,8 @@ public class SaveSystem : MonoBehaviour
 
         if (executeTime != null && DateTime.Now < executeTime)
         {
-            var remainingInMinutes = (executeTime - DateTime.Now).TotalMinutes;
-            return (startTime, (float)remainingInMinutes);
+            var remainingInMinutes = (float)(executeTime - DateTime.Now).TotalMinutes;
+            return (startTime, remainingInMinutes);
         }
 
         return (startTime, 0);

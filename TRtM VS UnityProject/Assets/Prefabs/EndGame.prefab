@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   youWinColor: {r: 0.9056604, g: 0.7616295, b: 0.33748665, a: 1}
-  youLoseColor: {r: 0.7735849, g: 0.3539516, b: 0.3539516, a: 0}
+  youLoseColor: {r: 0.7735849, g: 0.3539516, b: 0.3539516, a: 1}
 --- !u!1 &7160969169089354128
 GameObject:
   m_ObjectHideFlags: 0

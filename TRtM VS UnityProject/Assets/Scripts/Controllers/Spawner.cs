@@ -129,10 +129,9 @@ public class Spawner : MonoBehaviour
         return s;
     }
 
-    public GameObject SpawnDelayBlock(DateTime endTime, double delay)
+    public GameObject SpawnDelayBlock()
     {
         GameObject delayBlock = Instantiate(_prefabManager.delayBlockPrefab, _prefabManager.content);
-        var remaining = endTime - DateTime.Now;
         return delayBlock;
     }
 

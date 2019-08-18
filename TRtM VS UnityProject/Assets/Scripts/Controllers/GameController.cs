@@ -199,11 +199,15 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         DateTime endTime = DateTime.Now.AddMinutes(m_timeToWait);
         _saveSystem.SetStartTimeAndExecuteTime(startTime, endTime);
 
-        GameObject delayBlock = _spawner.SpawnDelayBlock(endTime, m_timeToWait);
+        GameObject delayBlock = _spawner.SpawnDelayBlock();
         Slider slider = _spawner.SpawnSlider(DateTime.Now, m_timeToWait);
-        while (DateTime.Now <= endTime)
+
+        float m_Remaining = m_timeToWait;
+        while (m_Remaining > 0)
         {
-            delayBlock.GetComponentInChildren<Text>().text = TimeSpan.FromMinutes(m_timeToWait).ToString(@"hh\:mm\:ss");
+            m_Remaining -= Time.deltaTime / 60;
+            Debug.Log(m_Remaining);
+            delayBlock.GetComponentInChildren<Text>().text = TimeSpan.FromMinutes(m_Remaining).ToString(@"hh\:mm\:ss");
             slider.value += Time.deltaTime / (m_timeToWait * 60);
             yield return null;
         }
@@ -217,14 +221,15 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         DateTime endTime = DateTime.Now.AddMinutes(m_timeToWait);
         var totalDelay = (endTime - startTime).TotalMinutes;
 
-        GameObject delayBlock = _spawner.SpawnDelayBlock(startTime, m_timeToWait);
+        GameObject delayBlock = _spawner.SpawnDelayBlock();
         Slider slider = _spawner.SpawnSlider(startTime, totalDelay);
-        float s_timeToWait = m_timeToWait * 60;
-        while (DateTime.Now <= endTime)
+
+        float m_Remaining = m_timeToWait;
+        while (m_Remaining > 0)
         {
-            s_timeToWait -= Time.deltaTime;
-            delayBlock.GetComponentInChildren<Text>().text = TimeSpan.FromSeconds(s_timeToWait).ToString(@"hh\:mm\:ss");
-            slider.value += Time.deltaTime / (m_timeToWait * 60);
+            m_Remaining -= Time.deltaTime / 60;
+            delayBlock.GetComponentInChildren<Text>().text = TimeSpan.FromMinutes(m_Remaining).ToString(@"hh\:mm\:ss");
+            slider.value += (float)(Time.deltaTime / (totalDelay * 60));
             yield return null;
         }
         Destroy(delayBlock.gameObject); // будет ли работать без gameObject?
