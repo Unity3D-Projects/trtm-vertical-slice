@@ -116,15 +116,15 @@ public class SaveSystem : MonoBehaviour
         _player.StartOn = startOn;
 
         // проверить дилей
-        var delay = CheckForDelay(xExecute);
-        if (delay > 0)
+        var result = CheckForDelay(xExecute);
+        if (result.remainingInMinutes > 0)
         {
-            var coroutine = new CoroutineObject<float>(_controller, _controller.ExecuteWithDelay);
+            var coroutine = new CoroutineObject<DateTime, float>(_controller, _controller.ExecuteWithDelay);
             coroutine.Finished += () =>
             {
                 _controller.PlayerStandBy = false;
             };
-            coroutine.Start(delay);
+            coroutine.Start(result.startTime, result.remainingInMinutes);
         } else
         {
             _controller.PlayerStandBy = false;
@@ -154,16 +154,18 @@ public class SaveSystem : MonoBehaviour
         return loadedVars;
     }
 
-    private float CheckForDelay(XElement xExecute)
+    private (DateTime startTime, float remainingInMinutes) CheckForDelay(XElement xExecute)
     {
         var executeTime = DateTime.Parse(xExecute.Attribute(Const.XmlAliases.ExecuteTime)?.Value ?? DateTime.Now.ToString());
+        var startTime = DateTime.Parse(xExecute.Attribute(Const.XmlAliases.StartTime)?.Value ?? DateTime.Now.ToString());
 
         if (executeTime != null && DateTime.Now < executeTime)
         {
-            return (float)(executeTime - DateTime.Now).TotalMinutes;
+            var remainingInMinutes = (executeTime - DateTime.Now).TotalMinutes;
+            return (startTime, (float)remainingInMinutes);
         }
 
-        return 0;
+        return (startTime, 0);
     }
 
     // get type of event ???
@@ -255,18 +257,24 @@ public class SaveSystem : MonoBehaviour
         var df = (PhraseDialogueFragment)ArticyDatabase.GetObject(id);
     }
 
-    public void SetExecuteTime(DateTime executeTime)
+    public void SetStartTimeAndExecuteTime(DateTime startTime, DateTime executeTime)
     {
         XDocument xDoc = XDocument.Load(_savePath);
         XElement xExecute = xDoc.Element("save").Element("execute");
+
+        XAttribute xStartTime = xExecute.Attribute(Const.XmlAliases.StartTime);
         XAttribute xExecuteTime = xExecute.Attribute(Const.XmlAliases.ExecuteTime);
-        if (xExecuteTime != null)
-        {
-            xExecuteTime.Value = executeTime.ToString();
-        } else
-        {
+
+        if (xExecuteTime == null)
             xExecute.Add(new XAttribute(Const.XmlAliases.ExecuteTime, executeTime.ToString()));
-        }
+        else
+            xExecuteTime.Value = executeTime.ToString();
+
+        if (xStartTime == null)
+            xExecute.Add(new XAttribute(Const.XmlAliases.StartTime, startTime.ToString()));
+        else
+            xStartTime.Value = startTime.ToString();
+
         xDoc.Save(_savePath);
     }
 

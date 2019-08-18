@@ -123,14 +123,16 @@ public class Spawner : MonoBehaviour
     {
         double timePassed = (DateTime.Now - start).TotalMinutes;
         Slider s = Instantiate(_prefabManager.sliderPrefab, _prefabManager.content);
+        s.interactable = false;
         s.value = (float)(timePassed / delay);
         // log slider or something
         return s;
     }
 
-    public GameObject SpawnDelayBlock()
+    public GameObject SpawnDelayBlock(DateTime endTime, double delay)
     {
         GameObject delayBlock = Instantiate(_prefabManager.delayBlockPrefab, _prefabManager.content);
+        var remaining = endTime - DateTime.Now;
         return delayBlock;
     }
 

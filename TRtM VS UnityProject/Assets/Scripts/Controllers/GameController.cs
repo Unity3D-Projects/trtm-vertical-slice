@@ -152,7 +152,6 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         float seconds;
         if (clampSpeedToOne) seconds = time <= 1 ? 1 : time;
         else seconds = time;
-
         yield return new WaitForSeconds(seconds);
 
         float delay = Current.Template.PhraseFeature.delay;
@@ -194,15 +193,18 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         _saveSystem.LogGlobalVars();
     }
 
-    private IEnumerator PlayWithDelay(List<Branch> candidates, float delay)
+    private IEnumerator PlayWithDelay(List<Branch> candidates, float m_timeToWait)
     {
-        DateTime endTime = DateTime.Now.AddMinutes(delay);
-        _saveSystem.SetExecuteTime(endTime);
-        GameObject delayBlock = _spawner.SpawnDelayBlock();
-        Slider slider = _spawner.SpawnSlider(DateTime.Now, delay);
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = DateTime.Now.AddMinutes(m_timeToWait);
+        _saveSystem.SetStartTimeAndExecuteTime(startTime, endTime);
+
+        GameObject delayBlock = _spawner.SpawnDelayBlock(endTime, m_timeToWait);
+        Slider slider = _spawner.SpawnSlider(DateTime.Now, m_timeToWait);
         while (DateTime.Now <= endTime)
         {
-            slider.value += Time.deltaTime / (delay * 60f);
+            delayBlock.GetComponentInChildren<Text>().text = TimeSpan.FromMinutes(m_timeToWait).ToString(@"hh\:mm\:ss");
+            slider.value += Time.deltaTime / (m_timeToWait * 60);
             yield return null;
         }
         Destroy(slider.gameObject);
@@ -210,15 +212,19 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         Play(candidates);
     }
     
-    public IEnumerator ExecuteWithDelay(float delay)
+    public IEnumerator ExecuteWithDelay(DateTime startTime, float m_timeToWait)
     {
-        GameObject delayBlock = _spawner.SpawnDelayBlock();
-        Slider slider = _spawner.SpawnSlider(DateTime.Now, delay);
-        float remaining = delay * 60;
-        while (remaining > 0)
+        DateTime endTime = DateTime.Now.AddMinutes(m_timeToWait);
+        var totalDelay = (endTime - startTime).TotalMinutes;
+
+        GameObject delayBlock = _spawner.SpawnDelayBlock(startTime, m_timeToWait);
+        Slider slider = _spawner.SpawnSlider(startTime, totalDelay);
+        float s_timeToWait = m_timeToWait * 60;
+        while (DateTime.Now <= endTime)
         {
-            remaining -= Time.deltaTime;
-            slider.value += Time.deltaTime / (delay * 60);
+            s_timeToWait -= Time.deltaTime;
+            delayBlock.GetComponentInChildren<Text>().text = TimeSpan.FromSeconds(s_timeToWait).ToString(@"hh\:mm\:ss");
+            slider.value += Time.deltaTime / (m_timeToWait * 60);
             yield return null;
         }
         Destroy(delayBlock.gameObject); // будет ли работать без gameObject?
