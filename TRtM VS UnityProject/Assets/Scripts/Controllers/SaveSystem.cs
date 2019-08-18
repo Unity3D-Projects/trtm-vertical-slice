@@ -40,12 +40,12 @@ public class SaveSystem : MonoBehaviour
         }
         else
         {
-            Debug.Log($"Loading saved game");
+            Debug.LogWarning($"Loading saved game");
             LoadGame();
         }
     }
 
-    private void SpawnLog(XDocument xDoc)
+    public void SpawnLog(XDocument xDoc)
     {
         var log = xDoc.Element("save").Element("log");
         foreach (XElement logEvent in log.Elements())
@@ -85,42 +85,37 @@ public class SaveSystem : MonoBehaviour
         return File.Exists(_savePath);
     }
 
-    public void LoadGame(string stateId = null)
+    public XDocument ProvideXDoc()
     {
-        bool fromState = stateId != null;
+        XDocument xDoc = XDocument.Load(_savePath);
+        return xDoc;
+    }
 
+    public void LoadGame()
+    {
         XDocument xDoc = XDocument.Load(_savePath);
 
         // отрисовать лог
         SpawnLog(xDoc);
 
         // инициализировать глобальные переменные
-        if (!fromState)
-        {
-            InitializeGlobalVariables();
-        } else
-        {
-            InitializeGlobalVariables(stateId);
-        }
-
-        // лишняя работа, если из ревайнда (посмотреть весь метод на подобное)
+        InitializeGlobalVariables();
+        
         var anyEndGame = xDoc.Element("save").Element("log").Elements("endGame").Any();
         if (anyEndGame)
         {
-            Debug.Log("Game already ended.");
+            Debug.LogWarning("Game already ended.");
             _controller.GameEnded = true;
             return;
         }
 
         // set startOn
         var xExecute = xDoc.Element("save").Element("execute");
-        var executeId = !fromState
-            ? xExecute.Attribute(Const.XmlAliases.ExecuteId).Value
-            : stateId;
+        var executeId = xExecute.Attribute(Const.XmlAliases.ExecuteId).Value;
         var startOn = ArticyDatabase.GetObject(executeId);
         _player.StartOn = startOn;
 
-        // проверить дилей (неактуально для ревайнда)
+        // проверить дилей
         var delay = CheckForDelay(xExecute);
         if (delay > 0)
         {
@@ -234,7 +229,6 @@ public class SaveSystem : MonoBehaviour
             }
             LogEvent(Const.LogEvent.LogButton, ((PhraseDialogueFragment)branch.Target).MenuText);
         }
-        LogGlobalVars();
     }
 
     public void LogState()
@@ -247,7 +241,8 @@ public class SaveSystem : MonoBehaviour
             CreateState(states, currentBlockName);
             xDoc.Save(_savePath);
             Debug.Log($"State {currentBlockName} was saved");
-        } else
+        }
+        else
         {
             Debug.LogWarning("Overwriting the state...");
             OverwriteState(stateWithThisName);
@@ -289,7 +284,7 @@ public class SaveSystem : MonoBehaviour
         }
         else return false;
     }
-
+    
     private void CreateState(XElement states, string id)
     {
         var state = GetGlobalVars("state");
@@ -306,11 +301,8 @@ public class SaveSystem : MonoBehaviour
     public void LogGlobalVars()
     {
         XDocument xDoc = XDocument.Load(_savePath);
-        var xmlVars = xDoc.Element("save").Element("vars").Descendants();
-        foreach(XElement xVar in xmlVars)
-        {
-            xVar.Value = _player.globalVariables.Variables[xVar.Attribute("name").Value].ToString();
-        }
+        xDoc.Element("save").Element("vars").Remove();
+        xDoc.Element("save").Add(GetGlobalVars("vars"));
         xDoc.Save(_savePath);
     }
 

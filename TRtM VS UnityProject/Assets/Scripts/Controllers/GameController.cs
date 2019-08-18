@@ -14,6 +14,7 @@ using Articy.Test.GlobalVariables;
 
 using System;
 using UnityEngine.UI;
+using System.Xml.Linq;
 
 public enum TextSpeed { SLOWEST = 5, SLOW = 4, NORMAL = 3, FAST = 2, FASTEST = 1 }
 
@@ -27,6 +28,8 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     #region Settings
     public TextSpeed textSpeed;
+    public bool clampSpeedToOne = true;
+    [Space]
 
     public bool _allowRewinding = true;
     public bool AllowRewinding
@@ -38,7 +41,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         set
         {
             _allowRewinding = value;
-            Debug.LogWarning($"Rewinding{(_allowRewinding ? " " : " dis")}allowed");
+            Debug.Log($"Rewinding{(_allowRewinding ? " " : " dis")}allowed");
         }
     }
     
@@ -52,7 +55,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         set
         {
             _playerStandBy = value;
-            Debug.LogWarning($"ArticyFlowPlayer is {(_playerStandBy ? "OFF" : "ON")}"); 
+            Debug.Log($"ArticyFlowPlayer is {(_playerStandBy ? "OFF" : "ON")}"); 
         }
     }
 
@@ -71,7 +74,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
                 PlayerStandBy = true;
                 AllowRewinding = true;
             }
-            Debug.LogWarning($"Game ended = {_gameEnded}");
+            Debug.Log($"Game ended = {_gameEnded}");
         }
     }
     #endregion
@@ -92,12 +95,11 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         {
             return;
         }
-
-        Current = GetComponent<ArticyFlowPlayer>().PausedOn as PhraseDialogueFragment;
         _currentSpeed = (float)textSpeed * 0.02f;
-
+        
         if (aObject is PhraseDialogueFragment df)
         {
+            Current = aObject as PhraseDialogueFragment;
             _spawner.SpawnPhrase(df.Text);
         }
     }
@@ -126,7 +128,9 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
                 return;
             }
             if (branch.IsValid)
+            {
                 candidates.Add(branch);
+            }
         }
 
         // checking for saving - refactor
@@ -145,36 +149,49 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     private IEnumerator WaitTimeAndCheckForDelay(List<Branch> candidates, float time)
     {
-        yield return new WaitForSeconds(time);
+        float seconds;
+        if (clampSpeedToOne) seconds = time <= 1 ? 1 : time;
+        else seconds = time;
+
+        yield return new WaitForSeconds(seconds);
 
         float delay = Current.Template.PhraseFeature.delay;
         if (delay > 0)
         {
+            // обязательно ли оборачивать? нет, потому что Play() еще не вызван и можно ждать. 
             StartCoroutine(PlayWithDelay(candidates, delay));
         }
         else
+        {
             Play(candidates);
+        }
     }
 
     private void Play(List<Branch> candidates)
     {
+
         if (candidates.Count == 0)
         {
             Debug.LogError("No candidates found.");
             GameObject eg = _spawner.SpawnEndGame(false);
         }
-
         else if (candidates.Count == 1)
         {
             _player.Play(candidates[0]);
-        } else
+            _saveSystem.LogGlobalVars();
+        }
+        else
+        {
             _spawner.SpawnChoice(candidates);
+        }
     }
 
     public IEnumerator PlayAndWaitConstantTimeOnClick(Branch branch)
     {
         yield return new WaitForSeconds(1);
+        
         _player.Play(branch);
+        _saveSystem.LogGlobalVars();
     }
 
     private IEnumerator PlayWithDelay(List<Branch> candidates, float delay)
@@ -210,14 +227,24 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     public void RewindToState(string stateId)
     {
-        Debug.Log($"Rewinding to state {stateId}");
+        Debug.LogWarning($"Rewinding to state {stateId}");
 
-        PlayerStandBy = false;
+        PlayerStandBy = false; // если поменять на true - баг (после ревайнда не спавнится выбор, только после перезагрузки игры)
         GameEnded = false;
         AllowRewinding = false;
 
         _saveSystem.CleanLog(stateId);
         _spawner.ClearScreen();
-        _saveSystem.LoadGame(stateId);
+
+        // отрисовать лог (пересмотреть и починить в соответствии с Single Responsibility principle)
+        XDocument xDoc = _saveSystem.ProvideXDoc();
+        _saveSystem.SpawnLog(xDoc);
+
+        // инициализировать глобальные переменные
+        _saveSystem.InitializeGlobalVariables(stateId);
+
+        // set startOn
+        var startOn = ArticyDatabase.GetObject(stateId);
+        _player.StartOn = startOn;
     }
 }

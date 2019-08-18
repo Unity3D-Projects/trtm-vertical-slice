@@ -56,6 +56,7 @@ public class Spawner : MonoBehaviour
         return bg;
     }
 
+    // в иерархии писать "Choice (2), если выбора 2, и т.д.
     public Button SpawnButtonFromLog(GameObject buttonGroup, string text, bool clicked)
     {
         Button b = Instantiate(_prefabManager.buttonPrefab, buttonGroup.transform);
@@ -83,7 +84,8 @@ public class Spawner : MonoBehaviour
         });
         return b;
     }
-
+    // в иерархии писать "Choice (2), если выбора 2, и т.д.
+    // попробовать не лямбды а отдельные хендлеры для кнопок (и ревайнд)
     public Button SpawnButton(GameObject buttonGroup, string text, Branch exit, List<Branch> candidates)
     {
         Button b = Instantiate(_prefabManager.buttonPrefab, buttonGroup.transform);
