@@ -15,6 +15,7 @@ using Articy.Test.GlobalVariables;
 using System;
 using UnityEngine.UI;
 using System.Xml.Linq;
+using UnityEngine.SceneManagement;
 
 public enum TextSpeed { SLOWEST = 5, SLOW = 4, NORMAL = 3, FAST = 2, FASTEST = 1 }
 
@@ -29,7 +30,9 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     #region Settings
     public TextSpeed textSpeed;
     public bool clampSpeedToOne = true;
-    [Space]
+    public bool instantMode = false;
+
+    public int minutesToSkip;
 
     public bool _allowRewinding = true;
     public bool AllowRewinding
@@ -81,6 +84,17 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     public PhraseDialogueFragment Current { get; private set; }
     private float _currentSpeed;
+
+    public CoroutineObjectBase CurrentDelay { get; set; }
+
+
+    // вот эту ебалу оформить
+    public void SkipDelay(float m_timeToSkip)
+    {
+        StopCoroutine(CurrentDelay.Coroutine);
+        _saveSystem.SubtractMinutesFromExecute(m_timeToSkip);
+        SceneManager.LoadScene("Main");
+    }
 
     private void Awake()
     {
@@ -144,21 +158,23 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             _saveSystem.LogState();
         }
 
-        StartCoroutine(WaitTimeAndCheckForDelay(candidates, Current.Text.Length * _currentSpeed)); // TODO: clamp to min 1 sec
+        var textDelay = !instantMode ? Current.Text.Length * _currentSpeed : 0;
+        StartCoroutine(WaitTimeAndCheckForDelay(candidates, textDelay)); // TODO: clamp to min 1 sec
     }
 
     private IEnumerator WaitTimeAndCheckForDelay(List<Branch> candidates, float time)
     {
         float seconds;
-        if (clampSpeedToOne) seconds = time <= 1 ? 1 : time;
+        if (clampSpeedToOne && !instantMode) seconds = time <= 1 ? 1 : time;
         else seconds = time;
         yield return new WaitForSeconds(seconds);
 
         float delay = Current.Template.PhraseFeature.delay;
         if (delay > 0)
         {
-            // обязательно ли оборачивать? нет, потому что Play() еще не вызван и можно ждать. 
-            StartCoroutine(PlayWithDelay(candidates, delay));
+            var coroutine = new CoroutineObject<List<Branch>, float>(this, PlayWithDelay);
+            coroutine.Start(candidates, delay);
+            CurrentDelay = coroutine;
         }
         else
         {
@@ -195,6 +211,8 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     private IEnumerator PlayWithDelay(List<Branch> candidates, float m_timeToWait)
     {
+        Debug.LogWarning("Delay entered from game");
+
         DateTime startTime = DateTime.Now;
         DateTime endTime = DateTime.Now.AddMinutes(m_timeToWait);
         _saveSystem.SetStartTimeAndExecuteTime(startTime, endTime);
@@ -206,7 +224,6 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         while (m_Remaining > 0)
         {
             m_Remaining -= Time.deltaTime / 60;
-            Debug.Log(m_Remaining);
             delayBlock.GetComponentInChildren<Text>().text = TimeSpan.FromMinutes(m_Remaining).ToString(@"hh\:mm\:ss");
             slider.value += Time.deltaTime / (m_timeToWait * 60);
             yield return null;
@@ -218,6 +235,8 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     
     public IEnumerator ExecuteWithDelay(DateTime startTime, float m_timeToWait)
     {
+        Debug.LogWarning("Delay entered from save");
+
         DateTime endTime = DateTime.Now.AddMinutes(m_timeToWait);
         var totalDelay = (endTime - startTime).TotalMinutes;
 

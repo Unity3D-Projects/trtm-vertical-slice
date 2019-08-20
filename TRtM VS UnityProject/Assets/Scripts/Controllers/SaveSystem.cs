@@ -122,10 +122,13 @@ public class SaveSystem : MonoBehaviour
             var coroutine = new CoroutineObject<DateTime, float>(_controller, _controller.ExecuteWithDelay);
             coroutine.Finished += () =>
             {
+                // coroutine.Stop() ??
                 _controller.PlayerStandBy = false;
             };
             coroutine.Start(result.startTime, result.remainingInMinutes);
-        } else
+            _controller.CurrentDelay = coroutine;
+        }
+        else
         {
             _controller.PlayerStandBy = false;
         }
@@ -154,7 +157,8 @@ public class SaveSystem : MonoBehaviour
         return loadedVars;
     }
 
-    private (DateTime startTime, float remainingInMinutes) CheckForDelay(XElement xExecute)
+    // private
+    public (DateTime startTime, float remainingInMinutes) CheckForDelay(XElement xExecute)
     {
         var executeTime = DateTime.Parse(xExecute.Attribute(Const.XmlAliases.ExecuteTime)?.Value ?? DateTime.Now.ToString());
         var startTime = DateTime.Parse(xExecute.Attribute(Const.XmlAliases.StartTime)?.Value ?? DateTime.Now.ToString());
@@ -313,11 +317,20 @@ public class SaveSystem : MonoBehaviour
         xDoc.Element("save").Add(GetGlobalVars("vars"));
         xDoc.Save(_savePath);
     }
-
+    
     public void UpdateExecuteElement(string technicalName)
     {
         XDocument xDoc = XDocument.Load(_savePath);
         xDoc.Element("save").Element("execute").Attribute(Const.XmlAliases.ExecuteId).Value = technicalName;
+        xDoc.Save(_savePath);
+    }
+    public void SubtractMinutesFromExecute(float time)
+    {
+        XDocument xDoc = XDocument.Load(_savePath);
+        var xExecuteTime = xDoc.Element("save").Element("execute").Attribute(Const.XmlAliases.ExecuteTime);
+        DateTime dateBefore = DateTime.Parse(xExecuteTime.Value);
+        DateTime dateAfter = dateBefore.AddMinutes(-time);
+        xExecuteTime.Value = dateAfter.ToString();
         xDoc.Save(_savePath);
     }
 
@@ -331,6 +344,11 @@ public class SaveSystem : MonoBehaviour
         xDoc.Element("save").Add(GetGlobalVars("vars"));
         
         xDoc.Save(_savePath);
+    }
+
+    public void DeleteSaveFile()
+    {
+        File.Delete(_savePath);
     }
 
     private XElement GetGlobalVars(string elementName)
