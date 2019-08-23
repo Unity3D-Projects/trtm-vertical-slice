@@ -53,7 +53,8 @@ public class SaveSystem : MonoBehaviour
             switch (logEvent.Name.LocalName)
             {
                 case (Const.XmlAliases.Phrase):
-                    _spawner.SpawnPhrase(logEvent.Value);
+                    var phrase = ArticyDatabase.GetObject(logEvent.Value) as PhraseDialogueFragment;
+                    _spawner.SpawnPhrase(phrase.Text);
                     break;
 
                 case (Const.XmlAliases.ButtonGroup):
@@ -61,9 +62,10 @@ public class SaveSystem : MonoBehaviour
                     bg.GetComponent<ArticyReference>().reference = (ArticyRef)ArticyDatabase.GetObject(logEvent.Attribute("id").Value);
                     foreach (XElement xButton in logEvent.Elements())
                     {
+                        var blockWithMenuText = ArticyDatabase.GetObject(xButton.Value) as PhraseDialogueFragment;
                         Button b = _spawner.SpawnButtonFromLog(
                             bg,
-                            xButton.Value,
+                            blockWithMenuText.MenuText,
                             bool.Parse(xButton.Attribute(Const.XmlAliases.ButtonPressedAttributte).Value));
                     }
                     break;
@@ -224,16 +226,16 @@ public class SaveSystem : MonoBehaviour
 
     public void LogChoice(Branch exit, List<Branch> candidates)
     {
-        LogEvent(Const.LogEvent.LogPhrase, _controller.Current.Text);
+        LogEvent(Const.LogEvent.LogPhrase, _controller.Current.TechnicalName);
         LogEvent(Const.LogEvent.LogButtonGroup, string.Empty);
         foreach (Branch branch in candidates)
         {
             if (((PhraseDialogueFragment)branch.Target).TechnicalName == ((PhraseDialogueFragment)exit.Target).TechnicalName)
             {
-                LogEvent(Const.LogEvent.LogButtonPressed, ((PhraseDialogueFragment)exit.Target).MenuText);
+                LogEvent(Const.LogEvent.LogButtonPressed, ((PhraseDialogueFragment)exit.Target).TechnicalName);
                 continue;
             }
-            LogEvent(Const.LogEvent.LogButton, ((PhraseDialogueFragment)branch.Target).MenuText);
+            LogEvent(Const.LogEvent.LogButton, ((PhraseDialogueFragment)branch.Target).TechnicalName);
         }
     }
 

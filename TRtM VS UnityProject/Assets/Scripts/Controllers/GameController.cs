@@ -150,7 +150,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         // checking for saving - refactor
         if (candidates.Count == 1)
         {
-            _saveSystem.LogEvent(Const.LogEvent.LogPhrase, Current.Text);
+            _saveSystem.LogEvent(Const.LogEvent.LogPhrase, Current.TechnicalName);
             _saveSystem.UpdateExecuteElement(((PhraseDialogueFragment)candidates[0].Target).TechnicalName);
         }
         else if (candidates.Count > 1)
