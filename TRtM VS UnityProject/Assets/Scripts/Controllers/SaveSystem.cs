@@ -178,22 +178,21 @@ public class SaveSystem : MonoBehaviour
     public void LogEvent(Const.LogEvent type, string content)
     {
         XDocument xDoc = XDocument.Load(_savePath);
-
+        var xLog = xDoc.Element("save").Element("log");
         switch (type)
         {
             case Const.LogEvent.LogPhrase:
-                xDoc.Element("save").Element("log").Add(new XElement(Const.XmlAliases.Phrase, content));
+                xLog.Add(new XElement(Const.XmlAliases.Phrase, content));
                 break;
             case Const.LogEvent.LogButtonGroup:
-                xDoc.Element("save").Element("log")
-                    .Add(new XElement(
+                xLog.Add(new XElement(
                         Const.XmlAliases.ButtonGroup,
                             new XAttribute("id", _controller.Current.TechnicalName),
                         content));
                 break;
 
             case Const.LogEvent.LogButton:
-                xDoc.Element("save").Element("log").Elements(Const.XmlAliases.ButtonGroup).Last()
+                xLog.Elements(Const.XmlAliases.ButtonGroup).Last()
                     .Add(new XElement(
                         Const.XmlAliases.Button,
                             new XAttribute(Const.XmlAliases.ButtonPressedAttributte, false),
@@ -201,22 +200,20 @@ public class SaveSystem : MonoBehaviour
                 break;
 
             case Const.LogEvent.LogButtonPressed:
-                xDoc.Element("save").Element("log").Elements(Const.XmlAliases.ButtonGroup).Last()
+                xLog.Elements(Const.XmlAliases.ButtonGroup).Last()
                     .Add(new XElement(
                         Const.XmlAliases.Button,
                             new XAttribute(Const.XmlAliases.ButtonPressedAttributte, true),
                         content));
                 break;
             case Const.LogEvent.LogEndGameWin:
-                xDoc.Element("save").Element("log")
-                    .Add(new XElement(Const.XmlAliases.EndGame,
+                xLog.Add(new XElement(Const.XmlAliases.EndGame,
                             new XAttribute(Const.XmlAliases.EndGameWinAttributte, true),
                             content));
                 break;
 
             case Const.LogEvent.LogEndGameLose:
-                xDoc.Element("save").Element("log")
-                    .Add(new XElement(Const.XmlAliases.EndGame,
+                xLog.Add(new XElement(Const.XmlAliases.EndGame,
                             new XAttribute(Const.XmlAliases.EndGameWinAttributte, false),
                             content));
                 break;
@@ -230,12 +227,14 @@ public class SaveSystem : MonoBehaviour
         LogEvent(Const.LogEvent.LogButtonGroup, string.Empty);
         foreach (Branch branch in candidates)
         {
-            if (((PhraseDialogueFragment)branch.Target).TechnicalName == ((PhraseDialogueFragment)exit.Target).TechnicalName)
+            var branchTarget = branch.Target as PhraseDialogueFragment;
+            var exitTarget = exit.Target as PhraseDialogueFragment;
+            if (branchTarget.TechnicalName == (exitTarget.TechnicalName))
             {
-                LogEvent(Const.LogEvent.LogButtonPressed, ((PhraseDialogueFragment)exit.Target).TechnicalName);
+                LogEvent(Const.LogEvent.LogButtonPressed, exitTarget.TechnicalName);
                 continue;
             }
-            LogEvent(Const.LogEvent.LogButton, ((PhraseDialogueFragment)branch.Target).TechnicalName);
+            LogEvent(Const.LogEvent.LogButton, branchTarget.TechnicalName);
         }
     }
 
@@ -260,7 +259,7 @@ public class SaveSystem : MonoBehaviour
     public void LoadState(string id)
     {
         XDocument xDoc = XDocument.Load(_savePath);
-        var df = (PhraseDialogueFragment)ArticyDatabase.GetObject(id);
+        var df = ArticyDatabase.GetObject(id) as PhraseDialogueFragment;
     }
 
     public void SetStartTimeAndExecuteTime(DateTime startTime, DateTime executeTime)
@@ -336,7 +335,7 @@ public class SaveSystem : MonoBehaviour
         xDoc.Save(_savePath);
     }
 
-    public void CreateNewSaveFile()
+    private void CreateNewSaveFile()
     {
         XDocument xDoc = new XDocument(
                     new XElement("save",

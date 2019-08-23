@@ -85,37 +85,12 @@ public class Spawner : MonoBehaviour
         return b;
     }
     // в иерархии писать "Choice (2), если выбора 2, и т.д.
-    // попробовать не лямбды а отдельные хендлеры для кнопок (и ревайнд)
     public Button SpawnButton(GameObject buttonGroup, string text, Branch exit, List<Branch> candidates)
     {
         Button b = Instantiate(_prefabManager.buttonPrefab, buttonGroup.transform);
         b.name = text;
         b.GetComponentInChildren<Text>().text = text;
-        b.onClick.AddListener(() =>
-        {
-            _saveSystem.LogChoice(exit, candidates);
-
-            var siblingButtons = buttonGroup.gameObject.GetComponentsInChildren<Button>().ToList();
-            foreach (Button sibling in siblingButtons)
-            {
-                var sColors = b.GetComponent<ButtonColors>().notPressedColors;
-                sibling.colors = sColors;
-                sibling.onClick.RemoveAllListeners();
-                sibling.onClick.AddListener(() =>
-                {
-                    if (_controller.AllowRewinding)
-                    {
-                        var reference = buttonGroup.GetComponent<ArticyReference>().reference;
-                        var id = ((PhraseDialogueFragment)reference).TechnicalName;
-                        _controller.RewindToState(id);
-                    }
-                });
-            }
-            var bColors = b.GetComponent<ButtonColors>().pressedColors;
-            b.colors = bColors;
-
-            StartCoroutine(_controller.PlayAndWaitConstantTimeOnClick(exit));
-        });
+        b.onClick.AddListener(() => ButtonOnClickEventHandler(b, buttonGroup, exit, candidates));
         return b;
     }
 
@@ -125,7 +100,6 @@ public class Spawner : MonoBehaviour
         Slider s = Instantiate(_prefabManager.sliderPrefab, _prefabManager.content);
         s.interactable = false;
         s.value = (float)(timePassed / delay);
-        // log slider or something
         return s;
     }
 
@@ -138,14 +112,8 @@ public class Spawner : MonoBehaviour
     public GameObject SpawnEndGame(bool win)
     {
         GameObject endGame = Instantiate(_prefabManager.endgamePrefab, _prefabManager.content);
-        if (win)
-        {
-            endGame.GetComponent<Image>().color = endGame.GetComponent<EndGameColors>().youWinColor;
-        }
-        else
-        {
-            endGame.GetComponent<Image>().color = endGame.GetComponent<EndGameColors>().youLoseColor;
-        }
+        if (win) endGame.GetComponent<Image>().color = endGame.GetComponent<EndGameColors>().youWinColor;
+        else endGame.GetComponent<Image>().color = endGame.GetComponent<EndGameColors>().youLoseColor;
         return endGame;
     }
 
@@ -154,6 +122,34 @@ public class Spawner : MonoBehaviour
         foreach (Transform child in _prefabManager.content)
         {
             Destroy(child.gameObject);
+        }
+    }
+
+    private void ButtonOnClickEventHandler(Button button, GameObject buttonGroup, Branch exit, List<Branch> candidates)
+    {
+        _saveSystem.LogChoice(exit, candidates);
+
+        var siblingButtons = buttonGroup.gameObject.GetComponentsInChildren<Button>().ToList();
+        foreach (Button sibling in siblingButtons)
+        {
+            var sColors = button.GetComponent<ButtonColors>().notPressedColors;
+            sibling.colors = sColors;
+            sibling.onClick.RemoveAllListeners();
+            sibling.onClick.AddListener(() => ButtonOnSecondClickEventHandler(buttonGroup));
+        }
+        var bColors = button.GetComponent<ButtonColors>().pressedColors;
+        button.colors = bColors;
+
+        StartCoroutine(_controller.PlayAndWaitConstantTimeOnClick(exit));
+    }
+
+    private void ButtonOnSecondClickEventHandler(GameObject buttonGroup)
+    {
+        if (_controller.AllowRewinding)
+        {
+            var reference = buttonGroup.GetComponent<ArticyReference>().reference;
+            var id = ((PhraseDialogueFragment)reference).TechnicalName;
+            _controller.RewindToState(id);
         }
     }
 }

@@ -84,11 +84,8 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     public PhraseDialogueFragment Current { get; private set; }
     private float _currentSpeed;
-
     public CoroutineObjectBase CurrentDelay { get; set; }
-
-
-    // вот эту ебалу оформить
+    
     public void SkipDelay(float m_timeToSkip)
     {
         StopCoroutine(CurrentDelay.Coroutine);
@@ -147,11 +144,12 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             }
         }
 
-        // checking for saving - refactor
+        // checking for saving - refactor? how?
         if (candidates.Count == 1)
         {
             _saveSystem.LogEvent(Const.LogEvent.LogPhrase, Current.TechnicalName);
-            _saveSystem.UpdateExecuteElement(((PhraseDialogueFragment)candidates[0].Target).TechnicalName);
+            var target = candidates[0].Target as PhraseDialogueFragment;
+            _saveSystem.UpdateExecuteElement(target.TechnicalName);
         }
         else if (candidates.Count > 1)
         {
@@ -159,7 +157,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         }
 
         var textDelay = !instantMode ? Current.Text.Length * _currentSpeed : 0;
-        StartCoroutine(WaitTimeAndCheckForDelay(candidates, textDelay)); // TODO: clamp to min 1 sec
+        StartCoroutine(WaitTimeAndCheckForDelay(candidates, textDelay));
     }
 
     private IEnumerator WaitTimeAndCheckForDelay(List<Branch> candidates, float time)
