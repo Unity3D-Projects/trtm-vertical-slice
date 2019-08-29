@@ -209,7 +209,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     private IEnumerator PlayWithDelay(List<Branch> candidates, float m_timeToWait)
     {
-        Debug.LogWarning("Delay entered from game");
+        Debug.Log("Delay entered from game");
 
         DateTime startTime = DateTime.Now;
         DateTime endTime = DateTime.Now.AddMinutes(m_timeToWait);
@@ -233,7 +233,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     
     public IEnumerator ExecuteWithDelay(DateTime startTime, float m_timeToWait)
     {
-        Debug.LogWarning("Delay entered from save");
+        Debug.Log("Delay entered from save");
 
         DateTime endTime = DateTime.Now.AddMinutes(m_timeToWait);
         var totalDelay = (endTime - startTime).TotalMinutes;
@@ -255,7 +255,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     public void RewindToState(string stateId)
     {
-        Debug.LogWarning($"Rewinding to state {stateId}");
+        Debug.Log($"Rewinding to state {stateId}");
 
         PlayerStandBy = false; // если поменять на true - баг (после ревайнда не спавнится выбор, только после перезагрузки игры)
         GameEnded = false;

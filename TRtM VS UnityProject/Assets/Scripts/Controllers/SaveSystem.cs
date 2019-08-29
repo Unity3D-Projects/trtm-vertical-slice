@@ -40,7 +40,7 @@ public class SaveSystem : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning($"Loading saved game");
+            Debug.Log($"Loading saved game");
             LoadGame();
         }
     }
@@ -106,7 +106,7 @@ public class SaveSystem : MonoBehaviour
         var anyEndGame = xDoc.Element("save").Element("log").Elements("endGame").Any();
         if (anyEndGame)
         {
-            Debug.LogWarning("Game already ended.");
+            Debug.Log("Game already ended.");
             _controller.GameEnded = true;
             return;
         }
@@ -251,7 +251,7 @@ public class SaveSystem : MonoBehaviour
         }
         else
         {
-            Debug.LogWarning("Overwriting the state...");
+            Debug.Log("Overwriting the state...");
             OverwriteState(stateWithThisName);
         }
     }
@@ -292,7 +292,7 @@ public class SaveSystem : MonoBehaviour
 
         if (stateWithThisName != null)
         {
-            Debug.LogWarning($"{GetType().Name}: Document already has a state called \"{stateName}\".");
+            Debug.Log($"{GetType().Name}: Document already has a state called \"{stateName}\".");
             return true;
         }
         else return false;
