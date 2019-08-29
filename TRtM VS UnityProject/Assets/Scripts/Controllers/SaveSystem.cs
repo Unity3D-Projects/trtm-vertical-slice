@@ -328,10 +328,18 @@ public class SaveSystem : MonoBehaviour
     public void SubtractMinutesFromExecute(float time)
     {
         XDocument xDoc = XDocument.Load(_savePath);
-        var xExecuteTime = xDoc.Element("save").Element("execute").Attribute(Const.XmlAliases.ExecuteTime);
-        DateTime dateBefore = DateTime.Parse(xExecuteTime.Value);
-        DateTime dateAfter = dateBefore.AddMinutes(-time);
-        xExecuteTime.Value = dateAfter.ToString();
+        var xExecute = xDoc.Element("save").Element("execute");
+
+        var xExecuteTime = xExecute.Attribute(Const.XmlAliases.ExecuteTime);
+        DateTime eBefore = DateTime.Parse(xExecuteTime.Value);
+        DateTime eAfter = eBefore.AddMinutes(-time);
+        xExecuteTime.Value = eAfter.ToString();
+
+        var xStartTime = xExecute.Attribute(Const.XmlAliases.StartTime);
+        DateTime sBefore = DateTime.Parse(xStartTime.Value);
+        DateTime sAfter = sBefore.AddMinutes(-time);
+        xStartTime.Value = sAfter.ToString();
+        
         xDoc.Save(_savePath);
     }
 
