@@ -45,8 +45,62 @@ public class SaveSystem : MonoBehaviour
         }
     }
 
-    public void SpawnLog(XDocument xDoc)
+    
+
+    public bool SaveFileExists()
     {
+        return File.Exists(_savePath);
+    }
+
+    public XDocument ProvideXDoc()
+    {
+        XDocument xDoc = XDocument.Load(_savePath);
+        return xDoc;
+    }
+
+    public void LoadGame()
+    {
+        SpawnLog();
+        
+        InitializeGlobalVariables();
+
+        XDocument xDoc = XDocument.Load(_savePath);
+
+        var anyEndGame = xDoc.Element("save").Element("log").Elements("endGame").Any();
+        if (anyEndGame)
+        {
+            Debug.Log("Game already ended.");
+            _controller.GameEnded = true;
+            return;
+        }
+
+        // set startOn
+        var xExecute = xDoc.Element("save").Element("execute");
+        var executeId = xExecute.Attribute(Const.XmlAliases.ExecuteId).Value; 
+        _player.StartOn = ArticyDatabase.GetObject(executeId);
+
+        // проверить дилей
+        var result = CheckForDelay(xExecute);
+        if (result.remainingInMinutes > 0)
+        {
+            var coroutine = new CoroutineObject<DateTime, float>(_controller, _controller.ExecuteWithDelay);
+            coroutine.Finished += () =>
+            {
+                _controller.PlayerStandBy = false;
+            };
+            coroutine.Start(result.startTime, result.remainingInMinutes);
+            _controller.CurrentDelay = coroutine;
+        }
+        else
+        {
+            _controller.PlayerStandBy = false;
+        }
+    }
+
+    public void SpawnLog()
+    {
+        XDocument xDoc = XDocument.Load(_savePath);
+
         var log = xDoc.Element("save").Element("log");
         foreach (XElement logEvent in log.Elements())
         {
@@ -73,66 +127,13 @@ public class SaveSystem : MonoBehaviour
                     if (bool.Parse(logEvent.Attribute(Const.XmlAliases.EndGameWinAttributte).Value))
                     {
                         _spawner.SpawnEndGame(true);
-                    } else
+                    }
+                    else
                     {
                         _spawner.SpawnEndGame(false);
                     }
                     break;
             }
-        }
-    }
-
-    public bool SaveFileExists()
-    {
-        return File.Exists(_savePath);
-    }
-
-    public XDocument ProvideXDoc()
-    {
-        XDocument xDoc = XDocument.Load(_savePath);
-        return xDoc;
-    }
-
-    public void LoadGame()
-    {
-        XDocument xDoc = XDocument.Load(_savePath);
-
-        // отрисовать лог
-        SpawnLog(xDoc);
-
-        // инициализировать глобальные переменные
-        InitializeGlobalVariables();
-        
-        var anyEndGame = xDoc.Element("save").Element("log").Elements("endGame").Any();
-        if (anyEndGame)
-        {
-            Debug.Log("Game already ended.");
-            _controller.GameEnded = true;
-            return;
-        }
-
-        // set startOn
-        var xExecute = xDoc.Element("save").Element("execute");
-        var executeId = xExecute.Attribute(Const.XmlAliases.ExecuteId).Value;
-        var startOn = ArticyDatabase.GetObject(executeId);
-        _player.StartOn = startOn;
-
-        // проверить дилей
-        var result = CheckForDelay(xExecute);
-        if (result.remainingInMinutes > 0)
-        {
-            var coroutine = new CoroutineObject<DateTime, float>(_controller, _controller.ExecuteWithDelay);
-            coroutine.Finished += () =>
-            {
-                // coroutine.Stop() ??
-                _controller.PlayerStandBy = false;
-            };
-            coroutine.Start(result.startTime, result.remainingInMinutes);
-            _controller.CurrentDelay = coroutine;
-        }
-        else
-        {
-            _controller.PlayerStandBy = false;
         }
     }
 
@@ -145,6 +146,20 @@ public class SaveSystem : MonoBehaviour
            : CopyVars(xDoc.Element("save").Element("states").Elements().Where(e => e.Attribute("id").Value == id).FirstOrDefault());
 
         ArticyDatabase.DefaultGlobalVariables.Variables = loadedVars;
+    }
+    
+    private (DateTime startTime, float remainingInMinutes) CheckForDelay(XElement xExecute)
+    {
+        var executeTime = DateTime.Parse(xExecute.Attribute(Const.XmlAliases.ExecuteTime)?.Value ?? DateTime.Now.ToString());
+        var startTime = DateTime.Parse(xExecute.Attribute(Const.XmlAliases.StartTime)?.Value ?? DateTime.Now.ToString());
+
+        if (executeTime != null && DateTime.Now < executeTime)
+        {
+            var remainingInMinutes = (float)(executeTime - DateTime.Now).TotalMinutes;
+            return (startTime, remainingInMinutes);
+        }
+
+        return (startTime, 0);
     }
 
     private Dictionary<string, object> CopyVars(XElement elementToCopyFrom)
@@ -159,22 +174,6 @@ public class SaveSystem : MonoBehaviour
         return loadedVars;
     }
 
-    // private
-    public (DateTime startTime, float remainingInMinutes) CheckForDelay(XElement xExecute)
-    {
-        var executeTime = DateTime.Parse(xExecute.Attribute(Const.XmlAliases.ExecuteTime)?.Value ?? DateTime.Now.ToString());
-        var startTime = DateTime.Parse(xExecute.Attribute(Const.XmlAliases.StartTime)?.Value ?? DateTime.Now.ToString());
-
-        if (executeTime != null && DateTime.Now < executeTime)
-        {
-            var remainingInMinutes = (float)(executeTime - DateTime.Now).TotalMinutes;
-            return (startTime, remainingInMinutes);
-        }
-
-        return (startTime, 0);
-    }
-
-    // get type of event ???
     public void LogEvent(Const.LogEvent type, string content)
     {
         XDocument xDoc = XDocument.Load(_savePath);

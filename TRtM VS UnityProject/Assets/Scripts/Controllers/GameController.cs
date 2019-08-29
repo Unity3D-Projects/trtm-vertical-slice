@@ -166,7 +166,6 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         if (clampSpeedToOne && !instantMode) seconds = time <= 1 ? 1 : time;
         else seconds = time;
         yield return new WaitForSeconds(seconds);
-
         float delay = Current.Template.PhraseFeature.delay;
         if (delay > 0)
         {
@@ -265,8 +264,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         _spawner.ClearScreen();
 
         // отрисовать лог (пересмотреть и починить в соответствии с Single Responsibility principle)
-        XDocument xDoc = _saveSystem.ProvideXDoc();
-        _saveSystem.SpawnLog(xDoc);
+        _saveSystem.SpawnLog();
 
         // инициализировать глобальные переменные
         _saveSystem.InitializeGlobalVariables(stateId);
