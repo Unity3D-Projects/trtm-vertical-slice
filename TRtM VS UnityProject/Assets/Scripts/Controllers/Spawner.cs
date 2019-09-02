@@ -1,4 +1,4 @@
-﻿using Articy.Test;
+﻿using Articy.The_Road_To_Moscow;
 using Articy.Unity;
 using Articy.Unity.Interfaces;
 using System;
@@ -67,7 +67,8 @@ public class Spawner : MonoBehaviour
         {
             var colors = b.GetComponent<ButtonColors>().pressedColors;
             b.colors = colors;
-        } else
+        }
+        else
         {
             var colors = b.GetComponent<ButtonColors>().notPressedColors;
             b.colors = colors;
@@ -78,7 +79,7 @@ public class Spawner : MonoBehaviour
             if (_controller.AllowRewinding)
             {
                 var reference = buttonGroup.GetComponent<ArticyReference>().reference;
-                var id = ((PhraseDialogueFragment)reference).TechnicalName;
+                var id = ((DFTemplate)reference).TechnicalName;
                 _controller.RewindToState(id);
             }
         });
@@ -148,7 +149,7 @@ public class Spawner : MonoBehaviour
         if (_controller.AllowRewinding)
         {
             var reference = buttonGroup.GetComponent<ArticyReference>().reference;
-            var id = ((PhraseDialogueFragment)reference).TechnicalName;
+            var id = ((DFTemplate)reference).TechnicalName;
             _controller.RewindToState(id);
         }
     }

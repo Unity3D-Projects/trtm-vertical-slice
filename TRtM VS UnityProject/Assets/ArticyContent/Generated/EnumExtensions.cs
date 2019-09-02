@@ -1,10 +1,25 @@
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
 	public static class EnumExtensionMethods
 	{
-		public static string GetDisplayName(this Sex aSex)
+		public static string GetDisplayName(this Text_Position aText_Position)
 		{
-			return Articy.Unity.ArticyTypeSystem.GetArticyType("Sex").GetEnumValue(((int)(aSex))).DisplayName;
+			return Articy.Unity.ArticyTypeSystem.GetArticyType("Text_Position").GetEnumValue(((int)(aText_Position))).DisplayName;
+		}
+
+		public static string GetDisplayName(this SFX aSFX)
+		{
+			return Articy.Unity.ArticyTypeSystem.GetArticyType("SFX").GetEnumValue(((int)(aSFX))).DisplayName;
+		}
+
+		public static string GetDisplayName(this Music aMusic)
+		{
+			return Articy.Unity.ArticyTypeSystem.GetArticyType("Music").GetEnumValue(((int)(aMusic))).DisplayName;
+		}
+
+		public static string GetDisplayName(this Ambience aAmbience)
+		{
+			return Articy.Unity.ArticyTypeSystem.GetArticyType("Ambience").GetEnumValue(((int)(aAmbience))).DisplayName;
 		}
 
 		public static string GetDisplayName(this ShapeType aShapeType)

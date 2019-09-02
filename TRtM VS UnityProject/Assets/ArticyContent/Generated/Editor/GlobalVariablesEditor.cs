@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-using Articy.Test.GlobalVariables;
+using Articy.The_Road_To_Moscow.GlobalVariables;
 using Articy.Unity.Editor.PropertyDrawer;
 using System;
 using System.Collections;
@@ -16,11 +16,11 @@ using UnityEditor;
 using UnityEngine;
 
 
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
-    [CustomEditor(typeof(Articy.Test.GlobalVariables.ArticyGlobalVariables))]
+    [CustomEditor(typeof(Articy.The_Road_To_Moscow.GlobalVariables.ArticyGlobalVariables))]
     public class GlobalVariablesDrawer : GlobalVariablesEditor
     {
     }
@@ -31,7 +31,7 @@ namespace Articy.Test
         [UnityEditor.MenuItem("Articy/Advanced/Create GlobalVariables")]
         public static void CreateNewGlobalVariables()
         {
-Articy.Unity.Editor.Utils.ArticyEditorUtility.CreateGlobalVariablesClone<Articy.Test.GlobalVariables.ArticyGlobalVariables>();
+Articy.Unity.Editor.Utils.ArticyEditorUtility.CreateGlobalVariablesClone<Articy.The_Road_To_Moscow.GlobalVariables.ArticyGlobalVariables>();
         }
     }
 }

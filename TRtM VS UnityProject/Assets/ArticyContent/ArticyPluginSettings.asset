@@ -12,13 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 1760449090, guid: 538242286e35fb84f8e90dd86ba08b80, type: 3}
   m_Name: ArticyPluginSettings
   m_EditorClassIdentifier: 
-  mUsedImportFile: Assets/test.articyu3d
+  mUsedImportFile: Assets/The_Road_to_Moscow.articyu3d
   mUsedLocalizationPath: 
-  mLastUsedObjectDefinitionHash: 498B542231707E2BC7AB17488C2D49E2B3FF31AD7E4123A5A50872D157C86B3D
-  mLastUsedScriptFragmentsHash: 3244358420
+  mLastUsedObjectDefinitionHash: EBC8D60880B9E711BAC63551BF6067319864D77F8B23EA563A19CE9FC3E74612
+  mLastUsedScriptFragmentsHash: 1118352620
   mLastUsedPackagesHash: 282370559
   mLastUsedPackagesCount: 1
-  mLastBuildCode: 1
+  mLastBuildCode: -100
   mAwaitingModelImport: 0
   mAwaitingFragmentsImport: 0
   mSCMIgnoreState: 0

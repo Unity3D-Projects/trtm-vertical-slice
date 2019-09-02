@@ -14,5 +14,5 @@ public class SaveSystemEditor : Editor
             theSaveSystem.DeleteSaveFile();
         }
     }
-     
+
 }

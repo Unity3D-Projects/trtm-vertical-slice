@@ -1,4 +1,4 @@
-﻿using Articy.Test.GlobalVariables;
+﻿using Articy.The_Road_To_Moscow.GlobalVariables;
 using Articy.Unity.Utils;
 using Articy.Unity;
 using System;
@@ -9,7 +9,7 @@ using UnityEngine;
 using System.Collections.Generic;
 using Articy.Unity.Interfaces;
 using System.Collections;
-using Articy.Test;
+using Articy.The_Road_To_Moscow;
 using UnityEngine.UI;
 
 public class SaveSystem : MonoBehaviour
@@ -45,7 +45,7 @@ public class SaveSystem : MonoBehaviour
         }
     }
 
-    
+
 
     public bool SaveFileExists()
     {
@@ -61,7 +61,7 @@ public class SaveSystem : MonoBehaviour
     public void LoadGame()
     {
         SpawnLog();
-        
+
         InitializeGlobalVariables();
 
         XDocument xDoc = XDocument.Load(_savePath);
@@ -76,7 +76,7 @@ public class SaveSystem : MonoBehaviour
 
         // set startOn
         var xExecute = xDoc.Element("save").Element("execute");
-        var executeId = xExecute.Attribute(Const.XmlAliases.ExecuteId).Value; 
+        var executeId = xExecute.Attribute(Const.XmlAliases.ExecuteId).Value;
         _player.StartOn = ArticyDatabase.GetObject(executeId);
 
         // проверить дилей
@@ -107,7 +107,7 @@ public class SaveSystem : MonoBehaviour
             switch (logEvent.Name.LocalName)
             {
                 case (Const.XmlAliases.Phrase):
-                    var phrase = ArticyDatabase.GetObject(logEvent.Value) as PhraseDialogueFragment;
+                    var phrase = ArticyDatabase.GetObject(logEvent.Value) as DFTemplate;
                     _spawner.SpawnPhrase(phrase.Text);
                     break;
 
@@ -116,7 +116,7 @@ public class SaveSystem : MonoBehaviour
                     bg.GetComponent<ArticyReference>().reference = (ArticyRef)ArticyDatabase.GetObject(logEvent.Attribute("id").Value);
                     foreach (XElement xButton in logEvent.Elements())
                     {
-                        var blockWithMenuText = ArticyDatabase.GetObject(xButton.Value) as PhraseDialogueFragment;
+                        var blockWithMenuText = ArticyDatabase.GetObject(xButton.Value) as DFTemplate;
                         Button b = _spawner.SpawnButtonFromLog(
                             bg,
                             blockWithMenuText.MenuText,
@@ -147,7 +147,7 @@ public class SaveSystem : MonoBehaviour
 
         ArticyDatabase.DefaultGlobalVariables.Variables = loadedVars;
     }
-    
+
     private (DateTime startTime, float remainingInMinutes) CheckForDelay(XElement xExecute)
     {
         var executeTime = DateTime.Parse(xExecute.Attribute(Const.XmlAliases.ExecuteTime)?.Value ?? DateTime.Now.ToString());
@@ -226,8 +226,8 @@ public class SaveSystem : MonoBehaviour
         LogEvent(Const.LogEvent.LogButtonGroup, string.Empty);
         foreach (Branch branch in candidates)
         {
-            var branchTarget = branch.Target as PhraseDialogueFragment;
-            var exitTarget = exit.Target as PhraseDialogueFragment;
+            var branchTarget = branch.Target as DFTemplate;
+            var exitTarget = exit.Target as DFTemplate;
             if (branchTarget.TechnicalName == (exitTarget.TechnicalName))
             {
                 LogEvent(Const.LogEvent.LogButtonPressed, exitTarget.TechnicalName);
@@ -258,7 +258,7 @@ public class SaveSystem : MonoBehaviour
     public void LoadState(string id)
     {
         XDocument xDoc = XDocument.Load(_savePath);
-        var df = ArticyDatabase.GetObject(id) as PhraseDialogueFragment;
+        var df = ArticyDatabase.GetObject(id) as DFTemplate;
     }
 
     public void SetStartTimeAndExecuteTime(DateTime startTime, DateTime executeTime)
@@ -296,7 +296,7 @@ public class SaveSystem : MonoBehaviour
         }
         else return false;
     }
-    
+
     private void CreateState(XElement states, string id)
     {
         var state = GetGlobalVars("state");
@@ -317,7 +317,7 @@ public class SaveSystem : MonoBehaviour
         xDoc.Element("save").Add(GetGlobalVars("vars"));
         xDoc.Save(_savePath);
     }
-    
+
     public void UpdateExecuteElement(string technicalName)
     {
         XDocument xDoc = XDocument.Load(_savePath);
@@ -338,7 +338,7 @@ public class SaveSystem : MonoBehaviour
         DateTime sBefore = DateTime.Parse(xStartTime.Value);
         DateTime sAfter = sBefore.AddMinutes(-time);
         xStartTime.Value = sAfter.ToString();
-        
+
         xDoc.Save(_savePath);
     }
 
@@ -350,7 +350,7 @@ public class SaveSystem : MonoBehaviour
                         new XElement("execute", new XAttribute(Const.XmlAliases.ExecuteId, _player.StartOn.TechnicalName)),
                         new XElement("states")));
         xDoc.Element("save").Add(GetGlobalVars("vars"));
-        
+
         xDoc.Save(_savePath);
     }
 

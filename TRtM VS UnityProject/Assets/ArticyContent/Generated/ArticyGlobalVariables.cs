@@ -15,7 +15,7 @@ using System.Collections;
 using UnityEngine;
 
 
-namespace Articy.Test.GlobalVariables
+namespace Articy.The_Road_To_Moscow.GlobalVariables
 {
     
     
@@ -24,27 +24,11 @@ namespace Articy.Test.GlobalVariables
     public class ArticyGlobalVariables : BaseGlobalVariables
     {
         
-        [SerializeField()]
-        [HideInInspector()]
-        private Game mGame = new Game();
-        
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
-            variableNames.Add("Game.side");
-            variableNames.Add("Game.likes");
-            variableNames.Add("Game.intro");
-            variableNames.Add("Game.answer");
         }
         #endregion
-        
-        public Game Game
-        {
-            get
-            {
-                return mGame;
-            }
-        }
         
         public static ArticyGlobalVariables Default
         {
@@ -56,7 +40,6 @@ namespace Articy.Test.GlobalVariables
         
         public override void Init()
         {
-            Game.RegisterVariables(this);
         }
     }
 }

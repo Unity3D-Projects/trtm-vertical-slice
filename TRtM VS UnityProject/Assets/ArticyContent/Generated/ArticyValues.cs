@@ -16,7 +16,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -25,7 +25,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -34,7 +34,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -43,7 +43,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -52,7 +52,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -61,16 +61,43 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
     [Serializable()]
-    public class ArticyValueSex : ArticyValue<Sex>
+    public class ArticyValueText_Position : ArticyValue<Text_Position>
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueSFX : ArticyValue<SFX>
+    {
+    }
+}
+namespace Articy.The_Road_To_Moscow
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueMusic : ArticyValue<Music>
+    {
+    }
+}
+namespace Articy.The_Road_To_Moscow
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueAmbience : ArticyValue<Ambience>
+    {
+    }
+}
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -79,7 +106,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -88,7 +115,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -97,7 +124,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -106,7 +133,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -115,7 +142,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -124,7 +151,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -133,7 +160,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -142,7 +169,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -151,34 +178,34 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
     [Serializable()]
-    public class ArticyValuePhraseDialogueFragmentTemplate : ArticyValue<Articy.Test.Templates.PhraseDialogueFragmentTemplate>
+    public class ArticyValueDFTemplateTemplate : ArticyValue<Articy.The_Road_To_Moscow.Templates.DFTemplateTemplate>
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
     [Serializable()]
-    public class ArticyValuePhraseFeatureFeature : ArticyValue<Articy.Test.Features.PhraseFeatureFeature>
+    public class ArticyValueDFFeatureFeature : ArticyValue<Articy.The_Road_To_Moscow.Features.DFFeatureFeature>
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
     [Serializable()]
-    public class ArticyValuePhraseDialogueFragment : ArticyValue<PhraseDialogueFragment>
+    public class ArticyValueDFTemplate : ArticyValue<DFTemplate>
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -187,7 +214,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -196,7 +223,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -205,7 +232,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -214,61 +241,34 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
     [Serializable()]
-    public class ArticyValueDefaultSupportingCharacterTemplateTemplate : ArticyValue<Articy.Test.Templates.DefaultSupportingCharacterTemplateTemplate>
+    public class ArticyValueEntityTemplateTemplate : ArticyValue<Articy.The_Road_To_Moscow.Templates.EntityTemplateTemplate>
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
     [Serializable()]
-    public class ArticyValueDefaultBasicCharacterFeatureFeature : ArticyValue<Articy.Test.Features.DefaultBasicCharacterFeatureFeature>
+    public class ArticyValueEntityFeatureFeature : ArticyValue<Articy.The_Road_To_Moscow.Features.EntityFeatureFeature>
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
     [Serializable()]
-    public class ArticyValueDefaultSupportingCharacterTemplate : ArticyValue<DefaultSupportingCharacterTemplate>
+    public class ArticyValueEntityTemplate : ArticyValue<EntityTemplate>
     {
     }
 }
-namespace Articy.Test
-{
-    
-    
-    [Serializable()]
-    public class ArticyValueDefaultMainCharacterTemplateTemplate : ArticyValue<Articy.Test.Templates.DefaultMainCharacterTemplateTemplate>
-    {
-    }
-}
-namespace Articy.Test
-{
-    
-    
-    [Serializable()]
-    public class ArticyValueDefaultExtendedCharacterFeatureFeature : ArticyValue<Articy.Test.Features.DefaultExtendedCharacterFeatureFeature>
-    {
-    }
-}
-namespace Articy.Test
-{
-    
-    
-    [Serializable()]
-    public class ArticyValueDefaultMainCharacterTemplate : ArticyValue<DefaultMainCharacterTemplate>
-    {
-    }
-}
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -277,7 +277,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -286,7 +286,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -295,7 +295,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -304,7 +304,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -313,7 +313,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -322,7 +322,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -331,7 +331,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -340,7 +340,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -349,7 +349,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -358,7 +358,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -367,7 +367,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -376,7 +376,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -385,7 +385,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -394,7 +394,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -403,7 +403,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -412,7 +412,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     
@@ -421,7 +421,7 @@ namespace Articy.Test
     {
     }
 }
-namespace Articy.Test
+namespace Articy.The_Road_To_Moscow
 {
     
     

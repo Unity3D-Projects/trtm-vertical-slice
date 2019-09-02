@@ -7,10 +7,10 @@ using Articy.Unity.Constraints;
 using Articy.Unity.Utils;
 using Articy.Unity.Interfaces;
 
-using Articy.Test;
-using Articy.Test.Templates;
-using Articy.Test.Features;
-using Articy.Test.GlobalVariables;
+using Articy.The_Road_To_Moscow;
+using Articy.The_Road_To_Moscow.Templates;
+using Articy.The_Road_To_Moscow.Features;
+using Articy.The_Road_To_Moscow.GlobalVariables;
 
 using System;
 using UnityEngine.UI;
@@ -47,7 +47,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             Debug.Log($"Rewinding{(_allowRewinding ? " " : " dis")}allowed");
         }
     }
-    
+
     public bool _playerStandBy = false;
     public bool PlayerStandBy
     {
@@ -58,7 +58,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         set
         {
             _playerStandBy = value;
-            Debug.Log($"ArticyFlowPlayer is {(_playerStandBy ? "OFF" : "ON")}"); 
+            Debug.Log($"ArticyFlowPlayer is {(_playerStandBy ? "OFF" : "ON")}");
         }
     }
 
@@ -82,10 +82,10 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     }
     #endregion
 
-    public PhraseDialogueFragment Current { get; private set; }
+    public DFTemplate Current { get; private set; }
     private float _currentSpeed;
     public CoroutineObjectBase CurrentDelay { get; set; }
-    
+
     public void SkipDelay(float m_timeToSkip)
     {
         StopCoroutine(CurrentDelay.Coroutine);
@@ -99,7 +99,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         _player = GetComponent<ArticyFlowPlayer>();
         _saveSystem = GetComponent<SaveSystem>();
     }
-    
+
     public void OnFlowPlayerPaused(IFlowObject aObject)
     {
         if (PlayerStandBy)
@@ -107,10 +107,10 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             return;
         }
         _currentSpeed = (float)textSpeed * 0.02f;
-        
-        if (aObject is PhraseDialogueFragment df)
+
+        if (aObject is DFTemplate df)
         {
-            Current = aObject as PhraseDialogueFragment;
+            Current = aObject as DFTemplate;
             _spawner.SpawnPhrase(df.Text);
         }
     }
@@ -131,7 +131,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         foreach (Branch branch in aBranches)
         {
             // if branch is not DF (empty) - it's a pin - end of flow
-            if (!(branch.Target is PhraseDialogueFragment))
+            if (!(branch.Target is DFTemplate))
             {
                 _spawner.SpawnEndGame(true);
                 _saveSystem.LogEvent(Const.LogEvent.LogEndGameWin, string.Empty);
@@ -148,7 +148,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         if (candidates.Count == 1)
         {
             _saveSystem.LogEvent(Const.LogEvent.LogPhrase, Current.TechnicalName);
-            var target = candidates[0].Target as PhraseDialogueFragment;
+            var target = candidates[0].Target as DFTemplate;
             _saveSystem.UpdateExecuteElement(target.TechnicalName);
         }
         else if (candidates.Count > 1)
@@ -166,7 +166,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         if (clampSpeedToOne && !instantMode) seconds = time <= 1 ? 1 : time;
         else seconds = time;
         yield return new WaitForSeconds(seconds);
-        float delay = Current.Template.PhraseFeature.delay;
+        float delay = Current.Template.DFFeature.Delay;
         if (delay > 0)
         {
             var coroutine = new CoroutineObject<List<Branch>, float>(this, PlayWithDelay);
@@ -201,7 +201,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     public IEnumerator PlayAndWaitConstantTimeOnClick(Branch branch)
     {
         yield return new WaitForSeconds(1);
-        
+
         _player.Play(branch);
         _saveSystem.LogGlobalVars();
     }
@@ -229,7 +229,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         Destroy(delayBlock.gameObject);
         Play(candidates);
     }
-    
+
     public IEnumerator ExecuteWithDelay(DateTime startTime, float m_timeToWait)
     {
         Debug.Log("Delay entered from save");
