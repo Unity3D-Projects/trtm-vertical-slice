@@ -79,7 +79,7 @@ public class Spawner : MonoBehaviour
             if (_controller.AllowRewinding)
             {
                 var reference = buttonGroup.GetComponent<ArticyReference>().reference;
-                var id = ((DFTemplate)reference).TechnicalName;
+                var id = ((DialogueFragment)reference).TechnicalName;
                 _controller.RewindToState(id);
             }
         });
@@ -149,7 +149,7 @@ public class Spawner : MonoBehaviour
         if (_controller.AllowRewinding)
         {
             var reference = buttonGroup.GetComponent<ArticyReference>().reference;
-            var id = ((DFTemplate)reference).TechnicalName;
+            var id = ((DialogueFragment)reference).TechnicalName;
             _controller.RewindToState(id);
         }
     }

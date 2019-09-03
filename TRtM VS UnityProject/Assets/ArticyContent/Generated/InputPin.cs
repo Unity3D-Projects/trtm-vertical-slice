@@ -22,7 +22,7 @@ namespace Articy.The_Road_To_Moscow
     
     
     [Serializable()]
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(637030557534997914)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(637031442812431909)]
     public class InputPin : ArticyPrimitive, IInputPin
     {
         

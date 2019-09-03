@@ -82,7 +82,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     }
     #endregion
 
-    public DFTemplate Current { get; private set; }
+    public DialogueFragment Current { get; private set; }
     private float _currentSpeed;
     public CoroutineObjectBase CurrentDelay { get; set; }
 
@@ -108,9 +108,9 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         }
         _currentSpeed = (float)textSpeed * 0.02f;
 
-        if (aObject is DFTemplate df)
+        if (aObject is DialogueFragment df)
         {
-            Current = aObject as DFTemplate;
+            Current = aObject as DialogueFragment;
             _spawner.SpawnPhrase(df.Text);
         }
     }
@@ -131,7 +131,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         foreach (Branch branch in aBranches)
         {
             // if branch is not DF (empty) - it's a pin - end of flow
-            if (!(branch.Target is DFTemplate))
+            if (!(branch.Target is DialogueFragment))
             {
                 _spawner.SpawnEndGame(true);
                 _saveSystem.LogEvent(Const.LogEvent.LogEndGameWin, string.Empty);
@@ -148,7 +148,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         if (candidates.Count == 1)
         {
             _saveSystem.LogEvent(Const.LogEvent.LogPhrase, Current.TechnicalName);
-            var target = candidates[0].Target as DFTemplate;
+            var target = candidates[0].Target as DialogueFragment;
             _saveSystem.UpdateExecuteElement(target.TechnicalName);
         }
         else if (candidates.Count > 1)
@@ -163,10 +163,17 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     private IEnumerator WaitTimeAndCheckForDelay(List<Branch> candidates, float time)
     {
         float seconds;
-        if (clampSpeedToOne && !instantMode) seconds = time <= 1 ? 1 : time;
+        if (clampSpeedToOne && !instantMode) seconds = time <= 2.5f ? 2.5f : time;
         else seconds = time;
         yield return new WaitForSeconds(seconds);
-        float delay = Current.Template.DFFeature.Delay;
+
+
+        float delay = 0;
+        if (Current is DFTemplate dft)
+        {
+            delay = dft.Template.DFFeature.Delay;
+        }
+        
         if (delay > 0)
         {
             var coroutine = new CoroutineObject<List<Branch>, float>(this, PlayWithDelay);

@@ -107,7 +107,7 @@ public class SaveSystem : MonoBehaviour
             switch (logEvent.Name.LocalName)
             {
                 case (Const.XmlAliases.Phrase):
-                    var phrase = ArticyDatabase.GetObject(logEvent.Value) as DFTemplate;
+                    var phrase = ArticyDatabase.GetObject(logEvent.Value) as DialogueFragment;
                     _spawner.SpawnPhrase(phrase.Text);
                     break;
 
@@ -116,7 +116,7 @@ public class SaveSystem : MonoBehaviour
                     bg.GetComponent<ArticyReference>().reference = (ArticyRef)ArticyDatabase.GetObject(logEvent.Attribute("id").Value);
                     foreach (XElement xButton in logEvent.Elements())
                     {
-                        var blockWithMenuText = ArticyDatabase.GetObject(xButton.Value) as DFTemplate;
+                        var blockWithMenuText = ArticyDatabase.GetObject(xButton.Value) as DialogueFragment;
                         Button b = _spawner.SpawnButtonFromLog(
                             bg,
                             blockWithMenuText.MenuText,
@@ -226,8 +226,8 @@ public class SaveSystem : MonoBehaviour
         LogEvent(Const.LogEvent.LogButtonGroup, string.Empty);
         foreach (Branch branch in candidates)
         {
-            var branchTarget = branch.Target as DFTemplate;
-            var exitTarget = exit.Target as DFTemplate;
+            var branchTarget = branch.Target as DialogueFragment;
+            var exitTarget = exit.Target as DialogueFragment;
             if (branchTarget.TechnicalName == (exitTarget.TechnicalName))
             {
                 LogEvent(Const.LogEvent.LogButtonPressed, exitTarget.TechnicalName);

@@ -1,6 +1,24 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8589600308569137682
+--- !u!114 &-9115710442622996426
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: CachedImageWidth
+  m_EditorClassIdentifier: 
+  mTechnicalName: CachedImageWidth
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-8767095774804674099
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -10,12 +28,335 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PathCaps.LineArrowHead
+  m_Name: ShapeType.Polygon
   m_EditorClassIdentifier: 
-  mTechnicalName: LineArrowHead
-  mDisplayName: LineArrowHead
-  mValue: 2
---- !u!114 &-8498019885279493585
+  mTechnicalName: Polygon
+  mDisplayName: Polygon
+  mValue: 5
+--- !u!114 &-8658015397050358377
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: VisibilityModes.Visible
+  m_EditorClassIdentifier: 
+  mTechnicalName: Visible
+  mDisplayName: Visible
+  mValue: 1
+--- !u!114 &-8640917428421258946
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Condition
+  m_EditorClassIdentifier: 
+  mTechnicalName: Condition
+  mDisplayName: Condition
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.Condition, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: 6143240569864957533}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: -208730499067532034}
+  - {fileID: 7656158118180984843}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -4638267542469815652}
+  - {fileID: 4261813718614832189}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
+  mEnumValues: []
+--- !u!114 &-8634459016683175340
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShapeType
+  m_EditorClassIdentifier: 
+  mTechnicalName: ShapeType
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.The_Road_To_Moscow.ShapeType, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-8557496271319518221
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShowDisplayName
+  m_EditorClassIdentifier: 
+  mTechnicalName: ShowDisplayName
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-8548541645936466827
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: StartCap
+  m_EditorClassIdentifier: 
+  mTechnicalName: StartCap
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.The_Road_To_Moscow.PathCaps, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-8466130383370722966
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: SFX.Stop
+  m_EditorClassIdentifier: 
+  mTechnicalName: Stop
+  mDisplayName: Stop
+  mValue: 0
+--- !u!114 &-8158308647336827344
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ImageOpacity
+  m_EditorClassIdentifier: 
+  mTechnicalName: ImageOpacity
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-7971484133962406708
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: DFTemplate
+  m_EditorClassIdentifier: 
+  mTechnicalName: DFTemplate
+  mDisplayName: DFTemplate
+  mBaseType: {fileID: 9024206309673438075}
+  mCSharpType: Articy.The_Road_To_Moscow.DFTemplate, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 1
+  mFeatures:
+  - DFFeature
+  mProperties:
+  - {fileID: -3157809441883447204}
+  - {fileID: -2063689366763809465}
+  - {fileID: 7614446980252567652}
+  - {fileID: -3983600221826671437}
+  - {fileID: -2394730185325738700}
+  - {fileID: 816810771747341867}
+  - {fileID: -2837260678437577407}
+  - {fileID: 5890175259292139135}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -4638267542469815652}
+  - {fileID: 4261813718614832189}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
+  mEnumValues: []
+--- !u!114 &-7694366196099866081
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Music
+  m_EditorClassIdentifier: 
+  mTechnicalName: Music
+  mDisplayName: Music
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.The_Road_To_Moscow.Music, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 1
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties: []
+  mEnumValues:
+  - {fileID: 4852131078323698010}
+  - {fileID: -5594370368708617079}
+--- !u!114 &-7531168017084849722
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Ambience.Stop
+  m_EditorClassIdentifier: 
+  mTechnicalName: Stop
+  mDisplayName: Stop
+  mValue: 0
+--- !u!114 &-7374270764935917462
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Size
+  m_EditorClassIdentifier: 
+  mTechnicalName: Size
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-7255155803967709740
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ClipRect
+  m_EditorClassIdentifier: 
+  mTechnicalName: ClipRect
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: UnityEngine.Rect, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-6909555301963573352
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Asset
+  m_EditorClassIdentifier: 
+  mTechnicalName: Asset
+  mDisplayName: Asset
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.Asset, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: 6143240569864957533}
+  - {fileID: -6816241500534925462}
+  - {fileID: -2384079650246834697}
+  - {fileID: -3952301007622819541}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
+  mEnumValues: []
+--- !u!114 &-6816241500534925462
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Filename
+  m_EditorClassIdentifier: 
+  mTechnicalName: Filename
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-6754039658385881047
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -34,7 +375,365 @@ MonoBehaviour:
     PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-8493908061263497812
+--- !u!114 &-5974280478823005060
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Text_Position.Right
+  m_EditorClassIdentifier: 
+  mTechnicalName: Right
+  mDisplayName: Right
+  mValue: 3
+--- !u!114 &-5972640954752544427
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: TextObject
+  m_EditorClassIdentifier: 
+  mTechnicalName: TextObject
+  mDisplayName: TextObject
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.TextObject, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: 6143240569864957533}
+  - {fileID: 7014389258897006150}
+  - {fileID: -3952301007622819541}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
+  mEnumValues: []
+--- !u!114 &-5945521505783502643
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Comment
+  m_EditorClassIdentifier: 
+  mTechnicalName: Comment
+  mDisplayName: Comment
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.Comment, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: -1851571879742264032}
+  - {fileID: 5851496394958248040}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
+  mEnumValues: []
+--- !u!114 &-5771335141910751163
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PreviewImageViewBoxModes.Custom
+  m_EditorClassIdentifier: 
+  mTechnicalName: Custom
+  mDisplayName: Custom
+  mValue: 1
+--- !u!114 &-5688958585358088629
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PathCaps.FilledArrowHead
+  m_EditorClassIdentifier: 
+  mTechnicalName: FilledArrowHead
+  mDisplayName: FilledArrowHead
+  mValue: 3
+--- !u!114 &-5594370368708617079
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Music.Calm_Piano
+  m_EditorClassIdentifier: 
+  mTechnicalName: Calm_Piano
+  mDisplayName: Calm Piano
+  mValue: 1
+--- !u!114 &-5430905344106489106
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PathCaps.None
+  m_EditorClassIdentifier: 
+  mTechnicalName: None
+  mDisplayName: None
+  mValue: 1
+--- !u!114 &-5147229196401460735
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  mTechnicalName: Dialogue
+  mDisplayName: Dialogue
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.Dialogue, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: 7014389258897006150}
+  - {fileID: 6143240569864957533}
+  - {fileID: -3952301007622819541}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -4638267542469815652}
+  - {fileID: 4261813718614832189}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
+  mEnumValues: []
+--- !u!114 &-5042662521454801186
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Text_Position.Left
+  m_EditorClassIdentifier: 
+  mTechnicalName: Left
+  mDisplayName: Left
+  mValue: 1
+--- !u!114 &-5016220847908911754
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PreviewImageViewBoxModes
+  m_EditorClassIdentifier: 
+  mTechnicalName: PreviewImageViewBoxModes
+  mDisplayName: PreviewImageViewBoxModes
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.Unity.PreviewImageViewBoxModes, ArticyRuntime, Version=2.0.3.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 1
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties: []
+  mEnumValues:
+  - {fileID: 235783921669321627}
+  - {fileID: -5771335141910751163}
+--- !u!114 &-4848259371090339863
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: LocationAnchorSize.Medium
+  m_EditorClassIdentifier: 
+  mTechnicalName: Medium
+  mDisplayName: Medium
+  mValue: 1
+--- !u!114 &-4638267542469815652
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: InputPins
+  m_EditorClassIdentifier: 
+  mTechnicalName: InputPins
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.The_Road_To_Moscow.List`1, Assembly-CSharp
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-4424260341611568524
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Zone
+  m_EditorClassIdentifier: 
+  mTechnicalName: Zone
+  mDisplayName: Zone
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.Zone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: 6143240569864957533}
+  - {fileID: -3952301007622819541}
+  - {fileID: 4358918510528517789}
+  - {fileID: -6754039658385881047}
+  - {fileID: -8634459016683175340}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: 4494678862229975107}
+  - {fileID: 4546499381759830845}
+  - {fileID: 8242413237320290239}
+  - {fileID: -2453190685946968735}
+  - {fileID: -8557496271319518221}
+  - {fileID: 1981404320722173882}
+  - {fileID: 8357174083137927568}
+  - {fileID: 4343735231421194450}
+  - {fileID: 481819364236013000}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
+  mEnumValues: []
+--- !u!114 &-4308130325549032509
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShapeType
+  m_EditorClassIdentifier: 
+  mTechnicalName: ShapeType
+  mDisplayName: ShapeType
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.The_Road_To_Moscow.ShapeType, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 1
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties: []
+  mEnumValues:
+  - {fileID: -656408802683137557}
+  - {fileID: 8563136172683007749}
+  - {fileID: 1886210517233338582}
+  - {fileID: -1218930055563074136}
+  - {fileID: 3126952275446010611}
+  - {fileID: -8767095774804674099}
+  - {fileID: 6136113620930621347}
+--- !u!114 &-4264867256259708924
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: EndCap
+  m_EditorClassIdentifier: 
+  mTechnicalName: EndCap
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.The_Road_To_Moscow.PathCaps, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-4226574651080471831
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -48,42 +747,43 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mTechnicalName: Path
   mDisplayName: Path
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.Path, Assembly-CSharp
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.Path, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
   mIsEnum: 0
   mHasTemplate: 0
   mFeatures: []
   mProperties:
-  - {fileID: 5263294781390377385}
-  - {fileID: -2073674368693143518}
-  - {fileID: 6810202115672750288}
-  - {fileID: -8498019885279493585}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: 4838174109648519847}
-  - {fileID: -6518570811490581952}
-  - {fileID: 6339694125308840934}
-  - {fileID: -171246079039528209}
-  - {fileID: -6729117355937107578}
-  - {fileID: 896486392376456706}
-  - {fileID: 1340104365565283320}
-  - {fileID: 2672291663338397506}
-  - {fileID: 2689082259650747854}
-  - {fileID: -3169021266082648542}
-  - {fileID: -4213824204527313674}
-  - {fileID: -3323209839046477586}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
+  - {fileID: 6143240569864957533}
+  - {fileID: -3952301007622819541}
+  - {fileID: 4358918510528517789}
+  - {fileID: -6754039658385881047}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: 4494678862229975107}
+  - {fileID: 481819364236013000}
+  - {fileID: -8557496271319518221}
+  - {fileID: 1981404320722173882}
+  - {fileID: 8357174083137927568}
+  - {fileID: 4343735231421194450}
+  - {fileID: 4546499381759830845}
+  - {fileID: 8242413237320290239}
+  - {fileID: -2453190685946968735}
+  - {fileID: -8548541645936466827}
+  - {fileID: -4264867256259708924}
+  - {fileID: -4192673870378300701}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
   mEnumValues: []
---- !u!114 &-8205763131827836034
+--- !u!114 &-4192673870378300701
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -93,16 +793,55 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Target
+  m_Name: LineWidth
   m_EditorClassIdentifier: 
-  mTechnicalName: Target
+  mTechnicalName: LineWidth
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.0.3.0, Culture=neutral,
-    PublicKeyToken=null
+  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-8034483773221468783
+--- !u!114 &-4165830202302200949
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: FlowFragment
+  m_EditorClassIdentifier: 
+  mTechnicalName: FlowFragment
+  mDisplayName: FlowFragment
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.FlowFragment, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: 7014389258897006150}
+  - {fileID: 6143240569864957533}
+  - {fileID: -3952301007622819541}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -4638267542469815652}
+  - {fileID: 4261813718614832189}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
+  mEnumValues: []
+--- !u!114 &-3983600221826671437
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,31 +851,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Children
+  m_Name: DFFeature.SFX
   m_EditorClassIdentifier: 
-  mTechnicalName: Children
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.Collections.ArrayList, mscorlib, Version=4.0.0.0, Culture=neutral,
-    PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-7945139681167917574
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DFFeature.Ambience
-  m_EditorClassIdentifier: 
-  mTechnicalName: DFFeature.Ambience
-  mDisplayName: Ambience
+  mTechnicalName: DFFeature.SFX
+  mDisplayName: SFX
   mIsTemplateProperty: 1
-  mPropertyType: Articy.The_Road_To_Moscow.Ambience, Assembly-CSharp
+  mPropertyType: Articy.The_Road_To_Moscow.SFX, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
   mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
   mConstraintValues:
   - 
@@ -157,105 +878,7 @@ MonoBehaviour:
   - 
   - BySortIndex
   - 
---- !u!114 &-7819807570312225900
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Asset
-  m_EditorClassIdentifier: 
-  mTechnicalName: Asset
-  mDisplayName: Asset
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.Asset, Assembly-CSharp
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: 5263294781390377385}
-  - {fileID: -4171525072186247811}
-  - {fileID: -5024914144613426647}
-  - {fileID: -2073674368693143518}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
-  mEnumValues: []
---- !u!114 &-7536589823380342339
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DFTemplate
-  m_EditorClassIdentifier: 
-  mTechnicalName: DFTemplate
-  mDisplayName: DFTemplate
-  mBaseType: {fileID: 7545682892033445512}
-  mCSharpType: Articy.The_Road_To_Moscow.DFTemplate, Assembly-CSharp
-  mIsEnum: 0
-  mHasTemplate: 1
-  mFeatures:
-  - DFFeature
-  mProperties:
-  - {fileID: -5445353591895150840}
-  - {fileID: -7945139681167917574}
-  - {fileID: 1018716413953270046}
-  - {fileID: 4229694034505320920}
-  - {fileID: -3297054436919228258}
-  - {fileID: 1479419585600635709}
-  - {fileID: -5637715426407164100}
-  - {fileID: -4699785369734193903}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -4205017482995126948}
-  - {fileID: -4235531383282111622}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
-  mEnumValues: []
---- !u!114 &-7390358400780499308
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType.Polygon
-  m_EditorClassIdentifier: 
-  mTechnicalName: Polygon
-  mDisplayName: Polygon
-  mValue: 5
---- !u!114 &-7013346059318265952
+--- !u!114 &-3952301007622819541
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -265,30 +888,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ParentId
+  m_Name: PreviewImage
   m_EditorClassIdentifier: 
-  mTechnicalName: ParentId
+  mTechnicalName: PreviewImage
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: System.UInt64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mPropertyType: Articy.Unity.PreviewImage, ArticyRuntime, Version=2.0.3.0, Culture=neutral,
+    PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-6839006255470069147
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PreviewImageViewBoxModes.FromAsset
-  m_EditorClassIdentifier: 
-  mTechnicalName: FromAsset
-  mDisplayName: FromAsset
-  mValue: 0
---- !u!114 &-6729117355937107578
+--- !u!114 &-3930520741572665201
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -298,15 +907,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DisplayNameSize
+  m_Name: Parent
   m_EditorClassIdentifier: 
-  mTechnicalName: DisplayNameSize
+  mTechnicalName: Parent
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mPropertyType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.0.3.0, Culture=neutral,
+    PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-6518570811490581952
+--- !u!114 &-3712371451366337392
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -316,100 +926,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Selectability
+  m_Name: Text
   m_EditorClassIdentifier: 
-  mTechnicalName: Selectability
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.The_Road_To_Moscow.SelectabilityModes, Assembly-CSharp
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-6112974306129969750
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType
-  m_EditorClassIdentifier: 
-  mTechnicalName: ShapeType
-  mDisplayName: ShapeType
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.The_Road_To_Moscow.ShapeType, Assembly-CSharp
-  mIsEnum: 1
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties: []
-  mEnumValues:
-  - {fileID: 4768795597149782710}
-  - {fileID: 4515702353870733745}
-  - {fileID: -719943888595195643}
-  - {fileID: 7057065036986373318}
-  - {fileID: -4213122541237577007}
-  - {fileID: -7390358400780499308}
-  - {fileID: 907187465969735849}
---- !u!114 &-6066489548360510386
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: EntityTemplate
-  m_EditorClassIdentifier: 
-  mTechnicalName: EntityTemplate
-  mDisplayName: EntityTemplate
-  mBaseType: {fileID: 790373201313749217}
-  mCSharpType: Articy.The_Road_To_Moscow.EntityTemplate, Assembly-CSharp
-  mIsEnum: 0
-  mHasTemplate: 1
-  mFeatures:
-  - EntityFeature
-  mProperties:
-  - {fileID: -3573375230960535417}
-  - {fileID: 5890814377784973420}
-  - {fileID: 5263294781390377385}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: -2073674368693143518}
-  - {fileID: 5054068311756110519}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
-  mEnumValues: []
---- !u!114 &-5637715426407164100
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: StageDirections
-  m_EditorClassIdentifier: 
-  mTechnicalName: StageDirections
+  mTechnicalName: Text
   mDisplayName: 
   mIsTemplateProperty: 0
   mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-5573584038560001114
+--- !u!114 &-3582925420961870468
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -418,16 +943,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: SelectabilityModes.Unselectable
   m_EditorClassIdentifier: 
-  mTechnicalName: ShapeType
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.The_Road_To_Moscow.ShapeType, Assembly-CSharp
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-5500213123992768297
+  mTechnicalName: Unselectable
+  mDisplayName: Unselectable
+  mValue: 0
+--- !u!114 &-3293053684451925764
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -436,21 +958,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Ambience
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: LocationAnchorSize.Large
   m_EditorClassIdentifier: 
-  mTechnicalName: Ambience
-  mDisplayName: Ambience
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.The_Road_To_Moscow.Ambience, Assembly-CSharp
-  mIsEnum: 1
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties: []
-  mEnumValues:
-  - {fileID: 5476151025973547891}
-  - {fileID: -4996588746993537332}
---- !u!114 &-5445353591895150840
+  mTechnicalName: Large
+  mDisplayName: Large
+  mValue: 2
+--- !u!114 &-3157809441883447204
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -487,22 +1001,7 @@ MonoBehaviour:
   - 
   - 
   - 
---- !u!114 &-5245158292468873144
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Text_Position.Middle
-  m_EditorClassIdentifier: 
-  mTechnicalName: Middle
-  mDisplayName: Middle
-  mValue: 2
---- !u!114 &-5052699609718628649
+--- !u!114 &-2957882594061929817
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -512,16 +1011,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Color
+  m_Name: CachedImageHeight
   m_EditorClassIdentifier: 
-  mTechnicalName: Color
+  mTechnicalName: CachedImageHeight
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
+  mPropertyType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-5024914144613426647
+--- !u!114 &-2837260678437577407
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -531,30 +1029,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OriginalSource
+  m_Name: StageDirections
   m_EditorClassIdentifier: 
-  mTechnicalName: OriginalSource
+  mTechnicalName: StageDirections
   mDisplayName: 
   mIsTemplateProperty: 0
   mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-4996588746993537332
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Ambience.Field
-  m_EditorClassIdentifier: 
-  mTechnicalName: Field
-  mDisplayName: Field
-  mValue: 1
---- !u!114 &-4961347530987053158
+--- !u!114 &-2678587018812209764
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -564,20 +1047,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: SelectabilityModes
+  m_Name: LocationAnchorSize
   m_EditorClassIdentifier: 
-  mTechnicalName: SelectabilityModes
-  mDisplayName: SelectabilityModes
+  mTechnicalName: LocationAnchorSize
+  mDisplayName: LocationAnchorSize
   mBaseType: {fileID: 0}
-  mCSharpType: Articy.The_Road_To_Moscow.SelectabilityModes, Assembly-CSharp
+  mCSharpType: Articy.The_Road_To_Moscow.LocationAnchorSize, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
   mIsEnum: 1
   mHasTemplate: 0
   mFeatures: []
   mProperties: []
   mEnumValues:
-  - {fileID: -2777567269508717909}
-  - {fileID: 3752991991426237986}
---- !u!114 &-4909531256889328859
+  - {fileID: 1085156173675884011}
+  - {fileID: -4848259371090339863}
+  - {fileID: -3293053684451925764}
+--- !u!114 &-2453190685946968735
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -586,328 +1071,17 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
   m_Name: OutlineStyle
   m_EditorClassIdentifier: 
   mTechnicalName: OutlineStyle
-  mDisplayName: OutlineStyle
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.The_Road_To_Moscow.OutlineStyle, Assembly-CSharp
-  mIsEnum: 1
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties: []
-  mEnumValues:
-  - {fileID: -2778969513547379404}
-  - {fileID: -4685620483591938346}
-  - {fileID: -2595455951719165363}
-  - {fileID: -557265476704912945}
-  - {fileID: -3691995051662825238}
---- !u!114 &-4699785369734193903
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Speaker
-  m_EditorClassIdentifier: 
-  mTechnicalName: Speaker
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.0.3.0, Culture=neutral,
-    PublicKeyToken=null
+  mPropertyType: Articy.The_Road_To_Moscow.OutlineStyle, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-4685620483591938346
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutlineStyle.Dot
-  m_EditorClassIdentifier: 
-  mTechnicalName: Dot
-  mDisplayName: Dot
-  mValue: 1
---- !u!114 &-4570314988295281546
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: VisibilityModes.Visible
-  m_EditorClassIdentifier: 
-  mTechnicalName: Visible
-  mDisplayName: Visible
-  mValue: 1
---- !u!114 &-4519497896707671349
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocationText
-  m_EditorClassIdentifier: 
-  mTechnicalName: LocationText
-  mDisplayName: LocationText
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.LocationText, Assembly-CSharp
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: 5263294781390377385}
-  - {fileID: -2073674368693143518}
-  - {fileID: -3517167012920866710}
-  - {fileID: 6810202115672750288}
-  - {fileID: -8498019885279493585}
-  - {fileID: -5573584038560001114}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: 4838174109648519847}
-  - {fileID: 1340104365565283320}
-  - {fileID: 2672291663338397506}
-  - {fileID: 2689082259650747854}
-  - {fileID: -6518570811490581952}
-  - {fileID: 6395915303095437640}
-  - {fileID: 1879208192609942664}
-  - {fileID: 896486392376456706}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
-  mEnumValues: []
---- !u!114 &-4448983406127121305
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocationAnchorSize.Small
-  m_EditorClassIdentifier: 
-  mTechnicalName: Small
-  mDisplayName: Small
-  mValue: 0
---- !u!114 &-4235531383282111622
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutputPins
-  m_EditorClassIdentifier: 
-  mTechnicalName: OutputPins
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.The_Road_To_Moscow.List`1, Assembly-CSharp
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-4213824204527313674
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: EndCap
-  m_EditorClassIdentifier: 
-  mTechnicalName: EndCap
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.The_Road_To_Moscow.PathCaps, Assembly-CSharp
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-4213122541237577007
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType.Path
-  m_EditorClassIdentifier: 
-  mTechnicalName: Path
-  mDisplayName: Path
-  mValue: 4
---- !u!114 &-4205017482995126948
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: InputPins
-  m_EditorClassIdentifier: 
-  mTechnicalName: InputPins
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.The_Road_To_Moscow.List`1, Assembly-CSharp
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-4171525072186247811
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Filename
-  m_EditorClassIdentifier: 
-  mTechnicalName: Filename
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-3691995051662825238
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutlineStyle.DashDotDot
-  m_EditorClassIdentifier: 
-  mTechnicalName: DashDotDot
-  mDisplayName: DashDotDot
-  mValue: 4
---- !u!114 &-3573375230960535417
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: EntityFeature.Text_Position
-  m_EditorClassIdentifier: 
-  mTechnicalName: EntityFeature.Text_Position
-  mDisplayName: Text Position
-  mIsTemplateProperty: 1
-  mPropertyType: Articy.The_Road_To_Moscow.Text_Position, Assembly-CSharp
-  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
-  mConstraintValues:
-  - 
-  - 
-  - 
-  - False
-  - 
-  - False
-  - False
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 
-  - 0
-  - 
-  - BySortIndex
-  - 
---- !u!114 &-3517167012920866710
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Anchors
-  m_EditorClassIdentifier: 
-  mTechnicalName: Anchors
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.The_Road_To_Moscow.List`1, Assembly-CSharp
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-3514335261824725545
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ClipRect
-  m_EditorClassIdentifier: 
-  mTechnicalName: ClipRect
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: UnityEngine.Rect, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-3323209839046477586
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LineWidth
-  m_EditorClassIdentifier: 
-  mTechnicalName: LineWidth
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-3297054436919228258
+--- !u!114 &-2394730185325738700
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -943,7 +1117,7 @@ MonoBehaviour:
   - 
   - 
   - sec
---- !u!114 &-3169021266082648542
+--- !u!114 &-2384079650246834697
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -953,15 +1127,52 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: StartCap
+  m_Name: OriginalSource
   m_EditorClassIdentifier: 
-  mTechnicalName: StartCap
+  mTechnicalName: OriginalSource
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: Articy.The_Road_To_Moscow.PathCaps, Assembly-CSharp
+  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-2976274335930060905
+--- !u!114 &-2063689366763809465
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: DFFeature.Ambience
+  m_EditorClassIdentifier: 
+  mTechnicalName: DFFeature.Ambience
+  mDisplayName: Ambience
+  mIsTemplateProperty: 1
+  mPropertyType: Articy.The_Road_To_Moscow.Ambience, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  mConstraintValues:
+  - 
+  - 
+  - 
+  - False
+  - 
+  - False
+  - False
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 
+  - 0
+  - 
+  - BySortIndex
+  - 
+--- !u!114 &-1978460922933636644
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -971,12 +1182,194 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Text_Position.Left
+  m_Name: PathCaps.LineArrowHead
   m_EditorClassIdentifier: 
-  mTechnicalName: Left
-  mDisplayName: Left
+  mTechnicalName: LineArrowHead
+  mDisplayName: LineArrowHead
+  mValue: 2
+--- !u!114 &-1851571879742264032
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: CreatedBy
+  m_EditorClassIdentifier: 
+  mTechnicalName: CreatedBy
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-1327867118367128697
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Id
+  m_EditorClassIdentifier: 
+  mTechnicalName: Id
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.UInt64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-1323807228862121228
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Instruction
+  m_EditorClassIdentifier: 
+  mTechnicalName: Instruction
+  mDisplayName: Instruction
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.Instruction, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: 6143240569864957533}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: -208730499067532034}
+  - {fileID: 7656158118180984843}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -4638267542469815652}
+  - {fileID: 4261813718614832189}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
+  mEnumValues: []
+--- !u!114 &-1218930055563074136
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShapeType.Rectangle
+  m_EditorClassIdentifier: 
+  mTechnicalName: Rectangle
+  mDisplayName: Rectangle
+  mValue: 3
+--- !u!114 &-1216289965534073849
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: OutlineStyle.DashDot
+  m_EditorClassIdentifier: 
+  mTechnicalName: DashDot
+  mDisplayName: DashDot
+  mValue: 3
+--- !u!114 &-1086057033836571653
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ZIndex
+  m_EditorClassIdentifier: 
+  mTechnicalName: ZIndex
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-1065825925066401973
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Ambience.Field
+  m_EditorClassIdentifier: 
+  mTechnicalName: Field
+  mDisplayName: Field
   mValue: 1
---- !u!114 &-2865125895414131832
+--- !u!114 &-1051588126623852917
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Children
+  m_EditorClassIdentifier: 
+  mTechnicalName: Children
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.Collections.ArrayList, mscorlib, Version=4.0.0.0, Culture=neutral,
+    PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-1018118229994696939
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Text_Position
+  m_EditorClassIdentifier: 
+  mTechnicalName: Text_Position
+  mDisplayName: Text Position
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.The_Road_To_Moscow.Text_Position, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 1
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties: []
+  mEnumValues:
+  - {fileID: -5042662521454801186}
+  - {fileID: -263805813255044299}
+  - {fileID: -5974280478823005060}
+--- !u!114 &-904268017791960197
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -995,70 +1388,7 @@ MonoBehaviour:
     PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-2778969513547379404
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutlineStyle.Solid
-  m_EditorClassIdentifier: 
-  mTechnicalName: Solid
-  mDisplayName: Solid
-  mValue: 0
---- !u!114 &-2777567269508717909
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: SelectabilityModes.Unselectable
-  m_EditorClassIdentifier: 
-  mTechnicalName: Unselectable
-  mDisplayName: Unselectable
-  mValue: 0
---- !u!114 &-2595455951719165363
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutlineStyle.Dash
-  m_EditorClassIdentifier: 
-  mTechnicalName: Dash
-  mDisplayName: Dash
-  mValue: 2
---- !u!114 &-2498831599156550097
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: CreatedOn
-  m_EditorClassIdentifier: 
-  mTechnicalName: CreatedOn
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-2453006129918615836
+--- !u!114 &-879688149329258018
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1068,110 +1398,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: VisibilityModes
+  m_Name: LocationImage
   m_EditorClassIdentifier: 
-  mTechnicalName: VisibilityModes
-  mDisplayName: VisibilityModes
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.The_Road_To_Moscow.VisibilityModes, Assembly-CSharp
-  mIsEnum: 1
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties: []
-  mEnumValues:
-  - {fileID: 2521401782085613174}
-  - {fileID: -4570314988295281546}
---- !u!114 &-2344551261994629554
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Spot
-  m_EditorClassIdentifier: 
-  mTechnicalName: Spot
-  mDisplayName: Spot
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.Spot, Assembly-CSharp
+  mTechnicalName: LocationImage
+  mDisplayName: LocationImage
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.LocationImage, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
   mIsEnum: 0
   mHasTemplate: 0
   mFeatures: []
   mProperties:
-  - {fileID: 5263294781390377385}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: -2073674368693143518}
-  - {fileID: 5054068311756110519}
-  - {fileID: 4838174109648519847}
-  - {fileID: 6339694125308840934}
-  - {fileID: -171246079039528209}
-  - {fileID: -6729117355937107578}
-  - {fileID: 1340104365565283320}
-  - {fileID: 2672291663338397506}
-  - {fileID: 2689082259650747854}
-  - {fileID: 896486392376456706}
-  - {fileID: -6518570811490581952}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
+  - {fileID: 6143240569864957533}
+  - {fileID: -3952301007622819541}
+  - {fileID: 7131016742636911369}
+  - {fileID: 4358918510528517789}
+  - {fileID: -6754039658385881047}
+  - {fileID: -8634459016683175340}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: 4494678862229975107}
+  - {fileID: 4546499381759830845}
+  - {fileID: 8242413237320290239}
+  - {fileID: -2453190685946968735}
+  - {fileID: 481819364236013000}
+  - {fileID: 4343735231421194450}
+  - {fileID: -7255155803967709740}
+  - {fileID: -8158308647336827344}
+  - {fileID: -904268017791960197}
+  - {fileID: -9115710442622996426}
+  - {fileID: -2957882594061929817}
+  - {fileID: -8557496271319518221}
+  - {fileID: 1981404320722173882}
+  - {fileID: 8357174083137927568}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
   mEnumValues: []
---- !u!114 &-2317756833387847605
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocationAnchorSize.Medium
-  m_EditorClassIdentifier: 
-  mTechnicalName: Medium
-  mDisplayName: Medium
-  mValue: 1
---- !u!114 &-2286788771981374472
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: SFX.Fuss
-  m_EditorClassIdentifier: 
-  mTechnicalName: Fuss
-  mDisplayName: Fuss
-  mValue: 1
---- !u!114 &-2221392668937341952
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Text_Position.Right
-  m_EditorClassIdentifier: 
-  mTechnicalName: Right
-  mDisplayName: Right
-  mValue: 3
---- !u!114 &-2073674368693143518
+--- !u!114 &-862499404098431603
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1181,49 +1452,64 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PreviewImage
+  m_Name: ParentId
   m_EditorClassIdentifier: 
-  mTechnicalName: PreviewImage
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.Unity.PreviewImage, ArticyRuntime, Version=2.0.3.0, Culture=neutral,
-    PublicKeyToken=null
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &-1573558450674423706
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PathCaps.Disc
-  m_EditorClassIdentifier: 
-  mTechnicalName: Disc
-  mDisplayName: Disc
-  mValue: 6
---- !u!114 &-1417477052405656353
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Id
-  m_EditorClassIdentifier: 
-  mTechnicalName: Id
+  mTechnicalName: ParentId
   mDisplayName: 
   mIsTemplateProperty: 0
   mPropertyType: System.UInt64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &-1257113232512733616
+--- !u!114 &-656408802683137557
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShapeType.Invalid
+  m_EditorClassIdentifier: 
+  mTechnicalName: Invalid
+  mDisplayName: Invalid
+  mValue: 0
+--- !u!114 &-263805813255044299
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Text_Position.Middle
+  m_EditorClassIdentifier: 
+  mTechnicalName: Middle
+  mDisplayName: Middle
+  mValue: 2
+--- !u!114 &-208730499067532034
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Expression
+  m_EditorClassIdentifier: 
+  mTechnicalName: Expression
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.Unity.ArticyScriptCondition, ArticyRuntime, Version=2.0.3.0,
+    Culture=neutral, PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &-82030911384002794
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1238,192 +1524,16 @@ MonoBehaviour:
   mTechnicalName: SFX
   mDisplayName: SFX
   mBaseType: {fileID: 0}
-  mCSharpType: Articy.The_Road_To_Moscow.SFX, Assembly-CSharp
+  mCSharpType: Articy.The_Road_To_Moscow.SFX, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
   mIsEnum: 1
   mHasTemplate: 0
   mFeatures: []
   mProperties: []
   mEnumValues:
-  - {fileID: 5428279934038988387}
-  - {fileID: -2286788771981374472}
-  - {fileID: 4045800253647221383}
---- !u!114 &-1105765725470447042
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Dialogue
-  m_EditorClassIdentifier: 
-  mTechnicalName: Dialogue
-  mDisplayName: Dialogue
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.Dialogue, Assembly-CSharp
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: 5890814377784973420}
-  - {fileID: 5263294781390377385}
-  - {fileID: -2073674368693143518}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -4205017482995126948}
-  - {fileID: -4235531383282111622}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
-  mEnumValues: []
---- !u!114 &-939428963802939435
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Music
-  m_EditorClassIdentifier: 
-  mTechnicalName: Music
-  mDisplayName: Music
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.The_Road_To_Moscow.Music, Assembly-CSharp
-  mIsEnum: 1
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties: []
-  mEnumValues:
-  - {fileID: 7733594809599728753}
-  - {fileID: 2480406628765907301}
---- !u!114 &-719943888595195643
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType.Circle
-  m_EditorClassIdentifier: 
-  mTechnicalName: Circle
-  mDisplayName: Circle
-  mValue: 2
---- !u!114 &-637692582631273497
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Jump
-  m_EditorClassIdentifier: 
-  mTechnicalName: Jump
-  mDisplayName: Jump
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.Jump, Assembly-CSharp
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -8205763131827836034}
-  - {fileID: 2746926415119920176}
-  - {fileID: -4205017482995126948}
-  - {fileID: -4235531383282111622}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
-  mEnumValues: []
---- !u!114 &-557265476704912945
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutlineStyle.DashDot
-  m_EditorClassIdentifier: 
-  mTechnicalName: DashDot
-  mDisplayName: DashDot
-  mValue: 3
---- !u!114 &-491035255686987120
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ArticyObject
-  m_EditorClassIdentifier: 
-  mTechnicalName: ArticyObject
-  mDisplayName: 
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.0.3.0, Culture=neutral,
-    PublicKeyToken=null
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: -7013346059318265952}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6314588789017829214}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -8034483773221468783}
-  mEnumValues: []
---- !u!114 &-171246079039528209
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DisplayNameColor
-  m_EditorClassIdentifier: 
-  mTechnicalName: DisplayNameColor
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
-    PublicKeyToken=null
-  mConstraintNames: 
-  mConstraintValues: []
+  - {fileID: -8466130383370722966}
+  - {fileID: 2543020039906898328}
+  - {fileID: 484291328766770556}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1437,98 +1547,98 @@ MonoBehaviour:
   m_Name: ArticyTypeSystem
   m_EditorClassIdentifier: 
   mArticyTypes:
-  - {fileID: -491035255686987120}
-  - {fileID: 4262097464217025209}
-  - {fileID: -1257113232512733616}
-  - {fileID: -939428963802939435}
-  - {fileID: -5500213123992768297}
-  - {fileID: -6112974306129969750}
-  - {fileID: -4961347530987053158}
-  - {fileID: -2453006129918615836}
-  - {fileID: -4909531256889328859}
-  - {fileID: 6105269244200280095}
-  - {fileID: 9094559177576152755}
-  - {fileID: 5131112562951952129}
-  - {fileID: 2709950931357536500}
-  - {fileID: -1105765725470447042}
-  - {fileID: 7545682892033445512}
-  - {fileID: -7536589823380342339}
-  - {fileID: 8372824601658484410}
-  - {fileID: 8586988746613282173}
-  - {fileID: -637692582631273497}
-  - {fileID: 790373201313749217}
-  - {fileID: -6066489548360510386}
-  - {fileID: 283121037425367519}
-  - {fileID: -2344551261994629554}
-  - {fileID: 5886226385655805115}
-  - {fileID: -8493908061263497812}
-  - {fileID: 8769029411151355862}
-  - {fileID: -7819807570312225900}
-  - {fileID: 1046438940098666605}
-  - {fileID: 8236009102345091144}
-  - {fileID: -4519497896707671349}
-  - {fileID: 4374207457865805006}
-  - {fileID: 990092846538870811}
-  - {fileID: 2768982294941354253}
-  - {fileID: 1601209086244072271}
+  - {fileID: 5798291914365311220}
+  - {fileID: -1018118229994696939}
+  - {fileID: -82030911384002794}
+  - {fileID: -7694366196099866081}
+  - {fileID: 2495393973018408620}
+  - {fileID: -4308130325549032509}
+  - {fileID: 7447767611847284007}
+  - {fileID: 1532062720642828402}
+  - {fileID: 4770547366663429129}
+  - {fileID: 1850341510579008829}
+  - {fileID: -2678587018812209764}
+  - {fileID: -5016220847908911754}
+  - {fileID: -4165830202302200949}
+  - {fileID: -5147229196401460735}
+  - {fileID: 9024206309673438075}
+  - {fileID: -7971484133962406708}
+  - {fileID: 2426036436536282494}
+  - {fileID: -5945521505783502643}
+  - {fileID: 4974849548229885733}
+  - {fileID: 6838398860565548144}
+  - {fileID: 8888901920568791970}
+  - {fileID: 1103586807617941301}
+  - {fileID: 6376512954908311767}
+  - {fileID: -4424260341611568524}
+  - {fileID: -4226574651080471831}
+  - {fileID: 7636237145897849960}
+  - {fileID: -6909555301963573352}
+  - {fileID: -8640917428421258946}
+  - {fileID: -1323807228862121228}
+  - {fileID: 576755711988552491}
+  - {fileID: -879688149329258018}
+  - {fileID: 7802064490611725713}
+  - {fileID: -5972640954752544427}
+  - {fileID: 7926800225777414689}
   mArticyPropertyInfos:
-  - {fileID: -7013346059318265952}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6314588789017829214}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -8034483773221468783}
-  - {fileID: 5890814377784973420}
-  - {fileID: 5263294781390377385}
-  - {fileID: -2073674368693143518}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: -4205017482995126948}
-  - {fileID: -4235531383282111622}
-  - {fileID: 1479419585600635709}
-  - {fileID: -5637715426407164100}
-  - {fileID: -4699785369734193903}
-  - {fileID: -5445353591895150840}
-  - {fileID: -7945139681167917574}
-  - {fileID: 1018716413953270046}
-  - {fileID: 4229694034505320920}
-  - {fileID: -3297054436919228258}
-  - {fileID: 3563086058861349426}
-  - {fileID: -2498831599156550097}
-  - {fileID: -8205763131827836034}
-  - {fileID: 2746926415119920176}
-  - {fileID: -3573375230960535417}
-  - {fileID: 4838174109648519847}
-  - {fileID: 6339694125308840934}
-  - {fileID: -171246079039528209}
-  - {fileID: -6729117355937107578}
-  - {fileID: 1340104365565283320}
-  - {fileID: 2672291663338397506}
-  - {fileID: 2689082259650747854}
-  - {fileID: 896486392376456706}
-  - {fileID: -6518570811490581952}
-  - {fileID: 6810202115672750288}
-  - {fileID: -8498019885279493585}
-  - {fileID: -5573584038560001114}
-  - {fileID: -3169021266082648542}
-  - {fileID: -4213824204527313674}
-  - {fileID: -3323209839046477586}
-  - {fileID: -4171525072186247811}
-  - {fileID: -5024914144613426647}
-  - {fileID: 2286695048185154642}
-  - {fileID: -3517167012920866710}
-  - {fileID: 6395915303095437640}
-  - {fileID: 1879208192609942664}
-  - {fileID: -3514335261824725545}
-  - {fileID: 3864384588055216896}
-  - {fileID: -2865125895414131832}
-  - {fileID: 3997479963114860805}
-  - {fileID: 5747784929903622152}
+  - {fileID: -862499404098431603}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4815378072155340572}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -1051588126623852917}
+  - {fileID: 7014389258897006150}
+  - {fileID: 6143240569864957533}
+  - {fileID: -3952301007622819541}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: -4638267542469815652}
+  - {fileID: 4261813718614832189}
+  - {fileID: 816810771747341867}
+  - {fileID: -2837260678437577407}
+  - {fileID: 5890175259292139135}
+  - {fileID: -3157809441883447204}
+  - {fileID: -2063689366763809465}
+  - {fileID: 7614446980252567652}
+  - {fileID: -3983600221826671437}
+  - {fileID: -2394730185325738700}
+  - {fileID: -1851571879742264032}
+  - {fileID: 5851496394958248040}
+  - {fileID: 6351246479924185182}
+  - {fileID: 3207413192751414791}
+  - {fileID: 8570862542191447327}
+  - {fileID: 4494678862229975107}
+  - {fileID: -8557496271319518221}
+  - {fileID: 1981404320722173882}
+  - {fileID: 8357174083137927568}
+  - {fileID: 4546499381759830845}
+  - {fileID: 8242413237320290239}
+  - {fileID: -2453190685946968735}
+  - {fileID: 4343735231421194450}
+  - {fileID: 481819364236013000}
+  - {fileID: 4358918510528517789}
+  - {fileID: -6754039658385881047}
+  - {fileID: -8634459016683175340}
+  - {fileID: -8548541645936466827}
+  - {fileID: -4264867256259708924}
+  - {fileID: -4192673870378300701}
+  - {fileID: -6816241500534925462}
+  - {fileID: -2384079650246834697}
+  - {fileID: -208730499067532034}
+  - {fileID: 7131016742636911369}
+  - {fileID: 8512545313737587584}
+  - {fileID: 5032041351729591605}
+  - {fileID: -7255155803967709740}
+  - {fileID: -8158308647336827344}
+  - {fileID: -904268017791960197}
+  - {fileID: -9115710442622996426}
+  - {fileID: -2957882594061929817}
   mArticyTypeNames:
   - ArticyObject
   - Text_Position
@@ -1564,7 +1674,74 @@ MonoBehaviour:
   - Document
   - TextObject
   - UserFolder
-  mArticyTypeTypes: []
+  mArticyTypeTypes:
+  - Articy.Unity.ArticyObject, ArticyRuntime, Version=2.0.3.0, Culture=neutral, PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Text_Position, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.SFX, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Music, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Ambience, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.ShapeType, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.SelectabilityModes, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.VisibilityModes, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.OutlineStyle, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.PathCaps, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.LocationAnchorSize, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  - Articy.Unity.PreviewImageViewBoxModes, ArticyRuntime, Version=2.0.3.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.FlowFragment, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Dialogue, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.DialogueFragment, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.DFTemplate, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Hub, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Comment, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Jump, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Entity, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.EntityTemplate, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Location, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Spot, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Zone, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Path, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Link, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Asset, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Condition, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Instruction, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.LocationText, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.LocationImage, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.Document, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.TextObject, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  - Articy.The_Road_To_Moscow.UserFolder, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
   mFeatureProps:
   - DFFeature.Image
   - DFFeature.Ambience
@@ -1573,19 +1750,19 @@ MonoBehaviour:
   - DFFeature.Delay
   - EntityFeature.Text_Position
   mFeaturePropInfos:
-  - {fileID: -5445353591895150840}
-  - {fileID: -7945139681167917574}
-  - {fileID: 1018716413953270046}
-  - {fileID: 4229694034505320920}
-  - {fileID: -3297054436919228258}
-  - {fileID: -3573375230960535417}
+  - {fileID: -3157809441883447204}
+  - {fileID: -2063689366763809465}
+  - {fileID: 7614446980252567652}
+  - {fileID: -3983600221826671437}
+  - {fileID: -2394730185325738700}
+  - {fileID: 8570862542191447327}
   mFeatureTechnicalNames:
   - DFFeature
   - EntityFeature
   mFeatureDisplayNames:
   - DFFeature
   - EntityFeature
---- !u!114 &246904376674319134
+--- !u!114 &235783921669321627
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1595,12 +1772,142 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PathCaps.Diamond
+  m_Name: PreviewImageViewBoxModes.FromAsset
   m_EditorClassIdentifier: 
-  mTechnicalName: Diamond
-  mDisplayName: Diamond
-  mValue: 4
---- !u!114 &283121037425367519
+  mTechnicalName: FromAsset
+  mDisplayName: FromAsset
+  mValue: 0
+--- !u!114 &481819364236013000
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Selectability
+  m_EditorClassIdentifier: 
+  mTechnicalName: Selectability
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.The_Road_To_Moscow.SelectabilityModes, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &484291328766770556
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: SFX.Walking
+  m_EditorClassIdentifier: 
+  mTechnicalName: Walking
+  mDisplayName: Walking
+  mValue: 2
+--- !u!114 &576755711988552491
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: LocationText
+  m_EditorClassIdentifier: 
+  mTechnicalName: LocationText
+  mDisplayName: LocationText
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.LocationText, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: 6143240569864957533}
+  - {fileID: -3952301007622819541}
+  - {fileID: 7131016742636911369}
+  - {fileID: 4358918510528517789}
+  - {fileID: -6754039658385881047}
+  - {fileID: -8634459016683175340}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: 4494678862229975107}
+  - {fileID: 4546499381759830845}
+  - {fileID: 8242413237320290239}
+  - {fileID: -2453190685946968735}
+  - {fileID: 481819364236013000}
+  - {fileID: 8512545313737587584}
+  - {fileID: 5032041351729591605}
+  - {fileID: 4343735231421194450}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
+  mEnumValues: []
+--- !u!114 &816810771747341867
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: MenuText
+  m_EditorClassIdentifier: 
+  mTechnicalName: MenuText
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &899160485711644140
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: VisibilityModes.Invisible
+  m_EditorClassIdentifier: 
+  mTechnicalName: Invisible
+  mDisplayName: Invisible
+  mValue: 0
+--- !u!114 &1085156173675884011
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: LocationAnchorSize.Small
+  m_EditorClassIdentifier: 
+  mTechnicalName: Small
+  mDisplayName: Small
+  mValue: 0
+--- !u!114 &1103586807617941301
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1614,30 +1921,31 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   mTechnicalName: Location
   mDisplayName: Location
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.Location, Assembly-CSharp
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.Location, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
   mIsEnum: 0
   mHasTemplate: 0
   mFeatures: []
   mProperties:
-  - {fileID: 5890814377784973420}
-  - {fileID: 5263294781390377385}
-  - {fileID: -2073674368693143518}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
+  - {fileID: 7014389258897006150}
+  - {fileID: 6143240569864957533}
+  - {fileID: -3952301007622819541}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
   mEnumValues: []
---- !u!114 &790373201313749217
+--- !u!114 &1532062720642828402
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1647,52 +1955,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Entity
+  m_Name: VisibilityModes
   m_EditorClassIdentifier: 
-  mTechnicalName: Entity
-  mDisplayName: Entity
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.Entity, Assembly-CSharp
-  mIsEnum: 0
+  mTechnicalName: VisibilityModes
+  mDisplayName: VisibilityModes
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.The_Road_To_Moscow.VisibilityModes, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 1
   mHasTemplate: 0
   mFeatures: []
-  mProperties:
-  - {fileID: 5890814377784973420}
-  - {fileID: 5263294781390377385}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: -2073674368693143518}
-  - {fileID: 5054068311756110519}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
-  mEnumValues: []
---- !u!114 &896486392376456706
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DropShadow
-  m_EditorClassIdentifier: 
-  mTechnicalName: DropShadow
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &907187465969735849
+  mProperties: []
+  mEnumValues:
+  - {fileID: 899160485711644140}
+  - {fileID: -8658015397050358377}
+--- !u!114 &1654558537196937449
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1702,12 +1979,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType.Link
+  m_Name: PathCaps.ColoredDot
   m_EditorClassIdentifier: 
-  mTechnicalName: Link
-  mDisplayName: Link
-  mValue: 6
---- !u!114 &990092846538870811
+  mTechnicalName: ColoredDot
+  mDisplayName: ColoredDot
+  mValue: 0
+--- !u!114 &1850341510579008829
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1717,32 +1994,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Document
+  m_Name: PathCaps
   m_EditorClassIdentifier: 
-  mTechnicalName: Document
-  mDisplayName: Document
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.Document, Assembly-CSharp
-  mIsEnum: 0
+  mTechnicalName: PathCaps
+  mDisplayName: PathCaps
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.The_Road_To_Moscow.PathCaps, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 1
   mHasTemplate: 0
   mFeatures: []
-  mProperties:
-  - {fileID: 5263294781390377385}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
-  mEnumValues: []
---- !u!114 &1018716413953270046
+  mProperties: []
+  mEnumValues:
+  - {fileID: 1654558537196937449}
+  - {fileID: -5430905344106489106}
+  - {fileID: -1978460922933636644}
+  - {fileID: -5688958585358088629}
+  - {fileID: 3460131463833442127}
+  - {fileID: 3878965611663483512}
+  - {fileID: 5728311264580718127}
+--- !u!114 &1886210517233338582
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShapeType.Circle
+  m_EditorClassIdentifier: 
+  mTechnicalName: Circle
+  mDisplayName: Circle
+  mValue: 2
+--- !u!114 &1981404320722173882
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1752,33 +2038,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DFFeature.Music
+  m_Name: DisplayNameColor
   m_EditorClassIdentifier: 
-  mTechnicalName: DFFeature.Music
-  mDisplayName: Music
-  mIsTemplateProperty: 1
-  mPropertyType: Articy.The_Road_To_Moscow.Music, Assembly-CSharp
-  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
-  mConstraintValues:
-  - 
-  - 
-  - 
-  - False
-  - 
-  - False
-  - False
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 0
-  - 
-  - 0
-  - 
-  - BySortIndex
-  - 
---- !u!114 &1046438940098666605
+  mTechnicalName: DisplayNameColor
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &2426036436536282494
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1788,35 +2057,107 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Condition
+  m_Name: Hub
   m_EditorClassIdentifier: 
-  mTechnicalName: Condition
-  mDisplayName: Condition
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.Condition, Assembly-CSharp
+  mTechnicalName: Hub
+  mDisplayName: Hub
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.Hub, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
   mIsEnum: 0
   mHasTemplate: 0
   mFeatures: []
   mProperties:
-  - {fileID: 5263294781390377385}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: 2286695048185154642}
-  - {fileID: -5052699609718628649}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -4205017482995126948}
-  - {fileID: -4235531383282111622}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
+  - {fileID: 6143240569864957533}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -4638267542469815652}
+  - {fileID: 4261813718614832189}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
   mEnumValues: []
---- !u!114 &1217073938345327697
+--- !u!114 &2495393973018408620
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Ambience
+  m_EditorClassIdentifier: 
+  mTechnicalName: Ambience
+  mDisplayName: Ambience
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.The_Road_To_Moscow.Ambience, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 1
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties: []
+  mEnumValues:
+  - {fileID: -7531168017084849722}
+  - {fileID: -1065825925066401973}
+--- !u!114 &2543020039906898328
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: SFX.Fuss
+  m_EditorClassIdentifier: 
+  mTechnicalName: Fuss
+  mDisplayName: Fuss
+  mValue: 1
+--- !u!114 &3126952275446010611
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShapeType.Path
+  m_EditorClassIdentifier: 
+  mTechnicalName: Path
+  mDisplayName: Path
+  mValue: 4
+--- !u!114 &3207413192751414791
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: TargetPin
+  m_EditorClassIdentifier: 
+  mTechnicalName: TargetPin
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.The_Road_To_Moscow.UInt64, Assembly-CSharp
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &3241508355875959978
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1834,7 +2175,22 @@ MonoBehaviour:
   mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &1276293257019143889
+--- !u!114 &3460131463833442127
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PathCaps.Diamond
+  m_EditorClassIdentifier: 
+  mTechnicalName: Diamond
+  mDisplayName: Diamond
+  mValue: 4
+--- !u!114 &3878965611663483512
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1849,7 +2205,80 @@ MonoBehaviour:
   mTechnicalName: Square
   mDisplayName: Square
   mValue: 5
---- !u!114 &1340104365565283320
+--- !u!114 &4261813718614832189
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: OutputPins
+  m_EditorClassIdentifier: 
+  mTechnicalName: OutputPins
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.The_Road_To_Moscow.List`1, Assembly-CSharp
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &4343735231421194450
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: DropShadow
+  m_EditorClassIdentifier: 
+  mTechnicalName: DropShadow
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &4358918510528517789
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Vertices
+  m_EditorClassIdentifier: 
+  mTechnicalName: Vertices
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.The_Road_To_Moscow.List`1, Assembly-CSharp
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &4494678862229975107
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Visibility
+  m_EditorClassIdentifier: 
+  mTechnicalName: Visibility
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.The_Road_To_Moscow.VisibilityModes, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &4546499381759830845
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1868,56 +2297,7 @@ MonoBehaviour:
     PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &1479419585600635709
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: MenuText
-  m_EditorClassIdentifier: 
-  mTechnicalName: MenuText
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &1601209086244072271
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: UserFolder
-  m_EditorClassIdentifier: 
-  mTechnicalName: UserFolder
-  mDisplayName: UserFolder
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.UserFolder, Assembly-CSharp
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: 5263294781390377385}
-  - {fileID: 1217073938345327697}
-  - {fileID: 5054068311756110519}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: 6036590419040981790}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
-  mEnumValues: []
---- !u!114 &1667357076562137670
+--- !u!114 &4593860295490941703
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1927,12 +2307,159 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PreviewImageViewBoxModes.Custom
+  m_Name: OutlineStyle.Dot
   m_EditorClassIdentifier: 
-  mTechnicalName: Custom
-  mDisplayName: Custom
+  mTechnicalName: Dot
+  mDisplayName: Dot
   mValue: 1
---- !u!114 &1879208192609942664
+--- !u!114 &4675962432404168940
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: TechnicalName
+  m_EditorClassIdentifier: 
+  mTechnicalName: TechnicalName
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &4770547366663429129
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: OutlineStyle
+  m_EditorClassIdentifier: 
+  mTechnicalName: OutlineStyle
+  mDisplayName: OutlineStyle
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.The_Road_To_Moscow.OutlineStyle, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 1
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties: []
+  mEnumValues:
+  - {fileID: 6085234607743920343}
+  - {fileID: 4593860295490941703}
+  - {fileID: 5031656708959834602}
+  - {fileID: -1216289965534073849}
+  - {fileID: 5348042401718223872}
+--- !u!114 &4815378072155340572
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: InstanceId
+  m_EditorClassIdentifier: 
+  mTechnicalName: InstanceId
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.UInt64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &4852131078323698010
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Music.Stop
+  m_EditorClassIdentifier: 
+  mTechnicalName: Stop
+  mDisplayName: Stop
+  mValue: 0
+--- !u!114 &4911611064759222546
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: SelectabilityModes.Selectable
+  m_EditorClassIdentifier: 
+  mTechnicalName: Selectable
+  mDisplayName: Selectable
+  mValue: 1
+--- !u!114 &4974849548229885733
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Jump
+  m_EditorClassIdentifier: 
+  mTechnicalName: Jump
+  mDisplayName: Jump
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.Jump, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: 6351246479924185182}
+  - {fileID: 3207413192751414791}
+  - {fileID: -4638267542469815652}
+  - {fileID: 4261813718614832189}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
+  mEnumValues: []
+--- !u!114 &5031656708959834602
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: OutlineStyle.Dash
+  m_EditorClassIdentifier: 
+  mTechnicalName: Dash
+  mDisplayName: Dash
+  mValue: 2
+--- !u!114 &5032041351729591605
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1950,7 +2477,65 @@ MonoBehaviour:
   mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &2286695048185154642
+--- !u!114 &5348042401718223872
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: OutlineStyle.DashDotDot
+  m_EditorClassIdentifier: 
+  mTechnicalName: DashDotDot
+  mDisplayName: DashDotDot
+  mValue: 4
+--- !u!114 &5728311264580718127
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: PathCaps.Disc
+  m_EditorClassIdentifier: 
+  mTechnicalName: Disc
+  mDisplayName: Disc
+  mValue: 6
+--- !u!114 &5798291914365311220
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ArticyObject
+  m_EditorClassIdentifier: 
+  mTechnicalName: ArticyObject
+  mDisplayName: 
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.0.3.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: -862499404098431603}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4815378072155340572}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -1051588126623852917}
+  mEnumValues: []
+--- !u!114 &5851496394958248040
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1960,16 +2545,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Expression
+  m_Name: CreatedOn
   m_EditorClassIdentifier: 
-  mTechnicalName: Expression
+  mTechnicalName: CreatedOn
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: Articy.Unity.ArticyScriptCondition, ArticyRuntime, Version=2.0.3.0,
-    Culture=neutral, PublicKeyToken=null
+  mPropertyType: System.DateTime, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &2480406628765907301
+--- !u!114 &5890175259292139135
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Speaker
+  m_EditorClassIdentifier: 
+  mTechnicalName: Speaker
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.0.3.0, Culture=neutral,
+    PublicKeyToken=null
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &6085234607743920343
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1979,27 +2582,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Music.Calm_Piano
+  m_Name: OutlineStyle.Solid
   m_EditorClassIdentifier: 
-  mTechnicalName: Calm_Piano
-  mDisplayName: Calm Piano
-  mValue: 1
---- !u!114 &2521401782085613174
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: VisibilityModes.Invisible
-  m_EditorClassIdentifier: 
-  mTechnicalName: Invisible
-  mDisplayName: Invisible
+  mTechnicalName: Solid
+  mDisplayName: Solid
   mValue: 0
---- !u!114 &2649001248004487787
+--- !u!114 &6136113620930621347
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2009,12 +2597,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocationAnchorSize.Large
+  m_Name: ShapeType.Link
   m_EditorClassIdentifier: 
-  mTechnicalName: Large
-  mDisplayName: Large
-  mValue: 2
---- !u!114 &2672291663338397506
+  mTechnicalName: Link
+  mDisplayName: Link
+  mValue: 6
+--- !u!114 &6143240569864957533
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2024,160 +2612,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutlineSize
+  m_Name: DisplayName
   m_EditorClassIdentifier: 
-  mTechnicalName: OutlineSize
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &2689082259650747854
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: OutlineStyle
-  m_EditorClassIdentifier: 
-  mTechnicalName: OutlineStyle
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.The_Road_To_Moscow.OutlineStyle, Assembly-CSharp
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &2709950931357536500
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: FlowFragment
-  m_EditorClassIdentifier: 
-  mTechnicalName: FlowFragment
-  mDisplayName: FlowFragment
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.FlowFragment, Assembly-CSharp
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: 5890814377784973420}
-  - {fileID: 5263294781390377385}
-  - {fileID: -2073674368693143518}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -4205017482995126948}
-  - {fileID: -4235531383282111622}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
-  mEnumValues: []
---- !u!114 &2746926415119920176
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: TargetPin
-  m_EditorClassIdentifier: 
-  mTechnicalName: TargetPin
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.The_Road_To_Moscow.UInt64, Assembly-CSharp
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &2768982294941354253
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: TextObject
-  m_EditorClassIdentifier: 
-  mTechnicalName: TextObject
-  mDisplayName: TextObject
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.TextObject, Assembly-CSharp
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: 5263294781390377385}
-  - {fileID: 5890814377784973420}
-  - {fileID: -2073674368693143518}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
-  mEnumValues: []
---- !u!114 &3563086058861349426
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: CreatedBy
-  m_EditorClassIdentifier: 
-  mTechnicalName: CreatedBy
+  mTechnicalName: DisplayName
   mDisplayName: 
   mIsTemplateProperty: 0
   mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &3752991991426237986
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: SelectabilityModes.Selectable
-  m_EditorClassIdentifier: 
-  mTechnicalName: Selectable
-  mDisplayName: Selectable
-  mValue: 1
---- !u!114 &3864384588055216896
+--- !u!114 &6351246479924185182
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2187,15 +2630,100 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ImageOpacity
+  m_Name: Target
   m_EditorClassIdentifier: 
-  mTechnicalName: ImageOpacity
+  mTechnicalName: Target
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mPropertyType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.0.3.0, Culture=neutral,
+    PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &3997479963114860805
+--- !u!114 &6376512954908311767
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Spot
+  m_EditorClassIdentifier: 
+  mTechnicalName: Spot
+  mDisplayName: Spot
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.Spot, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: 6143240569864957533}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: -3952301007622819541}
+  - {fileID: 7592563164278698422}
+  - {fileID: 4494678862229975107}
+  - {fileID: -8557496271319518221}
+  - {fileID: 1981404320722173882}
+  - {fileID: 8357174083137927568}
+  - {fileID: 4546499381759830845}
+  - {fileID: 8242413237320290239}
+  - {fileID: -2453190685946968735}
+  - {fileID: 4343735231421194450}
+  - {fileID: 481819364236013000}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
+  mEnumValues: []
+--- !u!114 &6838398860565548144
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: Entity
+  m_EditorClassIdentifier: 
+  mTechnicalName: Entity
+  mDisplayName: Entity
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.Entity, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: 7014389258897006150}
+  - {fileID: 6143240569864957533}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: -3952301007622819541}
+  - {fileID: 7592563164278698422}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
+  mEnumValues: []
+--- !u!114 &7014389258897006150
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2205,30 +2733,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: CachedImageWidth
+  m_Name: Attachments
   m_EditorClassIdentifier: 
-  mTechnicalName: CachedImageWidth
+  mTechnicalName: Attachments
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mPropertyType: Articy.The_Road_To_Moscow.List`1, Assembly-CSharp
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &4045800253647221383
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: SFX.Walking
-  m_EditorClassIdentifier: 
-  mTechnicalName: Walking
-  mDisplayName: Walking
-  mValue: 2
---- !u!114 &4229694034505320920
+--- !u!114 &7131016742636911369
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2238,12 +2751,73 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DFFeature.SFX
+  m_Name: Anchors
   m_EditorClassIdentifier: 
-  mTechnicalName: DFFeature.SFX
-  mDisplayName: SFX
+  mTechnicalName: Anchors
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: Articy.The_Road_To_Moscow.List`1, Assembly-CSharp
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &7447767611847284007
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: SelectabilityModes
+  m_EditorClassIdentifier: 
+  mTechnicalName: SelectabilityModes
+  mDisplayName: SelectabilityModes
+  mBaseType: {fileID: 0}
+  mCSharpType: Articy.The_Road_To_Moscow.SelectabilityModes, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 1
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties: []
+  mEnumValues:
+  - {fileID: -3582925420961870468}
+  - {fileID: 4911611064759222546}
+--- !u!114 &7592563164278698422
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShortId
+  m_EditorClassIdentifier: 
+  mTechnicalName: ShortId
+  mDisplayName: 
+  mIsTemplateProperty: 0
+  mPropertyType: System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+  mConstraintNames: 
+  mConstraintValues: []
+--- !u!114 &7614446980252567652
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: DFFeature.Music
+  m_EditorClassIdentifier: 
+  mTechnicalName: DFFeature.Music
+  mDisplayName: Music
   mIsTemplateProperty: 1
-  mPropertyType: Articy.The_Road_To_Moscow.SFX, Assembly-CSharp
+  mPropertyType: Articy.The_Road_To_Moscow.Music, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
   mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
   mConstraintValues:
   - 
@@ -2264,7 +2838,7 @@ MonoBehaviour:
   - 
   - BySortIndex
   - 
---- !u!114 &4262097464217025209
+--- !u!114 &7636237145897849960
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2274,89 +2848,39 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Text_Position
+  m_Name: Link
   m_EditorClassIdentifier: 
-  mTechnicalName: Text_Position
-  mDisplayName: Text Position
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.The_Road_To_Moscow.Text_Position, Assembly-CSharp
-  mIsEnum: 1
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties: []
-  mEnumValues:
-  - {fileID: -2976274335930060905}
-  - {fileID: -5245158292468873144}
-  - {fileID: -2221392668937341952}
---- !u!114 &4374207457865805006
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocationImage
-  m_EditorClassIdentifier: 
-  mTechnicalName: LocationImage
-  mDisplayName: LocationImage
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.LocationImage, Assembly-CSharp
+  mTechnicalName: Link
+  mDisplayName: Link
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.Link, Assembly-CSharp, Version=0.0.0.0, Culture=neutral,
+    PublicKeyToken=null
   mIsEnum: 0
   mHasTemplate: 0
   mFeatures: []
   mProperties:
-  - {fileID: 5263294781390377385}
-  - {fileID: -2073674368693143518}
-  - {fileID: -3517167012920866710}
-  - {fileID: 6810202115672750288}
-  - {fileID: -8498019885279493585}
-  - {fileID: -5573584038560001114}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: 4838174109648519847}
-  - {fileID: 1340104365565283320}
-  - {fileID: 2672291663338397506}
-  - {fileID: 2689082259650747854}
-  - {fileID: -6518570811490581952}
-  - {fileID: 896486392376456706}
-  - {fileID: -3514335261824725545}
-  - {fileID: 3864384588055216896}
-  - {fileID: -2865125895414131832}
-  - {fileID: 3997479963114860805}
-  - {fileID: 5747784929903622152}
-  - {fileID: 6339694125308840934}
-  - {fileID: -171246079039528209}
-  - {fileID: -6729117355937107578}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 6351246479924185182}
+  - {fileID: 7592563164278698422}
+  - {fileID: 4494678862229975107}
+  - {fileID: -8557496271319518221}
+  - {fileID: 1981404320722173882}
+  - {fileID: 8357174083137927568}
+  - {fileID: 481819364236013000}
+  - {fileID: 4343735231421194450}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
   mEnumValues: []
---- !u!114 &4515702353870733745
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType.Spot
-  m_EditorClassIdentifier: 
-  mTechnicalName: Spot
-  mDisplayName: Spot
-  mValue: 1
---- !u!114 &4695191647556134317
+--- !u!114 &7656158118180984843
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2366,67 +2890,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Size
+  m_Name: Color
   m_EditorClassIdentifier: 
-  mTechnicalName: Size
+  mTechnicalName: Color
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: UnityEngine.Vector2, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
+  mPropertyType: UnityEngine.Color, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral,
     PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &4768795597149782710
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType.Invalid
-  m_EditorClassIdentifier: 
-  mTechnicalName: Invalid
-  mDisplayName: Invalid
-  mValue: 0
---- !u!114 &4838174109648519847
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Visibility
-  m_EditorClassIdentifier: 
-  mTechnicalName: Visibility
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.The_Road_To_Moscow.VisibilityModes, Assembly-CSharp
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &5054068311756110519
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShortId
-  m_EditorClassIdentifier: 
-  mTechnicalName: ShortId
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.UInt32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &5131112562951952129
+--- !u!114 &7802064490611725713
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2436,134 +2909,65 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PreviewImageViewBoxModes
+  m_Name: Document
   m_EditorClassIdentifier: 
-  mTechnicalName: PreviewImageViewBoxModes
-  mDisplayName: PreviewImageViewBoxModes
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.Unity.PreviewImageViewBoxModes, ArticyRuntime, Version=2.0.3.0,
+  mTechnicalName: Document
+  mDisplayName: Document
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.Document, Assembly-CSharp, Version=0.0.0.0,
     Culture=neutral, PublicKeyToken=null
-  mIsEnum: 1
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties: []
-  mEnumValues:
-  - {fileID: -6839006255470069147}
-  - {fileID: 1667357076562137670}
---- !u!114 &5263294781390377385
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DisplayName
-  m_EditorClassIdentifier: 
-  mTechnicalName: DisplayName
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &5428279934038988387
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: SFX.Stop
-  m_EditorClassIdentifier: 
-  mTechnicalName: Stop
-  mDisplayName: Stop
-  mValue: 0
---- !u!114 &5476151025973547891
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Ambience.Stop
-  m_EditorClassIdentifier: 
-  mTechnicalName: Stop
-  mDisplayName: Stop
-  mValue: 0
---- !u!114 &5747784929903622152
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: CachedImageHeight
-  m_EditorClassIdentifier: 
-  mTechnicalName: CachedImageHeight
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &5886226385655805115
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Zone
-  m_EditorClassIdentifier: 
-  mTechnicalName: Zone
-  mDisplayName: Zone
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.Zone, Assembly-CSharp
   mIsEnum: 0
   mHasTemplate: 0
   mFeatures: []
   mProperties:
-  - {fileID: 5263294781390377385}
-  - {fileID: -2073674368693143518}
-  - {fileID: 6810202115672750288}
-  - {fileID: -8498019885279493585}
-  - {fileID: -5573584038560001114}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: 4838174109648519847}
-  - {fileID: 1340104365565283320}
-  - {fileID: 2672291663338397506}
-  - {fileID: 2689082259650747854}
-  - {fileID: 6339694125308840934}
-  - {fileID: -171246079039528209}
-  - {fileID: -6729117355937107578}
-  - {fileID: 896486392376456706}
-  - {fileID: -6518570811490581952}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
+  - {fileID: 6143240569864957533}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
   mEnumValues: []
---- !u!114 &5890814377784973420
+--- !u!114 &7926800225777414689
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: UserFolder
+  m_EditorClassIdentifier: 
+  mTechnicalName: UserFolder
+  mDisplayName: UserFolder
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.UserFolder, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 0
+  mFeatures: []
+  mProperties:
+  - {fileID: 6143240569864957533}
+  - {fileID: 3241508355875959978}
+  - {fileID: 7592563164278698422}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -1086057033836571653}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
+  mEnumValues: []
+--- !u!114 &8242413237320290239
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2573,61 +2977,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Attachments
+  m_Name: OutlineSize
   m_EditorClassIdentifier: 
-  mTechnicalName: Attachments
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.The_Road_To_Moscow.List`1, Assembly-CSharp
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &6036590419040981790
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ZIndex
-  m_EditorClassIdentifier: 
-  mTechnicalName: ZIndex
+  mTechnicalName: OutlineSize
   mDisplayName: 
   mIsTemplateProperty: 0
   mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &6105269244200280095
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PathCaps
-  m_EditorClassIdentifier: 
-  mTechnicalName: PathCaps
-  mDisplayName: PathCaps
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.The_Road_To_Moscow.PathCaps, Assembly-CSharp
-  mIsEnum: 1
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties: []
-  mEnumValues:
-  - {fileID: 7039519855624787171}
-  - {fileID: 9012056132446937286}
-  - {fileID: -8589600308569137682}
-  - {fileID: 8292166282660303608}
-  - {fileID: 246904376674319134}
-  - {fileID: 1276293257019143889}
-  - {fileID: -1573558450674423706}
---- !u!114 &6314300342098292385
+--- !u!114 &8357174083137927568
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2637,52 +2995,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Parent
+  m_Name: DisplayNameSize
   m_EditorClassIdentifier: 
-  mTechnicalName: Parent
+  mTechnicalName: DisplayNameSize
   mDisplayName: 
   mIsTemplateProperty: 0
-  mPropertyType: Articy.Unity.ArticyObject, ArticyRuntime, Version=2.0.3.0, Culture=neutral,
-    PublicKeyToken=null
+  mPropertyType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &6314588789017829214
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: InstanceId
-  m_EditorClassIdentifier: 
-  mTechnicalName: InstanceId
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.UInt64, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &6339694125308840934
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShowDisplayName
-  m_EditorClassIdentifier: 
-  mTechnicalName: ShowDisplayName
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &6395915303095437640
+--- !u!114 &8512545313737587584
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2700,7 +3021,22 @@ MonoBehaviour:
   mPropertyType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &6810202115672750288
+--- !u!114 &8563136172683007749
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: ShapeType.Spot
+  m_EditorClassIdentifier: 
+  mTechnicalName: Spot
+  mDisplayName: Spot
+  mValue: 1
+--- !u!114 &8570862542191447327
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2710,117 +3046,34 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Vertices
+  m_Name: EntityFeature.Text_Position
   m_EditorClassIdentifier: 
-  mTechnicalName: Vertices
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: Articy.The_Road_To_Moscow.List`1, Assembly-CSharp
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &6948510860859085082
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: TechnicalName
-  m_EditorClassIdentifier: 
-  mTechnicalName: TechnicalName
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &7039519855624787171
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PathCaps.ColoredDot
-  m_EditorClassIdentifier: 
-  mTechnicalName: ColoredDot
-  mDisplayName: ColoredDot
-  mValue: 0
---- !u!114 &7057065036986373318
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: ShapeType.Rectangle
-  m_EditorClassIdentifier: 
-  mTechnicalName: Rectangle
-  mDisplayName: Rectangle
-  mValue: 3
---- !u!114 &7545682892033445512
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: DialogueFragment
-  m_EditorClassIdentifier: 
-  mTechnicalName: DialogueFragment
-  mDisplayName: DialogueFragment
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.DialogueFragment, Assembly-CSharp
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: 1479419585600635709}
-  - {fileID: -5637715426407164100}
-  - {fileID: -4699785369734193903}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -4205017482995126948}
-  - {fileID: -4235531383282111622}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
-  mEnumValues: []
---- !u!114 &7733594809599728753
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Music.Stop
-  m_EditorClassIdentifier: 
-  mTechnicalName: Stop
-  mDisplayName: Stop
-  mValue: 0
---- !u!114 &7754140654671013017
+  mTechnicalName: EntityFeature.Text_Position
+  mDisplayName: Text Position
+  mIsTemplateProperty: 1
+  mPropertyType: Articy.The_Road_To_Moscow.Text_Position, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mConstraintNames: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f0000001000000011000000
+  mConstraintValues:
+  - 
+  - 
+  - 
+  - False
+  - 
+  - False
+  - False
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  - 
+  - 0
+  - 
+  - BySortIndex
+  - 
+--- !u!114 &8572949929312178498
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2839,7 +3092,7 @@ MonoBehaviour:
     PublicKeyToken=null
   mConstraintNames: 
   mConstraintValues: []
---- !u!114 &8236009102345091144
+--- !u!114 &8888901920568791970
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2849,217 +3102,73 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Instruction
+  m_Name: EntityTemplate
   m_EditorClassIdentifier: 
-  mTechnicalName: Instruction
-  mDisplayName: Instruction
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.Instruction, Assembly-CSharp
+  mTechnicalName: EntityTemplate
+  mDisplayName: EntityTemplate
+  mBaseType: {fileID: 6838398860565548144}
+  mCSharpType: Articy.The_Road_To_Moscow.EntityTemplate, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
+  mIsEnum: 0
+  mHasTemplate: 1
+  mFeatures:
+  - EntityFeature
+  mProperties:
+  - {fileID: 8570862542191447327}
+  - {fileID: 7014389258897006150}
+  - {fileID: 6143240569864957533}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: -3952301007622819541}
+  - {fileID: 7592563164278698422}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
+  mEnumValues: []
+--- !u!114 &9024206309673438075
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: DialogueFragment
+  m_EditorClassIdentifier: 
+  mTechnicalName: DialogueFragment
+  mDisplayName: DialogueFragment
+  mBaseType: {fileID: 5798291914365311220}
+  mCSharpType: Articy.The_Road_To_Moscow.DialogueFragment, Assembly-CSharp, Version=0.0.0.0,
+    Culture=neutral, PublicKeyToken=null
   mIsEnum: 0
   mHasTemplate: 0
   mFeatures: []
   mProperties:
-  - {fileID: 5263294781390377385}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: 2286695048185154642}
-  - {fileID: -5052699609718628649}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -4205017482995126948}
-  - {fileID: -4235531383282111622}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
+  - {fileID: 816810771747341867}
+  - {fileID: -2837260678437577407}
+  - {fileID: 5890175259292139135}
+  - {fileID: 7656158118180984843}
+  - {fileID: -3712371451366337392}
+  - {fileID: 3241508355875959978}
+  - {fileID: 8572949929312178498}
+  - {fileID: -1086057033836571653}
+  - {fileID: -7374270764935917462}
+  - {fileID: 7592563164278698422}
+  - {fileID: -1327867118367128697}
+  - {fileID: 4675962432404168940}
+  - {fileID: -3930520741572665201}
+  - {fileID: -4638267542469815652}
+  - {fileID: 4261813718614832189}
+  - {fileID: -862499404098431603}
+  - {fileID: 4815378072155340572}
+  - {fileID: -1051588126623852917}
   mEnumValues: []
---- !u!114 &8292166282660303608
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PathCaps.FilledArrowHead
-  m_EditorClassIdentifier: 
-  mTechnicalName: FilledArrowHead
-  mDisplayName: FilledArrowHead
-  mValue: 3
---- !u!114 &8372824601658484410
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Hub
-  m_EditorClassIdentifier: 
-  mTechnicalName: Hub
-  mDisplayName: Hub
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.Hub, Assembly-CSharp
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: 5263294781390377385}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -4205017482995126948}
-  - {fileID: -4235531383282111622}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
-  mEnumValues: []
---- !u!114 &8586988746613282173
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Comment
-  m_EditorClassIdentifier: 
-  mTechnicalName: Comment
-  mDisplayName: Comment
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.Comment, Assembly-CSharp
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: 3563086058861349426}
-  - {fileID: -2498831599156550097}
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: 5054068311756110519}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
-  mEnumValues: []
---- !u!114 &8607238225749402746
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -152228120, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Text
-  m_EditorClassIdentifier: 
-  mTechnicalName: Text
-  mDisplayName: 
-  mIsTemplateProperty: 0
-  mPropertyType: System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-  mConstraintNames: 
-  mConstraintValues: []
---- !u!114 &8769029411151355862
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: Link
-  m_EditorClassIdentifier: 
-  mTechnicalName: Link
-  mDisplayName: Link
-  mBaseType: {fileID: -491035255686987120}
-  mCSharpType: Articy.The_Road_To_Moscow.Link, Assembly-CSharp
-  mIsEnum: 0
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties:
-  - {fileID: -5052699609718628649}
-  - {fileID: 8607238225749402746}
-  - {fileID: 1217073938345327697}
-  - {fileID: 7754140654671013017}
-  - {fileID: 6036590419040981790}
-  - {fileID: 4695191647556134317}
-  - {fileID: -8205763131827836034}
-  - {fileID: 5054068311756110519}
-  - {fileID: 4838174109648519847}
-  - {fileID: 6339694125308840934}
-  - {fileID: -171246079039528209}
-  - {fileID: -6729117355937107578}
-  - {fileID: -6518570811490581952}
-  - {fileID: 896486392376456706}
-  - {fileID: -1417477052405656353}
-  - {fileID: 6948510860859085082}
-  - {fileID: 6314300342098292385}
-  - {fileID: -7013346059318265952}
-  - {fileID: 6314588789017829214}
-  - {fileID: -8034483773221468783}
-  mEnumValues: []
---- !u!114 &9012056132446937286
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -246416443, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: PathCaps.None
-  m_EditorClassIdentifier: 
-  mTechnicalName: None
-  mDisplayName: None
-  mValue: 1
---- !u!114 &9094559177576152755
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 747260720, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: LocationAnchorSize
-  m_EditorClassIdentifier: 
-  mTechnicalName: LocationAnchorSize
-  mDisplayName: LocationAnchorSize
-  mBaseType: {fileID: 0}
-  mCSharpType: Articy.The_Road_To_Moscow.LocationAnchorSize, Assembly-CSharp
-  mIsEnum: 1
-  mHasTemplate: 0
-  mFeatures: []
-  mProperties: []
-  mEnumValues:
-  - {fileID: -4448983406127121305}
-  - {fileID: -2317756833387847605}
-  - {fileID: 2649001248004487787}
