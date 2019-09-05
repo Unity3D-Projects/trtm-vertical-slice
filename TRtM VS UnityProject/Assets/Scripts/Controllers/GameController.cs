@@ -29,7 +29,8 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     #region Settings
     public TextSpeed textSpeed;
-    public bool clampSpeedToOne = true;
+    public bool clampSpeed = true;
+    public float clampValue = 2.5f;
     public bool instantMode = false;
 
     public int minutesToSkip;
@@ -111,7 +112,9 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         if (aObject is DialogueFragment df)
         {
             Current = aObject as DialogueFragment;
-            _spawner.SpawnPhrase(df.Text);
+
+            var speaker = df.Speaker as Entity;
+            _spawner.SpawnPhrase(df.Text,speaker.Color);
         }
     }
     public void OnBranchesUpdated(IList<Branch> aBranches)
@@ -163,7 +166,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     private IEnumerator WaitTimeAndCheckForDelay(List<Branch> candidates, float time)
     {
         float seconds;
-        if (clampSpeedToOne && !instantMode) seconds = time <= 2.5f ? 2.5f : time;
+        if (clampSpeed && !instantMode) seconds = time <= clampValue ? clampValue : time;
         else seconds = time;
         yield return new WaitForSeconds(seconds);
 

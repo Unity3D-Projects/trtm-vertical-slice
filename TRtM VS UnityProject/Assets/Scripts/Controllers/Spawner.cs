@@ -23,11 +23,12 @@ public class Spawner : MonoBehaviour
         _controller = GetComponent<GameController>();
     }
 
-    public GameObject SpawnPhrase(string text)
+    public GameObject SpawnPhrase(string text, Color color)
     {
         GameObject p = Instantiate(_prefabManager.phrasePrefab, _prefabManager.content);
         p.name = text.Length >= 20 ? Trim(text, 20) : text;
         p.GetComponentInChildren<Text>().text = text;
+        p.GetComponentInChildren<Text>().color = color;
         return p;
     }
 

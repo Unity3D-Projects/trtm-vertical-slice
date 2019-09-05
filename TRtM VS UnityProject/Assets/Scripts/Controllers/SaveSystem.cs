@@ -108,7 +108,8 @@ public class SaveSystem : MonoBehaviour
             {
                 case (Const.XmlAliases.Phrase):
                     var phrase = ArticyDatabase.GetObject(logEvent.Value) as DialogueFragment;
-                    _spawner.SpawnPhrase(phrase.Text);
+                    var speaker = phrase.Speaker as Entity;
+                    _spawner.SpawnPhrase(phrase.Text, speaker.Color);
                     break;
 
                 case (Const.XmlAliases.ButtonGroup):

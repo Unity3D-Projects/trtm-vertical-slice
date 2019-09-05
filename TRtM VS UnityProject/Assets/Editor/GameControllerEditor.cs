@@ -12,9 +12,16 @@ public class GameControllerEditor : Editor
 
         GameController theController = (GameController)target;
 
-        theController.textSpeed = (TextSpeed)EditorGUILayout.EnumPopup("Text speed", theController.textSpeed);
-        theController.clampSpeedToOne = EditorGUILayout.Toggle("Clamp speed to one", theController.clampSpeedToOne);
         theController.instantMode = EditorGUILayout.Toggle("Instant mode", theController.instantMode);
+        if (!theController.instantMode)
+        {
+            theController.textSpeed = (TextSpeed)EditorGUILayout.EnumPopup("Text speed", theController.textSpeed);
+        }
+        theController.clampSpeed = EditorGUILayout.Toggle("Clamp speed", theController.clampSpeed);
+        if (theController.clampSpeed)
+        {
+            theController.clampValue = EditorGUILayout.FloatField("Clamp value", theController.clampValue);
+        }
         EditorGUILayout.Space();
 
         theController.AllowRewinding = EditorGUILayout.Toggle("Allow rewinding", theController.AllowRewinding);

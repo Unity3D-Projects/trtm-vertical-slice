@@ -31,25 +31,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88d0aa12a39c78043807f0d449f46da4, type: 3}
   m_Name: ArticyScriptFragments
   m_EditorClassIdentifier: 
---- !u!114 &-6763722774751198474
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: HierarchyManager
-  m_EditorClassIdentifier: 
-  serializedNodes:
-  - id: 72057594037927937
-    parent: 0
-    technicalName: The_Road_To_Moscow
-    articyType: Project
-    childCount: 0
-    indexOfFirstChild: 1
 --- !u!114 &-4749233181358768410
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -84,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
   m_Name: ArticyDatabase
   m_EditorClassIdentifier: 
-  mHierarchy: {fileID: -6763722774751198474}
+  mHierarchy: {fileID: 4842540259814815978}
   mLocalization: {fileID: -4749233181358768410}
   mInternalProject:
     mName: The Road to Moscow
@@ -98,3 +79,16 @@ MonoBehaviour:
   - PackageName: All objects
     PackagePath: All objects
     mIsDefaultPackage: 1
+--- !u!114 &4842540259814815978
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: HierarchyManager
+  m_EditorClassIdentifier: 
+  serializedNodes: []
