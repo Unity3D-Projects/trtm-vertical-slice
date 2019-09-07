@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class PrefabManager : MonoBehaviour
 {
-    public GameObject phrasePrefab;
+    public GameObject middlePrefab;
+    public GameObject sidesPrefab;
     public GameObject dotsPrefab;
     public GameObject buttonGroup;
     public Button buttonPrefab;

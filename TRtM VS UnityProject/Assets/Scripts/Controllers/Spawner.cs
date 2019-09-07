@@ -23,13 +23,46 @@ public class Spawner : MonoBehaviour
         _controller = GetComponent<GameController>();
     }
 
-    public GameObject SpawnPhrase(string text, Color color)
+    public GameObject SpawnPhrase(string text, Color color, Text_Position side)
     {
-        GameObject p = Instantiate(_prefabManager.phrasePrefab, _prefabManager.content);
-        p.name = text.Length >= 20 ? Trim(text, 20) : text;
-        p.GetComponentInChildren<Text>().text = text;
-        p.GetComponentInChildren<Text>().color = color;
-        return p;
+        GameObject prefab;
+        if (side == Text_Position.Middle)
+        {
+            prefab = Instantiate(_prefabManager.middlePrefab, _prefabManager.content);
+        }
+        else
+        {
+            prefab = Instantiate(_prefabManager.sidesPrefab, _prefabManager.content);
+        }
+
+        prefab.name = text.Length >= 20 ? Trim(text, 20) : text;
+        prefab.GetComponentInChildren<Text>().text = text;
+        prefab.GetComponentInChildren<Text>().color = color;
+
+        switch (side)
+        {
+            case Text_Position.Left:
+                foreach (var lg in prefab.GetComponentsInChildren<LayoutGroup>())
+                {
+                    lg.childAlignment = TextAnchor.MiddleLeft;
+                }
+                prefab.GetComponentsInChildren<LayoutGroup>()[2].padding.left = 30;
+                prefab.GetComponentsInChildren<LayoutGroup>()[2].padding.right = 20;
+                prefab.GetComponentInChildren<Text>().alignment = TextAnchor.MiddleLeft;
+                break;
+
+            case Text_Position.Right:
+                foreach (var lg in prefab.GetComponentsInChildren<LayoutGroup>())
+                {
+                    lg.childAlignment = TextAnchor.MiddleRight;
+                }
+                prefab.GetComponentsInChildren<LayoutGroup>()[2].padding.left = 20;
+                prefab.GetComponentsInChildren<LayoutGroup>()[2].padding.right = 30;
+                prefab.GetComponentInChildren<Text>().alignment = TextAnchor.MiddleLeft;
+                break;
+        }
+
+        return prefab;
     }
 
     private string Trim(string text, int index)

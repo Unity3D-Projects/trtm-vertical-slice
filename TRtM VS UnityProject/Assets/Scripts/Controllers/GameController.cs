@@ -113,8 +113,8 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         {
             Current = aObject as DialogueFragment;
 
-            var speaker = df.Speaker as Entity;
-            _spawner.SpawnPhrase(df.Text,speaker.Color);
+            var speaker = df.Speaker as EntityTemplate;
+            _spawner.SpawnPhrase(df.Text,speaker.Color, speaker.Template.EntityFeature.Text_Position);
         }
     }
     public void OnBranchesUpdated(IList<Branch> aBranches)
