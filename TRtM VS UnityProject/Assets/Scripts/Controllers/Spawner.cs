@@ -46,8 +46,8 @@ public class Spawner : MonoBehaviour
                 {
                     lg.childAlignment = TextAnchor.MiddleLeft;
                 }
-                prefab.GetComponentsInChildren<LayoutGroup>()[2].padding.left = 30;
-                prefab.GetComponentsInChildren<LayoutGroup>()[2].padding.right = 20;
+                //prefab.GetComponentsInChildren<LayoutGroup>()[2].padding.left = 30;
+                //prefab.GetComponentsInChildren<LayoutGroup>()[2].padding.right = 20;
                 prefab.GetComponentInChildren<Text>().alignment = TextAnchor.MiddleLeft;
                 break;
 
@@ -56,8 +56,8 @@ public class Spawner : MonoBehaviour
                 {
                     lg.childAlignment = TextAnchor.MiddleRight;
                 }
-                prefab.GetComponentsInChildren<LayoutGroup>()[2].padding.left = 20;
-                prefab.GetComponentsInChildren<LayoutGroup>()[2].padding.right = 30;
+                //prefab.GetComponentsInChildren<LayoutGroup>()[2].padding.left = 20;
+                //prefab.GetComponentsInChildren<LayoutGroup>()[2].padding.right = 30;
                 prefab.GetComponentInChildren<Text>().alignment = TextAnchor.MiddleLeft;
                 break;
         }
