@@ -87,10 +87,10 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     private float _currentSpeed;
     public CoroutineObjectBase CurrentDelay { get; set; }
 
-    public void SkipDelay(float m_timeToSkip)
+    public void SkipDelay(float timeToSkipInMinutes)
     {
         StopCoroutine(CurrentDelay.Coroutine);
-        _saveSystem.SubtractMinutesFromExecute(m_timeToSkip);
+        _saveSystem.SubtractMinutesFromExecute(timeToSkipInMinutes);
         SceneManager.LoadScene("Main");
     }
 
@@ -166,10 +166,18 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     private IEnumerator WaitTimeAndCheckForDelay(List<Branch> candidates, float time)
     {
         float seconds;
-        if (clampSpeed && !instantMode) seconds = time <= clampValue ? clampValue : time;
-        else seconds = time;
-        yield return new WaitForSeconds(seconds);
+        if (clampSpeed && !instantMode)
+        {
+            seconds = time <= clampValue
+                ? clampValue
+                : time;
+        }
+        else
+        {
+            seconds = time;
+        }
 
+        yield return new WaitForSeconds(seconds);
 
         float delay = 0;
         if (Current is DFTemplate dft)
@@ -216,23 +224,23 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         _saveSystem.LogGlobalVars();
     }
 
-    private IEnumerator PlayWithDelay(List<Branch> candidates, float m_timeToWait)
+    private IEnumerator PlayWithDelay(List<Branch> candidates, float timeToWaitInMinutes)
     {
         Debug.Log("Delay entered from game");
 
         DateTime startTime = DateTime.Now;
-        DateTime endTime = DateTime.Now.AddMinutes(m_timeToWait);
+        DateTime endTime = DateTime.Now.AddMinutes(timeToWaitInMinutes);
         _saveSystem.SetStartTimeAndExecuteTime(startTime, endTime);
 
         GameObject delayBlock = _spawner.SpawnDelayBlock();
-        Slider slider = _spawner.SpawnSlider(DateTime.Now, m_timeToWait);
+        Slider slider = _spawner.SpawnSlider(DateTime.Now, timeToWaitInMinutes);
 
-        float m_Remaining = m_timeToWait;
-        while (m_Remaining > 0)
+        float remainingInMinutes = timeToWaitInMinutes;
+        while (remainingInMinutes > 0)
         {
-            m_Remaining -= Time.deltaTime / 60;
-            delayBlock.GetComponentInChildren<Text>().text = TimeSpan.FromMinutes(m_Remaining).ToString(@"hh\:mm\:ss");
-            slider.value += Time.deltaTime / (m_timeToWait * 60);
+            remainingInMinutes -= Time.deltaTime / 60;
+            delayBlock.GetComponentInChildren<Text>().text = TimeSpan.FromMinutes(remainingInMinutes).ToString(@"hh\:mm\:ss");
+            slider.value += Time.deltaTime / (timeToWaitInMinutes * 60);
             yield return null;
         }
         Destroy(slider.gameObject);
@@ -240,21 +248,21 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         Play(candidates);
     }
 
-    public IEnumerator ExecuteWithDelay(DateTime startTime, float m_timeToWait)
+    public IEnumerator ExecuteWithDelay(DateTime startTime, float timeToWaitInMinutes)
     {
         Debug.Log("Delay entered from save");
 
-        DateTime endTime = DateTime.Now.AddMinutes(m_timeToWait);
+        DateTime endTime = DateTime.Now.AddMinutes(timeToWaitInMinutes);
         var totalDelay = (endTime - startTime).TotalMinutes;
 
         GameObject delayBlock = _spawner.SpawnDelayBlock();
         Slider slider = _spawner.SpawnSlider(startTime, totalDelay);
 
-        float m_Remaining = m_timeToWait;
-        while (m_Remaining > 0)
+        float remainingInMinutes = timeToWaitInMinutes;
+        while (remainingInMinutes > 0)
         {
-            m_Remaining -= Time.deltaTime / 60;
-            delayBlock.GetComponentInChildren<Text>().text = TimeSpan.FromMinutes(m_Remaining).ToString(@"hh\:mm\:ss");
+            remainingInMinutes -= Time.deltaTime / 60;
+            delayBlock.GetComponentInChildren<Text>().text = TimeSpan.FromMinutes(remainingInMinutes).ToString(@"hh\:mm\:ss");
             slider.value += (float)(Time.deltaTime / (totalDelay * 60));
             yield return null;
         }
