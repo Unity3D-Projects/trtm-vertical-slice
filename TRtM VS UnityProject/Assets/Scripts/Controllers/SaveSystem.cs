@@ -19,9 +19,12 @@ public class SaveSystem : MonoBehaviour
     private Spawner _spawner;
 
     private string _savePath = Const.SavePath;
+    public GameState GameState { get; set };
 
     private void Awake()
     {
+        GameState = new GameState();
+
         _controller = GetComponent<GameController>();
         _player = GetComponent<ArticyFlowPlayer>();
         _spawner = GetComponent<Spawner>();

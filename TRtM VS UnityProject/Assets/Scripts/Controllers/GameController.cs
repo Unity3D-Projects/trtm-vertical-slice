@@ -114,7 +114,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             Current = aObject as DialogueFragment;
 
             var speaker = df.Speaker as EntityTemplate;
-            _spawner.SpawnPhrase(df.Text,speaker.Color, speaker.Template.EntityFeature.Text_Position);
+            _spawner.SpawnPhrase(df.Text, speaker.Color, speaker.Template.EntityFeature.Text_Position);
         }
     }
     public void OnBranchesUpdated(IList<Branch> aBranches)
@@ -124,10 +124,10 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             return;
         }
 
-        if (aBranches == null)
+        if (aBranches == null || aBranches.Count == 0)
         {
             Debug.LogError("No branches found");
-            GameObject eg = _spawner.SpawnEndGame(false);
+            _spawner.SpawnEndGame(false);
         }
 
         List<Branch> candidates = new List<Branch>();
@@ -138,6 +138,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             {
                 _spawner.SpawnEndGame(true);
                 _saveSystem.LogEvent(Const.LogEvent.LogEndGameWin, string.Empty);
+                _saveSystem.GameState.log.Items.AddLast(new saveLogEndGame(win: false));
                 GameEnded = true;
                 return;
             }
