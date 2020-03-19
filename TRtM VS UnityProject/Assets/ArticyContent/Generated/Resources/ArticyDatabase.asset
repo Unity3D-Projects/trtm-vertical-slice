@@ -65,7 +65,7 @@ MonoBehaviour:
   m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
   m_Name: ArticyDatabase
   m_EditorClassIdentifier: 
-  mHierarchy: {fileID: 4842540259814815978}
+  mHierarchy: {fileID: 6951798311188805833}
   mLocalization: {fileID: -4749233181358768410}
   mInternalProject:
     mName: The Road to Moscow
@@ -79,7 +79,7 @@ MonoBehaviour:
   - PackageName: All objects
     PackagePath: All objects
     mIsDefaultPackage: 1
---- !u!114 &4842540259814815978
+--- !u!114 &6951798311188805833
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}

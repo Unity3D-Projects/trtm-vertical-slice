@@ -16,6 +16,8 @@ using System;
 using UnityEngine.UI;
 using System.Xml.Linq;
 using UnityEngine.SceneManagement;
+using System.Threading.Tasks;
+using System.Threading;
 
 public enum TextSpeed { SLOWEST = 5, SLOW = 4, NORMAL = 3, FAST = 2, FASTEST = 1 }
 
@@ -124,6 +126,11 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             return;
         }
 
+        StartCoroutine(OnBranchesUpdatedCoroutine(aBranches));
+    }
+
+    private IEnumerator OnBranchesUpdatedCoroutine(IList<Branch> aBranches)
+    {
         if (aBranches == null)
         {
             Debug.LogError("No branches found");
@@ -139,7 +146,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
                 _spawner.SpawnEndGame(true);
                 _saveSystem.LogEvent(Const.LogEvent.LogEndGameWin, string.Empty);
                 GameEnded = true;
-                return;
+                yield break;
             }
             if (branch.IsValid)
             {
@@ -160,45 +167,40 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         }
 
         var textDelay = !instantMode ? Current.Text.Length * _currentSpeed : 0;
-        StartCoroutine(WaitTimeAndCheckForDelay(candidates, textDelay));
+
+        yield return WaitSeconds(textDelay);
+
+        Play(candidates);
     }
 
-    private IEnumerator WaitTimeAndCheckForDelay(List<Branch> candidates, float time)
+    private IEnumerator WaitSeconds(float seconds)
     {
-        float seconds;
+        float clampedSeconds;
         if (clampSpeed && !instantMode)
         {
-            seconds = time <= clampValue
+            clampedSeconds = seconds <= clampValue
                 ? clampValue
-                : time;
+                : seconds;
         }
         else
         {
-            seconds = time;
+            clampedSeconds = seconds;
         }
 
-        yield return new WaitForSeconds(seconds);
+        yield return new WaitForSeconds(clampedSeconds);
+    }
 
-        float delay = 0;
-        if (Current is DFTemplate dft)
-        {
-            delay = dft.Template.DFFeature.Delay;
-        }
-        
+    private void Play(List<Branch> candidates)
+    {
+        float delay = (Current as DFTemplate)?.Template.DFFeature.Delay ?? 0;
+
         if (delay > 0)
         {
             var coroutine = new CoroutineObject<List<Branch>, float>(this, PlayWithDelay);
             coroutine.Start(candidates, delay);
             CurrentDelay = coroutine;
+            return;
         }
-        else
-        {
-            Play(candidates);
-        }
-    }
-
-    private void Play(List<Branch> candidates)
-    {
 
         if (candidates.Count == 0)
         {
@@ -216,7 +218,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         }
     }
 
-    public IEnumerator PlayAndWaitConstantTimeOnClick(Branch branch)
+    public IEnumerator OnChoiceChosen(Branch branch)
     {
         yield return new WaitForSeconds(1);
 

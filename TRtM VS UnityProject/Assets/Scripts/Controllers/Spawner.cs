@@ -175,7 +175,7 @@ public class Spawner : MonoBehaviour
         var bColors = button.GetComponent<ButtonColors>().pressedColors;
         button.colors = bColors;
 
-        StartCoroutine(_controller.PlayAndWaitConstantTimeOnClick(exit));
+        StartCoroutine(_controller.OnChoiceChosen(exit));
     }
 
     private void ButtonOnSecondClickEventHandler(GameObject buttonGroup)

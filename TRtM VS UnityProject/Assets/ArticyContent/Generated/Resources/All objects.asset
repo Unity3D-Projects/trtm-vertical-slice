@@ -1,78 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-9145746779253624396
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b64268b4afb8e54ea7a185fd18b4df2, type: 3}
-  m_Name: DFr_2E03728F
-  m_EditorClassIdentifier: 
-  id: 72057594037928359
-  technicalName: DFr_2E03728F
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928348
-  mColor: {r: 0.21586053, g: 0.12743768, b: 0.36130682, a: 1}
-  mText: "\u041F\u0430\u043F..."
-  mExternalId: 
-  mPosition: {x: 0, y: 0}
-  mZIndex: 0
-  mSize: {x: 225, y: 200}
-  mShortId: 771977871
-  mInputPins:
-    value:
-    - id: 72057594037928362
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928359
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928363
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928359
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928368
-          mTarget:
-            objectRef: 72057594037928365
-      mOwnerInstanceId: 0
-  mTemplate:
-    value:
-      mDFFeature:
-        value:
-          mImage:
-            objectRef: 0
-          mAmbience: 1
-          mMusic: 0
-          mSFX: 0
-          mDelay: 0
-          mOwnerId: 72057594037928359
-          mOwnerInstanceId: 0
-      mOwnerId: 72057594037928359
-      mOwnerInstanceId: 0
---- !u!114 &-8988289949587929544
+--- !u!114 &-8866752247451071896
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -82,50 +10,56 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_B99EE103
+  m_Name: DFr_981C5DCB
   m_EditorClassIdentifier: 
-  id: 72057594037929130
-  technicalName: DFr_B99EE103
-  parentId: 72057594037929145
+  id: 72057594037929088
+  technicalName: DFr_981C5DCB
+  parentId: 72057594037928352
   childrenIds: 
-  mMenuText: "\u0412\u043E\u0439\u0434\u0438 \u0447\u0435\u0440\u0435\u0437 \u0434\u0432\u0435\u0440\u044C"
+  mMenuText: 
   mStageDirections: 
   mSpeaker:
     objectRef: 72057594037928340
   mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: 
+  mText: "\u041E\u043D \u0441\u0436\u0438\u043C\u0430\u0435\u0442 \u043C\u043E\u044E
+    \u0440\u0443\u043A\u0443, \u0431\u043E\u0438\u0442\u0441\u044F..."
   mExternalId: 
-  mPosition: {x: 599, y: 376}
-  mZIndex: 102
+  mPosition: {x: 9375, y: -125}
+  mZIndex: 90
   mSize: {x: 225, y: 200}
-  mShortId: 3114197251
+  mShortId: 2551995851
   mInputPins:
     value:
-    - id: 72057594037929133
+    - id: 72057594037929091
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037929130
+      mOwner: 72057594037929088
       mConnections:
         value: []
       mOwnerInstanceId: 0
   mOutputPins:
     value:
-    - id: 72057594037929134
+    - id: 72057594037929092
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037929130
+      mOwner: 72057594037929088
       mConnections:
-        value: []
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929098
+          mTarget:
+            objectRef: 72057594037929095
       mOwnerInstanceId: 0
---- !u!114 &-8882989061406100319
+--- !u!114 &-8707291902530781055
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -135,166 +69,56 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_D23C55EB
+  m_Name: DFr_3426FC7C
   m_EditorClassIdentifier: 
-  id: 72057594037928537
-  technicalName: DFr_D23C55EB
+  id: 72057594037928479
+  technicalName: DFr_3426FC7C
   parentId: 72057594037928352
   childrenIds: 
   mMenuText: 
   mStageDirections: 
   mSpeaker:
-    objectRef: 72057594037928348
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041C\u043D\u0435 \u0437\u0434\u0435\u0441\u044C \u043D\u0435 \u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F."
-  mExternalId: 
-  mPosition: {x: 5000, y: 0}
-  mZIndex: 23
-  mSize: {x: 225, y: 200}
-  mShortId: 3527169515
-  mInputPins:
-    value:
-    - id: 72057594037928540
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928537
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928541
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928537
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928553
-          mTarget:
-            objectRef: 72057594037928550
-      mOwnerInstanceId: 0
---- !u!114 &-8774708144217738852
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_9AFA76ED
-  m_EditorClassIdentifier: 
-  id: 72057594037928472
-  technicalName: DFr_9AFA76ED
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u0439 \u043D\u0430\u0431\u043B\u044E\u0434\u0430\u0442\u044C"
-  mStageDirections: 
-  mSpeaker:
     objectRef: 72057594037928344
   mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: 
+  mText: "\u041D\u0435\u0442, \u043C\u044B \u0434\u043E\u043B\u0436\u043D\u044B \u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C
+    \u0434\u043E\u043C."
   mExternalId: 
-  mPosition: {x: 3625, y: 250}
-  mZIndex: 16
+  mPosition: {x: 4175, y: 0}
+  mZIndex: 17
   mSize: {x: 225, y: 200}
-  mShortId: 2600105709
+  mShortId: 874970236
   mInputPins:
     value:
-    - id: 72057594037928475
+    - id: 72057594037928482
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928472
+      mOwner: 72057594037928479
       mConnections:
         value: []
       mOwnerInstanceId: 0
   mOutputPins:
     value:
-    - id: 72057594037928476
+    - id: 72057594037928483
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928472
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
---- !u!114 &-8728004428708492830
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_A978A689
-  m_EditorClassIdentifier: 
-  id: 72057594037928529
-  technicalName: DFr_A978A689
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: "\u041F\u043E\u0447\u0435\u043C\u0443?"
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928344
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041F\u043E\u0447\u0435\u043C\u0443?"
-  mExternalId: 
-  mPosition: {x: 4725, y: 0}
-  mZIndex: 21
-  mSize: {x: 225, y: 200}
-  mShortId: 2843256457
-  mInputPins:
-    value:
-    - id: 72057594037928532
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928529
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928533
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928529
+      mOwner: 72057594037928479
       mConnections:
         value:
         - mLabel: 
           mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928540
+          mTargetPin: 72057594037928489
           mTarget:
-            objectRef: 72057594037928537
+            objectRef: 72057594037928486
       mOwnerInstanceId: 0
---- !u!114 &-8417815156266012389
+--- !u!114 &-8390364692262274194
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -303,300 +127,18 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_41F98101
+  m_Script: {fileID: 11500000, guid: 0d966e1e675cc3c43adec7af94fa22e6, type: 3}
+  m_Name: Ufo_1409C165
   m_EditorClassIdentifier: 
-  id: 72057594037928906
-  technicalName: DFr_41F98101
-  parentId: 72057594037928352
+  id: 72057594037928197
+  technicalName: Ufo_1409C165
+  parentId: 216172783392894804
   childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928348
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u0412\u0434\u0440\u0443\u0433 \u043E\u043D\u0438 \u0441\u043F\u044F\u0442?"
+  mDisplayName: Images
   mExternalId: 
-  mPosition: {x: 6750, y: 0}
-  mZIndex: 30
-  mSize: {x: 225, y: 200}
-  mShortId: 1106870529
-  mInputPins:
-    value:
-    - id: 72057594037928909
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928906
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928910
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928906
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928916
-          mTarget:
-            objectRef: 72057594037928913
-      mOwnerInstanceId: 0
---- !u!114 &-6292100832854600569
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_0C54B736
-  m_EditorClassIdentifier: 
-  id: 72057594037928994
-  technicalName: DFr_0C54B736
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: "\u041F\u043E\u043D\u0430\u0431\u043B\u044E\u0434\u0430\u0439 \u0437\u0430
-    \u0434\u043E\u043C\u043E\u043C \u0435\u0449\u0451"
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928344
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: 
-  mExternalId: 
-  mPosition: {x: 8550, y: 125}
-  mZIndex: 84
-  mSize: {x: 225, y: 200}
-  mShortId: 206878518
-  mInputPins:
-    value:
-    - id: 72057594037928997
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928994
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928998
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928994
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
---- !u!114 &-5553187975096206455
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b908c954271909c40ad4ad98d6b4bf91, type: 3}
-  m_Name: CMT_72057594037928977
-  m_EditorClassIdentifier: 
-  id: 72057594037928977
-  technicalName: CMT_72057594037928977
-  parentId: 72057594037928352
-  childrenIds: 
-  mCreatedBy: 
-  mColor: {r: 0, g: 0, b: 0, a: 1}
-  mText: "\u0417\u0430\u0434\u0430\u0442\u044C \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u0443\u044E
-    \u0434\u043E\u0432\u0435\u0440\u0438\u044F \u0441\u044B\u043D\u0430 \u043A \u0433\u043E\u043B\u043E\u0441\u0443.\r\n\r\n\u0421\u044B\u043D
-    \u0445\u043E\u0440\u043E\u0448\u0438\u0439. \u0415\u0441\u043B\u0438 \u0433\u043E\u043B\u043E\u0441
-    \u043F\u043E\u0441\u0442\u0443\u043F\u0430\u0435\u0442 \u043F\u043B\u043E\u0445\u043E,
-    \u0442\u043E \u0441\u044B\u043D \u0435\u0433\u043E \u043D\u0435 \u043B\u044E\u0431\u0438\u0442."
-  mExternalId: 
-  mPosition: {x: 7925, y: -500}
-  mZIndex: 40
-  mSize: {x: 275, y: 875}
-  mShortId: 501557621
---- !u!114 &-5542104348131489116
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47a255c341ce764d9548427e53ea888, type: 3}
-  m_Name: Ntt_1E25159F
-  m_EditorClassIdentifier: 
-  id: 72057594037928344
-  technicalName: Ntt_1E25159F
-  parentId: 72057594037928220
-  childrenIds: 
-  mAttachments:
-    listIds: 
-  mDisplayName: Father (Speech)
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: 
-  mExternalId: 
-  mPosition: {x: 20, y: 20}
-  mZIndex: 1
-  mSize: {x: 256, y: 196}
-  mPreviewImage:
-    mViewBoxX: 0
-    mViewBoxY: 0
-    mViewBoxWidth: 0
-    mViewBoxHeight: 0
-    mMode: 0
-    mAsset:
-      objectRef: 0
-  mShortId: 505746847
-  mTemplate:
-    value:
-      mEntityFeature:
-        value:
-          mText_Position: 3
-          mOwnerId: 72057594037928344
-          mOwnerInstanceId: 0
-      mOwnerId: 72057594037928344
-      mOwnerInstanceId: 0
---- !u!114 &-5277910037981418436
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_6F573716
-  m_EditorClassIdentifier: 
-  id: 72057594037928386
-  technicalName: DFr_6F573716
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928348
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u042F \u0437\u0430\u043C\u0451\u0440\u0437..."
-  mExternalId: 
-  mPosition: {x: 1100, y: 0}
-  mZIndex: 4
-  mSize: {x: 225, y: 200}
-  mShortId: 1867986710
-  mInputPins:
-    value:
-    - id: 72057594037928389
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928386
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928390
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928386
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928396
-          mTarget:
-            objectRef: 72057594037928393
-      mOwnerInstanceId: 0
---- !u!114 &-5144211589702178396
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_77E810FA
-  m_EditorClassIdentifier: 
-  id: 72057594037928884
-  technicalName: DFr_77E810FA
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: "\u0423\u0441\u043F\u043E\u043A\u043E\u0439 \u0435\u0433\u043E"
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928344
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041D\u0435 \u0431\u043E\u0439\u0441\u044F. \u0415\u0441\u043B\u0438 \u0431\u044B
-    \u0442\u0430\u043C \u043A\u0442\u043E-\u0442\u043E \u0431\u044B\u043B, \u043C\u044B
-    \u0431\u044B \u0443\u0436\u0435 \u0443\u0441\u043B\u044B\u0448\u0430\u043B\u0438
-    \u0438\u0445."
-  mExternalId: 
-  mPosition: {x: 6475, y: 0}
-  mZIndex: 27
-  mSize: {x: 225, y: 200}
-  mShortId: 2011697402
-  mInputPins:
-    value:
-    - id: 72057594037928887
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928884
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928888
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928884
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928909
-          mTarget:
-            objectRef: 72057594037928906
-      mOwnerInstanceId: 0
---- !u!114 &-4848206443686085781
+  mShortId: 336183653
+  mZIndex: 0
+--- !u!114 &-8305079040737885933
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -654,81 +196,7 @@ MonoBehaviour:
           mTarget:
             objectRef: 72057594037928421
       mOwnerInstanceId: 0
---- !u!114 &-4376671321840759395
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bfaac0c61110d64dbdd72551a048d51, type: 3}
-  m_Name: Dlg_CD923E5E
-  m_EditorClassIdentifier: 
-  id: 72057594037928352
-  technicalName: Dlg_CD923E5E
-  parentId: 72057594037928213
-  childrenIds: a701000000000001d00100000000000101020000000000011002000000000001030400000000000113040000000000012904000000000001ad01000000000001b401000000000001bb01000000000001c201000000000001c901000000000001d701000000000001de01000000000001e501000000000001ec01000000000001f301000000000001fa01000000000001090200000000000118020000000000011f0200000000000126020000000000012d0200000000000135020000000000013c020000000000015102000000000001590200000000000166020000000000016d020000000000017702000000000001b403000000000001bc03000000000001c303000000000001ca03000000000001d103000000000001d803000000000001df03000000000001e703000000000001ee03000000000001f503000000000001fc030000000000010a040000000000011b0400000000000122040000000000017904000000000001800400000000000187040000000000018e0400000000000195040000000000011104000000000001
-  mAttachments:
-    listIds: 
-  mDisplayName: In field
-  mPreviewImage:
-    mViewBoxX: 0
-    mViewBoxY: 0
-    mViewBoxWidth: 0
-    mViewBoxHeight: 0
-    mMode: 0
-    mAsset:
-      objectRef: 0
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041E\u0442\u0435\u0446 \u0441 \u0441\u044B\u043D\u043E\u043C \u043B\u0435\u0436\u0430\u0442
-    \u0432 \u043F\u043E\u043B\u0435 \u0438 \u043D\u0430\u0431\u043B\u044E\u0434\u0430\u044E\u0442
-    \u0437\u0430 \u0434\u043E\u043C\u043E\u043C. \u041E\u043D\u0438 \u0443\u0441\u0442\u0430\u043B\u0438
-    \u0438 \u0437\u0430\u043C\u0451\u0440\u0437\u043B\u0438. \u0414\u043E\u043C \u043A\u0430\u0436\u0435\u0442\u0441\u044F
-    \u043F\u0443\u0441\u0442\u044B\u043C. \u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
-    \u0440\u0435\u0448\u0438\u0442\u044C, \u0441\u0442\u043E\u0438\u0442 \u043B\u0438
-    \u043E\u0431\u044B\u0441\u043A\u0430\u0442\u044C \u0434\u043E\u043C \u0438\u043B\u0438
-    \u0443\u0439\u0442\u0438 \u0438\u0441\u043A\u0430\u0442\u044C \u0435\u0434\u0443
-    \u0438 \u043C\u0435\u0441\u0442\u043E \u0434\u043B\u044F \u043F\u0440\u0438\u0432\u0430\u043B\u0430
-    \u0433\u0434\u0435-\u043D\u0438\u0431\u0443\u0434\u044C \u0435\u0449\u0451."
-  mExternalId: 
-  mPosition: {x: -8, y: 0}
-  mZIndex: 0
-  mSize: {x: 291, y: 200}
-  mShortId: 3448913502
-  mInputPins:
-    value:
-    - id: 72057594037928355
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928352
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928356
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928352
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037929148
-          mTarget:
-            objectRef: 72057594037929145
-      mOwnerInstanceId: 0
---- !u!114 &-4176366381478358240
+--- !u!114 &-7854825836496714513
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -738,55 +206,51 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_E5E77E58
+  m_Name: DFr_0C54B736
   m_EditorClassIdentifier: 
-  id: 72057594037928365
-  technicalName: DFr_E5E77E58
+  id: 72057594037928994
+  technicalName: DFr_0C54B736
   parentId: 72057594037928352
   childrenIds: 
-  mMenuText: 
+  mMenuText: "\u041F\u043E\u043D\u0430\u0431\u043B\u044E\u0434\u0430\u0439 \u0437\u0430
+    \u0434\u043E\u043C\u043E\u043C \u0435\u0449\u0451"
   mStageDirections: 
   mSpeaker:
     objectRef: 72057594037928344
   mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u0427\u0442\u043E?"
+  mText: 
   mExternalId: 
-  mPosition: {x: 275, y: 0}
-  mZIndex: 1
+  mPosition: {x: 8550, y: 125}
+  mZIndex: 84
   mSize: {x: 225, y: 200}
-  mShortId: 3857153624
+  mShortId: 206878518
   mInputPins:
     value:
-    - id: 72057594037928368
+    - id: 72057594037928997
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928365
+      mOwner: 72057594037928994
       mConnections:
         value: []
       mOwnerInstanceId: 0
   mOutputPins:
     value:
-    - id: 72057594037928369
+    - id: 72057594037928998
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928365
+      mOwner: 72057594037928994
       mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928375
-          mTarget:
-            objectRef: 72057594037928372
+        value: []
       mOwnerInstanceId: 0
---- !u!114 &-3886811016444581812
+--- !u!114 &-7650164093821200842
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -796,10 +260,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_44CF5B06
+  m_Name: DFr_3A31A576
   m_EditorClassIdentifier: 
-  id: 72057594037928942
-  technicalName: DFr_44CF5B06
+  id: 72057594037928557
+  technicalName: DFr_3A31A576
   parentId: 72057594037928352
   childrenIds: 
   mMenuText: 
@@ -807,45 +271,55 @@ MonoBehaviour:
   mSpeaker:
     objectRef: 72057594037928348
   mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041D\u0430\u0434\u0435\u044E\u0441\u044C, \u0432\u0441\u0451 \u0431\u0443\u0434\u0435\u0442
-    \u0445\u043E\u0440\u043E\u0448\u043E."
+  mText: "\u041D\u0435\u0442, \u043F\u0440\u043E\u0441\u0442\u043E \u043C\u043D\u0435
+    \u0441\u0442\u0440\u0430\u0448\u043D\u043E."
   mExternalId: 
-  mPosition: {x: 7950, y: -125}
-  mZIndex: 35
+  mPosition: {x: 5550, y: 0}
+  mZIndex: 25
   mSize: {x: 225, y: 200}
-  mShortId: 1154439942
+  mShortId: 976332150
   mInputPins:
     value:
-    - id: 72057594037928945
-      mText:
-        value:
-          handlerId: 886063062
-          ownerId: 72057594037928942
-          ownerInstanceId: 0
-          mRawScript: true
-      mOwner: 72057594037928942
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928946
+    - id: 72057594037928560
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928942
+      mOwner: 72057594037928557
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928561
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928557
       mConnections:
         value:
         - mLabel: 
           mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928973
+          mTargetPin: 72057594037928496
           mTarget:
-            objectRef: 72057594037928970
+            objectRef: 72057594037928493
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928504
+          mTarget:
+            objectRef: 72057594037928501
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928511
+          mTarget:
+            objectRef: 72057594037928508
       mOwnerInstanceId: 0
---- !u!114 &-3650189210474540454
+--- !u!114 &-7260707380178487455
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -855,170 +329,120 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_3795A369
+  m_Name: DFr_B4CDA54C
   m_EditorClassIdentifier: 
-  id: 72057594037928486
-  technicalName: DFr_3795A369
+  id: 72057594037928892
+  technicalName: DFr_B4CDA54C
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: "\u0418\u0434\u0438 \u0443\u0436\u0435!"
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928344
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 6475, y: -250}
+  mZIndex: 28
+  mSize: {x: 225, y: 200}
+  mShortId: 3033376076
+  mInputPins:
+    value:
+    - id: 72057594037928895
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928892
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928896
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928892
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &-7168254839813571621
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_D12D185D
+  m_EditorClassIdentifier: 
+  id: 72057594037928442
+  technicalName: DFr_D12D185D
   parentId: 72057594037928352
   childrenIds: 
   mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928348
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u042F \u043D\u0435 \u0445\u043E\u0447\u0443 \u0438\u0434\u0442\u0438 \u0442\u0443\u0434\u0430.
-    \u0414\u0430\u0432\u0430\u0439 \u0443\u0439\u0434\u0451\u043C \u043E\u0442\u0441\u044E\u0434\u0430?"
-  mExternalId: 
-  mPosition: {x: 4450, y: 0}
-  mZIndex: 18
-  mSize: {x: 225, y: 200}
-  mShortId: 932553577
-  mInputPins:
-    value:
-    - id: 72057594037928489
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928486
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928490
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928486
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928532
-          mTarget:
-            objectRef: 72057594037928529
-      mOwnerInstanceId: 0
---- !u!114 &-3619235808622488701
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_2FBE3443
-  m_EditorClassIdentifier: 
-  id: 72057594037929137
-  technicalName: DFr_2FBE3443
-  parentId: 72057594037929145
-  childrenIds: 
-  mMenuText: "\u041F\u0440\u043E\u0432\u0435\u0440\u044C \u043E\u043A\u043D\u0430"
   mStageDirections: 
   mSpeaker:
     objectRef: 72057594037928340
   mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: 
+  mText: "\u0418 \u043F\u0440\u0430\u0432\u0434\u0430, \u0442\u043E\u0436\u0435 \u043D\u0430\u0447\u0438\u043D\u0430\u044E
+    \u043C\u0451\u0440\u0437\u043D\u0443\u0442\u044C, \u043D\u0430\u0434\u043E \u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F.
+    \u0412\u0440\u043E\u0434\u0435 \u0432\u0441\u0451 \u0442\u0438\u0445\u043E."
   mExternalId: 
-  mPosition: {x: 599, y: 876}
-  mZIndex: 104
+  mPosition: {x: 3300, y: 0}
+  mZIndex: 12
   mSize: {x: 225, y: 200}
-  mShortId: 800994371
+  mShortId: 3509393501
   mInputPins:
     value:
-    - id: 72057594037929140
+    - id: 72057594037928445
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037929137
+      mOwner: 72057594037928442
       mConnections:
         value: []
       mOwnerInstanceId: 0
   mOutputPins:
     value:
-    - id: 72057594037929141
+    - id: 72057594037928446
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037929137
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
---- !u!114 &-3205722872071294149
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_04A99E08
-  m_EditorClassIdentifier: 
-  id: 72057594037928493
-  technicalName: DFr_04A99E08
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: "\u0418\u0434\u0438\u0442\u0435 \u0432 \u0434\u043E\u043C"
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928344
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041C\u044B \u0443\u0441\u0442\u0430\u043B\u0438 \u0438 \u043F\u0440\u043E\u043C\u043E\u043A\u043B\u0438,
-    \u043D\u0430\u043C \u043D\u0443\u0436\u043D\u043E \u043F\u0435\u0440\u0435\u0434\u043E\u0445\u043D\u0443\u0442\u044C
-    \u0433\u0434\u0435-\u043D\u0438\u0431\u0443\u0434\u044C. \u041C\u043E\u0436\u0435\u0442,
-    \u0442\u0430\u043C \u0435\u0441\u0442\u044C \u043A\u0430\u043A\u0430\u044F \u0435\u0434\u0430."
-  mExternalId: 
-  mPosition: {x: 5875, y: 0}
-  mZIndex: 19
-  mSize: {x: 225, y: 200}
-  mShortId: 78224904
-  mInputPins:
-    value:
-    - id: 72057594037928496
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928493
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928497
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928493
+      mOwner: 72057594037928442
       mConnections:
         value:
         - mLabel: 
           mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928570
+          mTargetPin: 72057594037928452
           mTarget:
-            objectRef: 72057594037928567
+            objectRef: 72057594037928449
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928467
+          mTarget:
+            objectRef: 72057594037928464
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928475
+          mTarget:
+            objectRef: 72057594037928472
       mOwnerInstanceId: 0
---- !u!114 &-3099395425488835182
+--- !u!114 &-6741120789555598932
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1028,75 +452,62 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_12DAB48A
+  m_Name: DFr_0B017BDD
   m_EditorClassIdentifier: 
-  id: 72057594037928379
-  technicalName: DFr_12DAB48A
+  id: 72057594037928920
+  technicalName: DFr_0B017BDD
   parentId: 72057594037928352
   childrenIds: 
   mMenuText: 
   mStageDirections: 
   mSpeaker:
-    objectRef: 72057594037928344
+    objectRef: 72057594037928348
   mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u0413\u0434\u0435-\u0442\u043E \u043F\u043E\u043B\u0447\u0430\u0441\u0430."
+  mText: "\u041B\u0430\u0434\u043D\u043E... \u042D\u0442\u043E \u0413\u043E\u043B\u043E\u0441
+    \u0433\u043E\u0432\u043E\u0440\u0438\u0442 \u0442\u0435\u0431\u0435 \u0438\u0434\u0442\u0438
+    \u0442\u0443\u0434\u0430?"
   mExternalId: 
-  mPosition: {x: 825, y: 0}
-  mZIndex: 3
+  mPosition: {x: 7300, y: 0}
+  mZIndex: 32
   mSize: {x: 225, y: 200}
-  mShortId: 316322954
+  mShortId: 184646621
   mInputPins:
     value:
-    - id: 72057594037928382
+    - id: 72057594037928923
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928379
+      mOwner: 72057594037928920
       mConnections:
         value: []
       mOwnerInstanceId: 0
   mOutputPins:
     value:
-    - id: 72057594037928383
+    - id: 72057594037928924
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928379
+      mOwner: 72057594037928920
       mConnections:
         value:
         - mLabel: 
           mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928389
+          mTargetPin: 72057594037928930
           mTarget:
-            objectRef: 72057594037928386
+            objectRef: 72057594037928927
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928938
+          mTarget:
+            objectRef: 72057594037928935
       mOwnerInstanceId: 0
---- !u!114 &-2489201331120656982
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d966e1e675cc3c43adec7af94fa22e6, type: 3}
-  m_Name: Ufo_6E98452A
-  m_EditorClassIdentifier: 
-  id: 72057594037928203
-  technicalName: Ufo_6E98452A
-  parentId: 216172783392894804
-  childrenIds: 
-  mDisplayName: Documents
-  mExternalId: 
-  mShortId: 1855472938
-  mZIndex: 0
---- !u!114 &-2251515485301589009
+--- !u!114 &-6724775377487023201
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1149,7 +560,108 @@ MonoBehaviour:
       mConnections:
         value: []
       mOwnerInstanceId: 0
---- !u!114 &-1852881071913597073
+--- !u!114 &-6585787423395265844
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_DC404CE9
+  m_EditorClassIdentifier: 
+  id: 72057594037928393
+  technicalName: DFr_DC404CE9
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928344
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u041F\u043E\u0442\u0435\u0440\u043F\u0438 \u043D\u0435\u043C\u043D\u043E\u0433\u043E."
+  mExternalId: 
+  mPosition: {x: 1375, y: 0}
+  mZIndex: 5
+  mSize: {x: 225, y: 200}
+  mShortId: 3695201513
+  mInputPins:
+    value:
+    - id: 72057594037928396
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928393
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928397
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928393
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928403
+          mTarget:
+            objectRef: 72057594037928400
+      mOwnerInstanceId: 0
+--- !u!114 &-6037141722187773833
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47a255c341ce764d9548427e53ea888, type: 3}
+  m_Name: Ntt_D2485258
+  m_EditorClassIdentifier: 
+  id: 72057594037928340
+  technicalName: Ntt_D2485258
+  parentId: 72057594037928220
+  childrenIds: 
+  mAttachments:
+    listIds: 
+  mDisplayName: Father (Thoughts)
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 0, y: 0}
+  mZIndex: 0
+  mSize: {x: 256, y: 196}
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mShortId: 3527955032
+  mTemplate:
+    value:
+      mEntityFeature:
+        value:
+          mText_Position: 2
+          mOwnerId: 72057594037928340
+          mOwnerInstanceId: 0
+      mOwnerId: 72057594037928340
+      mOwnerInstanceId: 0
+--- !u!114 &-6035916943173592671
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1222,7 +734,1078 @@ MonoBehaviour:
           mOwnerInstanceId: 0
       mOwnerId: 72057594037928400
       mOwnerInstanceId: 0
---- !u!114 &-1840118242683900928
+--- !u!114 &-5732817916026098852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_647FFB26
+  m_EditorClassIdentifier: 
+  id: 72057594037929109
+  technicalName: DFr_647FFB26
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928340
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u0418\u0434\u0451\u043C, \u0432\u0441\u0451 \u0442\u0438\u0445\u043E. \u041A\u0438\u0440\u043F\u0438\u0447\u043D\u0430\u044F
+    \u043A\u043B\u0430\u0434\u043A\u0430, \u043C\u0430\u0441\u0441\u0438\u0432\u043D\u0430\u044F
+    \u0432\u0445\u043E\u0434\u043D\u0430\u044F \u0434\u0432\u0435\u0440\u044C, \u043E\u043A\u043D\u0430
+    \u0443 \u0434\u0432\u0435\u0440\u0438 \u0446\u0435\u043B\u044B. \u0414\u043E\u043C
+    \u0432 \u0434\u0432\u0430 \u044D\u0442\u0430\u0436\u0430 \u043F\u043B\u044E\u0441
+    \u0447\u0435\u0440\u0434\u0430\u043A. \u041D\u0430\u0432\u0435\u0440\u043D\u044F\u043A\u0430
+    \u0435\u0449\u0451 \u0435\u0441\u0442\u044C \u043F\u043E\u0434\u0432\u0430\u043B."
+  mExternalId: 
+  mPosition: {x: 10200, y: -125}
+  mZIndex: 96
+  mSize: {x: 225, y: 200}
+  mShortId: 1686108966
+  mInputPins:
+    value:
+    - id: 72057594037929112
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929109
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929113
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929109
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928356
+          mTarget:
+            objectRef: 72057594037928352
+      mOwnerInstanceId: 0
+--- !u!114 &-5545611334202374308
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_E53FD6A8
+  m_EditorClassIdentifier: 
+  id: 72057594037928550
+  technicalName: DFr_E53FD6A8
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928344
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u0422\u044B \u0447\u0443\u0432\u0441\u0442\u0432\u0443\u0435\u0448\u044C
+    \u0437\u0434\u0435\u0441\u044C \u0447\u0442\u043E-\u0442\u043E?"
+  mExternalId: 
+  mPosition: {x: 5275, y: 0}
+  mZIndex: 24
+  mSize: {x: 225, y: 200}
+  mShortId: 3846166184
+  mInputPins:
+    value:
+    - id: 72057594037928553
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928550
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928554
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928550
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928560
+          mTarget:
+            objectRef: 72057594037928557
+      mOwnerInstanceId: 0
+--- !u!114 &-5339680360972937237
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_F1E3A583
+  m_EditorClassIdentifier: 
+  id: 72057594037928435
+  technicalName: DFr_F1E3A583
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928340
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u0418\u0437-\u0437\u0430 \u0432\u044B\u0441\u043E\u043A\u043E\u0439 \u0442\u0440\u0430\u0432\u044B
+    \u043D\u0430\u0441 \u043D\u0435 \u0434\u043E\u043B\u0436\u043D\u043E \u0431\u044B\u0442\u044C
+    \u0432\u0438\u0434\u043D\u043E. \u0423\u0436\u0435 \u0431\u043E\u043B\u044C\u0448\u0435
+    \u043F\u043E\u043B\u0443\u0447\u0430\u0441\u0430 \u043B\u0435\u0436\u0438\u043C,
+    \u043D\u0430\u0431\u043B\u044E\u0434\u0435\u043C."
+  mExternalId: 
+  mPosition: {x: 3025, y: 0}
+  mZIndex: 11
+  mSize: {x: 225, y: 200}
+  mShortId: 4058228099
+  mInputPins:
+    value:
+    - id: 72057594037928438
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928435
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928439
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928435
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928445
+          mTarget:
+            objectRef: 72057594037928442
+      mOwnerInstanceId: 0
+--- !u!114 &-5070892182522927325
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_2838C03A
+  m_EditorClassIdentifier: 
+  id: 72057594037928421
+  technicalName: DFr_2838C03A
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928340
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u0425\u043E\u0440\u043E\u0448\u0435\u0435 \u043C\u0435\u0441\u0442\u043E.
+    \u041D\u0435\u0431\u043E\u043B\u044C\u0448\u043E\u0439 \u043A\u043E\u0442\u0442\u0435\u0434\u0436
+    \u043D\u0430 \u0445\u043E\u043B\u043C\u0435, \u0441 \u0434\u043E\u0440\u043E\u0433\u0438
+    \u043D\u0435 \u0432\u0438\u0434\u043D\u043E. \u0415\u0441\u043B\u0438 \u0431\u044B
+    \u043D\u0435 \u043A\u0430\u0440\u0442\u0430, \u044F \u0431\u044B \u0432\u043E\u043E\u0431\u0449\u0435
+    \u043D\u0435 \u043F\u043E\u0434\u0443\u043C\u0430\u043B, \u0447\u0442\u043E \u0442\u0443\u0442
+    \u0447\u0442\u043E-\u0442\u043E \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C."
+  mExternalId: 
+  mPosition: {x: 2475, y: 0}
+  mZIndex: 9
+  mSize: {x: 225, y: 200}
+  mShortId: 674807866
+  mInputPins:
+    value:
+    - id: 72057594037928424
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928421
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928425
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928421
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928431
+          mTarget:
+            objectRef: 72057594037928428
+      mOwnerInstanceId: 0
+--- !u!114 &-5017528875103254724
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_A65932A7
+  m_EditorClassIdentifier: 
+  id: 72057594037928987
+  technicalName: DFr_A65932A7
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: "\u0423\u0445\u043E\u0434\u0438"
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928344
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 8550, y: -375}
+  mZIndex: 82
+  mSize: {x: 225, y: 200}
+  mShortId: 2790863527
+  mInputPins:
+    value:
+    - id: 72057594037928990
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928987
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928991
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928987
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &-3720669575837234728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_44CF5B06
+  m_EditorClassIdentifier: 
+  id: 72057594037928942
+  technicalName: DFr_44CF5B06
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928348
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u041D\u0430\u0434\u0435\u044E\u0441\u044C, \u0432\u0441\u0451 \u0431\u0443\u0434\u0435\u0442
+    \u0445\u043E\u0440\u043E\u0448\u043E."
+  mExternalId: 
+  mPosition: {x: 7950, y: -125}
+  mZIndex: 35
+  mSize: {x: 225, y: 200}
+  mShortId: 1154439942
+  mInputPins:
+    value:
+    - id: 72057594037928945
+      mText:
+        value:
+          handlerId: 886063062
+          ownerId: 72057594037928942
+          ownerInstanceId: 0
+          mRawScript: true
+      mOwner: 72057594037928942
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928946
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928942
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928973
+          mTarget:
+            objectRef: 72057594037928970
+      mOwnerInstanceId: 0
+--- !u!114 &-3432723594024885047
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_A978A689
+  m_EditorClassIdentifier: 
+  id: 72057594037928529
+  technicalName: DFr_A978A689
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: "\u041F\u043E\u0447\u0435\u043C\u0443?"
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928344
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u041F\u043E\u0447\u0435\u043C\u0443?"
+  mExternalId: 
+  mPosition: {x: 4725, y: 0}
+  mZIndex: 21
+  mSize: {x: 225, y: 200}
+  mShortId: 2843256457
+  mInputPins:
+    value:
+    - id: 72057594037928532
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928529
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928533
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928529
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928540
+          mTarget:
+            objectRef: 72057594037928537
+      mOwnerInstanceId: 0
+--- !u!114 &-3064979726705404757
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b64268b4afb8e54ea7a185fd18b4df2, type: 3}
+  m_Name: DFr_6C572AEA
+  m_EditorClassIdentifier: 
+  id: 72057594037928979
+  technicalName: DFr_6C572AEA
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: "\u0418\u0434\u0438 \u043A \u0434\u043E\u043C\u0443"
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928344
+  mColor: {r: 0.21586053, g: 0.12743768, b: 0.36130682, a: 1}
+  mText: "\u041F\u043E\u0439\u0434\u0451\u043C"
+  mExternalId: 
+  mPosition: {x: 8550, y: -125}
+  mZIndex: 80
+  mSize: {x: 225, y: 200}
+  mShortId: 1817651946
+  mInputPins:
+    value:
+    - id: 72057594037928982
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928979
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928983
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928979
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929004
+          mTarget:
+            objectRef: 72057594037929001
+      mOwnerInstanceId: 0
+  mTemplate:
+    value:
+      mDFFeature:
+        value:
+          mImage:
+            objectRef: 0
+          mAmbience: 0
+          mMusic: 0
+          mSFX: 1
+          mDelay: 0
+          mOwnerId: 72057594037928979
+          mOwnerInstanceId: 0
+      mOwnerId: 72057594037928979
+      mOwnerInstanceId: 0
+--- !u!114 &-2733346265570791446
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_6ED52C2D
+  m_EditorClassIdentifier: 
+  id: 72057594037929095
+  technicalName: DFr_6ED52C2D
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928340
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u0414\u043E\u0441\u0442\u0430\u043B \u043F\u0438\u0441\u0442\u043E\u043B\u0435\u0442.
+    \u0412\u0441\u0435\u0433\u043E \u0434\u0432\u0430 \u043F\u0430\u0442\u0440\u043E\u043D\u0430."
+  mExternalId: 
+  mPosition: {x: 9650, y: -125}
+  mZIndex: 92
+  mSize: {x: 225, y: 200}
+  mShortId: 1859464237
+  mInputPins:
+    value:
+    - id: 72057594037929098
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929095
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929099
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929095
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929105
+          mTarget:
+            objectRef: 72057594037929102
+      mOwnerInstanceId: 0
+--- !u!114 &-2709342422319010813
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfaac0c61110d64dbdd72551a048d51, type: 3}
+  m_Name: Dlg_5FA79CA6
+  m_EditorClassIdentifier: 
+  id: 72057594037929145
+  technicalName: Dlg_5FA79CA6
+  parentId: 72057594037928213
+  childrenIds: aa040000000000019c04000000000001a304000000000001b104000000000001
+  mAttachments:
+    listIds: 
+  mDisplayName: The House
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u041E\u0442\u0435\u0446 \u0438 \u0441\u044B\u043D \u043F\u043E\u0434\u043E\u0448\u043B\u0438
+    \u043A \u0434\u043E\u043C\u0443 \u0438 \u0433\u043E\u0442\u043E\u0432\u044B \u043E\u0431\u044B\u0441\u043A\u0430\u0442\u044C
+    \u0435\u0433\u043E, \u043B\u0438\u0431\u043E \u0443\u0439\u0442\u0438 \u0432 \u043B\u044E\u0431\u043E\u0439
+    \u043C\u043E\u043C\u0435\u043D\u0442."
+  mExternalId: 
+  mPosition: {x: 317, y: 0}
+  mZIndex: 1
+  mSize: {x: 291, y: 200}
+  mShortId: 1604820134
+  mInputPins:
+    value:
+    - id: 72057594037929148
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929145
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929119
+          mTarget:
+            objectRef: 72057594037929116
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929149
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929145
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &-2595099039259345256
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_B99EE103
+  m_EditorClassIdentifier: 
+  id: 72057594037929130
+  technicalName: DFr_B99EE103
+  parentId: 72057594037929145
+  childrenIds: 
+  mMenuText: "\u0412\u043E\u0439\u0434\u0438 \u0447\u0435\u0440\u0435\u0437 \u0434\u0432\u0435\u0440\u044C"
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928340
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 599, y: 376}
+  mZIndex: 102
+  mSize: {x: 225, y: 200}
+  mShortId: 3114197251
+  mInputPins:
+    value:
+    - id: 72057594037929133
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929130
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929134
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929130
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &-2437343959581122012
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_6F573716
+  m_EditorClassIdentifier: 
+  id: 72057594037928386
+  technicalName: DFr_6F573716
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928348
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u042F \u0437\u0430\u043C\u0451\u0440\u0437..."
+  mExternalId: 
+  mPosition: {x: 1100, y: 0}
+  mZIndex: 4
+  mSize: {x: 225, y: 200}
+  mShortId: 1867986710
+  mInputPins:
+    value:
+    - id: 72057594037928389
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928386
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928390
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928386
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928396
+          mTarget:
+            objectRef: 72057594037928393
+      mOwnerInstanceId: 0
+--- !u!114 &-2125977297199872654
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_12DAB48A
+  m_EditorClassIdentifier: 
+  id: 72057594037928379
+  technicalName: DFr_12DAB48A
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928344
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u0413\u0434\u0435-\u0442\u043E \u043F\u043E\u043B\u0447\u0430\u0441\u0430."
+  mExternalId: 
+  mPosition: {x: 825, y: 0}
+  mZIndex: 3
+  mSize: {x: 225, y: 200}
+  mShortId: 316322954
+  mInputPins:
+    value:
+    - id: 72057594037928382
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928379
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928383
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928379
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928389
+          mTarget:
+            objectRef: 72057594037928386
+      mOwnerInstanceId: 0
+--- !u!114 &-2067819756598010495
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_F3562291
+  m_EditorClassIdentifier: 
+  id: 72057594037928508
+  technicalName: DFr_F3562291
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: "\u041F\u043E\u043D\u0430\u0431\u044E\u0434\u0430\u0439\u0442\u0435 \u0435\u0449\u0451"
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928344
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 5875, y: 250}
+  mZIndex: 22
+  mSize: {x: 225, y: 200}
+  mShortId: 4082508433
+  mInputPins:
+    value:
+    - id: 72057594037928511
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928508
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928512
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928508
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &-1871984687870314827
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_77E810FA
+  m_EditorClassIdentifier: 
+  id: 72057594037928884
+  technicalName: DFr_77E810FA
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: "\u0423\u0441\u043F\u043E\u043A\u043E\u0439 \u0435\u0433\u043E"
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928344
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u041D\u0435 \u0431\u043E\u0439\u0441\u044F. \u0415\u0441\u043B\u0438 \u0431\u044B
+    \u0442\u0430\u043C \u043A\u0442\u043E-\u0442\u043E \u0431\u044B\u043B, \u043C\u044B
+    \u0431\u044B \u0443\u0436\u0435 \u0443\u0441\u043B\u044B\u0448\u0430\u043B\u0438
+    \u0438\u0445."
+  mExternalId: 
+  mPosition: {x: 6475, y: 0}
+  mZIndex: 27
+  mSize: {x: 225, y: 200}
+  mShortId: 2011697402
+  mInputPins:
+    value:
+    - id: 72057594037928887
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928884
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928888
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928884
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928909
+          mTarget:
+            objectRef: 72057594037928906
+      mOwnerInstanceId: 0
+--- !u!114 &-1864577600604686152
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_7CC38631
+  m_EditorClassIdentifier: 
+  id: 72057594037928949
+  technicalName: DFr_7CC38631
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928348
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u0422\u043E\u0433\u0434\u0430 \u043F\u043E\u0439\u0434\u0451\u043C, \u043E\u0431\u044B\u0447\u043D\u043E
+    \u0432\u0441\u0451 \u0445\u043E\u0440\u043E\u0448\u043E \u0431\u044B\u043B\u043E!"
+  mExternalId: 
+  mPosition: {x: 7950, y: -375}
+  mZIndex: 36
+  mSize: {x: 225, y: 200}
+  mShortId: 2093188657
+  mInputPins:
+    value:
+    - id: 72057594037928952
+      mText:
+        value:
+          handlerId: 798086281
+          ownerId: 72057594037928949
+          ownerInstanceId: 0
+          mRawScript: false
+      mOwner: 72057594037928949
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928953
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928949
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &-1570172565783572752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_2FBE3443
+  m_EditorClassIdentifier: 
+  id: 72057594037929137
+  technicalName: DFr_2FBE3443
+  parentId: 72057594037929145
+  childrenIds: 
+  mMenuText: "\u041F\u0440\u043E\u0432\u0435\u0440\u044C \u043E\u043A\u043D\u0430"
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928340
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 599, y: 876}
+  mZIndex: 104
+  mSize: {x: 225, y: 200}
+  mShortId: 800994371
+  mInputPins:
+    value:
+    - id: 72057594037929140
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929137
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929141
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929137
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &-1528184277059592061
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47a255c341ce764d9548427e53ea888, type: 3}
+  m_Name: Ntt_1E25159F
+  m_EditorClassIdentifier: 
+  id: 72057594037928344
+  technicalName: Ntt_1E25159F
+  parentId: 72057594037928220
+  childrenIds: 
+  mAttachments:
+    listIds: 
+  mDisplayName: Father (Speech)
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 20, y: 20}
+  mZIndex: 1
+  mSize: {x: 256, y: 196}
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mShortId: 505746847
+  mTemplate:
+    value:
+      mEntityFeature:
+        value:
+          mText_Position: 3
+          mOwnerId: 72057594037928344
+          mOwnerInstanceId: 0
+      mOwnerId: 72057594037928344
+      mOwnerInstanceId: 0
+--- !u!114 &-1403046813028308911
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d966e1e675cc3c43adec7af94fa22e6, type: 3}
+  m_Name: Ufo_6E98452A
+  m_EditorClassIdentifier: 
+  id: 72057594037928203
+  technicalName: Ufo_6E98452A
+  parentId: 216172783392894804
+  childrenIds: 
+  mDisplayName: Documents
+  mExternalId: 
+  mShortId: 1855472938
+  mZIndex: 0
+--- !u!114 &-927189037384832916
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1290,7 +1873,7 @@ MonoBehaviour:
           mTarget:
             objectRef: 72057594037928994
       mOwnerInstanceId: 0
---- !u!114 &-1763120668581872875
+--- !u!114 &-261195121174306240
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1300,62 +1883,165 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_0B017BDD
+  m_Name: DFr_20C82537
   m_EditorClassIdentifier: 
-  id: 72057594037928920
-  technicalName: DFr_0B017BDD
+  id: 72057594037929102
+  technicalName: DFr_20C82537
   parentId: 72057594037928352
   childrenIds: 
   mMenuText: 
   mStageDirections: 
   mSpeaker:
-    objectRef: 72057594037928348
+    objectRef: 72057594037928340
   mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041B\u0430\u0434\u043D\u043E... \u042D\u0442\u043E \u0413\u043E\u043B\u043E\u0441
-    \u0433\u043E\u0432\u043E\u0440\u0438\u0442 \u0442\u0435\u0431\u0435 \u0438\u0434\u0442\u0438
-    \u0442\u0443\u0434\u0430?"
+  mText: "\u041D\u0430\u0434\u0435\u044E\u0441\u044C, \u043D\u0435 \u043F\u043E\u043D\u0430\u0434\u043E\u0431\u0438\u0442\u0441\u044F."
   mExternalId: 
-  mPosition: {x: 7300, y: 0}
-  mZIndex: 32
+  mPosition: {x: 9925, y: -125}
+  mZIndex: 94
   mSize: {x: 225, y: 200}
-  mShortId: 184646621
+  mShortId: 549987639
   mInputPins:
     value:
-    - id: 72057594037928923
+    - id: 72057594037929105
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928920
+      mOwner: 72057594037929102
       mConnections:
         value: []
       mOwnerInstanceId: 0
   mOutputPins:
     value:
-    - id: 72057594037928924
+    - id: 72057594037929106
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928920
+      mOwner: 72057594037929102
       mConnections:
         value:
         - mLabel: 
           mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928930
+          mTargetPin: 72057594037929112
           mTarget:
-            objectRef: 72057594037928927
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928938
-          mTarget:
-            objectRef: 72057594037928935
+            objectRef: 72057594037929109
       mOwnerInstanceId: 0
---- !u!114 &-852918529910913234
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1919818469, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
+  m_Name: All objects
+  m_EditorClassIdentifier: 
+  mPackagePath: Assets/ArticyContent/Generated/Resources/All objects.asset
+  mResourceKey: All objects
+  mObjects:
+  - {fileID: 1112133134527655992}
+  - {fileID: 2098017403128281052}
+  - {fileID: 6235185083729054540}
+  - {fileID: -2709342422319010813}
+  - {fileID: 6155553226900705535}
+  - {fileID: -6035916943173592671}
+  - {fileID: 3760695696434968383}
+  - {fileID: 4435492263499565460}
+  - {fileID: 1332620782638700916}
+  - {fileID: -3064979726705404757}
+  - {fileID: 5520254384263706136}
+  - {fileID: 7330374189258100140}
+  - {fileID: 1652772845527544456}
+  - {fileID: -2125977297199872654}
+  - {fileID: -2437343959581122012}
+  - {fileID: -6585787423395265844}
+  - {fileID: 5918095927406415783}
+  - {fileID: -8305079040737885933}
+  - {fileID: -5070892182522927325}
+  - {fileID: 7549803948910403079}
+  - {fileID: -5339680360972937237}
+  - {fileID: -7168254839813571621}
+  - {fileID: 8123971960206096940}
+  - {fileID: 2342137275409126106}
+  - {fileID: -8707291902530781055}
+  - {fileID: 612954644448057490}
+  - {fileID: 6708420413419546191}
+  - {fileID: -6724775377487023201}
+  - {fileID: -2067819756598010495}
+  - {fileID: -3432723594024885047}
+  - {fileID: 8394931867114189062}
+  - {fileID: -5545611334202374308}
+  - {fileID: -7650164093821200842}
+  - {fileID: 8657260003022212129}
+  - {fileID: -1871984687870314827}
+  - {fileID: -7260707380178487455}
+  - {fileID: 1324243445926854884}
+  - {fileID: 2607036879050523799}
+  - {fileID: 7094885955294412675}
+  - {fileID: -6741120789555598932}
+  - {fileID: 8114601967766469120}
+  - {fileID: 7078970416529810042}
+  - {fileID: -3720669575837234728}
+  - {fileID: -1864577600604686152}
+  - {fileID: 8740561427382618768}
+  - {fileID: -927189037384832916}
+  - {fileID: -5017528875103254724}
+  - {fileID: -7854825836496714513}
+  - {fileID: 8142710941063570228}
+  - {fileID: -8866752247451071896}
+  - {fileID: -2733346265570791446}
+  - {fileID: -261195121174306240}
+  - {fileID: -5732817916026098852}
+  - {fileID: -2595099039259345256}
+  - {fileID: 3411391714510595073}
+  - {fileID: 5460287538778476993}
+  - {fileID: -1570172565783572752}
+  - {fileID: 154813920348822560}
+  - {fileID: -6037141722187773833}
+  - {fileID: -1528184277059592061}
+  - {fileID: 7245119651606562567}
+  - {fileID: -8390364692262274194}
+  - {fileID: 327963106468878518}
+  - {fileID: 9109675559263494022}
+  - {fileID: -1403046813028308911}
+  - {fileID: 3968908185606541904}
+  - {fileID: 5853014467159241314}
+--- !u!114 &154813920348822560
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b908c954271909c40ad4ad98d6b4bf91, type: 3}
+  m_Name: CMT_72057594037928977
+  m_EditorClassIdentifier: 
+  id: 72057594037928977
+  technicalName: CMT_72057594037928977
+  parentId: 72057594037928352
+  childrenIds: 
+  mCreatedBy: 
+  mColor: {r: 0, g: 0, b: 0, a: 1}
+  mText: "\u0417\u0430\u0434\u0430\u0442\u044C \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u0443\u044E
+    \u0434\u043E\u0432\u0435\u0440\u0438\u044F \u0441\u044B\u043D\u0430 \u043A \u0433\u043E\u043B\u043E\u0441\u0443.\r\n\r\n\u0421\u044B\u043D
+    \u0445\u043E\u0440\u043E\u0448\u0438\u0439. \u0415\u0441\u043B\u0438 \u0433\u043E\u043B\u043E\u0441
+    \u043F\u043E\u0441\u0442\u0443\u043F\u0430\u0435\u0442 \u043F\u043B\u043E\u0445\u043E,
+    \u0442\u043E \u0441\u044B\u043D \u0435\u0433\u043E \u043D\u0435 \u043B\u044E\u0431\u0438\u0442."
+  mExternalId: 
+  mPosition: {x: 7925, y: -500}
+  mZIndex: 40
+  mSize: {x: 275, y: 875}
+  mShortId: 501557621
+--- !u!114 &327963106468878518
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1365,17 +2051,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d966e1e675cc3c43adec7af94fa22e6, type: 3}
-  m_Name: Ufo_357B064A
+  m_Name: Ufo_25A5A54E
   m_EditorClassIdentifier: 
-  id: 72057594037928201
-  technicalName: Ufo_357B064A
+  id: 72057594037928199
+  technicalName: Ufo_25A5A54E
   parentId: 216172783392894804
   childrenIds: 
-  mDisplayName: Audio
+  mDisplayName: Videos
   mExternalId: 
-  mShortId: 897254986
+  mShortId: 631612750
   mZIndex: 0
---- !u!114 &-774569725749156559
+--- !u!114 &612954644448057490
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1385,219 +2071,56 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_F1E3A583
+  m_Name: DFr_3795A369
   m_EditorClassIdentifier: 
-  id: 72057594037928435
-  technicalName: DFr_F1E3A583
+  id: 72057594037928486
+  technicalName: DFr_3795A369
   parentId: 72057594037928352
   childrenIds: 
   mMenuText: 
   mStageDirections: 
   mSpeaker:
-    objectRef: 72057594037928340
+    objectRef: 72057594037928348
   mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u0418\u0437-\u0437\u0430 \u0432\u044B\u0441\u043E\u043A\u043E\u0439 \u0442\u0440\u0430\u0432\u044B
-    \u043D\u0430\u0441 \u043D\u0435 \u0434\u043E\u043B\u0436\u043D\u043E \u0431\u044B\u0442\u044C
-    \u0432\u0438\u0434\u043D\u043E. \u0423\u0436\u0435 \u0431\u043E\u043B\u044C\u0448\u0435
-    \u043F\u043E\u043B\u0443\u0447\u0430\u0441\u0430 \u043B\u0435\u0436\u0438\u043C,
-    \u043D\u0430\u0431\u043B\u044E\u0434\u0435\u043C."
+  mText: "\u042F \u043D\u0435 \u0445\u043E\u0447\u0443 \u0438\u0434\u0442\u0438 \u0442\u0443\u0434\u0430.
+    \u0414\u0430\u0432\u0430\u0439 \u0443\u0439\u0434\u0451\u043C \u043E\u0442\u0441\u044E\u0434\u0430?"
   mExternalId: 
-  mPosition: {x: 3025, y: 0}
-  mZIndex: 11
+  mPosition: {x: 4450, y: 0}
+  mZIndex: 18
   mSize: {x: 225, y: 200}
-  mShortId: 4058228099
+  mShortId: 932553577
   mInputPins:
     value:
-    - id: 72057594037928438
+    - id: 72057594037928489
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928435
+      mOwner: 72057594037928486
       mConnections:
         value: []
       mOwnerInstanceId: 0
   mOutputPins:
     value:
-    - id: 72057594037928439
+    - id: 72057594037928490
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928435
+      mOwner: 72057594037928486
       mConnections:
         value:
         - mLabel: 
           mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928445
+          mTargetPin: 72057594037928532
           mTarget:
-            objectRef: 72057594037928442
+            objectRef: 72057594037928529
       mOwnerInstanceId: 0
---- !u!114 &-603475127547997642
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47a255c341ce764d9548427e53ea888, type: 3}
-  m_Name: Ntt_D2485258
-  m_EditorClassIdentifier: 
-  id: 72057594037928340
-  technicalName: Ntt_D2485258
-  parentId: 72057594037928220
-  childrenIds: 
-  mAttachments:
-    listIds: 
-  mDisplayName: Father (Thoughts)
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: 
-  mExternalId: 
-  mPosition: {x: 0, y: 0}
-  mZIndex: 0
-  mSize: {x: 256, y: 196}
-  mPreviewImage:
-    mViewBoxX: 0
-    mViewBoxY: 0
-    mViewBoxWidth: 0
-    mViewBoxHeight: 0
-    mMode: 0
-    mAsset:
-      objectRef: 0
-  mShortId: 3527955032
-  mTemplate:
-    value:
-      mEntityFeature:
-        value:
-          mText_Position: 2
-          mOwnerId: 72057594037928340
-          mOwnerInstanceId: 0
-      mOwnerId: 72057594037928340
-      mOwnerInstanceId: 0
---- !u!114 &-520488685380866309
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_2E9B9357
-  m_EditorClassIdentifier: 
-  id: 72057594037929123
-  technicalName: DFr_2E9B9357
-  parentId: 72057594037929145
-  childrenIds: 
-  mMenuText: "\u041E\u0441\u043C\u043E\u0442\u0440\u0438\u0441\u044C"
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928340
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: 
-  mExternalId: 
-  mPosition: {x: 599, y: 626}
-  mZIndex: 100
-  mSize: {x: 225, y: 200}
-  mShortId: 781947735
-  mInputPins:
-    value:
-    - id: 72057594037929126
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037929123
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037929127
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037929123
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
---- !u!114 &-332859777901702333
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_2838C03A
-  m_EditorClassIdentifier: 
-  id: 72057594037928421
-  technicalName: DFr_2838C03A
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928340
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u0425\u043E\u0440\u043E\u0448\u0435\u0435 \u043C\u0435\u0441\u0442\u043E.
-    \u041D\u0435\u0431\u043E\u043B\u044C\u0448\u043E\u0439 \u043A\u043E\u0442\u0442\u0435\u0434\u0436
-    \u043D\u0430 \u0445\u043E\u043B\u043C\u0435, \u0441 \u0434\u043E\u0440\u043E\u0433\u0438
-    \u043D\u0435 \u0432\u0438\u0434\u043D\u043E. \u0415\u0441\u043B\u0438 \u0431\u044B
-    \u043D\u0435 \u043A\u0430\u0440\u0442\u0430, \u044F \u0431\u044B \u0432\u043E\u043E\u0431\u0449\u0435
-    \u043D\u0435 \u043F\u043E\u0434\u0443\u043C\u0430\u043B, \u0447\u0442\u043E \u0442\u0443\u0442
-    \u0447\u0442\u043E-\u0442\u043E \u043C\u043E\u0436\u0435\u0442 \u0431\u044B\u0442\u044C."
-  mExternalId: 
-  mPosition: {x: 2475, y: 0}
-  mZIndex: 9
-  mSize: {x: 225, y: 200}
-  mShortId: 674807866
-  mInputPins:
-    value:
-    - id: 72057594037928424
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928421
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928425
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928421
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928431
-          mTarget:
-            objectRef: 72057594037928428
-      mOwnerInstanceId: 0
---- !u!114 &-108930461014748619
+--- !u!114 &1112133134527655992
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1657,7 +2180,7 @@ MonoBehaviour:
       mConnections:
         value: []
       mOwnerInstanceId: 0
---- !u!114 &-63390052397536822
+--- !u!114 &1324243445926854884
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1667,138 +2190,490 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_E53FD6A8
+  m_Name: DFr_1B2F6257
   m_EditorClassIdentifier: 
-  id: 72057594037928550
-  technicalName: DFr_E53FD6A8
+  id: 72057594037928899
+  technicalName: DFr_1B2F6257
   parentId: 72057594037928352
   childrenIds: 
-  mMenuText: 
+  mMenuText: "\u041B\u0430\u0434\u043D\u043E, \u0443\u0445\u043E\u0434\u0438\u0442\u0435."
   mStageDirections: 
   mSpeaker:
     objectRef: 72057594037928344
   mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u0422\u044B \u0447\u0443\u0432\u0441\u0442\u0432\u0443\u0435\u0448\u044C
-    \u0437\u0434\u0435\u0441\u044C \u0447\u0442\u043E-\u0442\u043E?"
+  mText: 
   mExternalId: 
-  mPosition: {x: 5275, y: 0}
-  mZIndex: 24
+  mPosition: {x: 6475, y: 250}
+  mZIndex: 29
   mSize: {x: 225, y: 200}
-  mShortId: 3846166184
+  mShortId: 456090199
   mInputPins:
     value:
-    - id: 72057594037928553
+    - id: 72057594037928902
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928550
+      mOwner: 72057594037928899
       mConnections:
         value: []
       mOwnerInstanceId: 0
   mOutputPins:
     value:
-    - id: 72057594037928554
+    - id: 72057594037928903
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928550
+      mOwner: 72057594037928899
       mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928560
-          mTarget:
-            objectRef: 72057594037928557
+        value: []
       mOwnerInstanceId: 0
---- !u!114 &11400000
+--- !u!114 &1332620782638700916
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 1919818469, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
-  m_Name: All objects
+  m_Script: {fileID: 11500000, guid: 1b64268b4afb8e54ea7a185fd18b4df2, type: 3}
+  m_Name: DFr_4A61EFC1
   m_EditorClassIdentifier: 
-  mPackagePath: Assets/ArticyContent/Generated/Resources/All objects.asset
-  mResourceKey: All objects
-  mObjects:
-  - {fileID: -108930461014748619}
-  - {fileID: 7233017122622147157}
-  - {fileID: -4376671321840759395}
-  - {fileID: 5481151971356483916}
-  - {fileID: -9145746779253624396}
-  - {fileID: -1852881071913597073}
-  - {fileID: 6284153743336805482}
-  - {fileID: 869762533877722515}
-  - {fileID: 7557774420179588357}
-  - {fileID: 8420281268061018323}
-  - {fileID: 1366961320742919147}
-  - {fileID: -4176366381478358240}
-  - {fileID: 7016806853513138130}
-  - {fileID: -3099395425488835182}
-  - {fileID: -5277910037981418436}
-  - {fileID: 2148749193461369414}
-  - {fileID: 7649821899310568860}
-  - {fileID: -4848206443686085781}
-  - {fileID: -332859777901702333}
-  - {fileID: 3792152696009801069}
-  - {fileID: -774569725749156559}
-  - {fileID: 8657086138891373516}
-  - {fileID: 2270613085718954222}
-  - {fileID: -8774708144217738852}
-  - {fileID: 4958262074874657240}
-  - {fileID: -3650189210474540454}
-  - {fileID: -3205722872071294149}
-  - {fileID: -2251515485301589009}
-  - {fileID: 6695414878287734337}
-  - {fileID: -8728004428708492830}
-  - {fileID: -8882989061406100319}
-  - {fileID: -63390052397536822}
-  - {fileID: 7631032052276636118}
-  - {fileID: 4290748132631419081}
-  - {fileID: -5144211589702178396}
-  - {fileID: 5736691943604785110}
-  - {fileID: 1850522610590303081}
-  - {fileID: -8417815156266012389}
-  - {fileID: 5983944484742593629}
-  - {fileID: -1763120668581872875}
-  - {fileID: 2863695320903114637}
-  - {fileID: 8918724617064465255}
-  - {fileID: -3886811016444581812}
-  - {fileID: 1490572618227131977}
-  - {fileID: 6870861685297592906}
-  - {fileID: -1840118242683900928}
-  - {fileID: 8990332291348424807}
-  - {fileID: -6292100832854600569}
-  - {fileID: 3496321729392825523}
-  - {fileID: 6559692785576304168}
-  - {fileID: 2231088058805876964}
-  - {fileID: 6203394725675494611}
-  - {fileID: 7241458148602548352}
-  - {fileID: -8988289949587929544}
-  - {fileID: 3560754422397938144}
-  - {fileID: -520488685380866309}
-  - {fileID: -3619235808622488701}
-  - {fileID: -5553187975096206455}
-  - {fileID: -603475127547997642}
-  - {fileID: -5542104348131489116}
-  - {fileID: 3133328083344673907}
-  - {fileID: 5880684321310528352}
-  - {fileID: 420184161224367629}
-  - {fileID: -852918529910913234}
-  - {fileID: -2489201331120656982}
-  - {fileID: 2185780045445228512}
-  - {fileID: 5150309996204109949}
---- !u!114 &420184161224367629
+  id: 72057594037928963
+  technicalName: DFr_4A61EFC1
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928340
+  mColor: {r: 0.21586053, g: 0.12743768, b: 0.36130682, a: 1}
+  mText: "\u041F\u043E\u0433\u043E\u0434\u0438, \u0447\u0442\u043E \u0442\u044B \u0434\u0435\u043B\u0430\u0435\u0448\u044C,
+    \u043A\u0443\u0434\u0430?..."
+  mExternalId: 
+  mPosition: {x: 8225, y: 125}
+  mZIndex: 38
+  mSize: {x: 225, y: 200}
+  mShortId: 1247932353
+  mInputPins:
+    value:
+    - id: 72057594037928966
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928963
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928967
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928963
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mTemplate:
+    value:
+      mDFFeature:
+        value:
+          mImage:
+            objectRef: 0
+          mAmbience: 0
+          mMusic: 0
+          mSFX: 1
+          mDelay: 0
+          mOwnerId: 72057594037928963
+          mOwnerInstanceId: 0
+      mOwnerId: 72057594037928963
+      mOwnerInstanceId: 0
+--- !u!114 &1652772845527544456
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_990F3D96
+  m_EditorClassIdentifier: 
+  id: 72057594037928372
+  technicalName: DFr_990F3D96
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928348
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u0414\u043E\u043B\u0433\u043E \u043C\u044B \u0443\u0436\u0435 \u0442\u0443\u0442
+    \u043B\u0435\u0436\u0438\u043C?"
+  mExternalId: 
+  mPosition: {x: 550, y: 0}
+  mZIndex: 2
+  mSize: {x: 225, y: 200}
+  mShortId: 2567912854
+  mInputPins:
+    value:
+    - id: 72057594037928375
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928372
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928376
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928372
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928382
+          mTarget:
+            objectRef: 72057594037928379
+      mOwnerInstanceId: 0
+--- !u!114 &2098017403128281052
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d359306b6b782ad4482080a2d05e7e64, type: 3}
+  m_Name: FFr_C8E4E852
+  m_EditorClassIdentifier: 
+  id: 72057594037928213
+  technicalName: FFr_C8E4E852
+  parentId: 72057594037928207
+  childrenIds: a001000000000001b904000000000001
+  mAttachments:
+    listIds: 
+  mDisplayName: The House
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u041D\u0435\u0431\u043E\u043B\u044C\u0448\u043E\u0439 \u0447\u0430\u0441\u0442\u043D\u044B\u0439
+    \u0434\u043E\u043C \u0432 \u043B\u0435\u0441\u0443 \u0432 \u043A\u0438\u043B\u043E\u043C\u0435\u0442\u0440\u0435
+    \u043E\u0442 \u0434\u043E\u0440\u043E\u0433\u0438."
+  mExternalId: 
+  mPosition: {x: 0, y: 0}
+  mZIndex: 0
+  mSize: {x: 275, y: 200}
+  mShortId: 3370444882
+  mInputPins:
+    value:
+    - id: 72057594037928216
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928213
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928217
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928213
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &2342137275409126106
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_9AFA76ED
+  m_EditorClassIdentifier: 
+  id: 72057594037928472
+  technicalName: DFr_9AFA76ED
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: "\u041F\u0440\u043E\u0434\u043E\u043B\u0436\u0430\u0439 \u043D\u0430\u0431\u043B\u044E\u0434\u0430\u0442\u044C"
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928344
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 3625, y: 250}
+  mZIndex: 16
+  mSize: {x: 225, y: 200}
+  mShortId: 2600105709
+  mInputPins:
+    value:
+    - id: 72057594037928475
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928472
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928476
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928472
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &2607036879050523799
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_41F98101
+  m_EditorClassIdentifier: 
+  id: 72057594037928906
+  technicalName: DFr_41F98101
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928348
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u0412\u0434\u0440\u0443\u0433 \u043E\u043D\u0438 \u0441\u043F\u044F\u0442?"
+  mExternalId: 
+  mPosition: {x: 6750, y: 0}
+  mZIndex: 30
+  mSize: {x: 225, y: 200}
+  mShortId: 1106870529
+  mInputPins:
+    value:
+    - id: 72057594037928909
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928906
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928910
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928906
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928916
+          mTarget:
+            objectRef: 72057594037928913
+      mOwnerInstanceId: 0
+--- !u!114 &3411391714510595073
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_9353FD3E
+  m_EditorClassIdentifier: 
+  id: 72057594037929116
+  technicalName: DFr_9353FD3E
+  parentId: 72057594037929145
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928340
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u041F\u043E\u0434\u043E\u0448\u043B\u0438 \u043A \u043A\u0440\u044B\u043B\u044C\u0446\u0443."
+  mExternalId: 
+  mPosition: {x: 274, y: 626}
+  mZIndex: 98
+  mSize: {x: 225, y: 200}
+  mShortId: 2471755070
+  mInputPins:
+    value:
+    - id: 72057594037929119
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929116
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929120
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929116
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929126
+          mTarget:
+            objectRef: 72057594037929123
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929140
+          mTarget:
+            objectRef: 72057594037929137
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929133
+          mTarget:
+            objectRef: 72057594037929130
+      mOwnerInstanceId: 0
+--- !u!114 &3760695696434968383
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b64268b4afb8e54ea7a185fd18b4df2, type: 3}
+  m_Name: DFr_04788240
+  m_EditorClassIdentifier: 
+  id: 72057594037928449
+  technicalName: DFr_04788240
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: "\u0418\u0434\u0438 \u043A \u0434\u043E\u043C\u0443"
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928344
+  mColor: {r: 0.21586053, g: 0.12743768, b: 0.36130682, a: 1}
+  mText: "\u0412\u0441\u0442\u0430\u0432\u0430\u0439..."
+  mExternalId: 
+  mPosition: {x: 3625, y: 0}
+  mZIndex: 13
+  mSize: {x: 225, y: 200}
+  mShortId: 75006528
+  mInputPins:
+    value:
+    - id: 72057594037928452
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928449
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928453
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928449
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928460
+          mTarget:
+            objectRef: 72057594037928457
+      mOwnerInstanceId: 0
+  mTemplate:
+    value:
+      mDFFeature:
+        value:
+          mImage:
+            objectRef: 0
+          mAmbience: 0
+          mMusic: 0
+          mSFX: 1
+          mDelay: 0
+          mOwnerId: 72057594037928449
+          mOwnerInstanceId: 0
+      mOwnerId: 72057594037928449
+      mOwnerInstanceId: 0
+--- !u!114 &3968908185606541904
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1808,17 +2683,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d966e1e675cc3c43adec7af94fa22e6, type: 3}
-  m_Name: Ufo_25A5A54E
+  m_Name: Ufo_CE9A32B6
   m_EditorClassIdentifier: 
-  id: 72057594037928199
-  technicalName: Ufo_25A5A54E
+  id: 72057594037928205
+  technicalName: Ufo_CE9A32B6
   parentId: 216172783392894804
   childrenIds: 
-  mDisplayName: Videos
+  mDisplayName: Miscellaneous
   mExternalId: 
-  mShortId: 631612750
+  mShortId: 3466212022
   mZIndex: 0
---- !u!114 &869762533877722515
+--- !u!114 &4435492263499565460
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1885,7 +2760,60 @@ MonoBehaviour:
           mOwnerInstanceId: 0
       mOwnerId: 72057594037928464
       mOwnerInstanceId: 0
---- !u!114 &1366961320742919147
+--- !u!114 &5460287538778476993
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_2E9B9357
+  m_EditorClassIdentifier: 
+  id: 72057594037929123
+  technicalName: DFr_2E9B9357
+  parentId: 72057594037929145
+  childrenIds: 
+  mMenuText: "\u041E\u0441\u043C\u043E\u0442\u0440\u0438\u0441\u044C"
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928340
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 599, y: 626}
+  mZIndex: 100
+  mSize: {x: 225, y: 200}
+  mShortId: 781947735
+  mInputPins:
+    value:
+    - id: 72057594037929126
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929123
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037929127
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037929123
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &5520254384263706136
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1960,172 +2888,7 @@ MonoBehaviour:
           mOwnerInstanceId: 0
       mOwnerId: 72057594037929001
       mOwnerInstanceId: 0
---- !u!114 &1490572618227131977
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_7CC38631
-  m_EditorClassIdentifier: 
-  id: 72057594037928949
-  technicalName: DFr_7CC38631
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928348
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u0422\u043E\u0433\u0434\u0430 \u043F\u043E\u0439\u0434\u0451\u043C, \u043E\u0431\u044B\u0447\u043D\u043E
-    \u0432\u0441\u0451 \u0445\u043E\u0440\u043E\u0448\u043E \u0431\u044B\u043B\u043E!"
-  mExternalId: 
-  mPosition: {x: 7950, y: -375}
-  mZIndex: 36
-  mSize: {x: 225, y: 200}
-  mShortId: 2093188657
-  mInputPins:
-    value:
-    - id: 72057594037928952
-      mText:
-        value:
-          handlerId: 798086281
-          ownerId: 72057594037928949
-          ownerInstanceId: 0
-          mRawScript: false
-      mOwner: 72057594037928949
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928953
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928949
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
---- !u!114 &1850522610590303081
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_1B2F6257
-  m_EditorClassIdentifier: 
-  id: 72057594037928899
-  technicalName: DFr_1B2F6257
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: "\u041B\u0430\u0434\u043D\u043E, \u0443\u0445\u043E\u0434\u0438\u0442\u0435."
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928344
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: 
-  mExternalId: 
-  mPosition: {x: 6475, y: 250}
-  mZIndex: 29
-  mSize: {x: 225, y: 200}
-  mShortId: 456090199
-  mInputPins:
-    value:
-    - id: 72057594037928902
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928899
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928903
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928899
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
---- !u!114 &2148749193461369414
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_DC404CE9
-  m_EditorClassIdentifier: 
-  id: 72057594037928393
-  technicalName: DFr_DC404CE9
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928344
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041F\u043E\u0442\u0435\u0440\u043F\u0438 \u043D\u0435\u043C\u043D\u043E\u0433\u043E."
-  mExternalId: 
-  mPosition: {x: 1375, y: 0}
-  mZIndex: 5
-  mSize: {x: 225, y: 200}
-  mShortId: 3695201513
-  mInputPins:
-    value:
-    - id: 72057594037928396
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928393
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928397
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928393
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928403
-          mTarget:
-            objectRef: 72057594037928400
-      mOwnerInstanceId: 0
---- !u!114 &2185780045445228512
+--- !u!114 &5853014467159241314
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2135,17 +2898,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0d966e1e675cc3c43adec7af94fa22e6, type: 3}
-  m_Name: Ufo_CE9A32B6
+  m_Name: Ufo_7BA3AE48
   m_EditorClassIdentifier: 
-  id: 72057594037928205
-  technicalName: Ufo_CE9A32B6
-  parentId: 216172783392894804
-  childrenIds: 
-  mDisplayName: Miscellaneous
+  id: 72057594037928220
+  technicalName: Ufo_7BA3AE48
+  parentId: 216172785005863603
+  childrenIds: 940100000000000198010000000000019c01000000000001
+  mDisplayName: Characters
   mExternalId: 
-  mShortId: 3466212022
+  mShortId: 2074324552
   mZIndex: 0
---- !u!114 &2231088058805876964
+--- !u!114 &5918095927406415783
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2155,10 +2918,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_6ED52C2D
+  m_Name: DFr_8D7662D4
   m_EditorClassIdentifier: 
-  id: 72057594037929095
-  technicalName: DFr_6ED52C2D
+  id: 72057594037928407
+  technicalName: DFr_8D7662D4
   parentId: 72057594037928352
   childrenIds: 
   mMenuText: 
@@ -2166,45 +2929,196 @@ MonoBehaviour:
   mSpeaker:
     objectRef: 72057594037928340
   mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u0414\u043E\u0441\u0442\u0430\u043B \u043F\u0438\u0441\u0442\u043E\u043B\u0435\u0442.
-    \u0412\u0441\u0435\u0433\u043E \u0434\u0432\u0430 \u043F\u0430\u0442\u0440\u043E\u043D\u0430."
+  mText: "\u0423\u0436\u0435 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E
+    \u0434\u043D\u0435\u0439 \u0431\u0435\u0437 \u0435\u0434\u044B \u0438 \u0431\u0435\u0441\u0441\u043E\u043D\u043D\u0430\u044F
+    \u043D\u043E\u0447\u044C. \u041D\u0443\u0436\u043D\u043E \u0443\u0441\u0442\u0440\u043E\u0438\u0442\u044C
+    \u043F\u0440\u0438\u0432\u0430\u043B, \u043E\u0442\u0434\u043E\u0445\u043D\u0443\u0442\u044C,
+    \u0441\u043E\u0433\u0440\u0435\u0442\u044C\u0441\u044F, \u043F\u0440\u043E\u0441\u0443\u0448\u0438\u0442\u044C
+    \u043E\u0434\u0435\u0436\u0434\u0443. \u041C\u043E\u0436\u0435\u0442 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0441\u044F
+    \u043D\u0430\u0439\u0442\u0438 \u043A\u0430\u043A\u0443\u044E-\u0442\u043E \u0435\u0434\u0443."
   mExternalId: 
-  mPosition: {x: 9650, y: -125}
-  mZIndex: 92
+  mPosition: {x: 1925, y: 0}
+  mZIndex: 7
   mSize: {x: 225, y: 200}
-  mShortId: 1859464237
+  mShortId: 2373346004
   mInputPins:
     value:
-    - id: 72057594037929098
+    - id: 72057594037928410
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037929095
+      mOwner: 72057594037928407
       mConnections:
         value: []
       mOwnerInstanceId: 0
   mOutputPins:
     value:
-    - id: 72057594037929099
+    - id: 72057594037928411
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037929095
+      mOwner: 72057594037928407
       mConnections:
         value:
         - mLabel: 
           mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037929105
+          mTargetPin: 72057594037928417
           mTarget:
-            objectRef: 72057594037929102
+            objectRef: 72057594037928414
       mOwnerInstanceId: 0
---- !u!114 &2270613085718954222
+--- !u!114 &6155553226900705535
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b64268b4afb8e54ea7a185fd18b4df2, type: 3}
+  m_Name: DFr_2E03728F
+  m_EditorClassIdentifier: 
+  id: 72057594037928359
+  technicalName: DFr_2E03728F
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928348
+  mColor: {r: 0.21586053, g: 0.12743768, b: 0.36130682, a: 1}
+  mText: "\u041F\u0430\u043F..."
+  mExternalId: 
+  mPosition: {x: 0, y: 0}
+  mZIndex: 0
+  mSize: {x: 225, y: 200}
+  mShortId: 771977871
+  mInputPins:
+    value:
+    - id: 72057594037928362
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928359
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928363
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928359
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928368
+          mTarget:
+            objectRef: 72057594037928365
+      mOwnerInstanceId: 0
+  mTemplate:
+    value:
+      mDFFeature:
+        value:
+          mImage:
+            objectRef: 0
+          mAmbience: 1
+          mMusic: 0
+          mSFX: 0
+          mDelay: 0
+          mOwnerId: 72057594037928359
+          mOwnerInstanceId: 0
+      mOwnerId: 72057594037928359
+      mOwnerInstanceId: 0
+--- !u!114 &6235185083729054540
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0bfaac0c61110d64dbdd72551a048d51, type: 3}
+  m_Name: Dlg_CD923E5E
+  m_EditorClassIdentifier: 
+  id: 72057594037928352
+  technicalName: Dlg_CD923E5E
+  parentId: 72057594037928213
+  childrenIds: a701000000000001d00100000000000101020000000000011002000000000001030400000000000113040000000000012904000000000001ad01000000000001b401000000000001bb01000000000001c201000000000001c901000000000001d701000000000001de01000000000001e501000000000001ec01000000000001f301000000000001fa01000000000001090200000000000118020000000000011f0200000000000126020000000000012d0200000000000135020000000000013c020000000000015102000000000001590200000000000166020000000000016d020000000000017702000000000001b403000000000001bc03000000000001c303000000000001ca03000000000001d103000000000001d803000000000001df03000000000001e703000000000001ee03000000000001f503000000000001fc030000000000010a040000000000011b0400000000000122040000000000017904000000000001800400000000000187040000000000018e0400000000000195040000000000011104000000000001
+  mAttachments:
+    listIds: 
+  mDisplayName: In field
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u041E\u0442\u0435\u0446 \u0441 \u0441\u044B\u043D\u043E\u043C \u043B\u0435\u0436\u0430\u0442
+    \u0432 \u043F\u043E\u043B\u0435 \u0438 \u043D\u0430\u0431\u043B\u044E\u0434\u0430\u044E\u0442
+    \u0437\u0430 \u0434\u043E\u043C\u043E\u043C. \u041E\u043D\u0438 \u0443\u0441\u0442\u0430\u043B\u0438
+    \u0438 \u0437\u0430\u043C\u0451\u0440\u0437\u043B\u0438. \u0414\u043E\u043C \u043A\u0430\u0436\u0435\u0442\u0441\u044F
+    \u043F\u0443\u0441\u0442\u044B\u043C. \u041D\u0435\u043E\u0431\u0445\u043E\u0434\u0438\u043C\u043E
+    \u0440\u0435\u0448\u0438\u0442\u044C, \u0441\u0442\u043E\u0438\u0442 \u043B\u0438
+    \u043E\u0431\u044B\u0441\u043A\u0430\u0442\u044C \u0434\u043E\u043C \u0438\u043B\u0438
+    \u0443\u0439\u0442\u0438 \u0438\u0441\u043A\u0430\u0442\u044C \u0435\u0434\u0443
+    \u0438 \u043C\u0435\u0441\u0442\u043E \u0434\u043B\u044F \u043F\u0440\u0438\u0432\u0430\u043B\u0430
+    \u0433\u0434\u0435-\u043D\u0438\u0431\u0443\u0434\u044C \u0435\u0449\u0451."
+  mExternalId: 
+  mPosition: {x: -8, y: 0}
+  mZIndex: 0
+  mSize: {x: 291, y: 200}
+  mShortId: 3448913502
+  mInputPins:
+    value:
+    - id: 72057594037928355
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928352
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928356
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928352
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037929148
+          mTarget:
+            objectRef: 72057594037929145
+      mOwnerInstanceId: 0
+--- !u!114 &6708420413419546191
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2214,55 +3128,342 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_E0666CFB
+  m_Name: DFr_04A99E08
   m_EditorClassIdentifier: 
-  id: 72057594037928457
-  technicalName: DFr_E0666CFB
+  id: 72057594037928493
+  technicalName: DFr_04A99E08
   parentId: 72057594037928352
   childrenIds: 
-  mMenuText: 
+  mMenuText: "\u0418\u0434\u0438\u0442\u0435 \u0432 \u0434\u043E\u043C"
   mStageDirections: 
   mSpeaker:
-    objectRef: 72057594037928348
+    objectRef: 72057594037928344
   mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041C\u044B \u0443\u0445\u043E\u0434\u0438\u043C?"
+  mText: "\u041C\u044B \u0443\u0441\u0442\u0430\u043B\u0438 \u0438 \u043F\u0440\u043E\u043C\u043E\u043A\u043B\u0438,
+    \u043D\u0430\u043C \u043D\u0443\u0436\u043D\u043E \u043F\u0435\u0440\u0435\u0434\u043E\u0445\u043D\u0443\u0442\u044C
+    \u0433\u0434\u0435-\u043D\u0438\u0431\u0443\u0434\u044C. \u041C\u043E\u0436\u0435\u0442,
+    \u0442\u0430\u043C \u0435\u0441\u0442\u044C \u043A\u0430\u043A\u0430\u044F \u0435\u0434\u0430."
   mExternalId: 
-  mPosition: {x: 3900, y: 0}
-  mZIndex: 14
+  mPosition: {x: 5875, y: 0}
+  mZIndex: 19
   mSize: {x: 225, y: 200}
-  mShortId: 3764808955
+  mShortId: 78224904
   mInputPins:
     value:
-    - id: 72057594037928460
+    - id: 72057594037928496
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928457
+      mOwner: 72057594037928493
       mConnections:
         value: []
       mOwnerInstanceId: 0
   mOutputPins:
     value:
-    - id: 72057594037928461
+    - id: 72057594037928497
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928457
+      mOwner: 72057594037928493
       mConnections:
         value:
         - mLabel: 
           mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928482
+          mTargetPin: 72057594037928570
           mTarget:
-            objectRef: 72057594037928479
+            objectRef: 72057594037928567
       mOwnerInstanceId: 0
---- !u!114 &2863695320903114637
+--- !u!114 &7078970416529810042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_DFF43164
+  m_EditorClassIdentifier: 
+  id: 72057594037928935
+  technicalName: DFr_DFF43164
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: "\u041D\u0435\u0442"
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928344
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 7625, y: 125}
+  mZIndex: 34
+  mSize: {x: 225, y: 200}
+  mShortId: 3757322596
+  mInputPins:
+    value:
+    - id: 72057594037928938
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928935
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928939
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928935
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+--- !u!114 &7094885955294412675
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_3435B416
+  m_EditorClassIdentifier: 
+  id: 72057594037928913
+  technicalName: DFr_3435B416
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928344
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u041C\u044B \u0430\u043A\u043A\u0443\u0440\u0430\u0442\u043D\u043E \u043F\u043E\u0434\u043E\u0439\u0434\u0451\u043C
+    \u0438 \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0438\u043C. \u0412\u043D\u0443\u0442\u0440\u044C
+    \u043D\u0435 \u043F\u043E\u043B\u0435\u0437\u0435\u043C, \u043F\u043E\u043A\u0430
+    \u043D\u0435 \u0443\u0431\u0435\u0434\u0438\u043C\u0441\u044F, \u0447\u0442\u043E
+    \u0432\u0441\u0451 \u0445\u043E\u0440\u043E\u0448\u043E, \u0438\u0434\u0451\u0442?"
+  mExternalId: 
+  mPosition: {x: 7025, y: 0}
+  mZIndex: 31
+  mSize: {x: 225, y: 200}
+  mShortId: 875934742
+  mInputPins:
+    value:
+    - id: 72057594037928916
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928913
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928917
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928913
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928923
+          mTarget:
+            objectRef: 72057594037928920
+      mOwnerInstanceId: 0
+--- !u!114 &7245119651606562567
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a47a255c341ce764d9548427e53ea888, type: 3}
+  m_Name: Ntt_E37F1309
+  m_EditorClassIdentifier: 
+  id: 72057594037928348
+  technicalName: Ntt_E37F1309
+  parentId: 72057594037928220
+  childrenIds: 
+  mAttachments:
+    listIds: 
+  mDisplayName: Son
+  mColor: {r: 0.8307699, g: 0.8796224, b: 0.7230551, a: 1}
+  mText: 
+  mExternalId: 
+  mPosition: {x: 40, y: 40}
+  mZIndex: 2
+  mSize: {x: 256, y: 196}
+  mPreviewImage:
+    mViewBoxX: 0
+    mViewBoxY: 0
+    mViewBoxWidth: 0
+    mViewBoxHeight: 0
+    mMode: 0
+    mAsset:
+      objectRef: 0
+  mShortId: 3816755977
+  mTemplate:
+    value:
+      mEntityFeature:
+        value:
+          mText_Position: 1
+          mOwnerId: 72057594037928348
+          mOwnerInstanceId: 0
+      mOwnerId: 72057594037928348
+      mOwnerInstanceId: 0
+--- !u!114 &7330374189258100140
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_E5E77E58
+  m_EditorClassIdentifier: 
+  id: 72057594037928365
+  technicalName: DFr_E5E77E58
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928344
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u0427\u0442\u043E?"
+  mExternalId: 
+  mPosition: {x: 275, y: 0}
+  mZIndex: 1
+  mSize: {x: 225, y: 200}
+  mShortId: 3857153624
+  mInputPins:
+    value:
+    - id: 72057594037928368
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928365
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928369
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928365
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928375
+          mTarget:
+            objectRef: 72057594037928372
+      mOwnerInstanceId: 0
+--- !u!114 &7549803948910403079
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_9E8E57B4
+  m_EditorClassIdentifier: 
+  id: 72057594037928428
+  technicalName: DFr_9E8E57B4
+  parentId: 72057594037928352
+  childrenIds: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928340
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u041F\u043E\u0447\u0442\u0438 \u0432\u0441\u0435 \u043E\u043A\u043D\u0430
+    \u0446\u0435\u043B\u044B. \u0421\u043A\u043E\u0440\u0435\u0435 \u0432\u0441\u0435\u0433\u043E
+    \u0442\u0430\u043C \u043C\u043E\u0436\u043D\u043E \u0431\u0443\u0434\u0435\u0442
+    \u043D\u0430\u0439\u0442\u0438 \u043D\u0435\u0431\u043E\u043B\u044C\u0448\u0443\u044E
+    \u043A\u043E\u043C\u043D\u0430\u0442\u0443, \u0437\u0430\u043D\u043E\u0447\u0435\u0432\u0430\u0442\u044C
+    \u0432 \u0442\u0435\u043F\u043B\u0435 \u0438 \u043E\u0442\u043D\u043E\u0441\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0439
+    \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u0438. \u041F\u0440\u043E\u0431\u043B\u0435\u043C\u0430
+    \u0432 \u0442\u043E\u043C, \u0447\u0442\u043E \u044D\u0442\u043E\u0442 \u0434\u043E\u043C
+    \u043C\u043E\u0433\u043B\u0438 \u043E\u0431\u043B\u044E\u0431\u043E\u0432\u0430\u0442\u044C
+    \u0437\u0430\u0434\u043E\u043B\u0433\u043E \u0434\u043E \u043D\u0430\u0441, \u0443\u0436
+    \u0431\u043E\u043B\u044C\u043D\u043E \u043C\u0435\u0441\u0442\u043E \u0445\u043E\u0440\u043E\u0448\u0435\u0435..."
+  mExternalId: 
+  mPosition: {x: 2750, y: 0}
+  mZIndex: 10
+  mSize: {x: 225, y: 200}
+  mShortId: 2660128692
+  mInputPins:
+    value:
+    - id: 72057594037928431
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928428
+      mConnections:
+        value: []
+      mOwnerInstanceId: 0
+  mOutputPins:
+    value:
+    - id: 72057594037928432
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928428
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928438
+          mTarget:
+            objectRef: 72057594037928435
+      mOwnerInstanceId: 0
+--- !u!114 &8114601967766469120
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2331,7 +3532,7 @@ MonoBehaviour:
           mTarget:
             objectRef: 72057594037928956
       mOwnerInstanceId: 0
---- !u!114 &3133328083344673907
+--- !u!114 &8123971960206096940
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2340,41 +3541,56 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a47a255c341ce764d9548427e53ea888, type: 3}
-  m_Name: Ntt_E37F1309
+  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
+  m_Name: DFr_E0666CFB
   m_EditorClassIdentifier: 
-  id: 72057594037928348
-  technicalName: Ntt_E37F1309
-  parentId: 72057594037928220
+  id: 72057594037928457
+  technicalName: DFr_E0666CFB
+  parentId: 72057594037928352
   childrenIds: 
-  mAttachments:
-    listIds: 
-  mDisplayName: Son
-  mColor: {r: 0.8307699, g: 0.8796224, b: 0.7230551, a: 1}
-  mText: 
+  mMenuText: 
+  mStageDirections: 
+  mSpeaker:
+    objectRef: 72057594037928348
+  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+  mText: "\u041C\u044B \u0443\u0445\u043E\u0434\u0438\u043C?"
   mExternalId: 
-  mPosition: {x: 40, y: 40}
-  mZIndex: 2
-  mSize: {x: 256, y: 196}
-  mPreviewImage:
-    mViewBoxX: 0
-    mViewBoxY: 0
-    mViewBoxWidth: 0
-    mViewBoxHeight: 0
-    mMode: 0
-    mAsset:
-      objectRef: 0
-  mShortId: 3816755977
-  mTemplate:
+  mPosition: {x: 3900, y: 0}
+  mZIndex: 14
+  mSize: {x: 225, y: 200}
+  mShortId: 3764808955
+  mInputPins:
     value:
-      mEntityFeature:
+    - id: 72057594037928460
+      mText:
         value:
-          mText_Position: 1
-          mOwnerId: 72057594037928348
-          mOwnerInstanceId: 0
-      mOwnerId: 72057594037928348
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928457
+      mConnections:
+        value: []
       mOwnerInstanceId: 0
---- !u!114 &3496321729392825523
+  mOutputPins:
+    value:
+    - id: 72057594037928461
+      mText:
+        value:
+          handlerId: 0
+          ownerId: 0
+          ownerInstanceId: 0
+          mRawScript: 
+      mOwner: 72057594037928457
+      mConnections:
+        value:
+        - mLabel: 
+          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
+          mTargetPin: 72057594037928482
+          mTarget:
+            objectRef: 72057594037928479
+      mOwnerInstanceId: 0
+--- !u!114 &8142710941063570228
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2435,7 +3651,7 @@ MonoBehaviour:
           mTarget:
             objectRef: 72057594037929088
       mOwnerInstanceId: 0
---- !u!114 &3560754422397938144
+--- !u!114 &8394931867114189062
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2445,133 +3661,55 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_9353FD3E
+  m_Name: DFr_D23C55EB
   m_EditorClassIdentifier: 
-  id: 72057594037929116
-  technicalName: DFr_9353FD3E
-  parentId: 72057594037929145
-  childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928340
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041F\u043E\u0434\u043E\u0448\u043B\u0438 \u043A \u043A\u0440\u044B\u043B\u044C\u0446\u0443."
-  mExternalId: 
-  mPosition: {x: 274, y: 626}
-  mZIndex: 98
-  mSize: {x: 225, y: 200}
-  mShortId: 2471755070
-  mInputPins:
-    value:
-    - id: 72057594037929119
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037929116
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037929120
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037929116
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037929126
-          mTarget:
-            objectRef: 72057594037929123
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037929140
-          mTarget:
-            objectRef: 72057594037929137
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037929133
-          mTarget:
-            objectRef: 72057594037929130
-      mOwnerInstanceId: 0
---- !u!114 &3792152696009801069
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_9E8E57B4
-  m_EditorClassIdentifier: 
-  id: 72057594037928428
-  technicalName: DFr_9E8E57B4
+  id: 72057594037928537
+  technicalName: DFr_D23C55EB
   parentId: 72057594037928352
   childrenIds: 
   mMenuText: 
   mStageDirections: 
   mSpeaker:
-    objectRef: 72057594037928340
+    objectRef: 72057594037928348
   mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041F\u043E\u0447\u0442\u0438 \u0432\u0441\u0435 \u043E\u043A\u043D\u0430
-    \u0446\u0435\u043B\u044B. \u0421\u043A\u043E\u0440\u0435\u0435 \u0432\u0441\u0435\u0433\u043E
-    \u0442\u0430\u043C \u043C\u043E\u0436\u043D\u043E \u0431\u0443\u0434\u0435\u0442
-    \u043D\u0430\u0439\u0442\u0438 \u043D\u0435\u0431\u043E\u043B\u044C\u0448\u0443\u044E
-    \u043A\u043E\u043C\u043D\u0430\u0442\u0443, \u0437\u0430\u043D\u043E\u0447\u0435\u0432\u0430\u0442\u044C
-    \u0432 \u0442\u0435\u043F\u043B\u0435 \u0438 \u043E\u0442\u043D\u043E\u0441\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0439
-    \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u0438. \u041F\u0440\u043E\u0431\u043B\u0435\u043C\u0430
-    \u0432 \u0442\u043E\u043C, \u0447\u0442\u043E \u044D\u0442\u043E\u0442 \u0434\u043E\u043C
-    \u043C\u043E\u0433\u043B\u0438 \u043E\u0431\u043B\u044E\u0431\u043E\u0432\u0430\u0442\u044C
-    \u0437\u0430\u0434\u043E\u043B\u0433\u043E \u0434\u043E \u043D\u0430\u0441, \u0443\u0436
-    \u0431\u043E\u043B\u044C\u043D\u043E \u043C\u0435\u0441\u0442\u043E \u0445\u043E\u0440\u043E\u0448\u0435\u0435..."
+  mText: "\u041C\u043D\u0435 \u0437\u0434\u0435\u0441\u044C \u043D\u0435 \u043D\u0440\u0430\u0432\u0438\u0442\u0441\u044F."
   mExternalId: 
-  mPosition: {x: 2750, y: 0}
-  mZIndex: 10
+  mPosition: {x: 5000, y: 0}
+  mZIndex: 23
   mSize: {x: 225, y: 200}
-  mShortId: 2660128692
+  mShortId: 3527169515
   mInputPins:
     value:
-    - id: 72057594037928431
+    - id: 72057594037928540
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928428
+      mOwner: 72057594037928537
       mConnections:
         value: []
       mOwnerInstanceId: 0
   mOutputPins:
     value:
-    - id: 72057594037928432
+    - id: 72057594037928541
       mText:
         value:
           handlerId: 0
           ownerId: 0
           ownerInstanceId: 0
           mRawScript: 
-      mOwner: 72057594037928428
+      mOwner: 72057594037928537
       mConnections:
         value:
         - mLabel: 
           mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928438
+          mTargetPin: 72057594037928553
           mTarget:
-            objectRef: 72057594037928435
+            objectRef: 72057594037928550
       mOwnerInstanceId: 0
---- !u!114 &4290748132631419081
+--- !u!114 &8657260003022212129
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2641,531 +3779,7 @@ MonoBehaviour:
           mTarget:
             objectRef: 72057594037928899
       mOwnerInstanceId: 0
---- !u!114 &4958262074874657240
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_3426FC7C
-  m_EditorClassIdentifier: 
-  id: 72057594037928479
-  technicalName: DFr_3426FC7C
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928344
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041D\u0435\u0442, \u043C\u044B \u0434\u043E\u043B\u0436\u043D\u044B \u043E\u0441\u043C\u043E\u0442\u0440\u0435\u0442\u044C
-    \u0434\u043E\u043C."
-  mExternalId: 
-  mPosition: {x: 4175, y: 0}
-  mZIndex: 17
-  mSize: {x: 225, y: 200}
-  mShortId: 874970236
-  mInputPins:
-    value:
-    - id: 72057594037928482
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928479
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928483
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928479
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928489
-          mTarget:
-            objectRef: 72057594037928486
-      mOwnerInstanceId: 0
---- !u!114 &5150309996204109949
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d966e1e675cc3c43adec7af94fa22e6, type: 3}
-  m_Name: Ufo_7BA3AE48
-  m_EditorClassIdentifier: 
-  id: 72057594037928220
-  technicalName: Ufo_7BA3AE48
-  parentId: 216172785005863603
-  childrenIds: 940100000000000198010000000000019c01000000000001
-  mDisplayName: Characters
-  mExternalId: 
-  mShortId: 2074324552
-  mZIndex: 0
---- !u!114 &5481151971356483916
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0bfaac0c61110d64dbdd72551a048d51, type: 3}
-  m_Name: Dlg_5FA79CA6
-  m_EditorClassIdentifier: 
-  id: 72057594037929145
-  technicalName: Dlg_5FA79CA6
-  parentId: 72057594037928213
-  childrenIds: aa040000000000019c04000000000001a304000000000001b104000000000001
-  mAttachments:
-    listIds: 
-  mDisplayName: The House
-  mPreviewImage:
-    mViewBoxX: 0
-    mViewBoxY: 0
-    mViewBoxWidth: 0
-    mViewBoxHeight: 0
-    mMode: 0
-    mAsset:
-      objectRef: 0
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041E\u0442\u0435\u0446 \u0438 \u0441\u044B\u043D \u043F\u043E\u0434\u043E\u0448\u043B\u0438
-    \u043A \u0434\u043E\u043C\u0443 \u0438 \u0433\u043E\u0442\u043E\u0432\u044B \u043E\u0431\u044B\u0441\u043A\u0430\u0442\u044C
-    \u0435\u0433\u043E, \u043B\u0438\u0431\u043E \u0443\u0439\u0442\u0438 \u0432 \u043B\u044E\u0431\u043E\u0439
-    \u043C\u043E\u043C\u0435\u043D\u0442."
-  mExternalId: 
-  mPosition: {x: 317, y: 0}
-  mZIndex: 1
-  mSize: {x: 291, y: 200}
-  mShortId: 1604820134
-  mInputPins:
-    value:
-    - id: 72057594037929148
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037929145
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037929119
-          mTarget:
-            objectRef: 72057594037929116
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037929149
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037929145
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
---- !u!114 &5736691943604785110
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_B4CDA54C
-  m_EditorClassIdentifier: 
-  id: 72057594037928892
-  technicalName: DFr_B4CDA54C
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: "\u0418\u0434\u0438 \u0443\u0436\u0435!"
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928344
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: 
-  mExternalId: 
-  mPosition: {x: 6475, y: -250}
-  mZIndex: 28
-  mSize: {x: 225, y: 200}
-  mShortId: 3033376076
-  mInputPins:
-    value:
-    - id: 72057594037928895
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928892
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928896
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928892
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
---- !u!114 &5880684321310528352
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0d966e1e675cc3c43adec7af94fa22e6, type: 3}
-  m_Name: Ufo_1409C165
-  m_EditorClassIdentifier: 
-  id: 72057594037928197
-  technicalName: Ufo_1409C165
-  parentId: 216172783392894804
-  childrenIds: 
-  mDisplayName: Images
-  mExternalId: 
-  mShortId: 336183653
-  mZIndex: 0
---- !u!114 &5983944484742593629
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_3435B416
-  m_EditorClassIdentifier: 
-  id: 72057594037928913
-  technicalName: DFr_3435B416
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928344
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041C\u044B \u0430\u043A\u043A\u0443\u0440\u0430\u0442\u043D\u043E \u043F\u043E\u0434\u043E\u0439\u0434\u0451\u043C
-    \u0438 \u043F\u043E\u0441\u043C\u043E\u0442\u0440\u0438\u043C. \u0412\u043D\u0443\u0442\u0440\u044C
-    \u043D\u0435 \u043F\u043E\u043B\u0435\u0437\u0435\u043C, \u043F\u043E\u043A\u0430
-    \u043D\u0435 \u0443\u0431\u0435\u0434\u0438\u043C\u0441\u044F, \u0447\u0442\u043E
-    \u0432\u0441\u0451 \u0445\u043E\u0440\u043E\u0448\u043E, \u0438\u0434\u0451\u0442?"
-  mExternalId: 
-  mPosition: {x: 7025, y: 0}
-  mZIndex: 31
-  mSize: {x: 225, y: 200}
-  mShortId: 875934742
-  mInputPins:
-    value:
-    - id: 72057594037928916
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928913
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928917
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928913
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928923
-          mTarget:
-            objectRef: 72057594037928920
-      mOwnerInstanceId: 0
---- !u!114 &6203394725675494611
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_20C82537
-  m_EditorClassIdentifier: 
-  id: 72057594037929102
-  technicalName: DFr_20C82537
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928340
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041D\u0430\u0434\u0435\u044E\u0441\u044C, \u043D\u0435 \u043F\u043E\u043D\u0430\u0434\u043E\u0431\u0438\u0442\u0441\u044F."
-  mExternalId: 
-  mPosition: {x: 9925, y: -125}
-  mZIndex: 94
-  mSize: {x: 225, y: 200}
-  mShortId: 549987639
-  mInputPins:
-    value:
-    - id: 72057594037929105
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037929102
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037929106
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037929102
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037929112
-          mTarget:
-            objectRef: 72057594037929109
-      mOwnerInstanceId: 0
---- !u!114 &6284153743336805482
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b64268b4afb8e54ea7a185fd18b4df2, type: 3}
-  m_Name: DFr_04788240
-  m_EditorClassIdentifier: 
-  id: 72057594037928449
-  technicalName: DFr_04788240
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: "\u0418\u0434\u0438 \u043A \u0434\u043E\u043C\u0443"
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928344
-  mColor: {r: 0.21586053, g: 0.12743768, b: 0.36130682, a: 1}
-  mText: "\u0412\u0441\u0442\u0430\u0432\u0430\u0439..."
-  mExternalId: 
-  mPosition: {x: 3625, y: 0}
-  mZIndex: 13
-  mSize: {x: 225, y: 200}
-  mShortId: 75006528
-  mInputPins:
-    value:
-    - id: 72057594037928452
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928449
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928453
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928449
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928460
-          mTarget:
-            objectRef: 72057594037928457
-      mOwnerInstanceId: 0
-  mTemplate:
-    value:
-      mDFFeature:
-        value:
-          mImage:
-            objectRef: 0
-          mAmbience: 0
-          mMusic: 0
-          mSFX: 1
-          mDelay: 0
-          mOwnerId: 72057594037928449
-          mOwnerInstanceId: 0
-      mOwnerId: 72057594037928449
-      mOwnerInstanceId: 0
---- !u!114 &6559692785576304168
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_981C5DCB
-  m_EditorClassIdentifier: 
-  id: 72057594037929088
-  technicalName: DFr_981C5DCB
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928340
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041E\u043D \u0441\u0436\u0438\u043C\u0430\u0435\u0442 \u043C\u043E\u044E
-    \u0440\u0443\u043A\u0443, \u0431\u043E\u0438\u0442\u0441\u044F..."
-  mExternalId: 
-  mPosition: {x: 9375, y: -125}
-  mZIndex: 90
-  mSize: {x: 225, y: 200}
-  mShortId: 2551995851
-  mInputPins:
-    value:
-    - id: 72057594037929091
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037929088
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037929092
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037929088
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037929098
-          mTarget:
-            objectRef: 72057594037929095
-      mOwnerInstanceId: 0
---- !u!114 &6695414878287734337
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_F3562291
-  m_EditorClassIdentifier: 
-  id: 72057594037928508
-  technicalName: DFr_F3562291
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: "\u041F\u043E\u043D\u0430\u0431\u044E\u0434\u0430\u0439\u0442\u0435 \u0435\u0449\u0451"
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928344
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: 
-  mExternalId: 
-  mPosition: {x: 5875, y: 250}
-  mZIndex: 22
-  mSize: {x: 225, y: 200}
-  mShortId: 4082508433
-  mInputPins:
-    value:
-    - id: 72057594037928511
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928508
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928512
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928508
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
---- !u!114 &6870861685297592906
+--- !u!114 &8740561427382618768
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3224,7 +3838,7 @@ MonoBehaviour:
           mTarget:
             objectRef: 72057594037928963
       mOwnerInstanceId: 0
---- !u!114 &7016806853513138130
+--- !u!114 &9109675559263494022
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3233,628 +3847,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_990F3D96
+  m_Script: {fileID: 11500000, guid: 0d966e1e675cc3c43adec7af94fa22e6, type: 3}
+  m_Name: Ufo_357B064A
   m_EditorClassIdentifier: 
-  id: 72057594037928372
-  technicalName: DFr_990F3D96
-  parentId: 72057594037928352
+  id: 72057594037928201
+  technicalName: Ufo_357B064A
+  parentId: 216172783392894804
   childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928348
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u0414\u043E\u043B\u0433\u043E \u043C\u044B \u0443\u0436\u0435 \u0442\u0443\u0442
-    \u043B\u0435\u0436\u0438\u043C?"
+  mDisplayName: Audio
   mExternalId: 
-  mPosition: {x: 550, y: 0}
-  mZIndex: 2
-  mSize: {x: 225, y: 200}
-  mShortId: 2567912854
-  mInputPins:
-    value:
-    - id: 72057594037928375
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928372
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928376
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928372
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928382
-          mTarget:
-            objectRef: 72057594037928379
-      mOwnerInstanceId: 0
---- !u!114 &7233017122622147157
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d359306b6b782ad4482080a2d05e7e64, type: 3}
-  m_Name: FFr_C8E4E852
-  m_EditorClassIdentifier: 
-  id: 72057594037928213
-  technicalName: FFr_C8E4E852
-  parentId: 72057594037928207
-  childrenIds: a001000000000001b904000000000001
-  mAttachments:
-    listIds: 
-  mDisplayName: The House
-  mPreviewImage:
-    mViewBoxX: 0
-    mViewBoxY: 0
-    mViewBoxWidth: 0
-    mViewBoxHeight: 0
-    mMode: 0
-    mAsset:
-      objectRef: 0
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041D\u0435\u0431\u043E\u043B\u044C\u0448\u043E\u0439 \u0447\u0430\u0441\u0442\u043D\u044B\u0439
-    \u0434\u043E\u043C \u0432 \u043B\u0435\u0441\u0443 \u0432 \u043A\u0438\u043B\u043E\u043C\u0435\u0442\u0440\u0435
-    \u043E\u0442 \u0434\u043E\u0440\u043E\u0433\u0438."
-  mExternalId: 
-  mPosition: {x: 0, y: 0}
+  mShortId: 897254986
   mZIndex: 0
-  mSize: {x: 275, y: 200}
-  mShortId: 3370444882
-  mInputPins:
-    value:
-    - id: 72057594037928216
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928213
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928217
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928213
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
---- !u!114 &7241458148602548352
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_647FFB26
-  m_EditorClassIdentifier: 
-  id: 72057594037929109
-  technicalName: DFr_647FFB26
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928340
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u0418\u0434\u0451\u043C, \u0432\u0441\u0451 \u0442\u0438\u0445\u043E. \u041A\u0438\u0440\u043F\u0438\u0447\u043D\u0430\u044F
-    \u043A\u043B\u0430\u0434\u043A\u0430, \u043C\u0430\u0441\u0441\u0438\u0432\u043D\u0430\u044F
-    \u0432\u0445\u043E\u0434\u043D\u0430\u044F \u0434\u0432\u0435\u0440\u044C, \u043E\u043A\u043D\u0430
-    \u0443 \u0434\u0432\u0435\u0440\u0438 \u0446\u0435\u043B\u044B. \u0414\u043E\u043C
-    \u0432 \u0434\u0432\u0430 \u044D\u0442\u0430\u0436\u0430 \u043F\u043B\u044E\u0441
-    \u0447\u0435\u0440\u0434\u0430\u043A. \u041D\u0430\u0432\u0435\u0440\u043D\u044F\u043A\u0430
-    \u0435\u0449\u0451 \u0435\u0441\u0442\u044C \u043F\u043E\u0434\u0432\u0430\u043B."
-  mExternalId: 
-  mPosition: {x: 10200, y: -125}
-  mZIndex: 96
-  mSize: {x: 225, y: 200}
-  mShortId: 1686108966
-  mInputPins:
-    value:
-    - id: 72057594037929112
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037929109
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037929113
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037929109
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928356
-          mTarget:
-            objectRef: 72057594037928352
-      mOwnerInstanceId: 0
---- !u!114 &7557774420179588357
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b64268b4afb8e54ea7a185fd18b4df2, type: 3}
-  m_Name: DFr_4A61EFC1
-  m_EditorClassIdentifier: 
-  id: 72057594037928963
-  technicalName: DFr_4A61EFC1
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928340
-  mColor: {r: 0.21586053, g: 0.12743768, b: 0.36130682, a: 1}
-  mText: "\u041F\u043E\u0433\u043E\u0434\u0438, \u0447\u0442\u043E \u0442\u044B \u0434\u0435\u043B\u0430\u0435\u0448\u044C,
-    \u043A\u0443\u0434\u0430?..."
-  mExternalId: 
-  mPosition: {x: 8225, y: 125}
-  mZIndex: 38
-  mSize: {x: 225, y: 200}
-  mShortId: 1247932353
-  mInputPins:
-    value:
-    - id: 72057594037928966
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928963
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928967
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928963
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mTemplate:
-    value:
-      mDFFeature:
-        value:
-          mImage:
-            objectRef: 0
-          mAmbience: 0
-          mMusic: 0
-          mSFX: 1
-          mDelay: 0
-          mOwnerId: 72057594037928963
-          mOwnerInstanceId: 0
-      mOwnerId: 72057594037928963
-      mOwnerInstanceId: 0
---- !u!114 &7631032052276636118
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_3A31A576
-  m_EditorClassIdentifier: 
-  id: 72057594037928557
-  technicalName: DFr_3A31A576
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928348
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u041D\u0435\u0442, \u043F\u0440\u043E\u0441\u0442\u043E \u043C\u043D\u0435
-    \u0441\u0442\u0440\u0430\u0448\u043D\u043E."
-  mExternalId: 
-  mPosition: {x: 5550, y: 0}
-  mZIndex: 25
-  mSize: {x: 225, y: 200}
-  mShortId: 976332150
-  mInputPins:
-    value:
-    - id: 72057594037928560
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928557
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928561
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928557
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928496
-          mTarget:
-            objectRef: 72057594037928493
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928504
-          mTarget:
-            objectRef: 72057594037928501
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928511
-          mTarget:
-            objectRef: 72057594037928508
-      mOwnerInstanceId: 0
---- !u!114 &7649821899310568860
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_8D7662D4
-  m_EditorClassIdentifier: 
-  id: 72057594037928407
-  technicalName: DFr_8D7662D4
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928340
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u0423\u0436\u0435 \u043D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E
-    \u0434\u043D\u0435\u0439 \u0431\u0435\u0437 \u0435\u0434\u044B \u0438 \u0431\u0435\u0441\u0441\u043E\u043D\u043D\u0430\u044F
-    \u043D\u043E\u0447\u044C. \u041D\u0443\u0436\u043D\u043E \u0443\u0441\u0442\u0440\u043E\u0438\u0442\u044C
-    \u043F\u0440\u0438\u0432\u0430\u043B, \u043E\u0442\u0434\u043E\u0445\u043D\u0443\u0442\u044C,
-    \u0441\u043E\u0433\u0440\u0435\u0442\u044C\u0441\u044F, \u043F\u0440\u043E\u0441\u0443\u0448\u0438\u0442\u044C
-    \u043E\u0434\u0435\u0436\u0434\u0443. \u041C\u043E\u0436\u0435\u0442 \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0441\u044F
-    \u043D\u0430\u0439\u0442\u0438 \u043A\u0430\u043A\u0443\u044E-\u0442\u043E \u0435\u0434\u0443."
-  mExternalId: 
-  mPosition: {x: 1925, y: 0}
-  mZIndex: 7
-  mSize: {x: 225, y: 200}
-  mShortId: 2373346004
-  mInputPins:
-    value:
-    - id: 72057594037928410
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928407
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928411
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928407
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928417
-          mTarget:
-            objectRef: 72057594037928414
-      mOwnerInstanceId: 0
---- !u!114 &8420281268061018323
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1b64268b4afb8e54ea7a185fd18b4df2, type: 3}
-  m_Name: DFr_6C572AEA
-  m_EditorClassIdentifier: 
-  id: 72057594037928979
-  technicalName: DFr_6C572AEA
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: "\u0418\u0434\u0438 \u043A \u0434\u043E\u043C\u0443"
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928344
-  mColor: {r: 0.21586053, g: 0.12743768, b: 0.36130682, a: 1}
-  mText: "\u041F\u043E\u0439\u0434\u0451\u043C"
-  mExternalId: 
-  mPosition: {x: 8550, y: -125}
-  mZIndex: 80
-  mSize: {x: 225, y: 200}
-  mShortId: 1817651946
-  mInputPins:
-    value:
-    - id: 72057594037928982
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928979
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928983
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928979
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037929004
-          mTarget:
-            objectRef: 72057594037929001
-      mOwnerInstanceId: 0
-  mTemplate:
-    value:
-      mDFFeature:
-        value:
-          mImage:
-            objectRef: 0
-          mAmbience: 0
-          mMusic: 0
-          mSFX: 1
-          mDelay: 0
-          mOwnerId: 72057594037928979
-          mOwnerInstanceId: 0
-      mOwnerId: 72057594037928979
-      mOwnerInstanceId: 0
---- !u!114 &8657086138891373516
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_D12D185D
-  m_EditorClassIdentifier: 
-  id: 72057594037928442
-  technicalName: DFr_D12D185D
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: 
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928340
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: "\u0418 \u043F\u0440\u0430\u0432\u0434\u0430, \u0442\u043E\u0436\u0435 \u043D\u0430\u0447\u0438\u043D\u0430\u044E
-    \u043C\u0451\u0440\u0437\u043D\u0443\u0442\u044C, \u043D\u0430\u0434\u043E \u0434\u0432\u0438\u0433\u0430\u0442\u044C\u0441\u044F.
-    \u0412\u0440\u043E\u0434\u0435 \u0432\u0441\u0451 \u0442\u0438\u0445\u043E."
-  mExternalId: 
-  mPosition: {x: 3300, y: 0}
-  mZIndex: 12
-  mSize: {x: 225, y: 200}
-  mShortId: 3509393501
-  mInputPins:
-    value:
-    - id: 72057594037928445
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928442
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928446
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928442
-      mConnections:
-        value:
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928452
-          mTarget:
-            objectRef: 72057594037928449
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928467
-          mTarget:
-            objectRef: 72057594037928464
-        - mLabel: 
-          mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-          mTargetPin: 72057594037928475
-          mTarget:
-            objectRef: 72057594037928472
-      mOwnerInstanceId: 0
---- !u!114 &8918724617064465255
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_DFF43164
-  m_EditorClassIdentifier: 
-  id: 72057594037928935
-  technicalName: DFr_DFF43164
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: "\u041D\u0435\u0442"
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928344
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: 
-  mExternalId: 
-  mPosition: {x: 7625, y: 125}
-  mZIndex: 34
-  mSize: {x: 225, y: 200}
-  mShortId: 3757322596
-  mInputPins:
-    value:
-    - id: 72057594037928938
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928935
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928939
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928935
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
---- !u!114 &8990332291348424807
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5b5a50519cefa02448a14027a04f0292, type: 3}
-  m_Name: DFr_A65932A7
-  m_EditorClassIdentifier: 
-  id: 72057594037928987
-  technicalName: DFr_A65932A7
-  parentId: 72057594037928352
-  childrenIds: 
-  mMenuText: "\u0423\u0445\u043E\u0434\u0438"
-  mStageDirections: 
-  mSpeaker:
-    objectRef: 72057594037928344
-  mColor: {r: 0.57758045, g: 0.7605245, b: 0.7991027, a: 1}
-  mText: 
-  mExternalId: 
-  mPosition: {x: 8550, y: -375}
-  mZIndex: 82
-  mSize: {x: 225, y: 200}
-  mShortId: 2790863527
-  mInputPins:
-    value:
-    - id: 72057594037928990
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928987
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
-  mOutputPins:
-    value:
-    - id: 72057594037928991
-      mText:
-        value:
-          handlerId: 0
-          ownerId: 0
-          ownerInstanceId: 0
-          mRawScript: 
-      mOwner: 72057594037928987
-      mConnections:
-        value: []
-      mOwnerInstanceId: 0
