@@ -19,7 +19,7 @@ public class SaveSystem : MonoBehaviour
     private Spawner _spawner;
 
     private string _savePath = Const.SavePath;
-    public GameState GameState { get; set; };
+    public GameState GameState { get; set; }
 
     private void Awake()
     {
