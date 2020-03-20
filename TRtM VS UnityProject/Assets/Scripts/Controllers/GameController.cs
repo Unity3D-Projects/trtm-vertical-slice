@@ -93,6 +93,8 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     private float _currentSpeed;
     public CoroutineObjectBase CurrentDelay { get; set; }
 
+    public Button SpeedUpButton { get; set; }
+
     public void SkipDelay(float timeToSkipInMinutes)
     {
         if (CurrentDelay.Coroutine != null)
@@ -182,10 +184,10 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
         float delay = (Current as DFTemplate)?.Template.DFFeature.Delay ?? 0;
 
-        if (delay > 0)
+        if (delay >= 0)
         {
             var coroutine = new CoroutineObject<List<Branch>, float>(this, PlayWithDelay);
-            coroutine.Start(candidates, delay);
+            coroutine.Start(candidates, 0.3f);
             CurrentDelay = coroutine;
         }
         else
@@ -261,6 +263,8 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         }
         speedUpButton.onClick.AddListener(() => _spawner.ShowSkipPopup());
 
+        SpeedUpButton = speedUpButton;
+
         float remainingInMinutes = timeToWaitInMinutes;
         while (remainingInMinutes > 0)
         {
@@ -295,6 +299,8 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             speedUpButton.gameObject.SetActive(false);
         }
         speedUpButton.onClick.AddListener(() => _spawner.ShowSkipPopup());
+
+        SpeedUpButton = speedUpButton;
 
         float remainingInMinutes = timeToWaitInMinutes;
         while (remainingInMinutes > 0)

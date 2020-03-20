@@ -35,7 +35,7 @@ public class Spawner : MonoBehaviour
         var yesButton = buttons.Where(x => x.GetComponentInChildren<Text>().text == "Да").FirstOrDefault();
         var noButton = buttons.Where(x => x.GetComponentInChildren<Text>().text == "Нет").FirstOrDefault();
 
-        yesButton.onClick.AddListener(() => _advertisementManager.ShowAd(() => SkipPopupCallback(popup)));
+        yesButton.onClick.AddListener(() => _advertisementManager.ShowAd("rewardedVideo"));
         noButton.onClick.AddListener(() => Destroy(popup.gameObject));
 
         return popup;
