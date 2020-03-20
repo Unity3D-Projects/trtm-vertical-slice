@@ -1,16 +1,15 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Assets.Scripts.Controllers
 {
     public class NotificationManager
     {
-        public void ScheduleNotification(string title, string message)
+        public void ScheduleNotification(DateTime at, string key)
         {
+            if (key == Const.NotificationKeys.DalayReminder)
+            {
 
+            }
         }
     }
 }

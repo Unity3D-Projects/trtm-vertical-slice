@@ -26,4 +26,9 @@ public class Const
         public const string ExecuteTime = "at";
         public const string StartTime = "started";
     }
+
+    public class NotificationKeys
+    {
+        public const string DalayReminder = "delay";
+    }
 }

@@ -18,6 +18,7 @@ using System.Xml.Linq;
 using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
 using System.Threading;
+using Assets.Scripts.Controllers;
 
 public enum TextSpeed { SLOWEST = 5, SLOW = 4, NORMAL = 3, FAST = 2, FASTEST = 1 }
 
@@ -27,6 +28,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     private Spawner _spawner;
     private ArticyFlowPlayer _player;
     private SaveSystem _saveSystem;
+    private NotificationManager _notificationManager;
     #endregion
 
     #region Settings
@@ -101,6 +103,8 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         _spawner = GetComponent<Spawner>();
         _player = GetComponent<ArticyFlowPlayer>();
         _saveSystem = GetComponent<SaveSystem>();
+
+        _notificationManager = new NotificationManager();
     }
 
     public void OnFlowPlayerPaused(IFlowObject aObject)
@@ -215,6 +219,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         else
         {
             _spawner.SpawnChoice(candidates);
+            // _statisticsManager.TimeFlagStart("choice")
         }
     }
 
@@ -229,6 +234,8 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     private IEnumerator PlayWithDelay(List<Branch> candidates, float timeToWaitInMinutes)
     {
         Debug.Log("Delay entered from game");
+
+        _notificationManager.ScheduleNotification(DateTime.Now.AddMinutes(timeToWaitInMinutes), Const.NotificationKeys.DalayReminder);
 
         DateTime startTime = DateTime.Now;
         DateTime endTime = DateTime.Now.AddMinutes(timeToWaitInMinutes);
@@ -253,6 +260,8 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     public IEnumerator ExecuteWithDelay(DateTime startTime, float timeToWaitInMinutes)
     {
         Debug.Log("Delay entered from save");
+
+        _notificationManager.ScheduleNotification(DateTime.Now.AddMinutes(timeToWaitInMinutes), Const.NotificationKeys.DalayReminder);
 
         DateTime endTime = DateTime.Now.AddMinutes(timeToWaitInMinutes);
         var totalDelay = (endTime - startTime).TotalMinutes;

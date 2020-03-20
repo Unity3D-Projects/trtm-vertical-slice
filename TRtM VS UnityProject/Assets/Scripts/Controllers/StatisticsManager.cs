@@ -1,16 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Assets.Scripts.Controllers
+﻿namespace Assets.Scripts.Controllers
 {
-    public static class StatisticsManager
+    public class StatisticsManager
     {
-        public static object GetNewTimeMarker()
+        public void SendStatistics(string key, object data)
         {
-            return new object();
+
         }
     }
 }
