@@ -32,6 +32,7 @@ public class SaveSystem : MonoBehaviour
         _controller.PlayerStandBy = true;
         _controller.GameEnded = false;
         _controller.AllowRewinding = false;
+        _controller.CanWatchAd = false;
 
         if (!SaveFileExists())
         {
@@ -80,7 +81,10 @@ public class SaveSystem : MonoBehaviour
         _player.StartOn = ArticyDatabase.GetObject(executeId);
 
         // проверить дилей
-        var result = CheckForDelay(xExecute);
+        var result = CheckForDelay(xDoc);
+
+        _controller.CanWatchAd = result.canWatchAd;
+
         if (result.remainingInMinutes > 0)
         {
             var coroutine = new CoroutineObject<DateTime, float>(_controller, _controller.ExecuteWithDelay);
@@ -149,18 +153,32 @@ public class SaveSystem : MonoBehaviour
         ArticyDatabase.DefaultGlobalVariables.Variables = loadedVars;
     }
 
-    private (DateTime startTime, float remainingInMinutes) CheckForDelay(XElement xExecute)
+    public void SaveAdWatchedTime()
     {
+        XDocument xDoc = XDocument.Load(_savePath);
+
+        xDoc.Element("save").Element("logic").Element("lastWatchAdTime").Value = DateTime.Now.ToString();
+
+        xDoc.Save(_savePath);
+    }
+
+    private (DateTime startTime, float remainingInMinutes, bool canWatchAd) CheckForDelay(XDocument xDoc)
+    {
+        var xExecute = xDoc.Element("save").Element("execute");
+
         var executeTime = DateTime.Parse(xExecute.Attribute(Const.XmlAliases.ExecuteTime)?.Value ?? DateTime.Now.ToString());
         var startTime = DateTime.Parse(xExecute.Attribute(Const.XmlAliases.StartTime)?.Value ?? DateTime.Now.ToString());
+        var lastWatchAdTime = DateTime.Parse(xDoc.Element("save").Element("logic").Element("lastWatchAdTime").Value);
+
+        var canWatchAd = DateTime.Now.Subtract(lastWatchAdTime) >= TimeSpan.FromMinutes(Const.WatchAdFrequencyInMinutes);
 
         if (executeTime != null && DateTime.Now < executeTime)
         {
             var remainingInMinutes = (float)(executeTime - DateTime.Now).TotalMinutes;
-            return (startTime, remainingInMinutes);
+            return (startTime, remainingInMinutes, canWatchAd);
         }
 
-        return (startTime, 0);
+        return (startTime, 0, canWatchAd);
     }
 
     private Dictionary<string, object> CopyVars(XElement elementToCopyFrom)
@@ -349,7 +367,9 @@ public class SaveSystem : MonoBehaviour
                     new XElement("save",
                         new XElement("log"),
                         new XElement("execute", new XAttribute(Const.XmlAliases.ExecuteId, _player.StartOn.TechnicalName)),
-                        new XElement("states")));
+                        new XElement("states"),
+                        new XElement("logic",
+                            new XElement("lastWatchAdTime", DateTime.MinValue.ToString()))));
         xDoc.Element("save").Add(GetGlobalVars("vars"));
 
         xDoc.Save(_savePath);

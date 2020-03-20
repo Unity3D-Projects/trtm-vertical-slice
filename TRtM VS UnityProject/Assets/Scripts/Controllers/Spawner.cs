@@ -1,6 +1,7 @@
 ﻿using Articy.The_Road_To_Moscow;
 using Articy.Unity;
 using Articy.Unity.Interfaces;
+using Assets.Scripts.Controllers;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,6 +15,7 @@ public class Spawner : MonoBehaviour
     private PrefabManager _prefabManager;
     private ArticyFlowPlayer _player;
     private SaveSystem _saveSystem;
+    private AdvertisementManager _advertisementManager;
 
     private void Awake()
     {
@@ -21,6 +23,28 @@ public class Spawner : MonoBehaviour
         _player = GetComponent<ArticyFlowPlayer>();
         _saveSystem = GetComponent<SaveSystem>();
         _controller = GetComponent<GameController>();
+        _advertisementManager = GetComponent<AdvertisementManager>();
+    }
+
+    public GameObject ShowSkipPopup()
+    {
+        var popup = Instantiate(_prefabManager.skipPopupPrefab, _prefabManager.canvas);
+
+        var buttons = popup.GetComponentsInChildren<Button>();
+
+        var yesButton = buttons.Where(x => x.GetComponentInChildren<Text>().text == "Да").FirstOrDefault();
+        var noButton = buttons.Where(x => x.GetComponentInChildren<Text>().text == "Нет").FirstOrDefault();
+
+        yesButton.onClick.AddListener(() => _advertisementManager.ShowAd(() => SkipPopupCallback(popup)));
+        noButton.onClick.AddListener(() => Destroy(popup.gameObject));
+
+        return popup;
+    }
+
+    private void SkipPopupCallback(GameObject popup)
+    {
+        _controller.SkipDelay(1);
+        Destroy(popup.gameObject);
     }
 
     public GameObject SpawnPhrase(string text, Color color, Text_Position side)

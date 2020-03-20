@@ -3,6 +3,7 @@
 public class Const
 {
     public const string SavePath = @"G:\GitHub\The Road to Moscow\saves\save.xml";
+    public const int WatchAdFrequencyInMinutes = 30;
 
     public enum LogEvent
     {
@@ -29,6 +30,6 @@ public class Const
 
     public class NotificationKeys
     {
-        public const string DalayReminder = "delay";
+        public const string DelayReminder = "delay";
     }
 }

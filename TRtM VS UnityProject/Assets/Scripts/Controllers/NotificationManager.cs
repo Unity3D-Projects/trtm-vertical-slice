@@ -2,11 +2,11 @@
 
 namespace Assets.Scripts.Controllers
 {
-    public class NotificationManager
+    public static class NotificationManager
     {
-        public void ScheduleNotification(DateTime at, string key)
+        public static void ScheduleNotification(DateTime at, string key)
         {
-            if (key == Const.NotificationKeys.DalayReminder)
+            if (key == Const.NotificationKeys.DelayReminder)
             {
 
             }

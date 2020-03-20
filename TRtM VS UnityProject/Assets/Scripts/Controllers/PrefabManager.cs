@@ -5,6 +5,8 @@ using UnityEngine.UI;
 
 public class PrefabManager : MonoBehaviour
 {
+    public GameObject adMockPrefab;
+    public GameObject skipPopupPrefab;
     public GameObject middlePrefab;
     public GameObject sidesPrefab;
     public GameObject dotsPrefab;
@@ -14,4 +16,5 @@ public class PrefabManager : MonoBehaviour
     public Slider sliderPrefab;
     public GameObject delayBlockPrefab;
     public Transform content;
+    public Transform canvas;
 }

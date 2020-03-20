@@ -28,7 +28,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     private Spawner _spawner;
     private ArticyFlowPlayer _player;
     private SaveSystem _saveSystem;
-    private NotificationManager _notificationManager;
+    private AdvertisementManager _advertisementManager;
     #endregion
 
     #region Settings
@@ -67,6 +67,8 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         }
     }
 
+    public bool CanWatchAd { get; set; } = false;
+
     public bool _gameEnded = false;
     public bool GameEnded
     {
@@ -93,9 +95,14 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     public void SkipDelay(float timeToSkipInMinutes)
     {
-        StopCoroutine(CurrentDelay.Coroutine);
-        _saveSystem.SubtractMinutesFromExecute(timeToSkipInMinutes);
+        if (CurrentDelay.Coroutine != null)
+        {
+            StopCoroutine(CurrentDelay.Coroutine);
+            _saveSystem.SubtractMinutesFromExecute(timeToSkipInMinutes);
+        }
+
         SceneManager.LoadScene("Main");
+        CanWatchAd = false;
     }
 
     private void Awake()
@@ -103,8 +110,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         _spawner = GetComponent<Spawner>();
         _player = GetComponent<ArticyFlowPlayer>();
         _saveSystem = GetComponent<SaveSystem>();
-
-        _notificationManager = new NotificationManager();
+        _advertisementManager = GetComponent<AdvertisementManager>();
     }
 
     public void OnFlowPlayerPaused(IFlowObject aObject)
@@ -174,7 +180,18 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
         yield return WaitSeconds(textDelay);
 
-        Play(candidates);
+        float delay = (Current as DFTemplate)?.Template.DFFeature.Delay ?? 0;
+
+        if (delay > 0)
+        {
+            var coroutine = new CoroutineObject<List<Branch>, float>(this, PlayWithDelay);
+            coroutine.Start(candidates, delay);
+            CurrentDelay = coroutine;
+        }
+        else
+        {
+            Play(candidates);
+        }
     }
 
     private IEnumerator WaitSeconds(float seconds)
@@ -196,16 +213,6 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     private void Play(List<Branch> candidates)
     {
-        float delay = (Current as DFTemplate)?.Template.DFFeature.Delay ?? 0;
-
-        if (delay > 0)
-        {
-            var coroutine = new CoroutineObject<List<Branch>, float>(this, PlayWithDelay);
-            coroutine.Start(candidates, delay);
-            CurrentDelay = coroutine;
-            return;
-        }
-
         if (candidates.Count == 0)
         {
             Debug.LogError("No candidates found.");
@@ -219,6 +226,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         else
         {
             _spawner.SpawnChoice(candidates);
+
             // _statisticsManager.TimeFlagStart("choice")
         }
     }
@@ -235,7 +243,9 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     {
         Debug.Log("Delay entered from game");
 
-        _notificationManager.ScheduleNotification(DateTime.Now.AddMinutes(timeToWaitInMinutes), Const.NotificationKeys.DalayReminder);
+        CanWatchAd = true;
+
+        NotificationManager.ScheduleNotification(DateTime.Now.AddMinutes(timeToWaitInMinutes), Const.NotificationKeys.DelayReminder);
 
         DateTime startTime = DateTime.Now;
         DateTime endTime = DateTime.Now.AddMinutes(timeToWaitInMinutes);
@@ -243,6 +253,13 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
         GameObject delayBlock = _spawner.SpawnDelayBlock();
         Slider slider = _spawner.SpawnSlider(DateTime.Now, timeToWaitInMinutes);
+
+        var speedUpButton = slider.GetComponentInChildren<Button>();
+        if (!CanWatchAd)
+        {
+            speedUpButton.gameObject.SetActive(false);
+        }
+        speedUpButton.onClick.AddListener(() => _spawner.ShowSkipPopup());
 
         float remainingInMinutes = timeToWaitInMinutes;
         while (remainingInMinutes > 0)
@@ -252,8 +269,11 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             slider.value += Time.deltaTime / (timeToWaitInMinutes * 60);
             yield return null;
         }
+
         Destroy(slider.gameObject);
         Destroy(delayBlock.gameObject);
+        Destroy(speedUpButton.gameObject);
+
         Play(candidates);
     }
 
@@ -261,13 +281,20 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     {
         Debug.Log("Delay entered from save");
 
-        _notificationManager.ScheduleNotification(DateTime.Now.AddMinutes(timeToWaitInMinutes), Const.NotificationKeys.DalayReminder);
+        NotificationManager.ScheduleNotification(DateTime.Now.AddMinutes(timeToWaitInMinutes), Const.NotificationKeys.DelayReminder);
 
         DateTime endTime = DateTime.Now.AddMinutes(timeToWaitInMinutes);
         var totalDelay = (endTime - startTime).TotalMinutes;
 
         GameObject delayBlock = _spawner.SpawnDelayBlock();
         Slider slider = _spawner.SpawnSlider(startTime, totalDelay);
+
+        var speedUpButton = slider.GetComponentInChildren<Button>();
+        if (!CanWatchAd)
+        {
+            speedUpButton.gameObject.SetActive(false);
+        }
+        speedUpButton.onClick.AddListener(() => _spawner.ShowSkipPopup());
 
         float remainingInMinutes = timeToWaitInMinutes;
         while (remainingInMinutes > 0)
@@ -277,6 +304,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             slider.value += (float)(Time.deltaTime / (totalDelay * 60));
             yield return null;
         }
+        Destroy(speedUpButton.gameObject);
         Destroy(delayBlock.gameObject); // будет ли работать без gameObject?
         Destroy(slider.gameObject);
     }

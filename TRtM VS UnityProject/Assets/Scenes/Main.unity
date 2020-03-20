@@ -651,7 +651,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0.00012064154, y: -1369.9939}
+  m_AnchoredPosition: {x: 0.00012064154, y: -1649.5714}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &318110344
@@ -706,6 +706,7 @@ GameObject:
   - component: {fileID: 337808191}
   - component: {fileID: 337808190}
   - component: {fileID: 337808193}
+  - component: {fileID: 337808195}
   - component: {fileID: 337808194}
   m_Layer: 0
   m_Name: Controllers
@@ -797,6 +798,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93b5d7a5cfda95545a8186ac3b178c2f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  adMockPrefab: {fileID: 2541410551792698879, guid: ea811b58749605248be8aad28ba326d0,
+    type: 3}
+  skipPopupPrefab: {fileID: 809513541965967834, guid: db41ad3f0e802d04fb7badd6b439c109,
+    type: 3}
   middlePrefab: {fileID: 5208767470107189347, guid: 5930a148c9c58e94fb8737e6196b1822,
     type: 3}
   sidesPrefab: {fileID: 5596245172523145358, guid: 431b0eaeb35b8a540b61c1ffc14f2c4c,
@@ -813,6 +818,7 @@ MonoBehaviour:
   delayBlockPrefab: {fileID: 5208767470107189347, guid: 1f7993d0d8b84e6498ada4d7540af499,
     type: 3}
   content: {fileID: 318110343}
+  canvas: {fileID: 1690711919}
 --- !u!114 &337808194
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -823,6 +829,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8b00f8350b797cc4db48e68c2927f3d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &337808195
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 337808188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f8d8377c19d3fa479d07bc4a2219342, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &519420028
