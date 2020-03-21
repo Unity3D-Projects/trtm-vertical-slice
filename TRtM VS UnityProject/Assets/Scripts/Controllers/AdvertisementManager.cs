@@ -9,8 +9,6 @@ namespace Assets.Scripts.Controllers
 {
     public class AdvertisementManager : MonoBehaviour, IUnityAdsListener
     {
-        private PrefabManager _prefabManager;
-        private Spawner _spawner;
         private SaveSystem _saveSystem;
         private GameController _controller;
 
@@ -25,8 +23,6 @@ namespace Assets.Scripts.Controllers
 
         void Start()
         {
-            _prefabManager = GetComponent<PrefabManager>();
-            _spawner = GetComponent <Spawner>();
             _saveSystem = GetComponent<SaveSystem>();
             _controller = GetComponent<GameController>();
 
@@ -45,33 +41,7 @@ namespace Assets.Scripts.Controllers
         public void ShowAd(string placementId)
         {
             Advertisement.Show(placementId);
-
-            
         }
-
-        //private IEnumerator ShowAdCoroutine()
-        //{
-        //
-        //    //Debug.Log("This is where the ad is shown on the screen");
-        //    //
-        //    //var ad = Instantiate(_prefabManager.adMockPrefab, _prefabManager.canvas);
-        //    //
-        //    //double timePassed = (DateTime.Now - DateTime.Now).TotalMinutes;
-        //    //Slider s = Instantiate(_prefabManager.sliderPrefab, ad.transform);
-        //    //s.interactable = false;
-        //    //s.value = (float)(timePassed / 0.25f);
-        //    //
-        //    //float remainingInMinutes = 0.25f;
-        //    //while (remainingInMinutes > 0)
-        //    //{
-        //    //    remainingInMinutes -= Time.deltaTime / 60;
-        //    //    s.value += Time.deltaTime / (0.25f * 60);
-        //    //    yield return null;
-        //    //}
-        //    //Destroy(s.gameObject);
-        //    //Destroy(ad.gameObject);
-        //
-        //}
 
         public void OnUnityAdsReady(string placementId)
         {
@@ -95,8 +65,7 @@ namespace Assets.Scripts.Controllers
 
             if (placementId == "rewardedVideo")
             {
-                AnalyticsEvent.AdStart(true, AdvertisingNetwork.UnityAds, placementId);
-                AnalyticsEvent.Custom("customAdStart");
+                AnalyticsEvent.AdStart(true, placementId);
             }
         }
 
@@ -112,14 +81,14 @@ namespace Assets.Scripts.Controllers
                 if (placementId == "rewardedVideo")
                 {
                     _controller.SkipDelay(0.2f);
-                    AnalyticsEvent.AdComplete(true, AdvertisingNetwork.UnityAds, placementId);
+                    AnalyticsEvent.AdComplete(true, placementId);
                 }
             }
             else if (showResult == ShowResult.Skipped)
             {
                 if (placementId == "rewardedVideo")
                 {
-                    AnalyticsEvent.AdSkip(true, AdvertisingNetwork.UnityAds, placementId);
+                    AnalyticsEvent.AdSkip(true, placementId);
                 }
             }
             else if (showResult == ShowResult.Failed)

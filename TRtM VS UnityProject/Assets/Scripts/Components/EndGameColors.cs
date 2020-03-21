@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EndGameColors : MonoBehaviour
 {
-    [Header("YouWin Color")]
+    [Header("You Win Color")]
     [SerializeField]
     public Color youWinColor;
     [Header("You Lose Color")]

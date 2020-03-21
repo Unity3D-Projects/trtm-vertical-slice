@@ -19,6 +19,7 @@ using UnityEngine.SceneManagement;
 using System.Threading.Tasks;
 using System.Threading;
 using Assets.Scripts.Controllers;
+using System.Linq;
 
 public enum TextSpeed { SLOWEST = 5, SLOW = 4, NORMAL = 3, FAST = 2, FASTEST = 1 }
 
@@ -187,7 +188,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         if (delay >= 0)
         {
             var coroutine = new CoroutineObject<List<Branch>, float>(this, PlayWithDelay);
-            coroutine.Start(candidates, 0.3f);
+            coroutine.Start(candidates, 5f);
             CurrentDelay = coroutine;
         }
         else
@@ -253,8 +254,8 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         DateTime endTime = DateTime.Now.AddMinutes(timeToWaitInMinutes);
         _saveSystem.SetStartTimeAndExecuteTime(startTime, endTime);
 
-        GameObject delayBlock = _spawner.SpawnDelayBlock();
         Slider slider = _spawner.SpawnSlider(DateTime.Now, timeToWaitInMinutes);
+        var countDownText = slider.GetComponentsInChildren<Text>().Where(x => x.name == "CountDownText").FirstOrDefault();
 
         var speedUpButton = slider.GetComponentInChildren<Button>();
         if (!CanWatchAd)
@@ -269,13 +270,12 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         while (remainingInMinutes > 0)
         {
             remainingInMinutes -= Time.deltaTime / 60;
-            delayBlock.GetComponentInChildren<Text>().text = TimeSpan.FromMinutes(remainingInMinutes).ToString(@"hh\:mm\:ss");
+            countDownText.text = TimeSpan.FromMinutes(remainingInMinutes).ToString(@"hh\:mm\:ss");
             slider.value += Time.deltaTime / (timeToWaitInMinutes * 60);
             yield return null;
         }
 
         Destroy(slider.gameObject);
-        Destroy(delayBlock.gameObject);
         Destroy(speedUpButton.gameObject);
 
         Play(candidates);
@@ -290,8 +290,8 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         DateTime endTime = DateTime.Now.AddMinutes(timeToWaitInMinutes);
         var totalDelay = (endTime - startTime).TotalMinutes;
 
-        GameObject delayBlock = _spawner.SpawnDelayBlock();
         Slider slider = _spawner.SpawnSlider(startTime, totalDelay);
+        var countDownText = slider.GetComponentsInChildren<Text>().Where(x => x.name == "CountDownText").FirstOrDefault();
 
         var speedUpButton = slider.GetComponentInChildren<Button>();
         if (!CanWatchAd)
@@ -306,12 +306,11 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         while (remainingInMinutes > 0)
         {
             remainingInMinutes -= Time.deltaTime / 60;
-            delayBlock.GetComponentInChildren<Text>().text = TimeSpan.FromMinutes(remainingInMinutes).ToString(@"hh\:mm\:ss");
+            countDownText.text = TimeSpan.FromMinutes(remainingInMinutes).ToString(@"hh\:mm\:ss");
             slider.value += (float)(Time.deltaTime / (totalDelay * 60));
             yield return null;
         }
         Destroy(speedUpButton.gameObject);
-        Destroy(delayBlock.gameObject); // будет ли работать без gameObject?
         Destroy(slider.gameObject);
     }
 
