@@ -35,7 +35,24 @@ public class Spawner : MonoBehaviour
         var yesButton = buttons.Where(x => x.GetComponentInChildren<Text>().text == "Да").FirstOrDefault();
         var noButton = buttons.Where(x => x.GetComponentInChildren<Text>().text == "Нет").FirstOrDefault();
 
-        yesButton.onClick.AddListener(() => _advertisementManager.ShowAd("rewardedVideo"));
+        yesButton.onClick.AddListener(() => _advertisementManager.ShowAd("rewardedVideo", () => SkipPopupCallback(popup)));
+        noButton.onClick.AddListener(() => Destroy(popup.gameObject));
+
+        return popup;
+    }
+
+
+
+    public GameObject ShowRewindPopup(string stateId)
+    {
+        var popup = Instantiate(_prefabManager.rewindPopupPrefab, _prefabManager.canvas);
+
+        var buttons = popup.GetComponentsInChildren<Button>();
+
+        var yesButton = buttons.Where(x => x.GetComponentInChildren<Text>().text == "Да").FirstOrDefault();
+        var noButton = buttons.Where(x => x.GetComponentInChildren<Text>().text == "Нет").FirstOrDefault();
+
+        yesButton.onClick.AddListener(() => _advertisementManager.ShowAd("rewardedVideo", () => _controller.RewindToState(stateId)));
         noButton.onClick.AddListener(() => Destroy(popup.gameObject));
 
         return popup;
@@ -138,7 +155,7 @@ public class Spawner : MonoBehaviour
             {
                 var reference = buttonGroup.GetComponent<ArticyReference>().reference;
                 var id = ((DialogueFragment)reference).TechnicalName;
-                _controller.RewindToState(id);
+                ShowRewindPopup(id);
             }
         });
         return b;
@@ -208,7 +225,7 @@ public class Spawner : MonoBehaviour
         {
             var reference = buttonGroup.GetComponent<ArticyReference>().reference;
             var id = ((DialogueFragment)reference).TechnicalName;
-            _controller.RewindToState(id);
+            ShowRewindPopup(id);
         }
     }
 }

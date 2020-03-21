@@ -7,6 +7,7 @@ public class PrefabManager : MonoBehaviour
 {
     public GameObject adMockPrefab;
     public GameObject skipPopupPrefab;
+    public GameObject rewindPopupPrefab;
     public GameObject middlePrefab;
     public GameObject sidesPrefab;
     public GameObject dotsPrefab;

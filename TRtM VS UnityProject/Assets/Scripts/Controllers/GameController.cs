@@ -98,9 +98,11 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     public void SkipDelay(float timeToSkipInMinutes)
     {
-        if (CurrentDelay.Coroutine != null)
+        var controller = FindObjectOfType<GameController>();
+
+        if (controller.CurrentDelay.Coroutine != null)
         {
-            StopCoroutine(CurrentDelay.Coroutine);
+            controller.StopCoroutine(controller.CurrentDelay.Coroutine);
             _saveSystem.SubtractMinutesFromExecute(timeToSkipInMinutes);
         }
 
@@ -185,10 +187,10 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
         float delay = (Current as DFTemplate)?.Template.DFFeature.Delay ?? 0;
 
-        if (delay >= 0)
+        if (delay > 0)
         {
             var coroutine = new CoroutineObject<List<Branch>, float>(this, PlayWithDelay);
-            coroutine.Start(candidates, 5f);
+            coroutine.Start(candidates, delay);
             CurrentDelay = coroutine;
         }
         else

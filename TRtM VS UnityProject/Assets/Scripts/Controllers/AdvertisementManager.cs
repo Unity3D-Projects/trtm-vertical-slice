@@ -12,6 +12,8 @@ namespace Assets.Scripts.Controllers
         private SaveSystem _saveSystem;
         private GameController _controller;
 
+        private Action RewardCallback;
+
         public bool IsAdsReady { get => Advertisement.IsReady(); private set => IsAdsReady = value; }
         public bool IsShowingAd { get; set; }
 
@@ -38,9 +40,15 @@ namespace Assets.Scripts.Controllers
             }
         }
 
-        public void ShowAd(string placementId)
+        public void ShowAd(string placementId, Action reward)
         {
+            RewardCallback = reward;
             Advertisement.Show(placementId);
+        }
+
+        public void Test()
+        {
+            _controller.SkipDelay(1);
         }
 
         public void OnUnityAdsReady(string placementId)
@@ -75,12 +83,20 @@ namespace Assets.Scripts.Controllers
 
             _saveSystem.SaveAdWatchedTime();
 
-
             if (showResult == ShowResult.Finished)
             {
                 if (placementId == "rewardedVideo")
                 {
-                    _controller.SkipDelay(0.2f);
+                    if (RewardCallback != null)
+                    {
+                        RewardCallback();
+                        //Test();
+                    }
+                    else
+                    {
+                        throw new Exception("Reward callback was null");
+                    }
+
                     AnalyticsEvent.AdComplete(true, placementId);
                 }
             }
