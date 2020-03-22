@@ -85,7 +85,6 @@ namespace Assets.Scripts.Controllers
                     if (RewardCallback != null)
                     {
                         RewardCallback();
-                        //Test();
                     }
                     else
                     {

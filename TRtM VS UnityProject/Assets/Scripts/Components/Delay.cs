@@ -59,22 +59,13 @@ public class Delay : MonoBehaviour
 
     IEnumerator RunCoroutine()
     {
-
         while (_remainingTimeInSeconds > 0)
         {
             _remainingTimeInSeconds -= Time.deltaTime / 2;
             yield return null;
             OnUpdate.Invoke();
         }
-        
-        if (OnDelayPassed != null)
-        {
-            OnDelayPassed.Invoke();
-        }
-        else
-        {
-            Debug.LogError("Trying to invoke OnDelayPassed callback when it is null");
 
-        }
+        OnDelayPassed.Invoke();
     }
 }
