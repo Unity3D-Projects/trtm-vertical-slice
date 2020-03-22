@@ -34,14 +34,14 @@ public class GameControllerEditor : Editor
 
         GUILayout.BeginHorizontal();
 
-        theController.minutesToSkip = EditorGUILayout.IntField("Minutes to skip", theController.minutesToSkip);
+        theController.secondsToSkip = EditorGUILayout.IntField("Seconds to skip", theController.secondsToSkip);
 
         ColorUtility.TryParseHtmlString("#C55A5A", out Color color);
         GUI.backgroundColor = color;
 
         if (GUILayout.Button("Skip delay >>", GUILayout.Width(200), GUILayout.Height(40)))
         {
-            theController.SkipDelay(theController.minutesToSkip);
+            theController.SkipDelay(theController.secondsToSkip);
         }
         GUILayout.EndHorizontal();
 

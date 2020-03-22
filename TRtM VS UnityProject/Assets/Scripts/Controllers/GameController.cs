@@ -38,7 +38,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     public float clampValue = 2.5f;
     public bool instantMode = false;
 
-    public int minutesToSkip;
+    public int secondsToSkip;
 
     public bool _allowRewinding = true;
     public bool AllowRewinding
@@ -92,21 +92,25 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
     public DialogueFragment Current { get; private set; }
     private float _currentSpeed;
-    public CoroutineObjectBase CurrentDelay { get; set; }
-
     public Button SpeedUpButton { get; set; }
 
-    public void SkipDelay(float timeToSkipInMinutes)
+    public void SkipDelay(float timeToSkipInSeconds)
     {
-        var controller = FindObjectOfType<GameController>();
+        var delay = FindObjectOfType<Delay>();
 
-        if (controller.CurrentDelay.Coroutine != null)
+        if (delay.IsRunning)
         {
-            controller.StopCoroutine(controller.CurrentDelay.Coroutine);
-            _saveSystem.SubtractMinutesFromExecute(timeToSkipInMinutes);
+            Debug.Log("Runtime boost");
+            delay.Boost(timeToSkipInSeconds);
+            _saveSystem.SubtractSecondssFromExecute(timeToSkipInSeconds);
+        }
+        else
+        {
+            Debug.Log("Stoptime boost");
+            delay.RemainingTimeInSeconds -= timeToSkipInSeconds;
+            delay.Run();
         }
 
-        SceneManager.LoadScene("Main");
         CanWatchAd = false;
     }
 
@@ -185,18 +189,60 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
         yield return WaitSeconds(textDelay);
 
-        float delay = (Current as DFTemplate)?.Template.DFFeature.Delay ?? 0;
+        float delayInSeconds = (Current as DFTemplate)?.Template.DFFeature.Delay ?? 0;
 
-        if (delay > 0)
+        if (delayInSeconds >= 0)
         {
-            var coroutine = new CoroutineObject<List<Branch>, float>(this, PlayWithDelay);
-            coroutine.Start(candidates, delay);
-            CurrentDelay = coroutine;
+            var delayComponent = SetUpDelay(30);
+            delayComponent.OnDelayPassed.AddListener(() => Play(candidates));
+
+            delayComponent.Run();
         }
         else
         {
             Play(candidates);
         }
+    }
+
+    public Delay SetUpDelay(float delayInSeconds)
+    {
+        CanWatchAd = true;
+
+        NotificationManager.ScheduleNotification(DateTime.Now.AddSeconds(delayInSeconds), Const.NotificationKeys.DelayReminder);
+
+        DateTime startTime = DateTime.Now;
+        DateTime endTime = DateTime.Now.AddSeconds(delayInSeconds);
+        _saveSystem.SetStartTimeAndExecuteTime(startTime, endTime);
+
+        var slider = _spawner.SpawnSlider(DateTime.Now, delayInSeconds);
+        var delayComponent = slider.GetComponent<Delay>();
+        
+        var countDownText = slider.GetComponentsInChildren<Text>().Where(x => x.name == "CountDownText").FirstOrDefault();
+
+        delayComponent.OnUpdate.AddListener(() =>
+        {
+            countDownText.text = TimeSpan.FromSeconds(delayComponent.RemainingTimeInSeconds).ToString(@"hh\:mm\:ss");
+            slider.normalizedValue = 1 - Mathf.Lerp(0, 1, delayComponent.RemainingTimeInSeconds / delayInSeconds);
+        });
+
+        var speedUpButton = slider.GetComponentInChildren<Button>();
+        if (!CanWatchAd)
+        {
+            speedUpButton.gameObject.SetActive(false);
+        }
+        speedUpButton.onClick.AddListener(() => _spawner.ShowSkipPopup());
+
+        SpeedUpButton = speedUpButton;
+
+        delayComponent.RemainingTimeInSeconds = delayInSeconds;
+        delayComponent.OnDelayPassed.AddListener(() =>
+        {
+            Destroy(slider.gameObject);
+            Destroy(speedUpButton.gameObject);
+            delayComponent.OnDelayPassed.RemoveAllListeners();
+        });
+
+        return delayComponent;
     }
 
     private IEnumerator WaitSeconds(float seconds)
@@ -242,78 +288,6 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
         _player.Play(branch);
         _saveSystem.LogGlobalVars();
-    }
-
-    private IEnumerator PlayWithDelay(List<Branch> candidates, float timeToWaitInMinutes)
-    {
-        Debug.Log("Delay entered from game");
-
-        CanWatchAd = true;
-
-        NotificationManager.ScheduleNotification(DateTime.Now.AddMinutes(timeToWaitInMinutes), Const.NotificationKeys.DelayReminder);
-
-        DateTime startTime = DateTime.Now;
-        DateTime endTime = DateTime.Now.AddMinutes(timeToWaitInMinutes);
-        _saveSystem.SetStartTimeAndExecuteTime(startTime, endTime);
-
-        Slider slider = _spawner.SpawnSlider(DateTime.Now, timeToWaitInMinutes);
-        var countDownText = slider.GetComponentsInChildren<Text>().Where(x => x.name == "CountDownText").FirstOrDefault();
-
-        var speedUpButton = slider.GetComponentInChildren<Button>();
-        if (!CanWatchAd)
-        {
-            speedUpButton.gameObject.SetActive(false);
-        }
-        speedUpButton.onClick.AddListener(() => _spawner.ShowSkipPopup());
-
-        SpeedUpButton = speedUpButton;
-
-        float remainingInMinutes = timeToWaitInMinutes;
-        while (remainingInMinutes > 0)
-        {
-            remainingInMinutes -= Time.deltaTime / 60;
-            countDownText.text = TimeSpan.FromMinutes(remainingInMinutes).ToString(@"hh\:mm\:ss");
-            slider.value += Time.deltaTime / (timeToWaitInMinutes * 60);
-            yield return null;
-        }
-
-        Destroy(slider.gameObject);
-        Destroy(speedUpButton.gameObject);
-
-        Play(candidates);
-    }
-
-    public IEnumerator ExecuteWithDelay(DateTime startTime, float timeToWaitInMinutes)
-    {
-        Debug.Log("Delay entered from save");
-
-        NotificationManager.ScheduleNotification(DateTime.Now.AddMinutes(timeToWaitInMinutes), Const.NotificationKeys.DelayReminder);
-
-        DateTime endTime = DateTime.Now.AddMinutes(timeToWaitInMinutes);
-        var totalDelay = (endTime - startTime).TotalMinutes;
-
-        Slider slider = _spawner.SpawnSlider(startTime, totalDelay);
-        var countDownText = slider.GetComponentsInChildren<Text>().Where(x => x.name == "CountDownText").FirstOrDefault();
-
-        var speedUpButton = slider.GetComponentInChildren<Button>();
-        if (!CanWatchAd)
-        {
-            speedUpButton.gameObject.SetActive(false);
-        }
-        speedUpButton.onClick.AddListener(() => _spawner.ShowSkipPopup());
-
-        SpeedUpButton = speedUpButton;
-
-        float remainingInMinutes = timeToWaitInMinutes;
-        while (remainingInMinutes > 0)
-        {
-            remainingInMinutes -= Time.deltaTime / 60;
-            countDownText.text = TimeSpan.FromMinutes(remainingInMinutes).ToString(@"hh\:mm\:ss");
-            slider.value += (float)(Time.deltaTime / (totalDelay * 60));
-            yield return null;
-        }
-        Destroy(speedUpButton.gameObject);
-        Destroy(slider.gameObject);
     }
 
     public void RewindToState(string stateId)

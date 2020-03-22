@@ -46,11 +46,6 @@ namespace Assets.Scripts.Controllers
             Advertisement.Show(placementId);
         }
 
-        public void Test()
-        {
-            _controller.SkipDelay(1);
-        }
-
         public void OnUnityAdsReady(string placementId)
         {
             if (placementId == "rewardedVideo")

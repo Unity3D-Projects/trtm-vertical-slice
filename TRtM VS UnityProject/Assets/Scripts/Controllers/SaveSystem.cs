@@ -85,15 +85,12 @@ public class SaveSystem : MonoBehaviour
 
         _controller.CanWatchAd = result.canWatchAd;
 
-        if (result.remainingInMinutes > 0)
+        if (result.remainingInSeconds > 0)
         {
-            var coroutine = new CoroutineObject<DateTime, float>(_controller, _controller.ExecuteWithDelay);
-            coroutine.Finished += () =>
-            {
-                _controller.PlayerStandBy = false;
-            };
-            coroutine.Start(result.startTime, result.remainingInMinutes);
-            _controller.CurrentDelay = coroutine;
+            var delayComponent = _controller.SetUpDelay(result.remainingInSeconds);
+            delayComponent.OnDelayPassed.AddListener(() => { _controller.PlayerStandBy = false; });
+
+            delayComponent.Run();
         }
         else
         {
@@ -162,7 +159,7 @@ public class SaveSystem : MonoBehaviour
         xDoc.Save(_savePath);
     }
 
-    private (DateTime startTime, float remainingInMinutes, bool canWatchAd) CheckForDelay(XDocument xDoc)
+    private (DateTime startTime, float remainingInSeconds, bool canWatchAd) CheckForDelay(XDocument xDoc)
     {
         var xExecute = xDoc.Element("save").Element("execute");
 
@@ -174,8 +171,8 @@ public class SaveSystem : MonoBehaviour
 
         if (executeTime != null && DateTime.Now < executeTime)
         {
-            var remainingInMinutes = (float)(executeTime - DateTime.Now).TotalMinutes;
-            return (startTime, remainingInMinutes, canWatchAd);
+            var remainingInSeconds = (float)(executeTime - DateTime.Now).TotalSeconds;
+            return (startTime, remainingInSeconds, canWatchAd);
         }
 
         return (startTime, 0, canWatchAd);
@@ -343,19 +340,19 @@ public class SaveSystem : MonoBehaviour
         xDoc.Element("save").Element("execute").Attribute(Const.XmlAliases.ExecuteId).Value = technicalName;
         xDoc.Save(_savePath);
     }
-    public void SubtractMinutesFromExecute(float time)
+    public void SubtractSecondssFromExecute(float time)
     {
         XDocument xDoc = XDocument.Load(_savePath);
         var xExecute = xDoc.Element("save").Element("execute");
 
         var xExecuteTime = xExecute.Attribute(Const.XmlAliases.ExecuteTime);
         DateTime eBefore = DateTime.Parse(xExecuteTime.Value);
-        DateTime eAfter = eBefore.AddMinutes(-time);
+        DateTime eAfter = eBefore.AddSeconds(-time);
         xExecuteTime.Value = eAfter.ToString();
 
         var xStartTime = xExecute.Attribute(Const.XmlAliases.StartTime);
         DateTime sBefore = DateTime.Parse(xStartTime.Value);
-        DateTime sAfter = sBefore.AddMinutes(-time);
+        DateTime sAfter = sBefore.AddSeconds(-time);
         xStartTime.Value = sAfter.ToString();
 
         xDoc.Save(_savePath);

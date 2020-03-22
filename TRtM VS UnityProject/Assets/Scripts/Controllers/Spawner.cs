@@ -60,7 +60,7 @@ public class Spawner : MonoBehaviour
 
     private void SkipPopupCallback(GameObject popup)
     {
-        _controller.SkipDelay(1);
+        _controller.SkipDelay(60);
         Destroy(popup.gameObject);
     }
 

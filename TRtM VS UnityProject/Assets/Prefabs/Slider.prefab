@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5619421399378629162}
   - component: {fileID: 7247952826743527810}
   - component: {fileID: -1291400100331527264}
+  - component: {fileID: 2098845162137410023}
   m_Layer: 5
   m_Name: Slider
   m_TagString: Untagged
@@ -113,6 +114,18 @@ MonoBehaviour:
   m_FlexibleWidth: -1
   m_FlexibleHeight: -1
   m_LayoutPriority: 1
+--- !u!114 &2098845162137410023
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2594997820199461228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8087884b107f3e54c9f199d7b9822ab7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2969578316526334462
 GameObject:
   m_ObjectHideFlags: 0
