@@ -20,9 +20,9 @@ namespace Articy.The_Road_To_Moscow
 {
     
     
-    public enum Ambience
+    public enum Image
     {
         
-        Stop = 1,
+        DickPic = 1,
     }
 }

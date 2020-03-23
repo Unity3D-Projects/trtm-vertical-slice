@@ -66,7 +66,7 @@ namespace Articy.The_Road_To_Moscow
     
     
     [Serializable()]
-    public class ArticyValueText_Position : ArticyValue<Text_Position>
+    public class ArticyValueImage : ArticyValue<Image>
     {
     }
 }
@@ -94,6 +94,15 @@ namespace Articy.The_Road_To_Moscow
     
     [Serializable()]
     public class ArticyValueAmbience : ArticyValue<Ambience>
+    {
+    }
+}
+namespace Articy.The_Road_To_Moscow
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueTextPosdition : ArticyValue<TextPosdition>
     {
     }
 }
@@ -183,33 +192,6 @@ namespace Articy.The_Road_To_Moscow
     
     
     [Serializable()]
-    public class ArticyValueDFTemplateTemplate : ArticyValue<Articy.The_Road_To_Moscow.Templates.DFTemplateTemplate>
-    {
-    }
-}
-namespace Articy.The_Road_To_Moscow
-{
-    
-    
-    [Serializable()]
-    public class ArticyValueDFFeatureFeature : ArticyValue<Articy.The_Road_To_Moscow.Features.DFFeatureFeature>
-    {
-    }
-}
-namespace Articy.The_Road_To_Moscow
-{
-    
-    
-    [Serializable()]
-    public class ArticyValueDFTemplate : ArticyValue<DFTemplate>
-    {
-    }
-}
-namespace Articy.The_Road_To_Moscow
-{
-    
-    
-    [Serializable()]
     public class ArticyValueHub : ArticyValue<Hub>
     {
     }
@@ -246,7 +228,7 @@ namespace Articy.The_Road_To_Moscow
     
     
     [Serializable()]
-    public class ArticyValueEntityTemplateTemplate : ArticyValue<Articy.The_Road_To_Moscow.Templates.EntityTemplateTemplate>
+    public class ArticyValueEntityWithTextPositionTemplate : ArticyValue<Articy.The_Road_To_Moscow.Templates.EntityWithTextPositionTemplate>
     {
     }
 }
@@ -255,7 +237,7 @@ namespace Articy.The_Road_To_Moscow
     
     
     [Serializable()]
-    public class ArticyValueEntityFeatureFeature : ArticyValue<Articy.The_Road_To_Moscow.Features.EntityFeatureFeature>
+    public class ArticyValueEntityFFeature : ArticyValue<Articy.The_Road_To_Moscow.Features.EntityFFeature>
     {
     }
 }
@@ -264,7 +246,7 @@ namespace Articy.The_Road_To_Moscow
     
     
     [Serializable()]
-    public class ArticyValueEntityTemplate : ArticyValue<EntityTemplate>
+    public class ArticyValueEntityWithTextPosition : ArticyValue<EntityWithTextPosition>
     {
     }
 }
@@ -337,6 +319,60 @@ namespace Articy.The_Road_To_Moscow
     
     [Serializable()]
     public class ArticyValueInstruction : ArticyValue<Instruction>
+    {
+    }
+}
+namespace Articy.The_Road_To_Moscow
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueGameAssetTemplate : ArticyValue<Articy.The_Road_To_Moscow.Templates.GameAssetTemplate>
+    {
+    }
+}
+namespace Articy.The_Road_To_Moscow
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueAssetFFeature : ArticyValue<Articy.The_Road_To_Moscow.Features.AssetFFeature>
+    {
+    }
+}
+namespace Articy.The_Road_To_Moscow
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueGameAsset : ArticyValue<GameAsset>
+    {
+    }
+}
+namespace Articy.The_Road_To_Moscow
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueDelayTemplate : ArticyValue<Articy.The_Road_To_Moscow.Templates.DelayTemplate>
+    {
+    }
+}
+namespace Articy.The_Road_To_Moscow
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueDelayFFeature : ArticyValue<Articy.The_Road_To_Moscow.Features.DelayFFeature>
+    {
+    }
+}
+namespace Articy.The_Road_To_Moscow
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueDelay : ArticyValue<Delay>
     {
     }
 }

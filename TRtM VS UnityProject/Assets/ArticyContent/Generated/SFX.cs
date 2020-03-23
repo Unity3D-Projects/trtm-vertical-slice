@@ -23,10 +23,6 @@ namespace Articy.The_Road_To_Moscow
     public enum SFX
     {
         
-        Stop = 0,
-        
-        Fuss = 1,
-        
-        Walking = 2,
+        Pook = 1,
     }
 }

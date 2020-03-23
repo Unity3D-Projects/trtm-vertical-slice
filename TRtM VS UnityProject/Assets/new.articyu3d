@@ -1,0 +1,6325 @@
+{
+  "Settings": {
+    "set_Localization": "False",
+    "set_TextFormatter": "Unity",
+    "set_IncludedNodes": "Settings, Project, GlobalVariables, ObjectDefinitions, Packages, ScriptMethods, Hierarchy, Assets",
+    "set_UseScriptSupport": "True",
+    "ExportVersion": "1.1",
+    "ObjectDefinitionsHash": "1689020DA14F19D43DF77028517DC365568844198F930F3FC3638F25D5446D03",
+    "ScriptFragmentsHash": "3219844167"
+  },
+  "Project": {
+    "Name": "The Road to Moscow",
+    "DetailName": "Text adventure by Whatever Software",
+    "Guid": "53bfac0f-85b4-4272-972e-54edbe7ed775",
+    "TechnicalName": "The_Road_To_Moscow"
+  },
+  "GlobalVariables": [
+    {
+      "Namespace": "GameState",
+      "Description": "",
+      "Variables": []
+    },
+    {
+      "Namespace": "TheHouse",
+      "Description": "",
+      "Variables": [
+        {
+          "Variable": "IntroT1",
+          "Type": "Boolean",
+          "Value": "False",
+          "Description": "Отец рассказывает, что всё вымокло"
+        },
+        {
+          "Variable": "Timer",
+          "Type": "Integer",
+          "Value": "0",
+          "Description": "Считает время в доме."
+        }
+      ]
+    }
+  ],
+  "ObjectDefinitions": [
+    {
+      "Type": "Point",
+      "Class": "Primitive",
+      "Properties": [
+        {
+          "Property": "x",
+          "Type": "float"
+        },
+        {
+          "Property": "y",
+          "Type": "float"
+        }
+      ]
+    },
+    {
+      "Type": "Color",
+      "Class": "Primitive",
+      "Properties": [
+        {
+          "Property": "a",
+          "Type": "float"
+        },
+        {
+          "Property": "r",
+          "Type": "float"
+        },
+        {
+          "Property": "g",
+          "Type": "float"
+        },
+        {
+          "Property": "b",
+          "Type": "float"
+        }
+      ]
+    },
+    {
+      "Type": "Size",
+      "Class": "Primitive",
+      "Properties": [
+        {
+          "Property": "w",
+          "Type": "float"
+        },
+        {
+          "Property": "h",
+          "Type": "float"
+        }
+      ]
+    },
+    {
+      "Type": "Rect",
+      "Class": "Primitive",
+      "Properties": [
+        {
+          "Property": "x",
+          "Type": "float"
+        },
+        {
+          "Property": "y",
+          "Type": "float"
+        },
+        {
+          "Property": "w",
+          "Type": "float"
+        },
+        {
+          "Property": "h",
+          "Type": "float"
+        }
+      ]
+    },
+    {
+      "Type": "PreviewImage",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "ViewBox",
+          "Type": "Rect"
+        },
+        {
+          "Property": "Mode",
+          "Type": "PreviewImageViewBoxModes"
+        },
+        {
+          "Property": "Asset",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Transformation",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "Pivot",
+          "Type": "Point"
+        },
+        {
+          "Property": "Rotation",
+          "Type": "float"
+        },
+        {
+          "Property": "Translation",
+          "Type": "Point"
+        }
+      ]
+    },
+    {
+      "Type": "OutgoingConnection",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "Label",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "TargetPin",
+          "Type": "InputPin"
+        },
+        {
+          "Property": "Target",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "IncomingConnection",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "Label",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "SourcePin",
+          "Type": "OutputPin"
+        },
+        {
+          "Property": "Source",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "OutputPin",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "Text",
+          "Type": "Script_Instruction"
+        },
+        {
+          "Property": "Id",
+          "Type": "id"
+        },
+        {
+          "Property": "Owner",
+          "Type": "id"
+        },
+        {
+          "Property": "Connections",
+          "Type": "Array",
+          "ItemType": "OutgoingConnection"
+        }
+      ]
+    },
+    {
+      "Type": "InputPin",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "Text",
+          "Type": "Script_Condition"
+        },
+        {
+          "Property": "Id",
+          "Type": "id"
+        },
+        {
+          "Property": "Owner",
+          "Type": "id"
+        },
+        {
+          "Property": "Connections",
+          "Type": "Array",
+          "ItemType": "OutgoingConnection"
+        }
+      ]
+    },
+    {
+      "Type": "LocationAnchor",
+      "Class": "ArticyObject",
+      "Properties": [
+        {
+          "Property": "AnchorPositionX",
+          "Type": "float"
+        },
+        {
+          "Property": "AnchorPositionY",
+          "Type": "float"
+        },
+        {
+          "Property": "AnchorColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "AnchorSize",
+          "Type": "LocationAnchorSize"
+        }
+      ]
+    },
+    {
+      "Type": "Image",
+      "Class": "Enum",
+      "DisplayName": "Image",
+      "Values": {
+        "DickPic": 1
+      },
+      "DisplayNames": {
+        "DickPic": "DickPic"
+      }
+    },
+    {
+      "Type": "SFX",
+      "Class": "Enum",
+      "DisplayName": "SFX",
+      "Values": {
+        "Pook": 1
+      },
+      "DisplayNames": {
+        "Pook": "Pook"
+      }
+    },
+    {
+      "Type": "Music",
+      "Class": "Enum",
+      "DisplayName": "Music",
+      "Values": {
+        "Stop": 1
+      },
+      "DisplayNames": {
+        "Stop": "Stop"
+      }
+    },
+    {
+      "Type": "Ambience",
+      "Class": "Enum",
+      "DisplayName": "Ambience",
+      "Values": {
+        "Stop": 1
+      },
+      "DisplayNames": {
+        "Stop": "Stop"
+      }
+    },
+    {
+      "Type": "TextPosdition",
+      "Class": "Enum",
+      "DisplayName": "Text Position",
+      "Values": {
+        "Left": 1,
+        "Middle": 2,
+        "Right": 3
+      },
+      "DisplayNames": {
+        "Left": "Left",
+        "Middle": "Middle",
+        "Right": "Right"
+      }
+    },
+    {
+      "Type": "ShapeType",
+      "Class": "Enum",
+      "DisplayName": "ShapeType",
+      "Values": {
+        "Invalid": 0,
+        "Spot": 1,
+        "Circle": 2,
+        "Rectangle": 3,
+        "Path": 4,
+        "Polygon": 5,
+        "Link": 6
+      },
+      "DisplayNames": {
+        "Invalid": "Invalid",
+        "Spot": "Spot",
+        "Circle": "Circle",
+        "Rectangle": "Rectangle",
+        "Path": "Path",
+        "Polygon": "Polygon",
+        "Link": "Link"
+      }
+    },
+    {
+      "Type": "SelectabilityModes",
+      "Class": "Enum",
+      "DisplayName": "SelectabilityModes",
+      "Values": {
+        "Unselectable": 0,
+        "Selectable": 1
+      },
+      "DisplayNames": {
+        "Unselectable": "Unselectable",
+        "Selectable": "Selectable"
+      }
+    },
+    {
+      "Type": "VisibilityModes",
+      "Class": "Enum",
+      "DisplayName": "VisibilityModes",
+      "Values": {
+        "Invisible": 0,
+        "Visible": 1
+      },
+      "DisplayNames": {
+        "Invisible": "Invisible",
+        "Visible": "Visible"
+      }
+    },
+    {
+      "Type": "OutlineStyle",
+      "Class": "Enum",
+      "DisplayName": "OutlineStyle",
+      "Values": {
+        "Solid": 0,
+        "Dot": 1,
+        "Dash": 2,
+        "DashDot": 3,
+        "DashDotDot": 4
+      },
+      "DisplayNames": {
+        "Solid": "Solid",
+        "Dot": "Dot",
+        "Dash": "Dash",
+        "DashDot": "DashDot",
+        "DashDotDot": "DashDotDot"
+      }
+    },
+    {
+      "Type": "PathCaps",
+      "Class": "Enum",
+      "DisplayName": "PathCaps",
+      "Values": {
+        "ColoredDot": 0,
+        "None": 1,
+        "LineArrowHead": 2,
+        "FilledArrowHead": 3,
+        "Diamond": 4,
+        "Square": 5,
+        "Disc": 6
+      },
+      "DisplayNames": {
+        "ColoredDot": "ColoredDot",
+        "None": "None",
+        "LineArrowHead": "LineArrowHead",
+        "FilledArrowHead": "FilledArrowHead",
+        "Diamond": "Diamond",
+        "Square": "Square",
+        "Disc": "Disc"
+      }
+    },
+    {
+      "Type": "LocationAnchorSize",
+      "Class": "Enum",
+      "DisplayName": "LocationAnchorSize",
+      "Values": {
+        "Small": 0,
+        "Medium": 1,
+        "Large": 2
+      },
+      "DisplayNames": {
+        "Small": "Small",
+        "Medium": "Medium",
+        "Large": "Large"
+      }
+    },
+    {
+      "Type": "PreviewImageViewBoxModes",
+      "Class": "Enum",
+      "DisplayName": "PreviewImageViewBoxModes",
+      "Values": {
+        "FromAsset": 0,
+        "Custom": 1
+      },
+      "DisplayNames": {
+        "FromAsset": "FromAsset",
+        "Custom": "Custom"
+      }
+    },
+    {
+      "Type": "FlowFragment",
+      "Class": "FlowFragment",
+      "DisplayName": "FlowFragment",
+      "Properties": [
+        {
+          "Property": "Attachments",
+          "Type": "Array",
+          "ItemType": "Id"
+        },
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "Dialogue",
+      "Class": "Dialogue",
+      "DisplayName": "Dialogue",
+      "Properties": [
+        {
+          "Property": "Attachments",
+          "Type": "Array",
+          "ItemType": "Id"
+        },
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "DialogueFragment",
+      "Class": "DialogueFragment",
+      "DisplayName": "DialogueFragment",
+      "Properties": [
+        {
+          "Property": "MenuText",
+          "Type": "string"
+        },
+        {
+          "Property": "StageDirections",
+          "Type": "string"
+        },
+        {
+          "Property": "Speaker",
+          "Type": "Id"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "Hub",
+      "Class": "Hub",
+      "DisplayName": "Hub",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "Comment",
+      "Class": "Comment",
+      "DisplayName": "Comment",
+      "Properties": [
+        {
+          "Property": "CreatedBy",
+          "Type": "string"
+        },
+        {
+          "Property": "CreatedOn",
+          "Type": "DateTime"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Jump",
+      "Class": "Jump",
+      "DisplayName": "Jump",
+      "Properties": [
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "Target",
+          "Type": "Id"
+        },
+        {
+          "Property": "TargetPin",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "Entity",
+      "Class": "Entity",
+      "DisplayName": "Entity",
+      "Properties": [
+        {
+          "Property": "Attachments",
+          "Type": "Array",
+          "ItemType": "Id"
+        },
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "EntityWithTextPosition",
+      "Class": "Entity",
+      "InheritsFrom": "Entity",
+      "Template": {
+        "TechnicalName": "EntityWithTextPosition",
+        "DisplayName": "EntityWithTextPosition",
+        "Features": [
+          {
+            "TechnicalName": "EntityF",
+            "DisplayName": "EntityF",
+            "Properties": [
+              {
+                "Property": "TextPosdition",
+                "Type": "TextPosdition",
+                "DisplayName": "Text Position",
+                "ToolTip": "Позиция текста на экране."
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "TextPosdition",
+                "Type": "Enum",
+                "IsLocalized": "False",
+                "SortMode": "BySortIndex"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Location",
+      "Class": "Location",
+      "DisplayName": "Location",
+      "Properties": [
+        {
+          "Property": "Attachments",
+          "Type": "Array",
+          "ItemType": "Id"
+        },
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Spot",
+      "Class": "Spot",
+      "DisplayName": "Spot",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "ShowDisplayName",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "DisplayNameColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "DisplayNameSize",
+          "Type": "int"
+        },
+        {
+          "Property": "OutlineColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "OutlineSize",
+          "Type": "Float"
+        },
+        {
+          "Property": "OutlineStyle",
+          "Type": "OutlineStyle"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Zone",
+      "Class": "Zone",
+      "DisplayName": "Zone",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Vertices",
+          "Type": "Array",
+          "ItemType": "Point"
+        },
+        {
+          "Property": "Transform",
+          "Type": "Transformation"
+        },
+        {
+          "Property": "ShapeType",
+          "Type": "ShapeType"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "OutlineColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "OutlineSize",
+          "Type": "Float"
+        },
+        {
+          "Property": "OutlineStyle",
+          "Type": "OutlineStyle"
+        },
+        {
+          "Property": "ShowDisplayName",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "DisplayNameColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "DisplayNameSize",
+          "Type": "int"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Path",
+      "Class": "Path",
+      "DisplayName": "Path",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Vertices",
+          "Type": "Array",
+          "ItemType": "Point"
+        },
+        {
+          "Property": "Transform",
+          "Type": "Transformation"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "ShowDisplayName",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "DisplayNameColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "DisplayNameSize",
+          "Type": "int"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "OutlineColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "OutlineSize",
+          "Type": "Float"
+        },
+        {
+          "Property": "OutlineStyle",
+          "Type": "OutlineStyle"
+        },
+        {
+          "Property": "StartCap",
+          "Type": "PathCaps"
+        },
+        {
+          "Property": "EndCap",
+          "Type": "PathCaps"
+        },
+        {
+          "Property": "LineWidth",
+          "Type": "Float"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Link",
+      "Class": "Link",
+      "DisplayName": "Link",
+      "Properties": [
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "Target",
+          "Type": "Id"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "ShowDisplayName",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "DisplayNameColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "DisplayNameSize",
+          "Type": "int"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Asset",
+      "Class": "Asset",
+      "DisplayName": "Asset",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Filename",
+          "Type": "string"
+        },
+        {
+          "Property": "OriginalSource",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Condition",
+      "Class": "Condition",
+      "DisplayName": "Condition",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "String"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Expression",
+          "Type": "Script_Condition"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "Instruction",
+      "Class": "Instruction",
+      "DisplayName": "Instruction",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "String"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Expression",
+          "Type": "Script_Instruction"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "InputPins",
+          "Type": "Array",
+          "ItemType": "InputPin"
+        },
+        {
+          "Property": "OutputPins",
+          "Type": "Array",
+          "ItemType": "OutputPin"
+        }
+      ]
+    },
+    {
+      "Type": "GameAsset",
+      "Class": "Instruction",
+      "InheritsFrom": "Instruction",
+      "Template": {
+        "TechnicalName": "GameAsset",
+        "DisplayName": "GameAsset",
+        "Features": [
+          {
+            "TechnicalName": "AssetF",
+            "DisplayName": "AssetF",
+            "Properties": [
+              {
+                "Property": "Ambience",
+                "Type": "Ambience",
+                "DisplayName": "Ambience",
+                "ToolTip": "Звуки окружающего мира."
+              },
+              {
+                "Property": "Music",
+                "Type": "Music",
+                "DisplayName": "Music",
+                "ToolTip": "Музыка в игре."
+              },
+              {
+                "Property": "SFX",
+                "Type": "SFX",
+                "DisplayName": "SFX",
+                "ToolTip": "Звуковой эффект."
+              },
+              {
+                "Property": "Image",
+                "Type": "Image",
+                "DisplayName": "Image",
+                "ToolTip": "Изображение в игре."
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Ambience",
+                "Type": "Enum",
+                "IsLocalized": "False",
+                "SortMode": "BySortIndex"
+              },
+              {
+                "Property": "Music",
+                "Type": "Enum",
+                "IsLocalized": "False",
+                "SortMode": "BySortIndex"
+              },
+              {
+                "Property": "SFX",
+                "Type": "Enum",
+                "IsLocalized": "False",
+                "SortMode": "BySortIndex"
+              },
+              {
+                "Property": "Image",
+                "Type": "Enum",
+                "IsLocalized": "False",
+                "SortMode": "BySortIndex"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Type": "Delay",
+      "Class": "Instruction",
+      "InheritsFrom": "Instruction",
+      "Template": {
+        "TechnicalName": "Delay",
+        "DisplayName": "Delay",
+        "Features": [
+          {
+            "TechnicalName": "DelayF",
+            "DisplayName": "DelayF",
+            "Properties": [
+              {
+                "Property": "Delay",
+                "Type": "Float",
+                "DisplayName": "Delay",
+                "ToolTip": "Длительная задержка. Визуально отображается и может быть пропущена с помощью просмотра рекламы."
+              },
+              {
+                "Property": "Waiting",
+                "Type": "Float",
+                "DisplayName": "Waiting",
+                "ToolTip": "Короткая задержка."
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Delay",
+                "Type": "Number",
+                "MinValue": "-3.40282346638529E+38",
+                "MaxValue": "3.40282346638529E+38",
+                "Precision": "0",
+                "MinPrecision": "0",
+                "MaxPrecision": "0",
+                "Unit": "min"
+              },
+              {
+                "Property": "Waiting",
+                "Type": "Number",
+                "MinValue": "-3.40282346638529E+38",
+                "MaxValue": "3.40282346638529E+38",
+                "Precision": "0",
+                "MinPrecision": "0",
+                "MaxPrecision": "0",
+                "Unit": "sec"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "Type": "LocationText",
+      "Class": "LocationText",
+      "DisplayName": "LocationText",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "String"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Anchors",
+          "Type": "Array",
+          "ItemType": "LocationAnchor"
+        },
+        {
+          "Property": "Vertices",
+          "Type": "Array",
+          "ItemType": "Point"
+        },
+        {
+          "Property": "Transform",
+          "Type": "Transformation"
+        },
+        {
+          "Property": "ShapeType",
+          "Type": "ShapeType"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "OutlineColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "OutlineSize",
+          "Type": "Float"
+        },
+        {
+          "Property": "OutlineStyle",
+          "Type": "OutlineStyle"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "ForcedWidth",
+          "Type": "Float"
+        },
+        {
+          "Property": "ForcedHeight",
+          "Type": "Float"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "LocationImage",
+      "Class": "LocationImage",
+      "DisplayName": "LocationImage",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Anchors",
+          "Type": "Array",
+          "ItemType": "LocationAnchor"
+        },
+        {
+          "Property": "Vertices",
+          "Type": "Array",
+          "ItemType": "Point"
+        },
+        {
+          "Property": "Transform",
+          "Type": "Transformation"
+        },
+        {
+          "Property": "ShapeType",
+          "Type": "ShapeType"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Visibility",
+          "Type": "VisibilityModes"
+        },
+        {
+          "Property": "OutlineColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "OutlineSize",
+          "Type": "Float"
+        },
+        {
+          "Property": "OutlineStyle",
+          "Type": "OutlineStyle"
+        },
+        {
+          "Property": "Selectability",
+          "Type": "SelectabilityModes"
+        },
+        {
+          "Property": "DropShadow",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "ClipRect",
+          "Type": "Rect"
+        },
+        {
+          "Property": "ImageOpacity",
+          "Type": "Float"
+        },
+        {
+          "Property": "ImageAsset",
+          "Type": "Id"
+        },
+        {
+          "Property": "CachedImageWidth",
+          "Type": "int"
+        },
+        {
+          "Property": "CachedImageHeight",
+          "Type": "int"
+        },
+        {
+          "Property": "ShowDisplayName",
+          "Type": "Boolean"
+        },
+        {
+          "Property": "DisplayNameColor",
+          "Type": "Color"
+        },
+        {
+          "Property": "DisplayNameSize",
+          "Type": "int"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "Document",
+      "Class": "Document",
+      "DisplayName": "Document",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "TextObject",
+      "Class": "TextObject",
+      "DisplayName": "TextObject",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "Attachments",
+          "Type": "Array",
+          "ItemType": "Id"
+        },
+        {
+          "Property": "PreviewImage",
+          "Type": "PreviewImage"
+        },
+        {
+          "Property": "Color",
+          "Type": "Color"
+        },
+        {
+          "Property": "Text",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "Position",
+          "Type": "Point"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        },
+        {
+          "Property": "Size",
+          "Type": "Size"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        }
+      ]
+    },
+    {
+      "Type": "UserFolder",
+      "Class": "UserFolder",
+      "DisplayName": "UserFolder",
+      "Properties": [
+        {
+          "Property": "DisplayName",
+          "Type": "string"
+        },
+        {
+          "Property": "ExternalId",
+          "Type": "string"
+        },
+        {
+          "Property": "ShortId",
+          "Type": "uint"
+        },
+        {
+          "Property": "Id",
+          "Type": "Id"
+        },
+        {
+          "Property": "TechnicalName",
+          "Type": "string"
+        },
+        {
+          "Property": "Parent",
+          "Type": "Id"
+        },
+        {
+          "Property": "ZIndex",
+          "Type": "Float"
+        }
+      ]
+    }
+  ],
+  "Packages": [
+    {
+      "Name": "All objects",
+      "Description": "Exports all objects & types of the project",
+      "IsDefaultPackage": true,
+      "Models": [
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_0D48257A",
+            "Id": "0x010000000000010F",
+            "Parent": "0x0300000043CE43F7",
+            "Attachments": [],
+            "DisplayName": "Storyline",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 222831994,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000112",
+                "Owner": "0x010000000000010F"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000113",
+                "Owner": "0x010000000000010F"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "FlowFragment",
+          "Properties": {
+            "TechnicalName": "FFr_0A3DA84D",
+            "Id": "0x0100000000000115",
+            "Parent": "0x010000000000010F",
+            "Attachments": [],
+            "DisplayName": "The House",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 275.0,
+              "h": 200.0
+            },
+            "ShortId": 171812941,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000118",
+                "Owner": "0x0100000000000115"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000119",
+                "Owner": "0x0100000000000115"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_0BACD0AD",
+            "Id": "0x0100000000000208",
+            "Parent": "0x0100000000000115",
+            "Attachments": [],
+            "DisplayName": "Intro",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Отец с сыном наблюдают за домом.\r\n\r\nОни измотаны и им срочно нужно где-то переждать непогоду, высушить одежду, поспать и найти еды.\r\n\r\nДом выглядит подозрительным, но это их единственная возможность. Игрок может выбрать подождать и понаблюдать за домом, либо сразу пойти к дому.\r\n\r\nЕсли предложить герою уйти от этого дома, герой откажется, так как он сильно измотан.\r\n\r\nВ любом случае герой подходит к дому.",
+            "ExternalId": "",
+            "Position": {
+              "x": -8.0,
+              "y": 0.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 195874989,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000020B",
+                "Owner": "0x0100000000000208"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000020C",
+                "Owner": "0x0100000000000208",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000021D",
+                    "Target": "0x010000000000021A"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_1F3BAEAF",
+            "Id": "0x010000000000021A",
+            "Parent": "0x0100000000000115",
+            "Attachments": [],
+            "DisplayName": "Entrance",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Герои подошли к дому.\r\n\r\nВходная дверь закрыта, но открыто окно рядом с дверью.\r\n\r\nМожно обойти дом и обнаружить запертую дверь сзади. Также герой примечает сарай на заднем дворе.\r\n\r\nВ итоге герой проникает в дом через окно и впускает сына через дверь.",
+            "ExternalId": "",
+            "Position": {
+              "x": 317.0,
+              "y": 0.0
+            },
+            "ZIndex": 1.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 524005039,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000021D",
+                "Owner": "0x010000000000021A"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000021E",
+                "Owner": "0x010000000000021A",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000225",
+                    "Target": "0x0100000000000222"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_A0E9588C",
+            "Id": "0x0100000000000222",
+            "Parent": "0x0100000000000115",
+            "Attachments": [],
+            "DisplayName": "Hall",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Герои находятся внутри здания. Описание холла и дальнейших путей в доме.\r\n\r\nВнутри дома игрок выбирает, как осматривать дом:\r\n\r\nСначала осмотреть весь дом бегло, чтобы иметь общее представление о доме, либо осматривать комнату за комнатой более тщательно.",
+            "ExternalId": "",
+            "Position": {
+              "x": 642.0,
+              "y": 0.0
+            },
+            "ZIndex": 3.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 2699647116,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000225",
+                "Owner": "0x0100000000000222"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000226",
+                "Owner": "0x0100000000000222",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000022D",
+                    "Target": "0x010000000000022A"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000234",
+                    "Target": "0x0100000000000231"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000023B",
+                    "Target": "0x0100000000000238"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_B6C9E703",
+            "Id": "0x010000000000022A",
+            "Parent": "0x0100000000000115",
+            "Attachments": [],
+            "DisplayName": "Kitchen",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "На кухне бардак, полно грязной посуды.\r\n\r\nЕсли осмотреть шкафчики, можно найти бутылки с водой и консервированное мясо. Можно перекусить и попить.\r\n\r\nНа кухне есть дверь на задний двор. Теперь её можно отпереть и выйти во двор.",
+            "ExternalId": "",
+            "Position": {
+              "x": 967.0,
+              "y": -250.0
+            },
+            "ZIndex": 5.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 3066685187,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000022D",
+                "Owner": "0x010000000000022A"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000022E",
+                "Owner": "0x010000000000022A",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000263",
+                    "Target": "0x0100000000000260"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_39E3A4DB",
+            "Id": "0x0100000000000231",
+            "Parent": "0x0100000000000115",
+            "Attachments": [],
+            "DisplayName": "Living room",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Тут ничего интересного. Куча спальников и прочих вещей. Если обыскать куртку, то можно найти ключ. Герой убеждается, что дом точно жилой и лучше здесь не задерживаться надолго. Можно досрочно уйти из дома.",
+            "ExternalId": "",
+            "Position": {
+              "x": 967.0,
+              "y": 0.0
+            },
+            "ZIndex": 7.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 971220187,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000234",
+                "Owner": "0x0100000000000231"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000235",
+                "Owner": "0x0100000000000231"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_6BC87E85",
+            "Id": "0x0100000000000238",
+            "Parent": "0x0100000000000115",
+            "Attachments": [],
+            "DisplayName": "Corridor",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Проходная локация, которая ведёт в другие комнаты.",
+            "ExternalId": "",
+            "Position": {
+              "x": 967.0,
+              "y": 250.0
+            },
+            "ZIndex": 9.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 1808301701,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000023B",
+                "Owner": "0x0100000000000238"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000023C",
+                "Owner": "0x0100000000000238",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000245",
+                    "Target": "0x0100000000000242"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000024C",
+                    "Target": "0x0100000000000249"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000253",
+                    "Target": "0x0100000000000250"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_214587D3",
+            "Id": "0x0100000000000242",
+            "Parent": "0x0100000000000115",
+            "Attachments": [],
+            "DisplayName": "Basement",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Вход в подвал. На двери весит замок. Ключа нигде нет. Герой предлагает поискать ключ, либо иной способ открыть замок.\r\n\r\nЕсли герой открывает замок, то он видит там людей взаперти. Приходит понимание, что их тут держат ради пропитания. Если герой ел мясо с кухни, его выворачивает. Герой решает быстро уходить. Люди просят освободить их, но нужно найти ключ. Если ключ найден, то люди просят вас уходить, а они останутся дожидаться тех, кто их тут запер.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1292.0,
+              "y": 0.0
+            },
+            "ZIndex": 11.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 558204883,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000245",
+                "Owner": "0x0100000000000242"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000246",
+                "Owner": "0x0100000000000242"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_AC5F0B94",
+            "Id": "0x0100000000000249",
+            "Parent": "0x0100000000000115",
+            "Attachments": [],
+            "DisplayName": "Second Floor",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Второй этаж явно не жилой. Мебель разобрали на дрова, остался только мелкий мусор.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1292.0,
+              "y": 250.0
+            },
+            "ZIndex": 13.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 2891910036,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000024C",
+                "Owner": "0x0100000000000249"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000024D",
+                "Owner": "0x0100000000000249"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_D64D5258",
+            "Id": "0x0100000000000250",
+            "Parent": "0x0100000000000115",
+            "Attachments": [],
+            "DisplayName": "Storeroom",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "В кладовке полно вещей. Героя настораживает такое количество вещей, явно снятых с других людей. Также здесь есть много холодного оружия. Можно досрочно уйти из дома.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1292.0,
+              "y": 500.0
+            },
+            "ZIndex": 15.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 3595391576,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000253",
+                "Owner": "0x0100000000000250"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000254",
+                "Owner": "0x0100000000000250"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_46DE3101",
+            "Id": "0x0100000000000260",
+            "Parent": "0x0100000000000115",
+            "Attachments": [],
+            "DisplayName": "Backyard",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Герой видит большой котёл и кострище.\r\n\r\nНа заднем дворе можно найти топор в сарае, с помощью которого можно открыть дверь в подвал.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1292.0,
+              "y": -250.0
+            },
+            "ZIndex": 17.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 1188966657,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000263",
+                "Owner": "0x0100000000000260"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000264",
+                "Owner": "0x0100000000000260"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_D4B8EA55",
+            "Id": "0x0100000000000268",
+            "Parent": "0x0100000000000115",
+            "Attachments": [],
+            "DisplayName": "Alarm",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Если игрок находится в доме слишком долго, то сын оповещает Отца о приближающейся группе людей. Героям приходится срочно спасаться из дома.",
+            "ExternalId": "",
+            "Position": {
+              "x": -8.0,
+              "y": -250.0
+            },
+            "ZIndex": 19.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 3568888405,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000026B",
+                "Owner": "0x0100000000000268"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000026C",
+                "Owner": "0x0100000000000268"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Dialogue",
+          "Properties": {
+            "TechnicalName": "Dlg_CD0431BF",
+            "Id": "0x010000000000026F",
+            "Parent": "0x0100000000000115",
+            "Attachments": [],
+            "DisplayName": "Outro",
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Герои уходят из дома. Отец делится своими размышлениями о случившемся.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1667.0,
+              "y": 0.0
+            },
+            "ZIndex": 20.0,
+            "Size": {
+              "w": 291.0,
+              "h": 200.0
+            },
+            "ShortId": 3439604159,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000272",
+                "Owner": "0x010000000000026F"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000273",
+                "Owner": "0x010000000000026F"
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_915E6063",
+            "Id": "0x0100000000000277",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Пап...",
+            "ExternalId": "",
+            "Position": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2438881379,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000027A",
+                "Owner": "0x0100000000000277"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000027B",
+                "Owner": "0x0100000000000277",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000280",
+                    "Target": "0x010000000000027D"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_8E7732DD",
+            "Id": "0x010000000000027D",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Что?",
+            "ExternalId": "",
+            "Position": {
+              "x": 275.0,
+              "y": 0.0
+            },
+            "ZIndex": 1.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2390176477,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000280",
+                "Owner": "0x010000000000027D"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000281",
+                "Owner": "0x010000000000027D",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000287",
+                    "Target": "0x0100000000000284"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_3F761FB6",
+            "Id": "0x0100000000000284",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Долго мы уже тут сидим?",
+            "ExternalId": "",
+            "Position": {
+              "x": 550.0,
+              "y": 0.0
+            },
+            "ZIndex": 3.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1064705974,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000287",
+                "Owner": "0x0100000000000284"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000288",
+                "Owner": "0x0100000000000284",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000028E",
+                    "Target": "0x010000000000028B"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_D806B2EA",
+            "Id": "0x010000000000028B",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Где-то полчаса...",
+            "ExternalId": "",
+            "Position": {
+              "x": 825.0,
+              "y": 0.0
+            },
+            "ZIndex": 5.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3624317674,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000028E",
+                "Owner": "0x010000000000028B"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000028F",
+                "Owner": "0x010000000000028B",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000029C",
+                    "Target": "0x0100000000000299"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_42B86103",
+            "Id": "0x0100000000000292",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C8",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Утро и правда выдалось холодным.\r\n\r\nЕщё этот дождь...\r\n\r\nХоть мы и укрылись плёнкой, но одежда уже успела сильно отсыреть.\r\n\r\nНесколько бессонных ночей, голод и постоянный стресс тоже здоровья не прибавят.\r\n\r\nНадо срочно где-то укрыться.\r\n\r\nСделать привал, высушить одежду и хоть немного поспать в тепле и безопасности.\r\n\r\nЭто - идеальный вариант.\r\n\r\nНебольшой двухэтажный частный дом. Где-то три километра от дороги, плюс скрыт от посторонних глаз лесным массивом.\r\n\r\nПочти все стёкла целы.\r\n\r\nЗначит без проблем можно будет найти комнату без сквозняка. Может даже рядом с камином. Дым с дороги не увидят точно.\r\n\r\nНо есть одна проблема...\r\n\r\nДом действительно очень хорошо расположен, и его уже могли занять задолго до нас.\r\n\r\nМы уже полчаса лежим в кустах и наблюдаем за ним.\r\n\r\nПока всё спокойно, но из-за дождя не слышно, что происходит внутри.\r\n\r\nДумаю, что можно уже подойти поближе.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1650.0,
+              "y": 0.0
+            },
+            "ZIndex": 7.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1119379715,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000295",
+                "Owner": "0x0100000000000292"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000296",
+                "Owner": "0x0100000000000292",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000002AB",
+                    "Target": "0x01000000000002A8"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_B33CD713",
+            "Id": "0x0100000000000299",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Я замёрз.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1100.0,
+              "y": 0.0
+            },
+            "ZIndex": 8.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3007108883,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000029C",
+                "Owner": "0x0100000000000299"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000029D",
+                "Owner": "0x0100000000000299",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000002A3",
+                    "Target": "0x01000000000002A0"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_A62A3AAF",
+            "Id": "0x01000000000002A0",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Потерпи немного...",
+            "ExternalId": "",
+            "Position": {
+              "x": 1375.0,
+              "y": 0.0
+            },
+            "ZIndex": 10.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2787785391,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002A3",
+                "Owner": "0x01000000000002A0"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002A4",
+                "Owner": "0x01000000000002A0",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000295",
+                    "Target": "0x0100000000000292"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_3A08EE00",
+            "Id": "0x01000000000002A8",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Пап, я правда сильно замёрз. Давай уйдём от этого дома и поищем что-то ещё.",
+            "ExternalId": "",
+            "Position": {
+              "x": 1925.0,
+              "y": 0.0
+            },
+            "ZIndex": 13.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 973663744,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002AB",
+                "Owner": "0x01000000000002A8"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002AC",
+                "Owner": "0x01000000000002A8",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000002B2",
+                    "Target": "0x01000000000002AF"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_18A8AB54",
+            "Id": "0x01000000000002AF",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Мы не можем.\r\n\r\nНам нужно сделать привал и просушиться.\r\n\r\nДом выглядит нетронутым. Даже окна целы.\r\n\r\nСкорее всего мародёры не тронули его.\r\n\r\nМожет там можно найти еду и какие-нибудь лекарства.",
+            "ExternalId": "",
+            "Position": {
+              "x": 2200.0,
+              "y": 0.0
+            },
+            "ZIndex": 15.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 413707092,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002B2",
+                "Owner": "0x01000000000002AF"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002B3",
+                "Owner": "0x01000000000002AF",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000002B9",
+                    "Target": "0x01000000000002B6"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_FC2F76F4",
+            "Id": "0x01000000000002B6",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Мне не нравится это место.",
+            "ExternalId": "",
+            "Position": {
+              "x": 2475.0,
+              "y": 0.0
+            },
+            "ZIndex": 17.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 4230969076,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002B9",
+                "Owner": "0x01000000000002B6"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002BA",
+                "Owner": "0x01000000000002B6",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000002C0",
+                    "Target": "0x01000000000002BD"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_28E300BE",
+            "Id": "0x01000000000002BD",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Чувствуешь какое-то воздействие?",
+            "ExternalId": "",
+            "Position": {
+              "x": 2750.0,
+              "y": 0.0
+            },
+            "ZIndex": 19.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 685965502,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002C0",
+                "Owner": "0x01000000000002BD"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002C1",
+                "Owner": "0x01000000000002BD",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000002C7",
+                    "Target": "0x01000000000002C4"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_DDDD26E8",
+            "Id": "0x01000000000002C4",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Нет, всё хорошо.\r\n\r\nПросто страшно почему-то...",
+            "ExternalId": "",
+            "Position": {
+              "x": 3025.0,
+              "y": 0.0
+            },
+            "ZIndex": 21.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3722258152,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002C7",
+                "Owner": "0x01000000000002C4"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002C8",
+                "Owner": "0x01000000000002C4",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000002CE",
+                    "Target": "0x01000000000002CB"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000002D4",
+                    "Target": "0x01000000000002D1"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_BA0886CD",
+            "Id": "0x01000000000002CB",
+            "Parent": "0x0100000000000208",
+            "MenuText": "Успокой его",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Послушай, всё будет хорошо.\r\n\r\nЕсли бы там кто-то был, мы бы точно уже их заметили.",
+            "ExternalId": "",
+            "Position": {
+              "x": 3300.0,
+              "y": -125.0
+            },
+            "ZIndex": 23.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3121120973,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002CE",
+                "Owner": "0x01000000000002CB"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002CF",
+                "Owner": "0x01000000000002CB",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000002EC",
+                    "Target": "0x01000000000002E9"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_BF909731",
+            "Id": "0x01000000000002D1",
+            "Parent": "0x0100000000000208",
+            "MenuText": "Надави на него",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Тебе больше хочется умереть от холода в лесу или быть убитым на дороге?",
+            "ExternalId": "",
+            "Position": {
+              "x": 3300.0,
+              "y": 125.0
+            },
+            "ZIndex": 25.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3213924145,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002D4",
+                "Owner": "0x01000000000002D1"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002D5",
+                "Owner": "0x01000000000002D1",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000002DE",
+                    "Target": "0x01000000000002DB"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_5D745AA1",
+            "Id": "0x01000000000002DB",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Нет...",
+            "ExternalId": "",
+            "Position": {
+              "x": 3575.0,
+              "y": 125.0
+            },
+            "ZIndex": 27.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1567906465,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002DE",
+                "Owner": "0x01000000000002DB"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002DF",
+                "Owner": "0x01000000000002DB",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000002E5",
+                    "Target": "0x01000000000002E2"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_E188FEAB",
+            "Id": "0x01000000000002E2",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Тогда соберись.\r\n\r\nВ лесу мы не сможем быстро построить укрытие от дождя и развести костёр. Всё вымокло!\r\n\r\nА идти в дома у дороги ещё опаснее!\r\n\r\nНам нужен этот дом. Понимаешь?\r\n\r\nПерестань ныть!",
+            "ExternalId": "",
+            "Position": {
+              "x": 3850.0,
+              "y": 125.0
+            },
+            "ZIndex": 29.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3783851691,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002E5",
+                "Owner": "0x01000000000002E2"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002E6",
+                "Owner": "0x01000000000002E2",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000002FA",
+                    "Target": "0x01000000000002F7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_A51ECB54",
+            "Id": "0x01000000000002E9",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "А вдруг они спят? Или сами заметили нас и затаились?",
+            "ExternalId": "",
+            "Position": {
+              "x": 3575.0,
+              "y": -125.0
+            },
+            "ZIndex": 31.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2770258772,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002EC",
+                "Owner": "0x01000000000002E9"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002ED",
+                "Owner": "0x01000000000002E9",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000002F3",
+                    "Target": "0x01000000000002F0"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_1F44D5B1",
+            "Id": "0x01000000000002F0",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Заметить нас они точно не могли, так как мы передвигались очень осторожно, а в этих кустах нас точно не разглядеть.\r\n\r\nДа и дождь глушит любой шум. Так что видеть и слышать они нас точно не могут.\r\n\r\nНе переживай!",
+            "ExternalId": "",
+            "Position": {
+              "x": 3850.0,
+              "y": -125.0
+            },
+            "ZIndex": 33.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 524604849,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002F3",
+                "Owner": "0x01000000000002F0"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002F4",
+                "Owner": "0x01000000000002F0",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000002FA",
+                    "Target": "0x01000000000002F7"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_CB2C5FB2",
+            "Id": "0x01000000000002F7",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Хорошо... Но мне правда не нравится это место.",
+            "ExternalId": "",
+            "Position": {
+              "x": 4125.0,
+              "y": 25.0
+            },
+            "ZIndex": 35.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3408682930,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002FA",
+                "Owner": "0x01000000000002F7"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000002FB",
+                "Owner": "0x01000000000002F7",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000302",
+                    "Target": "0x01000000000002FF"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000308",
+                    "Target": "0x0100000000000305"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000330",
+                    "Target": "0x010000000000032D"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_B36AE357",
+            "Id": "0x01000000000002FF",
+            "Parent": "0x0100000000000208",
+            "MenuText": "Иди к дому",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Ладно, вставай, пора двигаться к дому.",
+            "ExternalId": "",
+            "Position": {
+              "x": 4400.0,
+              "y": -225.0
+            },
+            "ZIndex": 38.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3010126679,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000302",
+                "Owner": "0x01000000000002FF"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000303",
+                "Owner": "0x01000000000002FF",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000003B1",
+                    "Target": "0x01000000000003AE"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_5FBC433F",
+            "Id": "0x0100000000000305",
+            "Parent": "0x0100000000000208",
+            "MenuText": "Понаблюдай за домом ещё 15 минут",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Давай понаблюдаем за домом ещё немного...",
+            "ExternalId": "",
+            "Position": {
+              "x": 4400.0,
+              "y": 25.0
+            },
+            "ZIndex": 40.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1606173503,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000308",
+                "Owner": "0x0100000000000305"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000309",
+                "Owner": "0x0100000000000305",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000391",
+                    "Target": "0x010000000000038E"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_B58130E2",
+            "Id": "0x0100000000000316",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "В смысле?...\r\n\r\nКакое?",
+            "ExternalId": "",
+            "Position": {
+              "x": 6325.0,
+              "y": 650.0
+            },
+            "ZIndex": 44.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3045142754,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000319",
+                "Owner": "0x0100000000000316"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000031A",
+                "Owner": "0x0100000000000316",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000320",
+                    "Target": "0x010000000000031D"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_80C2BF85",
+            "Id": "0x010000000000031D",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Не знаю...\r\n\r\nВ лесу сейчас точно нет шансов. Придётся идти к дороге и надеяться на чудо...\r\n\r\nПойдём.",
+            "ExternalId": "",
+            "Position": {
+              "x": 6600.0,
+              "y": 650.0
+            },
+            "ZIndex": 46.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2160246661,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000320",
+                "Owner": "0x010000000000031D"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000321",
+                "Owner": "0x010000000000031D",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000037E",
+                    "Target": "0x010000000000037B"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_7832AE92",
+            "Id": "0x010000000000032D",
+            "Parent": "0x0100000000000208",
+            "MenuText": "Уходи отсюда",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "В смысле уходить?! Куда?",
+            "ExternalId": "",
+            "Position": {
+              "x": 4400.0,
+              "y": 400.0
+            },
+            "ZIndex": 49.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2016587410,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000330",
+                "Owner": "0x010000000000032D"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000331",
+                "Owner": "0x010000000000032D",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000338",
+                    "Target": "0x0100000000000335"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_56D20762",
+            "Id": "0x0100000000000335",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Пап...",
+            "ExternalId": "",
+            "Position": {
+              "x": 4675.0,
+              "y": 400.0
+            },
+            "ZIndex": 51.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1456605026,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000338",
+                "Owner": "0x0100000000000335"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000339",
+                "Owner": "0x0100000000000335",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000345",
+                    "Target": "0x0100000000000342"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_1A14114B",
+            "Id": "0x0100000000000342",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Да я не с тобой.\r\n\r\nПочему нам надо уходить отсюда?",
+            "ExternalId": "",
+            "Position": {
+              "x": 4950.0,
+              "y": 400.0
+            },
+            "ZIndex": 53.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 437522763,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000345",
+                "Owner": "0x0100000000000342"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000346",
+                "Owner": "0x0100000000000342",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000034C",
+                    "Target": "0x0100000000000349"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000354",
+                    "Target": "0x0100000000000351"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_951B2589",
+            "Id": "0x0100000000000349",
+            "Parent": "0x0100000000000208",
+            "MenuText": "Здесь может быть опасно",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Серьёзно?!\r\n\r\nА где сейчас не опасно?\r\n\r\nВ лесу мы не сможем быстро построить укрытие от дождя и развести костёр, потому что всё вымокло.\r\n\r\nА у дороги дым сразу же увидят и грохнут нас! Нам нужно развести огонь и просохнуть!",
+            "ExternalId": "",
+            "Position": {
+              "x": 5225.0,
+              "y": 275.0
+            },
+            "ZIndex": 55.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2501584265,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000034C",
+                "Owner": "0x0100000000000349"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000034D",
+                "Owner": "0x0100000000000349",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000370",
+                    "Target": "0x010000000000036D"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000036A",
+                    "Target": "0x0100000000000367"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_5D13CB9F",
+            "Id": "0x0100000000000351",
+            "Parent": "0x0100000000000208",
+            "MenuText": "Просто прислушайся к сыну",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Этот дом вне зоны!\r\n\r\nТы же не чувствуешь влияния?",
+            "ExternalId": "",
+            "Position": {
+              "x": 5225.0,
+              "y": 525.0
+            },
+            "ZIndex": 57.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1561578399,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000354",
+                "Owner": "0x0100000000000351"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000355",
+                "Owner": "0x0100000000000351",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000035C",
+                    "Target": "0x0100000000000359"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_46B424D9",
+            "Id": "0x0100000000000359",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Нет...",
+            "ExternalId": "",
+            "Position": {
+              "x": 5500.0,
+              "y": 525.0
+            },
+            "ZIndex": 59.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1186211033,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000035C",
+                "Owner": "0x0100000000000359"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000035D",
+                "Owner": "0x0100000000000359",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000363",
+                    "Target": "0x0100000000000360"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_B4973405",
+            "Id": "0x0100000000000360",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Вот видишь? Он просто испугался!\r\n\r\nИ уверен, что на дороге ему будет ещё страшнее.\r\n\r\nА в лесу мы не сможем быстро построить укрытие от дождя и развести костёр, потому что всё вымокло.\r\n\r\nВсё, вопрос закрыт.",
+            "ExternalId": "",
+            "Position": {
+              "x": 5775.0,
+              "y": 525.0
+            },
+            "ZIndex": 61.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3029808133,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000363",
+                "Owner": "0x0100000000000360"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000364",
+                "Owner": "0x0100000000000360",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000036A",
+                    "Target": "0x0100000000000367"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000370",
+                    "Target": "0x010000000000036D"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_C6062821",
+            "Id": "0x0100000000000367",
+            "Parent": "0x0100000000000208",
+            "MenuText": "Ладно, давай осмотрим дом.",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Другое дело.\r\n\r\nЗдесь холодно и мокро, лучше бы поскорее попасть внутрь.\r\n\r\nИли ещё немного понаблюдать на всякий случай?",
+            "ExternalId": "",
+            "Position": {
+              "x": 6050.0,
+              "y": 400.0
+            },
+            "ZIndex": 63.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3322292257,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000036A",
+                "Owner": "0x0100000000000367"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000036B",
+                "Owner": "0x0100000000000367",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000308",
+                    "Target": "0x0100000000000305"
+                  },
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000302",
+                    "Target": "0x01000000000002FF"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_771C1AC5",
+            "Id": "0x010000000000036D",
+            "Parent": "0x0100000000000208",
+            "MenuText": "Быстро уходи отсюда!",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Почему ты такой упёртый?\r\n\r\nЛадно, твоя взяла! Валим отсюда!\r\n\r\nПоищем другое место.",
+            "ExternalId": "",
+            "Position": {
+              "x": 6050.0,
+              "y": 650.0
+            },
+            "ZIndex": 65.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1998330565,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000370",
+                "Owner": "0x010000000000036D"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000371",
+                "Owner": "0x010000000000036D",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000319",
+                    "Target": "0x0100000000000316"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_E866D84C",
+            "Id": "0x010000000000037B",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Пошли...",
+            "ExternalId": "",
+            "Position": {
+              "x": 6875.0,
+              "y": 650.0
+            },
+            "ZIndex": 68.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3899054156,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000037E",
+                "Owner": "0x010000000000037B"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000037F",
+                "Owner": "0x010000000000037B",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000385",
+                    "Target": "0x0100000000000383"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_6D674A43",
+            "Id": "0x010000000000038E",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Но я замёрз...",
+            "ExternalId": "",
+            "Position": {
+              "x": 4675.0,
+              "y": 25.0
+            },
+            "ZIndex": 76.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1835485763,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000391",
+                "Owner": "0x010000000000038E"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000392",
+                "Owner": "0x010000000000038E",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000039E",
+                    "Target": "0x010000000000039B"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_185E3897",
+            "Id": "0x010000000000039B",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Потерпи ещё немножко...\r\n\r\nЗато потом согреемся и ты поспишь в тепле.",
+            "ExternalId": "",
+            "Position": {
+              "x": 4950.0,
+              "y": 25.0
+            },
+            "ZIndex": 78.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 408828055,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000039E",
+                "Owner": "0x010000000000039B"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000039F",
+                "Owner": "0x010000000000039B",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000003A5",
+                    "Target": "0x01000000000003A2"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_1F9691FE",
+            "Id": "0x01000000000003A2",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Хорошо.",
+            "ExternalId": "",
+            "Position": {
+              "x": 5225.0,
+              "y": 25.0
+            },
+            "ZIndex": 80.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 529961470,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003A5",
+                "Owner": "0x01000000000003A2"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003A6",
+                "Owner": "0x01000000000003A2",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000003AB",
+                    "Target": "0x01000000000003A9"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_1685C885",
+            "Id": "0x01000000000003AE",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Только давай осторожно...",
+            "ExternalId": "",
+            "Position": {
+              "x": 4675.0,
+              "y": -225.0
+            },
+            "ZIndex": 84.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 377866373,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003B1",
+                "Owner": "0x01000000000003AE"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003B2",
+                "Owner": "0x01000000000003AE",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000003B8",
+                    "Target": "0x01000000000003B5"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_A326C606",
+            "Id": "0x01000000000003B5",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Конечно осторожно.\r\n\r\nСейчас тихонечко подкрадёмся, прислушаемся.\r\n\r\nЗатем я загляну в окна и посмотрю, что к чему.\r\n\r\nА ты будешь меня прикрывать. Договорились?",
+            "ExternalId": "",
+            "Position": {
+              "x": 4950.0,
+              "y": -225.0
+            },
+            "ZIndex": 86.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2737227270,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003B8",
+                "Owner": "0x01000000000003B5"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003B9",
+                "Owner": "0x01000000000003B5",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000003BF",
+                    "Target": "0x01000000000003BC"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_1004ED18",
+            "Id": "0x01000000000003BC",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Договорились!",
+            "ExternalId": "",
+            "Position": {
+              "x": 5225.0,
+              "y": -225.0
+            },
+            "ZIndex": 88.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 268758296,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003BF",
+                "Owner": "0x01000000000003BC"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003C0",
+                "Owner": "0x01000000000003BC",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000003C6",
+                    "Target": "0x01000000000003C3"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_4EB6C532",
+            "Id": "0x01000000000003C3",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Ну, пойдём!",
+            "ExternalId": "",
+            "Position": {
+              "x": 5500.0,
+              "y": -225.0
+            },
+            "ZIndex": 90.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1320600882,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003C6",
+                "Owner": "0x01000000000003C3"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003C7",
+                "Owner": "0x01000000000003C3",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000003E3",
+                    "Target": "0x01000000000003E0"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_BEA999A0",
+            "Id": "0x01000000000003CA",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Прошла четверть часа. Всё без изменений. Дом выглядит пустым.\r\n\r\nТы как?",
+            "ExternalId": "",
+            "Position": {
+              "x": 5775.0,
+              "y": 25.0
+            },
+            "ZIndex": 92.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 3198785952,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003CD",
+                "Owner": "0x01000000000003CA"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003CE",
+                "Owner": "0x01000000000003CA",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000003D4",
+                    "Target": "0x01000000000003D1"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_469AD5AE",
+            "Id": "0x01000000000003D1",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001CC",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Замерз ужасно!",
+            "ExternalId": "",
+            "Position": {
+              "x": 6050.0,
+              "y": 25.0
+            },
+            "ZIndex": 94.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1184552366,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003D4",
+                "Owner": "0x01000000000003D1"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003D5",
+                "Owner": "0x01000000000003D1",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000003DB",
+                    "Target": "0x01000000000003D8"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_173D22A1",
+            "Id": "0x01000000000003D8",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C4",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "И я тоже.",
+            "ExternalId": "",
+            "Position": {
+              "x": 6325.0,
+              "y": 25.0
+            },
+            "ZIndex": 96.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 389882529,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003DB",
+                "Owner": "0x01000000000003D8"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003DC",
+                "Owner": "0x01000000000003D8",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000302",
+                    "Target": "0x01000000000002FF"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_96C789C0",
+            "Id": "0x01000000000003E0",
+            "Parent": "0x0100000000000208",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C8",
+            "Color": {
+              "r": 0.577580452,
+              "g": 0.7605245,
+              "b": 0.7991027
+            },
+            "Text": "Плёнка вся в каплях дождя. Аккуратно стряхнул и сложил в рюкзак.\r\n\r\nВстали.\r\n\r\nНоги совсем отсырели, в ботинках противно чавкает вода.\r\n\r\nНужно срочно просушить всю одежду...\r\n\r\nДо дома ведёт заросшая сухой травой гравийная дорожка.\r\n\r\nНикаких следов не видно.\r\n\r\nАккуратно подбираемся к дому...\r\n\r\nИз окон нас не должно быть видно.\r\n\r\nЕщё минута и мы будем у крыльца.",
+            "ExternalId": "",
+            "Position": {
+              "x": 5775.0,
+              "y": -225.0
+            },
+            "ZIndex": 96.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2529659328,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003E3",
+                "Owner": "0x01000000000003E0"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003E4",
+                "Owner": "0x01000000000003E0",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000003EA",
+                    "Target": "0x01000000000003E8"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "Delay",
+          "Properties": {
+            "TechnicalName": "Ins_8DEC6D88",
+            "Id": "0x0100000000000383",
+            "Parent": "0x0100000000000208",
+            "DisplayName": "//15 min",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 7150.0,
+              "y": 700.0
+            },
+            "ZIndex": 71.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 2381081992,
+            "Expression": "//15 min",
+            "Color": {
+              "r": 1.0,
+              "g": 0.527115166,
+              "b": 0.0
+            },
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000385",
+                "Owner": "0x0100000000000383"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000386",
+                "Owner": "0x0100000000000383"
+              }
+            ]
+          },
+          "Template": {
+            "DelayF": {
+              "Delay": 900.0,
+              "Waiting": null
+            }
+          }
+        },
+        {
+          "Type": "Delay",
+          "Properties": {
+            "TechnicalName": "Ins_5EC95E6E",
+            "Id": "0x01000000000003A9",
+            "Parent": "0x0100000000000208",
+            "DisplayName": "//15 min",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 5500.0,
+              "y": 75.0
+            },
+            "ZIndex": 82.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 1590255214,
+            "Expression": "//15 min",
+            "Color": {
+              "r": 1.0,
+              "g": 0.527115166,
+              "b": 0.0
+            },
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003AB",
+                "Owner": "0x01000000000003A9"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003AC",
+                "Owner": "0x01000000000003A9",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x01000000000003CD",
+                    "Target": "0x01000000000003CA"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "DelayF": {
+              "Delay": 900.0,
+              "Waiting": null
+            }
+          }
+        },
+        {
+          "Type": "Delay",
+          "Properties": {
+            "TechnicalName": "Ins_06E17521",
+            "Id": "0x01000000000003E8",
+            "Parent": "0x0100000000000208",
+            "DisplayName": "//1 min",
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 6050.0,
+              "y": -175.0
+            },
+            "ZIndex": 98.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 115438881,
+            "Expression": "//1 min",
+            "Color": {
+              "r": 1.0,
+              "g": 0.527115166,
+              "b": 0.0
+            },
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003EA",
+                "Owner": "0x01000000000003E8"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x01000000000003EB",
+                "Owner": "0x01000000000003E8",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.577580452,
+                      "g": 0.7605245,
+                      "b": 0.7991027
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000020C",
+                    "Target": "0x0100000000000208"
+                  }
+                ]
+              }
+            ]
+          },
+          "Template": {
+            "DelayF": {
+              "Delay": 60.0,
+              "Waiting": null
+            }
+          }
+        },
+        {
+          "Type": "Comment",
+          "Properties": {
+            "TechnicalName": "CMT_72057594037928843",
+            "Id": "0x010000000000038B",
+            "Parent": "0x0100000000000208",
+            "CreatedBy": "",
+            "CreatedOn": "2020-03-22T14:43:29.5380464",
+            "Color": {
+              "r": 0.0,
+              "g": 0.0,
+              "b": 0.0
+            },
+            "Text": "Герои выходят к дороге, где их перехватывают бандиты. Можно убежать, убежать и получить ранение либо умереть.",
+            "ExternalId": "",
+            "Position": {
+              "x": 7425.0,
+              "y": 700.0
+            },
+            "ZIndex": 75.0,
+            "Size": {
+              "w": 225.0,
+              "h": 100.0
+            },
+            "ShortId": 1731656504
+          }
+        },
+        {
+          "Type": "EntityWithTextPosition",
+          "Properties": {
+            "TechnicalName": "Ntt_C6E0D3B8",
+            "Id": "0x01000000000001C4",
+            "Parent": "0x01000000000001C2",
+            "Attachments": [],
+            "DisplayName": "Father",
+            "Color": {
+              "r": 0.7083758,
+              "g": 0.7835378,
+              "b": 0.8796224
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 0.0,
+              "y": 0.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "ShortId": 3336623032
+          },
+          "Template": {
+            "EntityF": {
+              "TextPosdition": 3
+            }
+          }
+        },
+        {
+          "Type": "EntityWithTextPosition",
+          "Properties": {
+            "TechnicalName": "Ntt_11540995",
+            "Id": "0x01000000000001C8",
+            "Parent": "0x01000000000001C2",
+            "Attachments": [],
+            "DisplayName": "Mind",
+            "Color": {
+              "r": 0.7083758,
+              "g": 0.7835378,
+              "b": 0.8796224
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 20.0,
+              "y": 20.0
+            },
+            "ZIndex": 1.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "ShortId": 290720149
+          },
+          "Template": {
+            "EntityF": {
+              "TextPosdition": 2
+            }
+          }
+        },
+        {
+          "Type": "EntityWithTextPosition",
+          "Properties": {
+            "TechnicalName": "Ntt_475C81E5",
+            "Id": "0x01000000000001CC",
+            "Parent": "0x01000000000001C2",
+            "Attachments": [],
+            "DisplayName": "Son",
+            "Color": {
+              "r": 0.8307699,
+              "g": 0.8796224,
+              "b": 0.7230551
+            },
+            "Text": "",
+            "ExternalId": "",
+            "Position": {
+              "x": 40.0,
+              "y": 40.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 256.0,
+              "h": 196.0
+            },
+            "PreviewImage": {
+              "ViewBox": {
+                "x": 0.0,
+                "y": 0.0,
+                "w": 0.0,
+                "h": 0.0
+              },
+              "Mode": "FromAsset",
+              "Asset": "0x0000000000000000"
+            },
+            "ShortId": 1197244901
+          },
+          "Template": {
+            "EntityF": {
+              "TextPosdition": 1
+            }
+          }
+        },
+        {
+          "Type": "UserFolder",
+          "Properties": {
+            "TechnicalName": "Ufo_01565C78",
+            "Id": "0x01000000000001C2",
+            "Parent": "0x03000000AC61A2B3",
+            "DisplayName": "Characters",
+            "ExternalId": "",
+            "ShortId": 22436984
+          }
+        }
+      ]
+    }
+  ],
+  "ScriptMethods": [],
+  "Hierarchy": {
+    "Id": "0x0100000000000001",
+    "TechnicalName": "The_Road_To_Moscow",
+    "Type": "Project",
+    "Children": [
+      {
+        "Id": "0x0300000043CE43F7",
+        "TechnicalName": "Flow",
+        "Type": "Flow",
+        "Children": [
+          {
+            "Id": "0x010000000000010F",
+            "TechnicalName": "FFr_0D48257A",
+            "Type": "FlowFragment",
+            "Children": [
+              {
+                "Id": "0x0100000000000115",
+                "TechnicalName": "FFr_0A3DA84D",
+                "Type": "FlowFragment",
+                "Children": [
+                  {
+                    "Id": "0x0100000000000208",
+                    "TechnicalName": "Dlg_0BACD0AD",
+                    "Type": "Dialogue",
+                    "Children": [
+                      {
+                        "Id": "0x0100000000000277",
+                        "TechnicalName": "DFr_915E6063",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x010000000000027D",
+                        "TechnicalName": "DFr_8E7732DD",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x0100000000000284",
+                        "TechnicalName": "DFr_3F761FB6",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x010000000000028B",
+                        "TechnicalName": "DFr_D806B2EA",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x0100000000000292",
+                        "TechnicalName": "DFr_42B86103",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x0100000000000299",
+                        "TechnicalName": "DFr_B33CD713",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000002A0",
+                        "TechnicalName": "DFr_A62A3AAF",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000002A8",
+                        "TechnicalName": "DFr_3A08EE00",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000002AF",
+                        "TechnicalName": "DFr_18A8AB54",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000002B6",
+                        "TechnicalName": "DFr_FC2F76F4",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000002BD",
+                        "TechnicalName": "DFr_28E300BE",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000002C4",
+                        "TechnicalName": "DFr_DDDD26E8",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000002CB",
+                        "TechnicalName": "DFr_BA0886CD",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000002D1",
+                        "TechnicalName": "DFr_BF909731",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000002DB",
+                        "TechnicalName": "DFr_5D745AA1",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000002E2",
+                        "TechnicalName": "DFr_E188FEAB",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000002E9",
+                        "TechnicalName": "DFr_A51ECB54",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000002F0",
+                        "TechnicalName": "DFr_1F44D5B1",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000002F7",
+                        "TechnicalName": "DFr_CB2C5FB2",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000002FF",
+                        "TechnicalName": "DFr_B36AE357",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x0100000000000305",
+                        "TechnicalName": "DFr_5FBC433F",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x0100000000000316",
+                        "TechnicalName": "DFr_B58130E2",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x010000000000031D",
+                        "TechnicalName": "DFr_80C2BF85",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x010000000000032D",
+                        "TechnicalName": "DFr_7832AE92",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x0100000000000335",
+                        "TechnicalName": "DFr_56D20762",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x0100000000000342",
+                        "TechnicalName": "DFr_1A14114B",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x0100000000000349",
+                        "TechnicalName": "DFr_951B2589",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x0100000000000351",
+                        "TechnicalName": "DFr_5D13CB9F",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x0100000000000359",
+                        "TechnicalName": "DFr_46B424D9",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x0100000000000360",
+                        "TechnicalName": "DFr_B4973405",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x0100000000000367",
+                        "TechnicalName": "DFr_C6062821",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x010000000000036D",
+                        "TechnicalName": "DFr_771C1AC5",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x010000000000037B",
+                        "TechnicalName": "DFr_E866D84C",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x0100000000000383",
+                        "TechnicalName": "Ins_8DEC6D88",
+                        "Type": "Instruction"
+                      },
+                      {
+                        "Id": "0x010000000000038B",
+                        "TechnicalName": "",
+                        "Type": "Comment"
+                      },
+                      {
+                        "Id": "0x010000000000038E",
+                        "TechnicalName": "DFr_6D674A43",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x010000000000039B",
+                        "TechnicalName": "DFr_185E3897",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000003A2",
+                        "TechnicalName": "DFr_1F9691FE",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000003A9",
+                        "TechnicalName": "Ins_5EC95E6E",
+                        "Type": "Instruction"
+                      },
+                      {
+                        "Id": "0x01000000000003AE",
+                        "TechnicalName": "DFr_1685C885",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000003B5",
+                        "TechnicalName": "DFr_A326C606",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000003BC",
+                        "TechnicalName": "DFr_1004ED18",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000003C3",
+                        "TechnicalName": "DFr_4EB6C532",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000003CA",
+                        "TechnicalName": "DFr_BEA999A0",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000003D1",
+                        "TechnicalName": "DFr_469AD5AE",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000003D8",
+                        "TechnicalName": "DFr_173D22A1",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000003E0",
+                        "TechnicalName": "DFr_96C789C0",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x01000000000003E8",
+                        "TechnicalName": "Ins_06E17521",
+                        "Type": "Instruction"
+                      }
+                    ]
+                  },
+                  {
+                    "Id": "0x010000000000021A",
+                    "TechnicalName": "Dlg_1F3BAEAF",
+                    "Type": "Dialogue"
+                  },
+                  {
+                    "Id": "0x0100000000000222",
+                    "TechnicalName": "Dlg_A0E9588C",
+                    "Type": "Dialogue"
+                  },
+                  {
+                    "Id": "0x010000000000022A",
+                    "TechnicalName": "Dlg_B6C9E703",
+                    "Type": "Dialogue"
+                  },
+                  {
+                    "Id": "0x0100000000000231",
+                    "TechnicalName": "Dlg_39E3A4DB",
+                    "Type": "Dialogue"
+                  },
+                  {
+                    "Id": "0x0100000000000238",
+                    "TechnicalName": "Dlg_6BC87E85",
+                    "Type": "Dialogue"
+                  },
+                  {
+                    "Id": "0x0100000000000242",
+                    "TechnicalName": "Dlg_214587D3",
+                    "Type": "Dialogue"
+                  },
+                  {
+                    "Id": "0x0100000000000249",
+                    "TechnicalName": "Dlg_AC5F0B94",
+                    "Type": "Dialogue"
+                  },
+                  {
+                    "Id": "0x0100000000000250",
+                    "TechnicalName": "Dlg_D64D5258",
+                    "Type": "Dialogue"
+                  },
+                  {
+                    "Id": "0x0100000000000260",
+                    "TechnicalName": "Dlg_46DE3101",
+                    "Type": "Dialogue"
+                  },
+                  {
+                    "Id": "0x0100000000000268",
+                    "TechnicalName": "Dlg_D4B8EA55",
+                    "Type": "Dialogue"
+                  },
+                  {
+                    "Id": "0x010000000000026F",
+                    "TechnicalName": "Dlg_CD0431BF",
+                    "Type": "Dialogue"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Id": "0x030000003140D3AC",
+        "TechnicalName": "Locations",
+        "Type": "Locations"
+      },
+      {
+        "Id": "0x03000000AC61A2B3",
+        "TechnicalName": "Entities",
+        "Type": "Entities",
+        "Children": [
+          {
+            "Id": "0x01000000000001C2",
+            "TechnicalName": "Ufo_01565C78",
+            "Type": "EntitiesUserFolder",
+            "Children": [
+              {
+                "Id": "0x01000000000001C4",
+                "TechnicalName": "Ntt_C6E0D3B8",
+                "Type": "Entity"
+              },
+              {
+                "Id": "0x01000000000001C8",
+                "TechnicalName": "Ntt_11540995",
+                "Type": "Entity"
+              },
+              {
+                "Id": "0x01000000000001CC",
+                "TechnicalName": "Ntt_475C81E5",
+                "Type": "Entity"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Id": "0x030000004C3DAF54",
+        "TechnicalName": "Assets",
+        "Type": "Assets"
+      },
+      {
+        "Id": "0x0300000029CF057C",
+        "TechnicalName": "TemplateDesign",
+        "Type": "TemplateDesign",
+        "Children": [
+          {
+            "Id": "0x03000000D2404DC0",
+            "TechnicalName": "Features",
+            "Type": "Features",
+            "Children": [
+              {
+                "Id": "0x010000000000011B",
+                "TechnicalName": "EntityF",
+                "Type": "Feature"
+              },
+              {
+                "Id": "0x0100000000000158",
+                "TechnicalName": "DelayF",
+                "Type": "Feature"
+              },
+              {
+                "Id": "0x010000000000016D",
+                "TechnicalName": "AssetF",
+                "Type": "Feature"
+              }
+            ]
+          },
+          {
+            "Id": "0x030000009AF68DCD",
+            "TechnicalName": "Templates",
+            "Type": "Templates",
+            "Children": [
+              {
+                "Id": "0x0300000078B45A71",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder",
+                "Children": [
+                  {
+                    "Id": "0x0100000000000131",
+                    "TechnicalName": "EntityWithTextPosition",
+                    "Type": "Template"
+                  }
+                ]
+              },
+              {
+                "Id": "0x030000006D1BC275",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x03000000030B5ACF",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x030000008DD5C0F2",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x0300000092CF598E",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x0300000030635118",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x03000000A715C057",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x030000005314E813",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x030000004264B29C",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x03000000FB371D5C",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x0300000013DF3A1A",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x03000000ADA9FA17",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x03000000ECC00F83",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x03000000F514339C",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x0300000096812FC1",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x03000000CC5A07F0",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x03000000DCC67F9D",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder"
+              },
+              {
+                "Id": "0x03000000BA022E2F",
+                "TechnicalName": "",
+                "Type": "TemplateTypeFolder",
+                "Children": [
+                  {
+                    "Id": "0x010000000000019E",
+                    "TechnicalName": "Delay",
+                    "Type": "Template"
+                  },
+                  {
+                    "Id": "0x01000000000001B0",
+                    "TechnicalName": "GameAsset",
+                    "Type": "Template"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "Id": "0x030000002C0951AE",
+            "TechnicalName": "PropertyTemplates",
+            "Type": "TraitTemplatesFolder",
+            "Children": [
+              {
+                "Id": "0x030000006E2C178B",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              },
+              {
+                "Id": "0x03000000BB12F1B8",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              },
+              {
+                "Id": "0x030000006F82D78E",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              },
+              {
+                "Id": "0x0300000037DCE3F0",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              },
+              {
+                "Id": "0x030000003630A240",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              },
+              {
+                "Id": "0x03000000D745C449",
+                "TechnicalName": "",
+                "Type": "TraitTemplatesTypedFolder"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "Id": "0x030000002B4F4C54",
+        "TechnicalName": "GlobalVariables",
+        "Type": "GlobalVariables",
+        "Children": [
+          {
+            "Id": "0x0100000000000219",
+            "TechnicalName": "",
+            "Type": "VariableSet"
+          },
+          {
+            "Id": "0x0100000000000276",
+            "TechnicalName": "",
+            "Type": "VariableSet"
+          }
+        ]
+      },
+      {
+        "Id": "0x03000000103AA2F0",
+        "TechnicalName": "Documents",
+        "Type": "Documents"
+      },
+      {
+        "Id": "0x03000000236F7272",
+        "TechnicalName": "Journeys",
+        "Type": "Journeys"
+      },
+      {
+        "Id": "0x03000000F917511B",
+        "TechnicalName": "ProjectSettings",
+        "Type": "ProjectSettingsFolder",
+        "Children": [
+          {
+            "Id": "0x01000000000000FA",
+            "TechnicalName": "",
+            "Type": "ProjectSettingsGeneral"
+          },
+          {
+            "Id": "0x01000000000000FB",
+            "TechnicalName": "",
+            "Type": "ProjectSettingsJourneys"
+          },
+          {
+            "Id": "0x01000000000000FC",
+            "TechnicalName": "",
+            "Type": "ProjectSettingsLocation"
+          },
+          {
+            "Id": "0x01000000000000FD",
+            "TechnicalName": "",
+            "Type": "ProjectSettingsFlow"
+          }
+        ]
+      },
+      {
+        "Id": "0x03000000173C3392",
+        "TechnicalName": "",
+        "Type": "RuleSets",
+        "Children": [
+          {
+            "Id": "0x01000000000000FF",
+            "TechnicalName": "",
+            "Type": "RuleSet",
+            "Children": [
+              {
+                "Id": "0x0100000000000102",
+                "TechnicalName": "",
+                "Type": "RuleSetPackage"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

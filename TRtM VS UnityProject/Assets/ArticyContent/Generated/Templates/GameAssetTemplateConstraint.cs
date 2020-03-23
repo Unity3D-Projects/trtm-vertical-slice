@@ -8,6 +8,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using Articy.The_Road_To_Moscow;
+using Articy.The_Road_To_Moscow.Features;
 using Articy.Unity;
 using Articy.Unity.Interfaces;
 using System;
@@ -16,13 +18,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-namespace Articy.The_Road_To_Moscow
+namespace Articy.The_Road_To_Moscow.Templates
 {
     
     
-    public enum Ambience
+    public class GameAssetTemplateConstraint
     {
         
-        Stop = 1,
+        private AssetFFeatureConstraint mAssetF = new AssetFFeatureConstraint();
+        
+        public AssetFFeatureConstraint AssetF
+        {
+            get
+            {
+                return mAssetF;
+            }
+        }
     }
 }

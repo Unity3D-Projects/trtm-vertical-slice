@@ -64,10 +64,10 @@ public class Spawner : MonoBehaviour
         Destroy(popup.gameObject);
     }
 
-    public GameObject SpawnPhrase(string text, Color color, Text_Position side)
+    public GameObject SpawnPhrase(string text, Color color, TextPosdition side)
     {
         GameObject prefab;
-        if (side == Text_Position.Middle)
+        if (side == TextPosdition.Middle)
         {
             prefab = Instantiate(_prefabManager.middlePrefab, _prefabManager.content);
         }
@@ -82,7 +82,7 @@ public class Spawner : MonoBehaviour
 
         switch (side)
         {
-            case Text_Position.Left:
+            case TextPosdition.Left:
                 foreach (var lg in prefab.GetComponentsInChildren<LayoutGroup>())
                 {
                     lg.childAlignment = TextAnchor.MiddleLeft;
@@ -92,7 +92,7 @@ public class Spawner : MonoBehaviour
                 prefab.GetComponentInChildren<Text>().alignment = TextAnchor.MiddleLeft;
                 break;
 
-            case Text_Position.Right:
+            case TextPosdition.Right:
                 foreach (var lg in prefab.GetComponentsInChildren<LayoutGroup>())
                 {
                     lg.childAlignment = TextAnchor.MiddleRight;
@@ -188,8 +188,8 @@ public class Spawner : MonoBehaviour
     public GameObject SpawnEndGame(bool win)
     {
         GameObject endGame = Instantiate(_prefabManager.endgamePrefab, _prefabManager.content);
-        if (win) endGame.GetComponent<Image>().color = endGame.GetComponent<EndGameColors>().youWinColor;
-        else endGame.GetComponent<Image>().color = endGame.GetComponent<EndGameColors>().youLoseColor;
+        if (win) endGame.GetComponent<UnityEngine.UI.Image>().color = endGame.GetComponent<EndGameColors>().youWinColor;
+        else endGame.GetComponent<UnityEngine.UI.Image>().color = endGame.GetComponent<EndGameColors>().youLoseColor;
         return endGame;
     }
 

@@ -15,3 +15,48 @@ using System.Collections;
 using UnityEngine;
 
 
+namespace Articy.The_Road_To_Moscow.GlobalVariables
+{
+    
+    
+    [Serializable()]
+    public class TheHouse : IArticyNamespace
+    {
+        
+        [SerializeField()]
+        private BaseGlobalVariables _VariableStorage;
+        
+        // Отец рассказывает, что всё вымокло
+        public bool IntroT1
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueBoolean(0);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueBoolean(0, value);
+            }
+        }
+        
+        // Считает время в доме.
+        public int Timer
+        {
+            get
+            {
+                return _VariableStorage.Internal_GetVariableValueInt32(0);
+            }
+            set
+            {
+                _VariableStorage.Internal_SetVariableValueInt32(0, value);
+            }
+        }
+        
+        public void RegisterVariables(BaseGlobalVariables aStorage)
+        {
+            _VariableStorage = aStorage;
+            aStorage.RegisterVariable("TheHouse.IntroT1", false);
+            aStorage.RegisterVariable("TheHouse.Timer", 0);
+        }
+    }
+}

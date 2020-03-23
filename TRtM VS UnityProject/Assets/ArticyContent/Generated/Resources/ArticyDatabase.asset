@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-8065119956634985434
+--- !u!114 &-8840754664544147816
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -12,26 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0590fbfd2d5511439b21b8a9c2c3411, type: 3}
   m_Name: DefaultGlobalVariables
   m_EditorClassIdentifier: 
-  BoolVariableCache: []
-  IntVariableCache: []
+  BoolVariableCache:
+  - mFullQualifiedName: TheHouse.IntroT1
+    mVar:
+      values: 00
+  IntVariableCache:
+  - mFullQualifiedName: TheHouse.Timer
+    mVar:
+      values: 00000000
   StringVariableCache: []
   LiveBoolVariableCache: []
   LiveIntVariableCache: []
   LiveStringVariableCache: []
   isInitialized: 1
---- !u!114 &-7807284848298772533
-MonoBehaviour:
-  m_ObjectHideFlags: 3
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 88d0aa12a39c78043807f0d449f46da4, type: 3}
-  m_Name: ArticyScriptFragments
-  m_EditorClassIdentifier: 
---- !u!114 &-7143195871690796268
+  mTheHouse:
+    _VariableStorage: {fileID: -8840754664544147816}
+--- !u!114 &-7250076159307062903
 MonoBehaviour:
   m_ObjectHideFlags: 3
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43,7 +39,13 @@ MonoBehaviour:
   m_Script: {fileID: 1655710724, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
   m_Name: HierarchyManager
   m_EditorClassIdentifier: 
-  serializedNodes: []
+  serializedNodes:
+  - id: 72057594037927937
+    parent: 0
+    technicalName: The_Road_To_Moscow
+    articyType: Project
+    childCount: 0
+    indexOfFirstChild: 1
 --- !u!114 &-4749233181358768410
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -78,17 +80,29 @@ MonoBehaviour:
   m_Script: {fileID: -1676762633, guid: df2ec02f61e861546b9427c26ccacb8d, type: 3}
   m_Name: ArticyDatabase
   m_EditorClassIdentifier: 
-  mHierarchy: {fileID: -7143195871690796268}
+  mHierarchy: {fileID: -7250076159307062903}
   mLocalization: {fileID: -4749233181358768410}
   mInternalProject:
     mName: The Road to Moscow
     mDetailName: Text adventure by Whatever Software
-    mId: b5f18cd2-d335-40b3-9f2b-0cf56b73c3d8
+    mId: 53bfac0f-85b4-4272-972e-54edbe7ed775
     mTechnicalName: The_Road_To_Moscow
   mImportedAssets: []
-  mDefaultGlobalVariables: {fileID: -8065119956634985434}
-  mScriptFragments: {fileID: -7807284848298772533}
+  mDefaultGlobalVariables: {fileID: -8840754664544147816}
+  mScriptFragments: {fileID: 8874339312727025744}
   mPackages:
   - PackageName: All objects
     PackagePath: All objects
     mIsDefaultPackage: 1
+--- !u!114 &8874339312727025744
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88d0aa12a39c78043807f0d449f46da4, type: 3}
+  m_Name: ArticyScriptFragments
+  m_EditorClassIdentifier: 

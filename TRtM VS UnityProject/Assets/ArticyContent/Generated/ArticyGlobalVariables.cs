@@ -24,11 +24,25 @@ namespace Articy.The_Road_To_Moscow.GlobalVariables
     public class ArticyGlobalVariables : BaseGlobalVariables
     {
         
+        [SerializeField()]
+        [HideInInspector()]
+        private TheHouse mTheHouse = new TheHouse();
+        
         #region Initialize static VariableName set
         static ArticyGlobalVariables()
         {
+            variableNames.Add("TheHouse.IntroT1");
+            variableNames.Add("TheHouse.Timer");
         }
         #endregion
+        
+        public TheHouse TheHouse
+        {
+            get
+            {
+                return mTheHouse;
+            }
+        }
         
         public static ArticyGlobalVariables Default
         {
@@ -40,6 +54,7 @@ namespace Articy.The_Road_To_Moscow.GlobalVariables
         
         public override void Init()
         {
+            TheHouse.RegisterVariables(this);
         }
     }
 }

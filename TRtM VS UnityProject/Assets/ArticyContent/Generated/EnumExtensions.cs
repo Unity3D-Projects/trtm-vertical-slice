@@ -2,9 +2,9 @@ namespace Articy.The_Road_To_Moscow
 {
 	public static class EnumExtensionMethods
 	{
-		public static string GetDisplayName(this Text_Position aText_Position)
+		public static string GetDisplayName(this Image aImage)
 		{
-			return Articy.Unity.ArticyTypeSystem.GetArticyType("Text_Position").GetEnumValue(((int)(aText_Position))).DisplayName;
+			return Articy.Unity.ArticyTypeSystem.GetArticyType("Image").GetEnumValue(((int)(aImage))).DisplayName;
 		}
 
 		public static string GetDisplayName(this SFX aSFX)
@@ -20,6 +20,11 @@ namespace Articy.The_Road_To_Moscow
 		public static string GetDisplayName(this Ambience aAmbience)
 		{
 			return Articy.Unity.ArticyTypeSystem.GetArticyType("Ambience").GetEnumValue(((int)(aAmbience))).DisplayName;
+		}
+
+		public static string GetDisplayName(this TextPosdition aTextPosdition)
+		{
+			return Articy.Unity.ArticyTypeSystem.GetArticyType("TextPosdition").GetEnumValue(((int)(aTextPosdition))).DisplayName;
 		}
 
 		public static string GetDisplayName(this ShapeType aShapeType)

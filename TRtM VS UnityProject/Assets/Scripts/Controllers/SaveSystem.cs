@@ -109,8 +109,8 @@ public class SaveSystem : MonoBehaviour
             {
                 case (Const.XmlAliases.Phrase):
                     var phrase = ArticyDatabase.GetObject(logEvent.Value) as DialogueFragment;
-                    var speaker = phrase.Speaker as EntityTemplate;
-                    _spawner.SpawnPhrase(phrase.Text, speaker.Color, speaker.Template.EntityFeature.Text_Position);
+                    var speaker = phrase.Speaker as EntityWithTextPosition;
+                    _spawner.SpawnPhrase(phrase.Text, speaker.Color, speaker.Template.EntityF.TextPosdition);
                     break;
 
                 case (Const.XmlAliases.ButtonGroup):
@@ -274,7 +274,7 @@ public class SaveSystem : MonoBehaviour
     public void LoadState(string id)
     {
         XDocument xDoc = XDocument.Load(_savePath);
-        var df = ArticyDatabase.GetObject(id) as DFTemplate;
+        var df = ArticyDatabase.GetObject(id) as DialogueFragment;
     }
 
     public void SetStartTimeAndExecuteTime(DateTime startTime, DateTime executeTime)

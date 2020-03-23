@@ -23,8 +23,6 @@ namespace Articy.The_Road_To_Moscow
     public enum Music
     {
         
-        Stop = 0,
-        
-        Calm_Piano = 1,
+        Stop = 1,
     }
 }

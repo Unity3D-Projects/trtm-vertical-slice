@@ -91,6 +91,9 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
     #endregion
 
     public DialogueFragment Current { get; private set; }
+    public bool ShouldDelay { get; private set; }
+    public float NextDelay { get; private set; }
+
     private float _currentSpeed;
     public Button SpeedUpButton { get; set; }
 
@@ -132,10 +135,28 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
         if (aObject is DialogueFragment df)
         {
+            ShouldDelay = false;
+            NextDelay = 0;
             Current = aObject as DialogueFragment;
 
-            var speaker = df.Speaker as EntityTemplate;
-            _spawner.SpawnPhrase(df.Text,speaker.Color, speaker.Template.EntityFeature.Text_Position);
+            var speaker = df.Speaker as EntityWithTextPosition;
+            _spawner.SpawnPhrase(df.Text,speaker.Color, speaker.Template.EntityF.TextPosdition);
+        }
+        
+        if (aObject is Instruction inst)
+        {
+            float delayInSeconds = (inst as Articy.The_Road_To_Moscow.Delay)?.Template.DelayF.Delay ?? 0;
+
+            if (delayInSeconds > 0)
+            {
+                ShouldDelay = true;
+                NextDelay = delayInSeconds;
+            }
+            else
+            {
+                ShouldDelay = false;
+                NextDelay = 0;
+            }
         }
     }
     public void OnBranchesUpdated(IList<Branch> aBranches)
@@ -160,7 +181,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         foreach (Branch branch in aBranches)
         {
             // if branch is not DF (empty) - it's a pin - end of flow
-            if (!(branch.Target is DialogueFragment))
+            if (!(branch.Target is DialogueFragment) && !(branch.Target is Instruction))
             {
                 _spawner.SpawnEndGame(true);
                 _saveSystem.LogEvent(Const.LogEvent.LogEndGameWin, string.Empty);
@@ -177,8 +198,19 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         if (candidates.Count == 1)
         {
             _saveSystem.LogEvent(Const.LogEvent.LogPhrase, Current.TechnicalName);
-            var target = candidates[0].Target as DialogueFragment;
-            _saveSystem.UpdateExecuteElement(target.TechnicalName);
+            var target = candidates[0].Target;
+
+            if (target is DialogueFragment)
+            {
+                _saveSystem.UpdateExecuteElement(((DialogueFragment)target).TechnicalName);
+            }
+            else // it's an instruction
+            {
+                var delayInstruction = (Instruction)target;
+                var delayTarget = delayInstruction.OutputPins[0].Connections[0].Target; // TODO: recognize next fragment (recursive method?)
+                _saveSystem.UpdateExecuteElement(((DialogueFragment)delayTarget).TechnicalName);
+            }
+
         }
         else if (candidates.Count > 1)
         {
@@ -189,12 +221,11 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
 
         yield return WaitSeconds(textDelay);
 
-        float delayInSeconds = (Current as DFTemplate)?.Template.DFFeature.Delay ?? 0;
-
-        if (delayInSeconds >= 0)
+        if (ShouldDelay == true)
         {
-            var delayComponent = SetUpDelay(30);
+            var delayComponent = SetUpDelay(NextDelay);
             delayComponent.OnDelayPassed.AddListener(() => Play(candidates));
+
 
             delayComponent.Run();
         }

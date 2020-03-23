@@ -8,11 +8,10 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using Articy.The_Road_To_Moscow.Features;
 using Articy.Unity;
-using Articy.Unity.Interfaces;
 using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 
@@ -20,9 +19,9 @@ namespace Articy.The_Road_To_Moscow
 {
     
     
-    public enum Ambience
+    public interface IObjectWithFeatureAssetF
     {
         
-        Stop = 1,
+        AssetFFeature GetFeatureAssetF();
     }
 }

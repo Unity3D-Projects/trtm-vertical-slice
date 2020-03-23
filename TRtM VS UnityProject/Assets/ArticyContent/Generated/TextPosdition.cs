@@ -20,9 +20,13 @@ namespace Articy.The_Road_To_Moscow
 {
     
     
-    public enum Ambience
+    public enum TextPosdition
     {
         
-        Stop = 1,
+        Left = 1,
+        
+        Middle = 2,
+        
+        Right = 3,
     }
 }

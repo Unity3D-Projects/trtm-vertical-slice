@@ -20,7 +20,7 @@ namespace Articy.The_Road_To_Moscow.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(637031442889005924)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(637206034888599848)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         
@@ -32,30 +32,30 @@ namespace Articy.The_Road_To_Moscow.GlobalVariables
         
         #region Script fragments
         /// <summary>
-        /// ObjectID: 0x1000000000003F1
-        /// Articy Object ref: articy://localhost/view/b5f18cd2-d335-40b3-9f2b-0cf56b73c3d8/72057594037928945?pane=selected&amp;tab=current
+        /// ObjectID: 0x100000000000383
+        /// Articy Object ref: articy://localhost/view/53bfac0f-85b4-4272-972e-54edbe7ed775/72057594037928835?pane=selected&amp;tab=current
         /// </summary>
-        public bool Script_0x1000000000003F1Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public void Script_0x100000000000383Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            return true;
+            //15 min;
         }
         
         /// <summary>
-        /// ObjectID: 0x1000000000003F8
-        /// Articy Object ref: articy://localhost/view/b5f18cd2-d335-40b3-9f2b-0cf56b73c3d8/72057594037928952?pane=selected&amp;tab=current
+        /// ObjectID: 0x1000000000003A9
+        /// Articy Object ref: articy://localhost/view/53bfac0f-85b4-4272-972e-54edbe7ed775/72057594037928873?pane=selected&amp;tab=current
         /// </summary>
-        public bool Script_0x1000000000003F8Text(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public void Script_0x1000000000003A9Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            return false;
+            //15 min;
         }
         
         /// <summary>
-        /// ObjectID: 0x1000000000003FF
-        /// Articy Object ref: articy://localhost/view/b5f18cd2-d335-40b3-9f2b-0cf56b73c3d8/72057594037928959?pane=selected&amp;tab=current
+        /// ObjectID: 0x1000000000003E8
+        /// Articy Object ref: articy://localhost/view/53bfac0f-85b4-4272-972e-54edbe7ed775/72057594037928936?pane=selected&amp;tab=current
         /// </summary>
-        public bool Script_0x1000000000003FFText(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
+        public void Script_0x1000000000003E8Expression(ArticyGlobalVariables aGlobalVariablesState, Articy.Unity.IBaseScriptMethodProvider aMethodProvider)
         {
-            return false;
+            //1 min;
         }
         #endregion
         
@@ -68,9 +68,9 @@ namespace Articy.The_Road_To_Moscow.GlobalVariables
         {
             Conditions = new System.Collections.Generic.Dictionary<int, System.Func<ArticyGlobalVariables, Articy.Unity.IBaseScriptMethodProvider, bool>>();
             Instructions = new System.Collections.Generic.Dictionary<int, System.Action<ArticyGlobalVariables, Articy.Unity.IBaseScriptMethodProvider>>();
-            Conditions.Add(886063062, this.Script_0x1000000000003F1Text);
-            Conditions.Add(798086281, this.Script_0x1000000000003F8Text);
-            Conditions.Add(-1660043809, this.Script_0x1000000000003FFText);
+            Instructions.Add(-1144826837, this.Script_0x100000000000383Expression);
+            Instructions.Add(1710343092, this.Script_0x1000000000003A9Expression);
+            Instructions.Add(-1865027915, this.Script_0x1000000000003E8Expression);
         }
         #endregion
         
