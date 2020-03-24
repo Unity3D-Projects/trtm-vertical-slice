@@ -133,6 +133,13 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         }
         _currentSpeed = (float)textSpeed * 0.02f;
 
+        if (aObject is Dialogue ff)
+        {
+            _spawner.SpawnPhrase(ff.Text, Color.white, TextPosdition.Middle);
+            ShouldDelay = false;
+            NextDelay = 0;
+        }
+
         if (aObject is DialogueFragment df)
         {
             ShouldDelay = false;
@@ -181,13 +188,14 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
         foreach (Branch branch in aBranches)
         {
             // if branch is not DF (empty) - it's a pin - end of flow
-            if (!(branch.Target is DialogueFragment) && !(branch.Target is Instruction))
+            if (!(branch.Target is DialogueFragment) && !(branch.Target is Instruction) && !(branch.Target is Dialogue))
             {
                 _spawner.SpawnEndGame(true);
                 _saveSystem.LogEvent(Const.LogEvent.LogEndGameWin, string.Empty);
                 GameEnded = true;
                 yield break;
             }
+
             if (branch.IsValid)
             {
                 candidates.Add(branch);
@@ -200,17 +208,7 @@ public class GameController : MonoBehaviour, IArticyFlowPlayerCallbacks
             _saveSystem.LogEvent(Const.LogEvent.LogPhrase, Current.TechnicalName);
             var target = candidates[0].Target;
 
-            if (target is DialogueFragment)
-            {
-                _saveSystem.UpdateExecuteElement(((DialogueFragment)target).TechnicalName);
-            }
-            else // it's an instruction
-            {
-                var delayInstruction = (Instruction)target;
-                var delayTarget = delayInstruction.OutputPins[0].Connections[0].Target; // TODO: recognize next fragment (recursive method?)
-                _saveSystem.UpdateExecuteElement(((DialogueFragment)delayTarget).TechnicalName);
-            }
-
+            _saveSystem.UpdateExecuteElement(((ArticyObject)target).TechnicalName); 
         }
         else if (candidates.Count > 1)
         {

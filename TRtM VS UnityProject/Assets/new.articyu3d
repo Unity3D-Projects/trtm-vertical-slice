@@ -5,7 +5,7 @@
     "set_IncludedNodes": "Settings, Project, GlobalVariables, ObjectDefinitions, Packages, ScriptMethods, Hierarchy, Assets",
     "set_UseScriptSupport": "True",
     "ExportVersion": "1.1",
-    "ObjectDefinitionsHash": "1689020DA14F19D43DF77028517DC365568844198F930F3FC3638F25D5446D03",
+    "ObjectDefinitionsHash": "C9D0C2BAF7F94284E4FDD649A823431AA57D09A11B5CAD4E978F6166C92FA3C8",
     "ScriptFragmentsHash": "3219844167"
   },
   "Project": {
@@ -1547,6 +1547,57 @@
       ]
     },
     {
+      "Type": "Delay",
+      "Class": "Instruction",
+      "InheritsFrom": "Instruction",
+      "Template": {
+        "TechnicalName": "Delay",
+        "DisplayName": "Delay",
+        "Features": [
+          {
+            "TechnicalName": "DelayF",
+            "DisplayName": "DelayF",
+            "Properties": [
+              {
+                "Property": "Delay",
+                "Type": "Float",
+                "DisplayName": "Delay",
+                "ToolTip": "Длительная задержка. Визуально отображается и может быть пропущена с помощью просмотра рекламы."
+              },
+              {
+                "Property": "Waiting",
+                "Type": "Float",
+                "DisplayName": "Waiting",
+                "ToolTip": "Короткая задержка."
+              }
+            ],
+            "Constraints": [
+              {
+                "Property": "Delay",
+                "Type": "Number",
+                "MinValue": "-3.40282346638529E+38",
+                "MaxValue": "3.40282346638529E+38",
+                "Precision": "0",
+                "MinPrecision": "0",
+                "MaxPrecision": "0",
+                "Unit": "min"
+              },
+              {
+                "Property": "Waiting",
+                "Type": "Number",
+                "MinValue": "-3.40282346638529E+38",
+                "MaxValue": "3.40282346638529E+38",
+                "Precision": "0",
+                "MinPrecision": "0",
+                "MaxPrecision": "0",
+                "Unit": "sec"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "Type": "GameAsset",
       "Class": "Instruction",
       "InheritsFrom": "Instruction",
@@ -1607,57 +1658,6 @@
                 "Type": "Enum",
                 "IsLocalized": "False",
                 "SortMode": "BySortIndex"
-              }
-            ]
-          }
-        ]
-      }
-    },
-    {
-      "Type": "Delay",
-      "Class": "Instruction",
-      "InheritsFrom": "Instruction",
-      "Template": {
-        "TechnicalName": "Delay",
-        "DisplayName": "Delay",
-        "Features": [
-          {
-            "TechnicalName": "DelayF",
-            "DisplayName": "DelayF",
-            "Properties": [
-              {
-                "Property": "Delay",
-                "Type": "Float",
-                "DisplayName": "Delay",
-                "ToolTip": "Длительная задержка. Визуально отображается и может быть пропущена с помощью просмотра рекламы."
-              },
-              {
-                "Property": "Waiting",
-                "Type": "Float",
-                "DisplayName": "Waiting",
-                "ToolTip": "Короткая задержка."
-              }
-            ],
-            "Constraints": [
-              {
-                "Property": "Delay",
-                "Type": "Number",
-                "MinValue": "-3.40282346638529E+38",
-                "MaxValue": "3.40282346638529E+38",
-                "Precision": "0",
-                "MinPrecision": "0",
-                "MaxPrecision": "0",
-                "Unit": "min"
-              },
-              {
-                "Property": "Waiting",
-                "Type": "Number",
-                "MinValue": "-3.40282346638529E+38",
-                "MaxValue": "3.40282346638529E+38",
-                "Precision": "0",
-                "MinPrecision": "0",
-                "MaxPrecision": "0",
-                "Unit": "sec"
               }
             ]
           }
@@ -2248,7 +2248,20 @@
               {
                 "Text": "",
                 "Id": "0x010000000000021D",
-                "Owner": "0x010000000000021A"
+                "Owner": "0x010000000000021A",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000409",
+                    "Target": "0x0100000000000406"
+                  }
+                ]
               }
             ],
             "OutputPins": [
@@ -2312,7 +2325,20 @@
               {
                 "Text": "",
                 "Id": "0x0100000000000225",
-                "Owner": "0x0100000000000222"
+                "Owner": "0x0100000000000222",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000418",
+                    "Target": "0x0100000000000415"
+                  }
+                ]
               }
             ],
             "OutputPins": [
@@ -5364,6 +5390,213 @@
           }
         },
         {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_94AC3FC5",
+            "Id": "0x0100000000000406",
+            "Parent": "0x010000000000021A",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C8",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "debug 1",
+            "ExternalId": "",
+            "Position": {
+              "x": 500.0,
+              "y": 325.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 2494316485,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000409",
+                "Owner": "0x0100000000000406"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000040A",
+                "Owner": "0x0100000000000406",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x0100000000000410",
+                    "Target": "0x010000000000040D"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_0F503553",
+            "Id": "0x010000000000040D",
+            "Parent": "0x010000000000021A",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C8",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "debug2",
+            "ExternalId": "",
+            "Position": {
+              "x": 875.0,
+              "y": 325.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 256914771,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000410",
+                "Owner": "0x010000000000040D"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000411",
+                "Owner": "0x010000000000040D",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000021E",
+                    "Target": "0x010000000000021A"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_F49BA5CB",
+            "Id": "0x0100000000000415",
+            "Parent": "0x0100000000000222",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C8",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "debug3",
+            "ExternalId": "",
+            "Position": {
+              "x": 400.0,
+              "y": 325.0
+            },
+            "ZIndex": 0.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 4103841227,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000418",
+                "Owner": "0x0100000000000415"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000419",
+                "Owner": "0x0100000000000415",
+                "Connections": [
+                  {
+                    "Color": {
+                      "a": 1.0,
+                      "r": 0.5764706,
+                      "g": 0.75686276,
+                      "b": 0.8
+                    },
+                    "Label": "",
+                    "TargetPin": "0x010000000000041F",
+                    "Target": "0x010000000000041C"
+                  }
+                ]
+              }
+            ]
+          }
+        },
+        {
+          "Type": "DialogueFragment",
+          "Properties": {
+            "TechnicalName": "DFr_6372B58A",
+            "Id": "0x010000000000041C",
+            "Parent": "0x0100000000000222",
+            "MenuText": "",
+            "StageDirections": "",
+            "Speaker": "0x01000000000001C8",
+            "Color": {
+              "r": 0.5764706,
+              "g": 0.75686276,
+              "b": 0.8
+            },
+            "Text": "debug4",
+            "ExternalId": "",
+            "Position": {
+              "x": 750.0,
+              "y": 325.0
+            },
+            "ZIndex": 2.0,
+            "Size": {
+              "w": 225.0,
+              "h": 200.0
+            },
+            "ShortId": 1668461962,
+            "InputPins": [
+              {
+                "Text": "",
+                "Id": "0x010000000000041F",
+                "Owner": "0x010000000000041C"
+              }
+            ],
+            "OutputPins": [
+              {
+                "Text": "",
+                "Id": "0x0100000000000420",
+                "Owner": "0x010000000000041C"
+              }
+            ]
+          }
+        },
+        {
           "Type": "Delay",
           "Properties": {
             "TechnicalName": "Ins_8DEC6D88",
@@ -5968,12 +6201,36 @@
                   {
                     "Id": "0x010000000000021A",
                     "TechnicalName": "Dlg_1F3BAEAF",
-                    "Type": "Dialogue"
+                    "Type": "Dialogue",
+                    "Children": [
+                      {
+                        "Id": "0x0100000000000406",
+                        "TechnicalName": "DFr_94AC3FC5",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x010000000000040D",
+                        "TechnicalName": "DFr_0F503553",
+                        "Type": "DialogueFragment"
+                      }
+                    ]
                   },
                   {
                     "Id": "0x0100000000000222",
                     "TechnicalName": "Dlg_A0E9588C",
-                    "Type": "Dialogue"
+                    "Type": "Dialogue",
+                    "Children": [
+                      {
+                        "Id": "0x0100000000000415",
+                        "TechnicalName": "DFr_F49BA5CB",
+                        "Type": "DialogueFragment"
+                      },
+                      {
+                        "Id": "0x010000000000041C",
+                        "TechnicalName": "DFr_6372B58A",
+                        "Type": "DialogueFragment"
+                      }
+                    ]
                   },
                   {
                     "Id": "0x010000000000022A",

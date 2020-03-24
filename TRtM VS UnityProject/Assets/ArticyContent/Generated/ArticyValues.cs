@@ -327,33 +327,6 @@ namespace Articy.The_Road_To_Moscow
     
     
     [Serializable()]
-    public class ArticyValueGameAssetTemplate : ArticyValue<Articy.The_Road_To_Moscow.Templates.GameAssetTemplate>
-    {
-    }
-}
-namespace Articy.The_Road_To_Moscow
-{
-    
-    
-    [Serializable()]
-    public class ArticyValueAssetFFeature : ArticyValue<Articy.The_Road_To_Moscow.Features.AssetFFeature>
-    {
-    }
-}
-namespace Articy.The_Road_To_Moscow
-{
-    
-    
-    [Serializable()]
-    public class ArticyValueGameAsset : ArticyValue<GameAsset>
-    {
-    }
-}
-namespace Articy.The_Road_To_Moscow
-{
-    
-    
-    [Serializable()]
     public class ArticyValueDelayTemplate : ArticyValue<Articy.The_Road_To_Moscow.Templates.DelayTemplate>
     {
     }
@@ -373,6 +346,33 @@ namespace Articy.The_Road_To_Moscow
     
     [Serializable()]
     public class ArticyValueDelay : ArticyValue<Delay>
+    {
+    }
+}
+namespace Articy.The_Road_To_Moscow
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueGameAssetTemplate : ArticyValue<Articy.The_Road_To_Moscow.Templates.GameAssetTemplate>
+    {
+    }
+}
+namespace Articy.The_Road_To_Moscow
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueAssetFFeature : ArticyValue<Articy.The_Road_To_Moscow.Features.AssetFFeature>
+    {
+    }
+}
+namespace Articy.The_Road_To_Moscow
+{
+    
+    
+    [Serializable()]
+    public class ArticyValueGameAsset : ArticyValue<GameAsset>
     {
     }
 }

@@ -20,7 +20,7 @@ namespace Articy.The_Road_To_Moscow.GlobalVariables
 {
     
     
-    [Articy.Unity.ArticyCodeGenerationHashAttribute(637206034888599848)]
+    [Articy.Unity.ArticyCodeGenerationHashAttribute(637206665399394297)]
     public class ArticyScriptFragments : BaseScriptFragments, ISerializationCallbackReceiver
     {
         
